@@ -1,11 +1,12 @@
-import React from 'react';
 import './styles/App.css';
+import { AppProvider } from './config/AppContext';
+import AppRouter from './config/AppRouter';
 
 function App() {
   return (
-    <div>
-      
-    </div>
+    <AppProvider>
+      <AppRouter />
+    </AppProvider>
   );
 }
 
