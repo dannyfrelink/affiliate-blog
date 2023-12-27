@@ -1,4 +1,3 @@
-// Router.tsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import About from '../pages/About';
@@ -10,8 +9,6 @@ const AppRouter: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/over-ons" element={<About />} />
-
-        {/* <Route path="/contact" element={<Contact />} /> */}
       </Routes>
     </Router>
   );
