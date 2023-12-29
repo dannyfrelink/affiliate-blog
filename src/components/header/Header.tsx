@@ -1,6 +1,6 @@
 import React from "react";
 
-interface HeaderLargeProps {
+interface HeaderProps {
 	Image: React.FC<JSX.IntrinsicElements["img"]>;
 	title: string;
 	subTitle?: string;
@@ -8,7 +8,7 @@ interface HeaderLargeProps {
 	align?: "center" | "bottom";
 }
 
-const HeaderLarge: React.FC<HeaderLargeProps> = ({
+const Header: React.FC<HeaderProps> = ({
 	Image,
 	title,
 	subTitle,
@@ -52,4 +52,4 @@ const HeaderLarge: React.FC<HeaderLargeProps> = ({
 	);
 };
 
-export default HeaderLarge;
+export default Header;
