@@ -1,5 +1,5 @@
-import HeaderLarge from "../components/header/HeaderLarge";
-import HeaderImage from "../images/mockup/dreamy.png";
+import HeaderLarge from "../components/header/Header";
+import HeaderImage from "../images/mockup/viewpoint.png";
 
 const Home = () => {
 	return (
