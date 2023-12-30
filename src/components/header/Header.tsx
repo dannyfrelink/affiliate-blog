@@ -1,5 +1,8 @@
 import React from "react";
 import Nav from "./Nav";
+import Button from "../body/Button";
+import MenuIcon from "@mui/icons-material/Menu";
+import { useAppContext } from "../../config/AppContext";
 
 interface HeaderProps {
 	Image: React.FC<JSX.IntrinsicElements["img"]>;
@@ -16,6 +19,8 @@ const Header: React.FC<HeaderProps> = ({
 	size = "large",
 	align = "center",
 }) => {
+	const { setNavOpen } = useAppContext();
+
 	return (
 		<header
 			className={`${
@@ -25,6 +30,13 @@ const Header: React.FC<HeaderProps> = ({
 			} [&>img]:w-full [&>img]:object-cover [&>img]:object-center [&>img]:absolute [&>img]:z-[-1] text-primary`}
 		>
 			<Image />
+
+			<Button
+				openNav={() => setNavOpen(true)}
+				className="absolute top-6 right-4"
+			>
+				<MenuIcon />
+			</Button>
 
 			<Nav />
 

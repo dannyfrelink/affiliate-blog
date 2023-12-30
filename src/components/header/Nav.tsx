@@ -13,10 +13,10 @@ const Nav: React.FC<NavProps> = ({}) => {
 
 	return (
 		<nav
-			className={`h-screen ${
+			className={`absolute h-screen ${
 				screenSize < 700
-					? `before:fixed before:w-screen before:inset-0 before:bg-[#707070] before:opacity-75 ${
-							navOpen ? "translate-0" : "-translate-x-full"
+					? `before:fixed before:w-screen before:bg-[#707070] before:opacity-75 ${
+							navOpen ? "left-0 before:inset-0" : "-left-[100vw]"
 					  }`
 					: ""
 			}`}
@@ -26,7 +26,7 @@ const Nav: React.FC<NavProps> = ({}) => {
 					screenSize < 700
 						? `w-[90vw] h-full rounded-r-3xl bg-primary text-black ${
 								navOpen &&
-								"animate-[menuFadeIn_1s_ease-out_forwards]"
+								"animate-[menuFadeIn_0.5s_ease-out_forwards]"
 						  }`
 						: ""
 				} px-6 pt-32 text-xl [&>li]:font-semibold [&>li:not(:last-of-type)]:mb-6`}
