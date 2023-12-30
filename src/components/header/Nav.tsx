@@ -6,14 +6,24 @@ import Details from "../general/Details";
 interface NavProps {}
 
 const Nav: React.FC<NavProps> = ({}) => {
-	const { screenSize, activePage, navOpen } = useAppContext();
+	const { screenSize, activePage, navOpen, setNavOpen } = useAppContext();
 
 	const checkActive = (isActive: boolean) => {
 		return isActive ? "font-semibold text-secondary" : "";
 	};
 
+	const handleClick = (e: any) => {
+		const target = e.target;
+		const tagName = target.tagName.toLowerCase();
+
+		if (tagName === "a") {
+			setNavOpen(false);
+		}
+	};
+
 	return (
 		<nav
+			onClick={handleClick}
 			className={`absolute h-screen ${
 				screenSize < 700
 					? `before:fixed before:w-screen before:bg-[#707070] before:opacity-75 ${
