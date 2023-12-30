@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from "./Nav";
-import Button from "../body/Button";
+import Button from "../general/Button";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useAppContext } from "../../config/AppContext";
 
