@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import About from "../pages/About";
 import Home from "../pages/Home";
 import BlogLocation from "../pages/Blogs/BlogLocation";
 import BlogOverview from "../pages/Blogs/BlogOverview";
 import BlogPost from "../pages/Blogs/BlogPost";
-import { useAppContext } from "./AppContext";
 
 const AppRouter: React.FC = () => {
 	return (
