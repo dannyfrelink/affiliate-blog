@@ -9,6 +9,12 @@ module.exports = {
 				tertair: "#687B68",
 				background: "#E8DFD1",
 			},
+			keyframes: {
+				menuFadeIn: {
+					"0%": { transform: "translate(-100vw)" },
+					"100%": { transform: "translate(0)" },
+				},
+			},
 		},
 	},
 	plugins: [],

@@ -5,6 +5,8 @@ interface AppContextProps {
 	screenSize: number;
 	activePage: boolean;
 	setActivePage: React.Dispatch<React.SetStateAction<boolean>>;
+	navOpen: boolean;
+	setNavOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
@@ -16,6 +18,7 @@ interface AppProps {
 export const AppProvider: React.FC<AppProps> = ({ children }) => {
 	const [screenSize, setScreenSize] = useState<number>(window.innerWidth);
 	const [activePage, setActivePage] = useState<boolean>(false);
+	const [navOpen, setNavOpen] = useState<boolean>(false);
 
 	useEffect(() => {
 		const handleWindowResize = () => {
@@ -33,6 +36,8 @@ export const AppProvider: React.FC<AppProps> = ({ children }) => {
 		screenSize,
 		activePage,
 		setActivePage,
+		navOpen,
+		setNavOpen,
 	};
 
 	return (

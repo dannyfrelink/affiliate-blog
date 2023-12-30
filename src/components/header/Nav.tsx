@@ -5,7 +5,7 @@ import { useAppContext } from "../../config/AppContext";
 interface NavProps {}
 
 const Nav: React.FC<NavProps> = ({}) => {
-	const { screenSize, activePage } = useAppContext();
+	const { screenSize, activePage, navOpen } = useAppContext();
 
 	const checkActive = (isActive: boolean) => {
 		return isActive ? "font-semibold text-secondary" : "";
@@ -15,14 +15,19 @@ const Nav: React.FC<NavProps> = ({}) => {
 		<nav
 			className={`h-screen ${
 				screenSize < 700
-					? "before:fixed before:w-screen before:inset-0 before:bg-[#707070] before:opacity-75"
+					? `before:fixed before:w-screen before:inset-0 before:bg-[#707070] before:opacity-75 ${
+							navOpen ? "translate-0" : "-translate-x-full"
+					  }`
 					: ""
 			}`}
 		>
 			<ul
 				className={`fixed ${
 					screenSize < 700
-						? "w-[90vw] h-full rounded-r-3xl bg-primary text-black"
+						? `w-[90vw] h-full rounded-r-3xl bg-primary text-black ${
+								navOpen &&
+								"animate-[menuFadeIn_1s_ease-out_forwards]"
+						  }`
 						: ""
 				} px-6 pt-32 text-xl [&>li]:font-semibold [&>li:not(:last-of-type)]:mb-6`}
 			>
