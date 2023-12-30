@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "./Nav";
 import Button from "../general/Button";
-import MenuIcon from "@mui/icons-material/Menu";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import { useAppContext } from "../../config/AppContext";
 
 interface HeaderProps {
@@ -35,7 +35,7 @@ const Header: React.FC<HeaderProps> = ({
 				openNav={() => setNavOpen(true)}
 				className="absolute top-6 right-4"
 			>
-				<MenuIcon />
+				<MenuRoundedIcon />
 			</Button>
 
 			<Nav />

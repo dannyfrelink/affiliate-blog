@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useAppContext } from "../../config/AppContext";
 import Details from "../general/Details";
+import CloseButton from "../general/CloseButton";
 
 interface NavProps {}
 
@@ -40,8 +41,13 @@ const Nav: React.FC<NavProps> = ({}) => {
 								"animate-[menuFadeIn_0.5s_ease-out_forwards]"
 						  }`
 						: ""
-				} px-6 pt-32 text-xl [&>li]:font-semibold [&>li:not(:last-of-type)]:mb-6`}
+				} pl-6 pr-4 pt-32 text-xl [&>li]:font-semibold [&>li:not(:last-of-type)]:mb-6`}
 			>
+				<CloseButton
+					className="absolute top-6 right-4"
+					closeMenu={() => setNavOpen(false)}
+				/>
+
 				<li>
 					<NavLink
 						className={({ isActive }) => checkActive(isActive)}
