@@ -19,7 +19,7 @@ const Header: React.FC<HeaderProps> = ({
 	size = "large",
 	align = "center",
 }) => {
-	const { setNavOpen } = useAppContext();
+	const { setNavOpen, screenSize } = useAppContext();
 
 	return (
 		<header
@@ -31,12 +31,14 @@ const Header: React.FC<HeaderProps> = ({
 		>
 			<Image />
 
-			<Button
-				openNav={() => setNavOpen(true)}
-				className="absolute top-6 right-4"
-			>
-				<MenuRoundedIcon />
-			</Button>
+			{screenSize < 700 && (
+				<Button
+					openNav={() => setNavOpen(true)}
+					className="absolute top-6 right-4"
+				>
+					<MenuRoundedIcon />
+				</Button>
+			)}
 
 			<Nav />
 
