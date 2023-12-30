@@ -1,7 +1,16 @@
+import React, { useEffect } from "react";
 import Header from "../components/header/Header";
+import { useAppContext } from "../config/AppContext";
 import HeaderImage from "../images/mockup/viewpoint.png";
 
-const Home = () => {
+interface HomeProps {}
+
+const Home: React.FC<HomeProps> = () => {
+	const { setActivePage } = useAppContext();
+	useEffect(() => {
+		setActivePage(false);
+	}, []);
+
 	return (
 		<div>
 			<Header

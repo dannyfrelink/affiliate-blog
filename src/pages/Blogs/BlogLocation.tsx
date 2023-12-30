@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HeaderImage from "../../images/mockup/viewpoint.png";
 import Header from "../../components/header/Header";
+import { useAppContext } from "../../config/AppContext";
+import { useParams } from "react-router-dom";
 
 interface BlogLocationProps {}
 
 const BlogLocation: React.FC<BlogLocationProps> = ({}) => {
+	const { location } = useParams();
+	const { setActivePage } = useAppContext();
+	useEffect(() => {
+		setActivePage(true);
+	}, []);
+
 	return (
 		<div>
 			<Header

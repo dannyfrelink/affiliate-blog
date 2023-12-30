@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useAppContext } from "../../config/AppContext";
 
 interface BlogPostProps {}
 
 const BlogPost: React.FC<BlogPostProps> = ({}) => {
 	const { location, blog } = useParams();
-	console.log(location, blog);
+	const { setActivePage } = useAppContext();
+	useEffect(() => {
+		setActivePage(true);
+	}, []);
+
 	return (
 		<div>
 			<div></div>

@@ -1,9 +1,10 @@
-import React, { createContext, useState, useContext } from "react";
+import React, { createContext, useState, useContext, useEffect } from "react";
 
 interface AppContextProps {
 	// Define your context state and any functions you need
-	count: number;
-	increment: () => void;
+	screenSize: number;
+	activePage: boolean;
+	setActivePage: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
@@ -13,15 +14,25 @@ interface AppProps {
 }
 
 export const AppProvider: React.FC<AppProps> = ({ children }) => {
-	const [count, setCount] = useState<number>(0);
+	const [screenSize, setScreenSize] = useState<number>(window.innerWidth);
+	const [activePage, setActivePage] = useState<boolean>(false);
 
-	const increment = () => {
-		setCount(count + 1);
-	};
+	useEffect(() => {
+		const handleWindowResize = () => {
+			setScreenSize(window.innerWidth);
+		};
+
+		window.addEventListener("resize", handleWindowResize);
+
+		return () => {
+			window.removeEventListener("resize", handleWindowResize);
+		};
+	}, []);
 
 	const contextValue: AppContextProps = {
-		count,
-		increment,
+		screenSize,
+		activePage,
+		setActivePage,
 	};
 
 	return (

@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HeaderImage from "../../images/mockup/viewpoint.png";
 import Header from "../../components/header/Header";
+import { useAppContext } from "../../config/AppContext";
 
 interface BlogOverviewProps {}
 
 const BlogOverview: React.FC<BlogOverviewProps> = ({}) => {
+	const { setActivePage } = useAppContext();
+	useEffect(() => {
+		setActivePage(true);
+	}, []);
+
 	return (
 		<div>
 			<Header

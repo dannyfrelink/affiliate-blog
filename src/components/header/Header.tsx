@@ -1,4 +1,5 @@
 import React from "react";
+import Nav from "./Nav";
 
 interface HeaderProps {
 	Image: React.FC<JSX.IntrinsicElements["img"]>;
@@ -24,6 +25,8 @@ const Header: React.FC<HeaderProps> = ({
 			} [&>img]:w-full [&>img]:object-cover [&>img]:object-center [&>img]:absolute [&>img]:z-[-1] text-primary`}
 		>
 			<Image />
+
+			<Nav />
 
 			<section
 				className={`${
