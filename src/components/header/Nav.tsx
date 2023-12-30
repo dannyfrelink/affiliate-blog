@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useAppContext } from "../../config/AppContext";
+import Details from "../general/Details";
 
 interface NavProps {}
 
@@ -39,14 +40,14 @@ const Nav: React.FC<NavProps> = ({}) => {
 						Home
 					</NavLink>
 				</li>
-				<details className="mb-6">
-					<summary
-						className={`${
-							activePage && "text-secondary"
-						} font-semibold`}
-					>
-						Blogs
-					</summary>
+
+				<Details
+					className="mb-6"
+					summary="Blogs"
+					summaryClass={`${
+						activePage && "text-secondary"
+					} font-semibold`}
+				>
 					<li className="font-light italic text-xs my-2">
 						<NavLink
 							className={({ isActive }) => checkActive(isActive)}
@@ -124,7 +125,7 @@ const Nav: React.FC<NavProps> = ({}) => {
 							</NavLink>
 						</li>
 					</div>
-				</details>
+				</Details>
 
 				<li>
 					<NavLink
