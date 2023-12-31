@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRounded";
+import { useAppContext } from "../../config/AppContext";
 
 interface DetailsProps {
 	children: React.ReactNode;
@@ -16,6 +17,7 @@ const Details: React.FC<DetailsProps> = ({
 	summaryClass = "",
 }) => {
 	const [open, setOpen] = useState<boolean>(false);
+	const { screenSize } = useAppContext();
 
 	return (
 		<div className={className}>
@@ -38,7 +40,18 @@ const Details: React.FC<DetailsProps> = ({
 				)}
 			</div>
 
-			<div className={`${open ? "block" : "hidden"}`}>{children}</div>
+			<div
+				className={`${
+					open
+						? `block ${
+								screenSize > 750 &&
+								"absolute animate-[blogsFadeIn_0.5s_ease-out_forwards] -ml-11 bg-primary rounded-b-xl pt-2 pb-4 px-8 shadow-subtle z-[-2]"
+						  }`
+						: "hidden"
+				}`}
+			>
+				{children}
+			</div>
 		</div>
 	);
 };

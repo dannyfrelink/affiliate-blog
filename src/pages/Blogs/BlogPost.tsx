@@ -6,9 +6,9 @@ interface BlogPostProps {}
 
 const BlogPost: React.FC<BlogPostProps> = ({}) => {
 	const { location, blog } = useParams();
-	const { setActivePage } = useAppContext();
+	const { setBlogsPageActive } = useAppContext();
 	useEffect(() => {
-		setActivePage(true);
+		setBlogsPageActive(true);
 	}, []);
 
 	return (

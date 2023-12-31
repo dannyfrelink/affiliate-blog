@@ -6,9 +6,9 @@ import { useAppContext } from "../../config/AppContext";
 interface BlogOverviewProps {}
 
 const BlogOverview: React.FC<BlogOverviewProps> = ({}) => {
-	const { setActivePage } = useAppContext();
+	const { setBlogsPageActive } = useAppContext();
 	useEffect(() => {
-		setActivePage(true);
+		setBlogsPageActive(true);
 	}, []);
 
 	return (

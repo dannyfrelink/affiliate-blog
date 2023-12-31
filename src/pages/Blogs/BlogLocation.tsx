@@ -8,9 +8,9 @@ interface BlogLocationProps {}
 
 const BlogLocation: React.FC<BlogLocationProps> = ({}) => {
 	const { location } = useParams();
-	const { setActivePage } = useAppContext();
+	const { setBlogsPageActive } = useAppContext();
 	useEffect(() => {
-		setActivePage(true);
+		setBlogsPageActive(true);
 	}, []);
 
 	return (

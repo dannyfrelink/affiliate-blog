@@ -7,7 +7,8 @@ import CloseButton from "../general/CloseButton";
 interface NavProps {}
 
 const Nav: React.FC<NavProps> = ({}) => {
-	const { screenSize, activePage, navOpen, setNavOpen } = useAppContext();
+	const { screenSize, blogsPageActive, navOpen, setNavOpen } =
+		useAppContext();
 
 	const checkActive = (isActive: boolean) => {
 		return isActive ? "font-semibold text-secondary" : "";
@@ -25,28 +26,33 @@ const Nav: React.FC<NavProps> = ({}) => {
 	return (
 		<nav
 			onClick={handleClick}
-			className={`absolute h-screen ${
-				screenSize < 700
-					? `before:fixed before:w-screen before:bg-[#707070] before:opacity-75 ${
-							navOpen ? "left-0 before:inset-0" : "-left-[100vw]"
-					  }`
-					: ""
+			className={`${
+				screenSize < 750 &&
+				`absolute h-screen before:fixed before:w-screen before:bg-[#707070] before:opacity-75 ${
+					navOpen ? "left-0 before:inset-0" : "-left-[100vw]"
+				}`
 			}`}
 		>
 			<ul
-				className={`fixed ${
-					screenSize < 700
-						? `w-[90vw] h-full rounded-r-3xl bg-primary text-black ${
+				className={`${
+					screenSize < 750
+						? `w-[90vw] h-full rounded-r-3xl bg-primary  pl-6 pr-4 pt-32 [&>li:not(:last-of-type)]:mb-6 ${
 								navOpen &&
 								"animate-[menuFadeIn_0.5s_ease-out_forwards]"
 						  }`
-						: ""
-				} pl-6 pr-4 pt-32 text-xl [&>li]:font-semibold [&>li:not(:last-of-type)]:mb-6`}
+						: `flex top-4 fixed before:fixed before:top-0 before:inset-x-0 before:h-16 before:bg-primary before:shadow-subtle before:z-[-1] ${
+								screenSize < 1250
+									? "right-[calc(100vw*((1/6)/2))] [&>li:not(:last-child)]:mr-6 [&>div]:mr-4"
+									: "right-[calc(100vw*((1/5)/2))] [&>li:not(:last-child)]:mr-10 [&>div]:mr-8"
+						  }`
+				} text-black text-xl [&>li]:font-semibold`}
 			>
-				<CloseButton
-					className="absolute top-6 right-4"
-					closeMenu={() => setNavOpen(false)}
-				/>
+				{screenSize < 750 && (
+					<CloseButton
+						className="absolute top-6 right-4"
+						closeMenu={() => setNavOpen(false)}
+					/>
+				)}
 
 				<li>
 					<NavLink
@@ -58,10 +64,10 @@ const Nav: React.FC<NavProps> = ({}) => {
 				</li>
 
 				<Details
-					className="mb-6"
+					className={screenSize < 750 ? "mb-6" : ""}
 					summary="Blogs"
 					summaryClass={`${
-						activePage && "text-secondary"
+						blogsPageActive && "text-secondary"
 					} font-semibold`}
 				>
 					<li className="font-light italic text-xs my-2">

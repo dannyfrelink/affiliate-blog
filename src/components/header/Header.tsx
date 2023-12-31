@@ -27,11 +27,11 @@ const Header: React.FC<HeaderProps> = ({
 				size === "large"
 					? "h-screen [&>img]:h-full"
 					: "h-[50vh] [&>img]:h-1/2"
-			} [&>img]:w-full [&>img]:object-cover [&>img]:object-center [&>img]:absolute [&>img]:z-[-1] text-primary`}
+			} [&>img]:w-full [&>img]:object-cover [&>img]:object-center [&>img]:absolute [&>img]:z-[-2] text-primary`}
 		>
 			<Image />
 
-			{screenSize < 700 && (
+			{screenSize < 750 && (
 				<Button
 					openNav={() => setNavOpen(true)}
 					className="absolute top-6 right-4"

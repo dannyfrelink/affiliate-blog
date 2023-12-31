@@ -14,6 +14,13 @@ module.exports = {
 					"0%": { transform: "translate(-100vw)" },
 					"100%": { transform: "translate(0)" },
 				},
+				blogsFadeIn: {
+					"0%": { top: "-15rem" },
+					"100%": { top: "3rem" },
+				},
+			},
+			boxShadow: {
+				subtle: "0px 3px 15px rgba(0,0,0,0.2)",
 			},
 		},
 	},

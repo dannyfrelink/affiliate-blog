@@ -6,9 +6,9 @@ import HeaderImage from "../images/mockup/viewpoint.png";
 interface HomeProps {}
 
 const Home: React.FC<HomeProps> = () => {
-	const { setActivePage } = useAppContext();
+	const { setBlogsPageActive } = useAppContext();
 	useEffect(() => {
-		setActivePage(false);
+		setBlogsPageActive(false);
 	}, []);
 
 	return (
