@@ -21,8 +21,8 @@ const Details: React.FC<DetailsProps> = ({
 
 	return (
 		<div className={className}>
-			<div
-				className="flex justify-between cursor-pointer"
+			<button
+				className="flex justify-between"
 				onClick={() => setOpen(!open)}
 			>
 				<li className={summaryClass}>{summary}</li>
@@ -38,7 +38,7 @@ const Details: React.FC<DetailsProps> = ({
 						fontSize="large"
 					/>
 				)}
-			</div>
+			</button>
 
 			<div
 				className={`${
