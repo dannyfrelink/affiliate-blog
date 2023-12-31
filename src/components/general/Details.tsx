@@ -22,7 +22,7 @@ const Details: React.FC<DetailsProps> = ({
 	return (
 		<div className={className}>
 			<div
-				className="flex justify-between"
+				className="flex justify-between cursor-pointer"
 				onClick={() => setOpen(!open)}
 			>
 				<li className={summaryClass}>{summary}</li>
