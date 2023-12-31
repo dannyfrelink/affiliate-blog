@@ -3,6 +3,7 @@ import Nav from "./Nav";
 import Button from "../general/Button";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import { useAppContext } from "../../config/AppContext";
+import Title from "./Title";
 
 interface HeaderProps {
 	Image: React.FC<JSX.IntrinsicElements["img"]>;
@@ -24,9 +25,11 @@ const Header: React.FC<HeaderProps> = ({
 	return (
 		<header
 			className={`${
-				size === "large"
-					? "h-screen [&>img]:h-full"
-					: "h-[50vh] [&>img]:h-1/2"
+				screenSize < 750
+					? size === "large"
+						? "h-screen [&>img]:h-full"
+						: "h-[50vh] [&>img]:h-1/2"
+					: "h-screen [&>img]:h-full"
 			} [&>img]:w-full [&>img]:object-cover [&>img]:object-center [&>img]:absolute [&>img]:z-[-2] text-primary`}
 		>
 			<Image />
@@ -42,29 +45,12 @@ const Header: React.FC<HeaderProps> = ({
 
 			<Nav />
 
-			<section
-				className={`${
-					align === "center"
-						? "justify-center items-center text-center"
-						: "justify-end pb-5"
-				} ${
-					size === "large" ? "h-[90vh]" : "h-[40vh]"
-				} flex flex-col w-5/6 mx-auto`}
-			>
-				<h1 className="font-extrabold text-2xl mb-3">{title}</h1>
-
-				{subTitle && (
-					<p
-						className={`${
-							align === "center"
-								? "font-semibold w-3/4 mx-auto"
-								: "text-[#C3C3C3]"
-						} text-sm`}
-					>
-						{subTitle}
-					</p>
-				)}
-			</section>
+			<Title
+				title={title}
+				subTitle={subTitle}
+				align={align}
+				size={size}
+			/>
 		</header>
 	);
 };
