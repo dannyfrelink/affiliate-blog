@@ -28,7 +28,7 @@ const Nav: React.FC<NavProps> = ({}) => {
 			onClick={handleClick}
 			className={`${
 				screenSize < 750 &&
-				`absolute h-screen before:fixed before:w-screen before:bg-[#707070] before:opacity-75 ${
+				`fixed h-screen before:fixed before:w-screen before:bg-[#707070] before:opacity-75 ${
 					navOpen ? "left-0 before:inset-0" : "-left-[100vw]"
 				}`
 			}`}
@@ -36,7 +36,7 @@ const Nav: React.FC<NavProps> = ({}) => {
 			<ul
 				className={`${
 					screenSize < 750
-						? `w-[90vw] h-full rounded-r-3xl bg-primary  pl-6 pr-4 pt-32 [&>li:not(:last-of-type)]:mb-6 ${
+						? `w-[90vw] h-full rounded-r-3xl bg-primary pl-6 pr-4 pt-32 [&>li:not(:last-of-type)]:mb-6 ${
 								navOpen &&
 								"animate-[menuFadeIn_0.5s_ease-out_forwards]"
 						  }`
