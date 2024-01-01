@@ -1,5 +1,6 @@
 import React from "react";
 import { useAppContext } from "../../config/AppContext";
+import H1 from "../typography/H1";
 
 interface TitleProps {
 	title: string;
@@ -25,17 +26,7 @@ const Title: React.FC<TitleProps> = ({ title, subTitle, align, size }) => {
 					  }`
 			} flex flex-col mx-auto`}
 		>
-			<h1
-				className={`font-extrabold ${
-					screenSize < 750
-						? "text-2xl mb-3"
-						: screenSize < 1250
-						? "text-3xl mb-6"
-						: "text-[42px] leading-[44px] mb-10"
-				}`}
-			>
-				{title}
-			</h1>
+			<H1>{title}</H1>
 
 			{subTitle && (
 				<p
