@@ -42,8 +42,8 @@ const Nav: React.FC<NavProps> = ({}) => {
 						  }`
 						: `flex top-4 fixed before:fixed before:top-0 before:inset-x-0 before:h-16 before:bg-primary before:shadow-subtle before:z-[-1] ${
 								screenSize < 1250
-									? "right-[calc(100vw*((1/6)/2))] [&>li:not(:last-child)]:mr-6 [&>div]:mr-4"
-									: "right-[calc(100vw*((1/5)/2))] [&>li:not(:last-child)]:mr-10 [&>div]:mr-8"
+									? "right-[9vw] [&>li:not(:last-child)]:mr-6 [&>div]:mr-4"
+									: "right-[10vw] [&>li:not(:last-child)]:mr-10 [&>div]:mr-8"
 						  }`
 				} text-black text-xl [&>li]:font-semibold`}
 			>
