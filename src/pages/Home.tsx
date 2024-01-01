@@ -3,6 +3,7 @@ import Header from "../components/header/Header";
 import { useAppContext } from "../config/AppContext";
 import HeaderImage from "../images/mockup/viewpoint.png";
 import Container from "../components/general/Container";
+import H2 from "../components/typography/H2";
 
 interface HomeProps {}
 
@@ -23,7 +24,7 @@ const Home: React.FC<HomeProps> = () => {
 			<main className="bg-background rounded-t-3xl">
 				<Container>
 					<div>
-						<h2>Lorem ipsum dolor sit</h2>
+						<H2>Lorem ipsum dolor sit</H2>
 						<p>
 							Lorem ipsum dolor sit amet. Est explicabo blanditiis
 							eum perferendis harum eum galisum voluptas quo natus
