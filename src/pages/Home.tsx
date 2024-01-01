@@ -4,6 +4,7 @@ import { useAppContext } from "../config/AppContext";
 import HeaderImage from "../images/mockup/viewpoint.png";
 import Container from "../components/general/Container";
 import H2 from "../components/typography/H2";
+import BaseText from "../components/typography/BaseText";
 
 interface HomeProps {}
 
@@ -25,14 +26,14 @@ const Home: React.FC<HomeProps> = () => {
 				<Container>
 					<div>
 						<H2>Lorem ipsum dolor sit</H2>
-						<p>
+						<BaseText>
 							Lorem ipsum dolor sit amet. Est explicabo blanditiis
 							eum perferendis harum eum galisum voluptas quo natus
 							nihil aut aspernatur voluptas rem ipsum dolorum aut
 							fugiat cumque. Et officiis iure et asperiores totam
 							quo sunt alias. Sed illum perferendis quo possimus
 							inventore et reiciendis modi. Sed quos voluptate n
-						</p>
+						</BaseText>
 					</div>
 				</Container>
 			</main>
