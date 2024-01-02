@@ -4,9 +4,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
+import H3 from "../typography/H3";
 
 interface CarouselProps {
-	items: string[];
+	items: { src: string; title: string }[];
 }
 
 const Carousel: React.FC<CarouselProps> = ({ items }) => {
@@ -49,12 +50,19 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 			className="[&>div.slick-dots]:!flex [&>div.slick-dots]:items-center [&>div.slick-dots]:justify-center [&>div.slick-dots]:relative [&>div.slick-dots]:bottom-0 [&>div.slick-dots]:mt-4"
 		>
 			{items.map((item, index) => (
-				<div className="mr-3" key={index}>
+				<div className="relative" key={index}>
 					<img
-						src={item}
+						src={item.src}
 						alt={`Slide ${index + 1}`}
 						className="w-full h-96 object-cover object-center rounded-2xl"
 					/>
+
+					<H3
+						color="white"
+						className="absolute bottom-6 w-[90%] left-[5%]"
+					>
+						{item.title}
+					</H3>
 				</div>
 			))}
 		</Slider>

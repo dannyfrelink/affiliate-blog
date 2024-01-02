@@ -6,6 +6,7 @@ import Container from "../components/general/Container";
 import Carousel from "../components/home/Carousel";
 import CarouselImg1 from "../images/mockup/mountains.png";
 import CarouselImg2 from "../images/mockup/couple.png";
+import H2 from "../components/typography/H2";
 
 const Home = () => {
 	const { setBlogsPageActive } = useAppContext();
@@ -23,12 +24,25 @@ const Home = () => {
 
 			<main className="bg-background rounded-t-3xl">
 				<Container>
+					<H2 className="text-center mb-5">Lorem ipsum dolor sit</H2>
 					<Carousel
 						items={[
-							CarouselImg1,
-							CarouselImg2,
-							CarouselImg1,
-							CarouselImg2,
+							{
+								src: CarouselImg1,
+								title: "Lorem ipsum dolor sit amet est explicabo blanditiis",
+							},
+							{
+								src: CarouselImg2,
+								title: "Lorem ipsum dolor sit amet est explicabo blanditiis",
+							},
+							{
+								src: CarouselImg1,
+								title: "Lorem ipsum dolor sit amet est explicabo blanditiis",
+							},
+							{
+								src: CarouselImg2,
+								title: "Lorem ipsum dolor sit amet est explicabo blanditiis",
+							},
 						]}
 					/>
 				</Container>
