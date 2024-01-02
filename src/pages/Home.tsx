@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Header from "../components/header/Header";
 import { useAppContext } from "../config/AppContext";
 import HeaderImage from "../images/mockup/viewpoint.png";
@@ -6,9 +6,7 @@ import Container from "../components/general/Container";
 import H2 from "../components/typography/H2";
 import BaseText from "../components/typography/BaseText";
 
-interface HomeProps {}
-
-const Home: React.FC<HomeProps> = () => {
+const Home = () => {
 	const { setBlogsPageActive } = useAppContext();
 	useEffect(() => {
 		setBlogsPageActive(false);
