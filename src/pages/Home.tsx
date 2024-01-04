@@ -70,16 +70,19 @@ const Home = () => {
 					<section
 						className={`[&>*:not(:last-child)]:mb-5 ${
 							screenSize < 750 && "max-w-[500px] mx-auto"
+						} ${
+							screenSize > 1350 &&
+							"flex justify-between flex-row-reverse"
 						}`}
 					>
 						{screenSize < 750 && (
 							<H2 className="text-center">Over ons</H2>
 						)}
 						<img
-							className={`h-[85vw] w-[85vw] max-h-[350px] mx-auto object-cover object-center rounded-2xl ${
+							className={`h-[85vw] w-[85vw] max-h-[350px] object-cover object-center rounded-2xl ${
 								screenSize < 750
-									? ""
-									: `max-w-[450px] float-right ${
+									? "mx-auto"
+									: `max-w-[450px] float-right !mb-0 ${
 											screenSize < 1250 ? "ml-6" : "ml-10"
 									  }`
 							}`}
