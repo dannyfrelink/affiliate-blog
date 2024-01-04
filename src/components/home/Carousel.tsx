@@ -32,10 +32,10 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 		arrows: false,
 		infinite: true,
 		speed: 500,
-		slidesToShow: screenSize < 750 ? 1 : screenSize < 1250 ? 2 : 3,
+		slidesToShow: 1,
 		slidesToScroll: 1,
 		centerMode: true,
-		centerPadding: "0",
+		centerPadding: screenSize > 750 ? "28%" : "0",
 		appendDots: (dots: React.ReactNode) => (
 			<div>
 				<ArrowBackIosRoundedIcon
@@ -72,7 +72,13 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 			className={`[&>div.slick-dots]:!flex [&>div.slick-dots]:items-center [&>div.slick-dots]:justify-center [&>div.slick-dots]:relative [&>div.slick-dots]:bottom-0  ${
 				screenSize < 750
 					? "[&>div.slick-dots]:mt-4"
-					: "[&>div.slick-list>div>div]:px-3 [&>div.slick-dots]:mt-6"
+					: `${
+							screenSize < 1250
+								? "[&>div.slick-list>div>div]:px-3"
+								: screenSize < 1500
+								? "[&>div.slick-list>div>div]:px-7"
+								: "[&>div.slick-list>div>div]:px-10"
+					  } [&>div.slick-dots]:mt-6`
 			}`}
 		>
 			{items.map((item, index) => (
