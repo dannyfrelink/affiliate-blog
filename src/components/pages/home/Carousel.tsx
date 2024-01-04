@@ -4,8 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
-import H3 from "../typography/H3";
-import { useAppContext } from "../../config/AppContext";
+import H3 from "../../typography/H3";
+import { useAppContext } from "../../../config/AppContext";
 
 interface CarouselProps {
 	items: { src: string; title: string }[];
