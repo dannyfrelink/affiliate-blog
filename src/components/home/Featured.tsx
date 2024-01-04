@@ -16,12 +16,18 @@ const Featured: React.FC<FeaturedProps> = ({ Image }) => {
 			<Image />
 
 			<section
-				className={`text-primary ${
-					screenSize < 750 ? "w-[85vw] mx-auto" : ""
+				className={`text-primary w-[85vw] max-w-[650px] ${
+					screenSize < 750
+						? "[&>*:not(:last-child)]:mb-4 mx-auto"
+						: screenSize < 1250
+						? "[&>*:not(:last-child)]:mb-5 ml-[9vw]"
+						: "[&>*:not(:last-child)]:mb-6 ml-[10vw]"
 				}`}
 			>
-				<BaseText className="italic">Uitgelicht</BaseText>
-				<H2>Lorem ipsum dolor sit amet est explicabo blanditiis</H2>
+				<div>
+					<BaseText className="italic mb-1">Uitgelicht</BaseText>
+					<H2>Lorem ipsum dolor sit amet est explicabo blanditiis</H2>
+				</div>
 				<BaseText>
 					Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem
 					ipsum dolor sit amet lorem ipsum dolor sit amet
