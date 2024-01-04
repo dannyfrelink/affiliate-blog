@@ -3,18 +3,19 @@ import { useAppContext } from "../../config/AppContext";
 
 interface H1Props {
 	children: React.ReactNode;
+	subTitle: string;
 }
 
-const H1: React.FC<H1Props> = ({ children }) => {
+const H1: React.FC<H1Props> = ({ children, subTitle }) => {
 	const { screenSize } = useAppContext();
 	return (
 		<h1
 			className={`font-extrabold ${
 				screenSize < 750
-					? "text-2xl mb-3"
+					? `text-2xl ${subTitle !== "" && "mb-3"}`
 					: screenSize < 1250
-					? "text-3xl mb-6"
-					: "text-[42px] leading-[44px] mb-10"
+					? `text-3xl ${subTitle !== "" && "mb-6"}`
+					: `text-[42px] leading-[44px] ${subTitle !== "" && "mb-10"}`
 			}`}
 		>
 			{children}

@@ -26,7 +26,7 @@ const Title: React.FC<TitleProps> = ({ title, subTitle, align, size }) => {
 					  }`
 			} flex flex-col mx-auto`}
 		>
-			<H1>{title}</H1>
+			<H1 subTitle={subTitle ? subTitle : ""}>{title}</H1>
 
 			{subTitle && (
 				<p
