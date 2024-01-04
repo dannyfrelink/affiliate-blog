@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import BlogLocation from "../pages/Blogs/BlogLocation";
 import BlogOverview from "../pages/Blogs/BlogOverview";
 import BlogPost from "../pages/Blogs/BlogPost";
+import Accommodations from "../pages/Accommodations";
 
 const AppRouter: React.FC = () => {
 	return (
@@ -14,7 +15,7 @@ const AppRouter: React.FC = () => {
 				<Route path="/blogs" element={<BlogOverview />} />
 				<Route path="/blogs/:location" element={<BlogLocation />} />
 				<Route path="/blogs/:location/:blog" element={<BlogPost />} />
-				<Route path="/accommodaties" element={<Home />} />
+				<Route path="/accommodaties" element={<Accommodations />} />
 				<Route path="/over-ons" element={<About />} />
 			</Routes>
 		</Router>
