@@ -7,6 +7,10 @@ interface AppContextProps {
 	setBlogsPageActive: React.Dispatch<React.SetStateAction<boolean>>;
 	navOpen: boolean;
 	setNavOpen: React.Dispatch<React.SetStateAction<boolean>>;
+	activeOverview: "accom" | "blog" | undefined;
+	setActiveOverview: React.Dispatch<
+		React.SetStateAction<"accom" | "blog" | undefined>
+	>;
 }
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
@@ -19,6 +23,8 @@ export const AppProvider: React.FC<AppProps> = ({ children }) => {
 	const [screenSize, setScreenSize] = useState<number>(window.innerWidth);
 	const [blogsPageActive, setBlogsPageActive] = useState<boolean>(false);
 	const [navOpen, setNavOpen] = useState<boolean>(false);
+	const [activeOverview, setActiveOverview] =
+		useState<AppContextProps["activeOverview"]>();
 
 	useEffect(() => {
 		const handleWindowResize = () => {
@@ -38,6 +44,8 @@ export const AppProvider: React.FC<AppProps> = ({ children }) => {
 		setBlogsPageActive,
 		navOpen,
 		setNavOpen,
+		activeOverview,
+		setActiveOverview,
 	};
 
 	return (
