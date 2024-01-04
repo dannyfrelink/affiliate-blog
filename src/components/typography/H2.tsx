@@ -3,13 +3,15 @@ import { useAppContext } from "../../config/AppContext";
 
 interface H2Props {
 	children: React.ReactNode;
+	id?: string;
 	className?: string;
 }
 
-const H2: React.FC<H2Props> = ({ children, className }) => {
+const H2: React.FC<H2Props> = ({ children, id, className }) => {
 	const { screenSize } = useAppContext();
 	return (
 		<h2
+			id={id}
 			className={`font-semibold ${className} ${
 				screenSize < 750
 					? "text-lg"

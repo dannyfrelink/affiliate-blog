@@ -8,10 +8,9 @@ import BaseText from "../components/typography/BaseText";
 import Overview from "../components/pages/overview/Overview";
 
 const Accommodations = () => {
-	const { setBlogsPageActive, setActiveOverview } = useAppContext();
+	const { setBlogsPageActive } = useAppContext();
 	useEffect(() => {
 		setBlogsPageActive(false);
-		setActiveOverview("accom");
 	}, []);
 
 	return (
