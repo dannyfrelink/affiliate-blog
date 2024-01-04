@@ -80,7 +80,13 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 					<img
 						src={item.src}
 						alt={`Slide ${index + 1}`}
-						className="w-full h-96 object-cover object-center rounded-2xl"
+						className={`w-full object-cover object-center rounded-2xl ${
+							screenSize < 750
+								? "h-96"
+								: screenSize < 1250
+								? "h-[420px]"
+								: "h-[470px]"
+						}`}
 					/>
 
 					<H3
