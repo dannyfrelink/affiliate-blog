@@ -14,11 +14,11 @@ const Button: React.FC<ButtonProps> = ({ children, className, openNav }) => {
 			onClick={openNav}
 			className={`${className} ${
 				screenSize < 750
-					? "text-sm"
+					? "text-sm py-1.5 px-2.5"
 					: screenSize < 1250
-					? "text-base"
-					: "text-lg"
-			} text-primary font-bold bg-secondary py-1.5 px-2.5 rounded-[12px_20px_8px_17px]`}
+					? "text-base py-2 px-3"
+					: "text-lg py-2.5 px-4"
+			} text-primary font-bold bg-secondary rounded-[12px_20px_8px_17px]`}
 		>
 			{children}
 		</button>
