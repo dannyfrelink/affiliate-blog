@@ -26,9 +26,9 @@ const Nav: React.FC<NavProps> = ({}) => {
 	return (
 		<nav
 			onClick={handleClick}
-			className={`${
+			className={`z-[99] fixed ${
 				screenSize < 750 &&
-				`fixed h-screen before:fixed before:w-screen before:bg-[#707070] before:opacity-75 ${
+				`h-screen before:fixed before:w-screen before:bg-[#707070] before:opacity-75 ${
 					navOpen ? "left-0 before:inset-0" : "-left-[100vw]"
 				}`
 			}`}
@@ -66,9 +66,9 @@ const Nav: React.FC<NavProps> = ({}) => {
 				<Details
 					className={screenSize < 750 ? "mb-6" : ""}
 					summary="Blogs"
-					summaryClass={`${
-						blogsPageActive && "text-secondary"
-					} font-bold`}
+					summaryClass={`font-semibold ${
+						blogsPageActive && "text-secondary !font-bold"
+					}`}
 				>
 					<li className="font-light italic text-xs my-2">
 						<NavLink
