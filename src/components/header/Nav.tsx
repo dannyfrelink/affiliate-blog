@@ -11,7 +11,7 @@ const Nav: React.FC<NavProps> = ({}) => {
 		useAppContext();
 
 	const checkActive = (isActive: boolean) => {
-		return isActive ? "font-semibold text-secondary" : "";
+		return isActive ? "font-bold text-secondary" : "";
 	};
 
 	const handleClick = (e: any) => {
@@ -68,7 +68,7 @@ const Nav: React.FC<NavProps> = ({}) => {
 					summary="Blogs"
 					summaryClass={`${
 						blogsPageActive && "text-secondary"
-					} font-semibold`}
+					} font-bold`}
 				>
 					<li className="font-light italic text-xs my-2">
 						<NavLink
