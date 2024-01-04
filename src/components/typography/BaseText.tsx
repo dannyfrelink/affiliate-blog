@@ -3,20 +3,21 @@ import { useAppContext } from "../../config/AppContext";
 
 interface BaseTextProps {
 	children: React.ReactNode;
+	className?: string;
 }
 
-const BaseText: React.FC<BaseTextProps> = ({ children }) => {
+const BaseText: React.FC<BaseTextProps> = ({ children, className }) => {
 	const { screenSize } = useAppContext();
 
 	return (
 		<p
-			className={
+			className={`${className} ${
 				screenSize < 750
 					? "text-sm"
 					: screenSize < 1250
 					? "text-base"
 					: "text-lg"
-			}
+			}`}
 		>
 			{children}
 		</p>

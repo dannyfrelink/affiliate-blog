@@ -3,7 +3,7 @@ import { useAppContext } from "../../config/AppContext";
 
 interface H2Props {
 	children: React.ReactNode;
-	className: string;
+	className?: string;
 }
 
 const H2: React.FC<H2Props> = ({ children, className }) => {

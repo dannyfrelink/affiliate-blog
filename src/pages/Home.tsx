@@ -7,6 +7,8 @@ import Carousel from "../components/home/Carousel";
 import CarouselImg1 from "../images/mockup/mountains.png";
 import CarouselImg2 from "../images/mockup/couple.png";
 import H2 from "../components/typography/H2";
+import Featured from "../components/home/Featured";
+import FeatureImage from "../images/mockup/dreamy.png";
 
 const Home = () => {
 	const { screenSize, setBlogsPageActive } = useAppContext();
@@ -22,7 +24,7 @@ const Home = () => {
 				subTitle="Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
 			/>
 
-			<main className="bg-background rounded-t-3xl">
+			<main>
 				<Container className={screenSize > 750 ? "!px-0" : ""}>
 					<H2
 						className={`text-center ${
@@ -55,6 +57,14 @@ const Home = () => {
 							},
 						]}
 					/>
+				</Container>
+
+				<Featured
+					Image={() => <img src={FeatureImage} alt="Viewpoint" />}
+				/>
+
+				<Container>
+					<div>test</div>
 				</Container>
 			</main>
 		</div>
