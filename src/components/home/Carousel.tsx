@@ -5,12 +5,14 @@ import "slick-carousel/slick/slick-theme.css";
 import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import H3 from "../typography/H3";
+import { useAppContext } from "../../config/AppContext";
 
 interface CarouselProps {
 	items: { src: string; title: string }[];
 }
 
 const Carousel: React.FC<CarouselProps> = ({ items }) => {
+	const { screenSize } = useAppContext();
 	const sliderRef = useRef<Slider>(null);
 
 	const nextSlide = () => {
@@ -30,15 +32,35 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 		arrows: false,
 		infinite: true,
 		speed: 500,
-		slidesToShow: 1,
+		slidesToShow: screenSize < 750 ? 1 : screenSize < 1250 ? 2 : 3,
 		slidesToScroll: 1,
+		centerMode: true,
+		centerPadding: "0",
 		appendDots: (dots: React.ReactNode) => (
 			<div>
-				<ArrowBackIosRoundedIcon onClick={prevSlide} />
-				<ul className="flex justify-center list-none mx-2 [&>li>button::before]:!text-base [&>li>button::before]:!text-secondary">
+				<ArrowBackIosRoundedIcon
+					className={`cursor-pointer ${
+						screenSize > 750 && "!text-3xl"
+					}`}
+					onClick={prevSlide}
+				/>
+				<ul
+					className={`flex justify-center list-none [&>li>button::before]:!text-secondary [&>li>button::before]:flex [&>li>button::before]:items-center ${
+						screenSize < 750
+							? "mx-2 [&>li>button::before]:!text-base"
+							: screenSize < 1250
+							? "mx-3 [&>li]:!mx-3 [&>li>button::before]:!text-lg [&>li>button::before]:!top-[0.1rem]"
+							: "mx-4 [&>li]:!mx-4 [&>li>button::before]:!text-xl [&>li>button::before]:!top-[0.1rem]"
+					}`}
+				>
 					{dots}
 				</ul>
-				<ArrowForwardIosRoundedIcon onClick={nextSlide} />
+				<ArrowForwardIosRoundedIcon
+					className={`cursor-pointer ${
+						screenSize > 750 && "!text-3xl"
+					}`}
+					onClick={nextSlide}
+				/>
 			</div>
 		),
 	};
@@ -47,7 +69,11 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 		<Slider
 			ref={sliderRef}
 			{...settings}
-			className="[&>div.slick-dots]:!flex [&>div.slick-dots]:items-center [&>div.slick-dots]:justify-center [&>div.slick-dots]:relative [&>div.slick-dots]:bottom-0 [&>div.slick-dots]:mt-4"
+			className={`[&>div.slick-dots]:!flex [&>div.slick-dots]:items-center [&>div.slick-dots]:justify-center [&>div.slick-dots]:relative [&>div.slick-dots]:bottom-0  ${
+				screenSize < 750
+					? "[&>div.slick-dots]:mt-4"
+					: "[&>div.slick-list>div>div]:px-3 [&>div.slick-dots]:mt-6"
+			}`}
 		>
 			{items.map((item, index) => (
 				<div className="relative" key={index}>

@@ -9,7 +9,7 @@ import CarouselImg2 from "../images/mockup/couple.png";
 import H2 from "../components/typography/H2";
 
 const Home = () => {
-	const { setBlogsPageActive } = useAppContext();
+	const { screenSize, setBlogsPageActive } = useAppContext();
 	useEffect(() => {
 		setBlogsPageActive(false);
 	}, []);
@@ -23,8 +23,18 @@ const Home = () => {
 			/>
 
 			<main className="bg-background rounded-t-3xl">
-				<Container>
-					<H2 className="text-center mb-5">Lorem ipsum dolor sit</H2>
+				<Container className={screenSize > 750 ? "!px-0" : ""}>
+					<H2
+						className={`text-center ${
+							screenSize < 750
+								? "mb-5"
+								: screenSize < 1250
+								? "mb-7"
+								: "mb-9"
+						}`}
+					>
+						Lorem ipsum dolor sit
+					</H2>
 					<Carousel
 						items={[
 							{
