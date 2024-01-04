@@ -11,6 +11,7 @@ import Featured from "../components/home/Featured";
 import FeatureImage from "../images/mockup/dreamy.png";
 import AboutImage from "../images/mockup/couple.png";
 import BaseText from "../components/typography/BaseText";
+import Footer from "../components/general/Footer";
 
 const Home = () => {
 	const { screenSize, setBlogsPageActive } = useAppContext();
@@ -26,7 +27,7 @@ const Home = () => {
 				subTitle="Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
 			/>
 
-			<main>
+			<main className="rounded-3xl">
 				<Container className={screenSize > 750 ? "!px-0" : ""}>
 					<H2
 						className={`text-center ${
@@ -113,6 +114,8 @@ const Home = () => {
 					</section>
 				</Container>
 			</main>
+
+			<Footer />
 		</div>
 	);
 };
