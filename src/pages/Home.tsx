@@ -9,6 +9,8 @@ import CarouselImg2 from "../images/mockup/couple.png";
 import H2 from "../components/typography/H2";
 import Featured from "../components/home/Featured";
 import FeatureImage from "../images/mockup/dreamy.png";
+import AboutImage from "../images/mockup/couple.png";
+import BaseText from "../components/typography/BaseText";
 
 const Home = () => {
 	const { screenSize, setBlogsPageActive } = useAppContext();
@@ -64,7 +66,51 @@ const Home = () => {
 				/>
 
 				<Container>
-					<div>test</div>
+					<section
+						className={`[&>*:not(:last-child)]:mb-5 ${
+							screenSize < 750 && "max-w-[500px] mx-auto"
+						}`}
+					>
+						{screenSize < 750 && (
+							<H2 className="text-center">Over ons</H2>
+						)}
+						<img
+							className={`h-[85vw] w-[85vw] max-h-[350px] mx-auto object-cover object-center rounded-2xl ${
+								screenSize < 750
+									? ""
+									: `max-w-[450px] float-right ${
+											screenSize < 1250 ? "ml-6" : "ml-10"
+									  }`
+							}`}
+							src={AboutImage}
+							alt="Us"
+						/>
+
+						<div className="[&>*:not(:last-child)]:mb-5 max-w-[750px]">
+							{screenSize > 750 && <H2>Over ons</H2>}
+							<BaseText>
+								Lorem ipsum dolor sit amet. Est explicabo
+								blanditiis eum perferendis harum eum galisum
+								voluptas quo natus nihil aut aspernatur voluptas
+								rem ipsum dolorum aut fugiat cumque. Et officiis
+								iure et asperiores totam quo sunt alias. Sed
+								illum perferendis quo possimus inventore et
+								reiciendis modi. Sed quos voluptate nam deleniti
+								veniam ut nihil consequatur.
+							</BaseText>
+							<BaseText>
+								Et dolorem rerum qui doloremque consectetur aut
+								incidunt fugit ad voluptatibus dignissimos aut
+								laborum excepturi et dicta dicta quo fuga enim.
+								Est ipsum possimus a corporis dolores qui
+								placeat dolor aut veritatis eveniet non cumque
+								autem sed iure veritatis est suscipit sequi. Est
+								asperiores porro non officia incidunt sed autem
+								dolor est dolores illo et molestiae quas aut
+								error totam.
+							</BaseText>
+						</div>
+					</section>
 				</Container>
 			</main>
 		</div>
