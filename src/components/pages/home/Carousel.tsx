@@ -69,16 +69,16 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 		<Slider
 			ref={sliderRef}
 			{...settings}
-			className={`[&>div.slick-dots]:!flex [&>div.slick-dots]:items-center [&>div.slick-dots]:justify-center [&>div.slick-dots]:relative [&>div.slick-dots]:bottom-0  ${
+			className={`[&>div.slick-dots]:!flex [&>div.slick-dots]:items-center [&>div.slick-dots]:justify-center [&>div.slick-dots]:relative [&>div.slick-dots]:bottom-0 ${
 				screenSize < 750
-					? "[&>div.slick-dots]:mt-4"
+					? "[&>div.slick-dots]:mt-4 [&>div.slick-list>div>div]:px-1"
 					: `${
 							screenSize < 1250
 								? "[&>div.slick-list>div>div]:px-3"
 								: screenSize < 1500
 								? "[&>div.slick-list>div>div]:px-7"
 								: "[&>div.slick-list>div>div]:px-10"
-					  } [&>div.slick-dots]:mt-6`
+					  } [&>div.slick-dots]:mt-3 [&>div.slick-list>div>div]:pb-3`
 			}`}
 		>
 			{items.map((item, index) => (
@@ -89,9 +89,11 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 						className={`w-full object-cover object-center rounded-2xl ${
 							screenSize < 750
 								? "h-96"
-								: screenSize < 1250
-								? "h-[420px]"
-								: "h-[470px]"
+								: `shadow-subtle ${
+										screenSize < 1250
+											? "h-[420px]"
+											: "h-[470px]"
+								  }`
 						}`}
 					/>
 

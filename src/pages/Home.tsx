@@ -79,7 +79,7 @@ const Home = () => {
 							<H2 className="text-center">Over ons</H2>
 						)}
 						<img
-							className={`h-[85vw] w-[85vw] max-h-[350px] object-cover object-center rounded-2xl ${
+							className={`h-[85vw] w-[85vw] max-h-[350px] object-cover object-center rounded-2xl shadow-subtle ${
 								screenSize < 750
 									? "mx-auto"
 									: `max-w-[450px] float-right !mb-0 ${

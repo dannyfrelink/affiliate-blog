@@ -11,7 +11,7 @@ const Container: React.FC<ContainerProps> = ({ children, className }) => {
 
 	return (
 		<section
-			className={`w-screen bg-primary rounded-3xl ${className} ${
+			className={`w-screen bg-primary rounded-3xl shadow-subtle ${className} ${
 				screenSize < 750
 					? "px-[7.5vw] py-7"
 					: screenSize < 1250
