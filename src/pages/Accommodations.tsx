@@ -2,12 +2,12 @@ import { useEffect } from "react";
 import { useAppContext } from "../config/AppContext";
 import Header from "../components/header/Header";
 import HeaderImage from "../images/mockup/hotel.png";
-import Container from "../components/general/Container";
 import H2 from "../components/typography/H2";
 import BaseText from "../components/typography/BaseText";
 import Overview from "../components/pages/overview/Overview";
 
 const Accommodations = () => {
+	const { screenSize } = useAppContext();
 	const { setBlogsPageActive } = useAppContext();
 	useEffect(() => {
 		setBlogsPageActive(false);
@@ -23,11 +23,17 @@ const Accommodations = () => {
 			/>
 
 			<Overview>
-				<div>
-					<H2 className="mb-2">
+				<div className="max-w-[1000px] mx-auto">
+					<H2 className={screenSize < 1250 ? "mb-2" : "mb-3"}>
 						Lorem ipsum dolor sit amet est explicabo blanditiis
 					</H2>
-					<div className="[&>*:not(:last-child)]:mb-3">
+					<div
+						className={
+							screenSize < 1250
+								? "[&>*:not(:last-child)]:mb-3"
+								: "[&>*:not(:last-child)]:mb-4"
+						}
+					>
 						<BaseText>
 							Lorem ipsum dolor sit amet. Est explicabo blanditiis
 							eum perferendis harum eum galisum voluptas quo natus
@@ -37,25 +43,35 @@ const Accommodations = () => {
 							inventore et reiciendis modi. Sed quos voluptate nam
 							deleniti veniam ut nihil consequatur.
 						</BaseText>
-						<BaseText>
-							Et dolorem rerum qui doloremque consectetur aut
-							incidunt fugit ad voluptatibus dignissimos aut
-							laborum excepturi et dicta dicta quo fuga enim. Est
-							ipsum possimus a corporis dolores qui placeat dolor
-							aut veritatis eveniet non cumque autem sed iure
-							veritatis est suscipit sequi. Est asperiores porro
-							non officia incidunt sed autem dolor est dolores
-							illo et molestiae quas aut error totam.
-						</BaseText>
-						<BaseText>
-							Et optio veniam aut veniam voluptatem et explicabo
-							ullam id aperiam cumque aut neque laborum ex
-							voluptatem facere. Eum rerum aperiam eos fugiat
-							dolor et quis cupiditate sed animi enim et ducimus
-							beatae. Et velit magni et fugiat voluptas est
-							inventore recusandae eum nihil dolorum sed ipsa
-							totam ea praesentium ipsum qui temporibus saepe.
-						</BaseText>
+						<div
+							className={
+								screenSize < 1250
+									? "[&>*:not(:last-child)]:mb-3"
+									: "[&>*:not(:last-child)]:mb-4"
+							}
+						>
+							<BaseText>
+								Et dolorem rerum qui doloremque consectetur aut
+								incidunt fugit ad voluptatibus dignissimos aut
+								laborum excepturi et dicta dicta quo fuga enim.
+								Est ipsum possimus a corporis dolores qui
+								placeat dolor aut veritatis eveniet non cumque
+								autem sed iure veritatis est suscipit sequi. Est
+								asperiores porro non officia incidunt sed autem
+								dolor est dolores illo et molestiae quas aut
+								error totam.
+							</BaseText>
+							<BaseText>
+								Et optio veniam aut veniam voluptatem et
+								explicabo ullam id aperiam cumque aut neque
+								laborum ex voluptatem facere. Eum rerum aperiam
+								eos fugiat dolor et quis cupiditate sed animi
+								enim et ducimus beatae. Et velit magni et fugiat
+								voluptas est inventore recusandae eum nihil
+								dolorum sed ipsa totam ea praesentium ipsum qui
+								temporibus saepe.
+							</BaseText>
+						</div>
 					</div>
 				</div>
 

@@ -4,12 +4,14 @@ import H2 from "../../typography/H2";
 import Button from "../../general/Button";
 // import { Link } from "react-router-dom";
 import { Link, Element } from "react-scroll";
+import { useAppContext } from "../../../config/AppContext";
 
 interface OverviewProps {
 	children: React.ReactNode[];
 }
 
 const Overview: React.FC<OverviewProps> = ({ children }) => {
+	const { screenSize } = useAppContext();
 	const destinations = [
 		"Canggu (Bali)",
 		"Ubud (Bali)",
@@ -29,18 +31,31 @@ const Overview: React.FC<OverviewProps> = ({ children }) => {
 		<main>
 			<Container>{children[0]}</Container>
 
-			<section className="relative text-center pt-5 pb-7 before:absolute before:inset-x-0 before:-inset-y-6 before:bg-background before:z-[-1]">
+			<section
+				className={`relative text-center before:absolute before:inset-x-0 before:-inset-y-6 before:bg-background before:z-[-1] ${
+					screenSize < 750 ? "pt-5 pb-7" : "pt-7 pb-10"
+				}`}
+			>
 				<H2>Bestemmingen</H2>
 
-				<div className="flex flex-wrap justify-center gap-3 w-[85vw] mx-auto mt-4">
+				<div
+					className={`flex flex-wrap justify-center w-[85vw] max-w-[800px] mx-auto ${
+						screenSize < 750
+							? "mt-4 gap-3"
+							: screenSize < 1250
+							? "max-w-[700px] mt-6 gap-y-4 gap-x-7"
+							: "mt-8 gap-y-4 gap-x-10"
+					}`}
+				>
 					{destinations.map((dest, index) => (
 						<Button key={index} className="!bg-tertair">
 							<Link
 								to={dest.toLowerCase().split(" ").join("-")}
 								smooth={true}
 								duration={500}
-							/>
-							{dest}
+							>
+								{dest}
+							</Link>
 						</Button>
 					))}
 				</div>
