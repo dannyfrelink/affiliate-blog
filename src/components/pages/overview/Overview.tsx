@@ -2,30 +2,16 @@ import React from "react";
 import Container from "../../general/Container";
 import H2 from "../../typography/H2";
 import Button from "../../general/Button";
-// import { Link } from "react-router-dom";
-import { Link, Element } from "react-scroll";
+import { Link } from "react-scroll";
 import { useAppContext } from "../../../config/AppContext";
 
 interface OverviewProps {
 	children: React.ReactNode[];
+	destinations: string[];
 }
 
-const Overview: React.FC<OverviewProps> = ({ children }) => {
+const Overview: React.FC<OverviewProps> = ({ children, destinations }) => {
 	const { screenSize } = useAppContext();
-	const destinations = [
-		"Canggu (Bali)",
-		"Ubud (Bali)",
-		"Uluwatu (Bali)",
-		"Lovina (Bali)",
-		"Amed (Bali)",
-		"Sideman (Bali)",
-		"Kuta (Lombok)",
-		"Nusa Lembongan",
-		"Nusa Penida",
-		"Gili Meno",
-		"Gili Air",
-		"Gili Trawangan",
-	];
 
 	return (
 		<main>
@@ -61,12 +47,7 @@ const Overview: React.FC<OverviewProps> = ({ children }) => {
 				</div>
 			</section>
 
-			<Container className="flex items-center h-[200vh]">
-				<div></div>
-			</Container>
-			<Element name={destinations[0].toLowerCase().split(" ").join("-")}>
-				<H2 id="canggu-(bali)">Canggu (Bali)</H2>
-			</Element>
+			<Container className="">{children[1]}</Container>
 		</main>
 	);
 };

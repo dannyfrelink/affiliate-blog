@@ -5,6 +5,21 @@ import HeaderImage from "../images/mockup/hotel.png";
 import H2 from "../components/typography/H2";
 import BaseText from "../components/typography/BaseText";
 import Overview from "../components/pages/overview/Overview";
+import Footer from "../components/general/Footer";
+import data from "../data/accommodations.json";
+
+interface AccommodationsData {
+	[destination: string]: {
+		image: string;
+		name: string;
+		description: string;
+		prices: {
+			high: number;
+			low: number;
+		};
+		link: string;
+	}[];
+}
 
 const Accommodations = () => {
 	const { screenSize } = useAppContext();
@@ -12,6 +27,9 @@ const Accommodations = () => {
 	useEffect(() => {
 		setBlogsPageActive(false);
 	}, []);
+
+	const accommodations: AccommodationsData = data.accommodations;
+	const destinations = Object.keys(accommodations);
 
 	return (
 		<div>
@@ -22,7 +40,7 @@ const Accommodations = () => {
 				title="Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet"
 			/>
 
-			<Overview>
+			<Overview destinations={destinations}>
 				<div className="max-w-[1000px] mx-auto">
 					<H2 className={screenSize < 1250 ? "mb-2" : "mb-3"}>
 						Lorem ipsum dolor sit amet est explicabo blanditiis
@@ -75,8 +93,39 @@ const Accommodations = () => {
 					</div>
 				</div>
 
-				<div>test</div>
+				<div>
+					{destinations.map((dest, index) => {
+						const accoms = accommodations[dest];
+
+						return (
+							<div key={index}>
+								<BaseText>Leukste accommodaties in</BaseText>
+								<H2 className="text-tertair">{dest}</H2>
+
+								<div>
+									{accoms.map((accom, index) => {
+										const image = require(`../images/mockup/${accom.image}`);
+
+										return (
+											<div key={index}>
+												<img
+													src={image}
+													alt="Accommodatie"
+												/>
+											</div>
+										);
+									})}
+								</div>
+							</div>
+						);
+					})}
+				</div>
+				{/* <Element name={destinations[0].toLowerCase().split(" ").join("-")}>
+					<H2 id="canggu-(bali)">Canggu (Bali)</H2>
+				</Element> */}
 			</Overview>
+
+			<Footer />
 		</div>
 	);
 };
