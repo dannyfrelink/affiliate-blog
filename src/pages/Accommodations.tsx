@@ -8,6 +8,7 @@ import Overview from "../components/pages/overview/Overview";
 import Footer from "../components/general/Footer";
 import data from "../data/accommodations.json";
 import AccommodationList from "../components/pages/overview/AccomodationList";
+import ScrollToTopButton from "../components/pages/overview/ScrollToTopButton";
 
 export interface Destination {
 	image: string;
@@ -101,6 +102,8 @@ const Accommodations = () => {
 					destinations={destinations}
 				/>
 			</Overview>
+
+			<ScrollToTopButton />
 
 			<Footer />
 		</div>
