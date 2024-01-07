@@ -156,7 +156,11 @@ const Accommodations = () => {
 													</BaseText>
 												</div>
 
-												<Button className="!mt-3">
+												<Button
+													link={accom.link}
+													className="!mt-3"
+													blank
+												>
 													Meer informatie{" "}
 													<ArrowForwardRoundedIcon
 														fontSize={
