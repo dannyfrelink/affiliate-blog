@@ -7,21 +7,19 @@ import H2 from "../../typography/H2";
 interface ListOverviewProps {
 	title: string;
 	dest: string;
-	index: number;
 	children: React.ReactNode;
 }
 
 const ListOverview: React.FC<ListOverviewProps> = ({
 	title,
 	dest,
-	index,
 	children,
 }) => {
 	const { screenSize } = useAppContext();
 	const destId = dest.toLowerCase().split(" ").join("-");
 
 	return (
-		<div key={index}>
+		<div>
 			<Element
 				className={`text-center ${
 					screenSize < 900
@@ -47,7 +45,17 @@ const ListOverview: React.FC<ListOverviewProps> = ({
 				</H2>
 			</Element>
 
-			{children}
+			<section
+				className={`flex  ${
+					screenSize < 900
+						? "items-center flex-col [&>*:not(:last-child)]:pb-5"
+						: `justify-between flex-wrap ${
+								screenSize < 1250 ? "gap-y-14" : "gap-y-20"
+						  }`
+				}`}
+			>
+				{children}
+			</section>
 		</div>
 	);
 };
