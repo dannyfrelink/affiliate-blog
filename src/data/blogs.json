@@ -1,0 +1,72 @@
+{
+	"blogs": {
+		"Canggu (Bali)": [
+			{
+				"id": 1,
+				"coverImage": "mountains.png",
+				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis"
+			},
+			{
+				"id": 2,
+				"coverImage": "mountains.png",
+				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis"
+			},
+			{
+				"id": 3,
+				"coverImage": "mountains.png",
+				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis"
+			}
+		],
+		"Ubud (Bali)": [
+			{
+				"id": 4,
+				"coverImage": "mountains.png",
+				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis"
+			},
+			{
+				"id": 5,
+				"coverImage": "mountains.png",
+				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis"
+			},
+			{
+				"id": 6,
+				"coverImage": "mountains.png",
+				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis"
+			}
+		],
+		"Amed (Bali)": [
+			{
+				"id": 7,
+				"coverImage": "mountains.png",
+				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis"
+			},
+			{
+				"id": 8,
+				"coverImage": "mountains.png",
+				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis"
+			}
+		],
+		"Nusa Lembongan": [
+			{
+				"id": 9,
+				"coverImage": "mountains.png",
+				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis"
+			},
+			{
+				"id": 10,
+				"coverImage": "mountains.png",
+				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis"
+			},
+			{
+				"id": 11,
+				"coverImage": "mountains.png",
+				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis"
+			},
+			{
+				"id": 12,
+				"coverImage": "mountains.png",
+				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis"
+			}
+		]
+	}
+}
