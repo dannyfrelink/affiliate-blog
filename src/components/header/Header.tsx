@@ -36,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({
 
 			{screenSize < 750 && (
 				<Button
-					openNav={() => setNavOpen(true)}
+					onClick={() => setNavOpen(true)}
 					className="fixed top-6 right-4 z-[98]"
 				>
 					<MenuRoundedIcon />

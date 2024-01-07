@@ -4,14 +4,14 @@ import { useAppContext } from "../../config/AppContext";
 interface ButtonProps {
 	children: React.ReactNode;
 	className?: string;
-	openNav?: () => void;
+	onClick?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, className, openNav }) => {
+const Button: React.FC<ButtonProps> = ({ children, className, onClick }) => {
 	const { screenSize } = useAppContext();
 	return (
 		<button
-			onClick={openNav}
+			onClick={onClick}
 			className={`${className} ${
 				screenSize < 750
 					? "text-sm py-1.5 px-2.5"
