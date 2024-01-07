@@ -15,7 +15,7 @@ const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = () => {
 
 	const scrollToTop = () => {
 		window.scrollTo({
-			top: screenSize < 750 ? 500 : screenSize < 1250 ? 800 : 1000,
+			top: screenSize < 750 ? 600 : screenSize < 1250 ? 800 : 1000,
 			behavior: "smooth",
 		});
 	};

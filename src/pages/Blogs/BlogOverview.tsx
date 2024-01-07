@@ -9,6 +9,7 @@ import data from "../../data/blogs.json";
 import ListOverview from "../../components/pages/overview/ListOverview";
 import H3 from "../../components/typography/H3";
 import { Link } from "react-router-dom";
+import ScrollToTopButton from "../../components/pages/overview/ScrollToTopButton";
 
 export interface Destination {
 	id: number;
@@ -114,6 +115,8 @@ const BlogOverview = ({}) => {
 					})}
 				</div>
 			</Overview>
+
+			<ScrollToTopButton />
 		</div>
 	);
 };
