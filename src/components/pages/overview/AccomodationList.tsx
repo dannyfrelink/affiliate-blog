@@ -1,12 +1,11 @@
 import React from "react";
 import H3 from "../../typography/H3";
 import Button from "../../general/Button";
-import { Element } from "react-scroll";
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
 import { AccommodationsData } from "../../../pages/Accommodations";
 import BaseText from "../../typography/BaseText";
-import H2 from "../../typography/H2";
 import { useAppContext } from "../../../config/AppContext";
+import ListOverview from "./ListOverview";
 
 interface AccommodationListProps {
 	accommodations: AccommodationsData;
@@ -26,32 +25,11 @@ const AccommodationList: React.FC<AccommodationListProps> = ({
 				const destId = dest.toLowerCase().split(" ").join("-");
 
 				return (
-					<div key={index}>
-						<Element
-							className={`text-center ${
-								screenSize < 900
-									? "pt-10"
-									: screenSize < 1250
-									? "pt-16 pb-8"
-									: "pt-20 pb-10"
-							}`}
-							name={destId}
-						>
-							<BaseText>Leukste accommodaties in</BaseText>
-							<H2
-								className={`text-tertair ${
-									screenSize < 900
-										? "mt-0.5"
-										: screenSize < 1250
-										? "mt-1.5"
-										: "mt-2"
-								}`}
-								id={destId}
-							>
-								{dest}
-							</H2>
-						</Element>
-
+					<ListOverview
+						title="Leukste accommodaties in"
+						dest={dest}
+						index={index}
+					>
 						<section
 							className={`flex  ${
 								screenSize < 900
@@ -142,7 +120,7 @@ const AccommodationList: React.FC<AccommodationListProps> = ({
 								);
 							})}
 						</section>
-					</div>
+					</ListOverview>
 				);
 			})}
 		</div>
