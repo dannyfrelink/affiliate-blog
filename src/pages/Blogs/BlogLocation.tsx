@@ -6,10 +6,6 @@ import { useParams } from "react-router-dom";
 
 const BlogLocation = ({}) => {
 	const { location } = useParams();
-	const { setBlogsPageActive } = useAppContext();
-	useEffect(() => {
-		setBlogsPageActive(true);
-	}, []);
 
 	return (
 		<div>

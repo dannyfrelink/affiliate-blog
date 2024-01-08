@@ -3,8 +3,6 @@ import React, { createContext, useState, useContext, useEffect } from "react";
 interface AppContextProps {
 	// Define your context state and any functions you need
 	screenSize: number;
-	blogsPageActive: boolean;
-	setBlogsPageActive: React.Dispatch<React.SetStateAction<boolean>>;
 	navOpen: boolean;
 	setNavOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
@@ -17,7 +15,6 @@ interface AppProps {
 
 export const AppProvider: React.FC<AppProps> = ({ children }) => {
 	const [screenSize, setScreenSize] = useState<number>(window.innerWidth);
-	const [blogsPageActive, setBlogsPageActive] = useState<boolean>(false);
 	const [navOpen, setNavOpen] = useState<boolean>(false);
 
 	useEffect(() => {
@@ -34,8 +31,6 @@ export const AppProvider: React.FC<AppProps> = ({ children }) => {
 
 	const contextValue: AppContextProps = {
 		screenSize,
-		blogsPageActive,
-		setBlogsPageActive,
 		navOpen,
 		setNavOpen,
 	};

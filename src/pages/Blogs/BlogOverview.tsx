@@ -23,10 +23,6 @@ export interface BlogsData {
 
 const BlogOverview = ({}) => {
 	const { screenSize } = useAppContext();
-	const { setBlogsPageActive } = useAppContext();
-	useEffect(() => {
-		setBlogsPageActive(true);
-	}, []);
 
 	const blogs: BlogsData = data.blogs;
 	const destinations = Object.keys(blogs);

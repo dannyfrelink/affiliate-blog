@@ -4,11 +4,6 @@ import Header from "../components/header/Header";
 import HeaderImage from "../images/mockup/viewpoint.png";
 
 const About = () => {
-	const { setBlogsPageActive } = useAppContext();
-	useEffect(() => {
-		setBlogsPageActive(false);
-	}, []);
-
 	return (
 		<div>
 			<Header

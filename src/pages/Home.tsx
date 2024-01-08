@@ -14,10 +14,7 @@ import BaseText from "../components/typography/BaseText";
 import Footer from "../components/general/Footer";
 
 const Home = () => {
-	const { screenSize, setBlogsPageActive } = useAppContext();
-	useEffect(() => {
-		setBlogsPageActive(false);
-	}, []);
+	const { screenSize } = useAppContext();
 
 	return (
 		<div>

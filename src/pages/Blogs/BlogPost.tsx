@@ -4,10 +4,6 @@ import { useAppContext } from "../../config/AppContext";
 
 const BlogPost = ({}) => {
 	const { location, blog } = useParams();
-	const { setBlogsPageActive } = useAppContext();
-	useEffect(() => {
-		setBlogsPageActive(true);
-	}, []);
 
 	return (
 		<div>

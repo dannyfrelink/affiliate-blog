@@ -26,10 +26,6 @@ export interface AccommodationsData {
 
 const Accommodations = () => {
 	const { screenSize } = useAppContext();
-	const { setBlogsPageActive } = useAppContext();
-	useEffect(() => {
-		setBlogsPageActive(false);
-	}, []);
 
 	const accommodations: AccommodationsData = data.accommodations;
 	const destinations = Object.keys(accommodations);

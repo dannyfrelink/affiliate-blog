@@ -1,14 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useAppContext } from "../../config/AppContext";
-import Details from "../general/Details";
 import CloseButton from "../general/CloseButton";
 
 interface NavProps {}
 
 const Nav: React.FC<NavProps> = ({}) => {
-	const { screenSize, blogsPageActive, navOpen, setNavOpen } =
-		useAppContext();
+	const { screenSize, navOpen, setNavOpen } = useAppContext();
 
 	const checkActive = (isActive: boolean) => {
 		return isActive ? "font-bold text-secondary" : "";
@@ -63,91 +61,14 @@ const Nav: React.FC<NavProps> = ({}) => {
 					</NavLink>
 				</li>
 
-				<Details
-					className={screenSize < 750 ? "mb-6" : ""}
-					summary="Blogs"
-					summaryClass={`font-semibold ${
-						blogsPageActive && "text-secondary !font-bold"
-					}`}
-				>
-					<li className="font-light italic text-xs my-2">
-						<NavLink
-							className={({ isActive }) => checkActive(isActive)}
-							to="/blogs"
-							end
-						>
-							Alle blogs bekijken
-						</NavLink>
-					</li>
-					<div className="text-base [&>li:not(:last-of-type)]:mb-[5px]">
-						<li>
-							<NavLink
-								className={({ isActive }) =>
-									checkActive(isActive)
-								}
-								to="/blogs/canggu"
-								end
-							>
-								Canggu
-							</NavLink>
-						</li>
-						<li>
-							<NavLink
-								className={({ isActive }) =>
-									checkActive(isActive)
-								}
-								to="/blogs/ubud"
-								end
-							>
-								Ubud
-							</NavLink>
-						</li>
-						<li>
-							<NavLink
-								className={({ isActive }) =>
-									checkActive(isActive)
-								}
-								to="/blogs/uluwatu"
-								end
-							>
-								Uluwatu
-							</NavLink>
-						</li>
-						<li>
-							<NavLink
-								className={({ isActive }) =>
-									checkActive(isActive)
-								}
-								to="/blogs/amed"
-								end
-							>
-								Amed
-							</NavLink>
-						</li>
-						<li>
-							<NavLink
-								className={({ isActive }) =>
-									checkActive(isActive)
-								}
-								to="/blogs/sideman"
-								end
-							>
-								Sideman
-							</NavLink>
-						</li>
-						<li>
-							<NavLink
-								className={({ isActive }) =>
-									checkActive(isActive)
-								}
-								to="/blogs/nusa-dua"
-								end
-							>
-								Nusa Dua
-							</NavLink>
-						</li>
-					</div>
-				</Details>
+				<li>
+					<NavLink
+						className={({ isActive }) => checkActive(isActive)}
+						to="/blogs"
+					>
+						Blogs
+					</NavLink>
+				</li>
 
 				<li>
 					<NavLink
