@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import { useAppContext } from "../config/AppContext";
 import Header from "../components/header/Header";
 import HeaderImage from "../images/mockup/hotel.png";
 import BaseText from "../components/typography/BaseText";
