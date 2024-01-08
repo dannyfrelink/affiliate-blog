@@ -25,8 +25,6 @@ export interface AccommodationsData {
 }
 
 const Accommodations = () => {
-	const { screenSize } = useAppContext();
-
 	const accommodations: AccommodationsData = data.accommodations;
 	const destinations = Object.keys(accommodations);
 
