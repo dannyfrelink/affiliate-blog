@@ -1,7 +1,6 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
 
 interface AppContextProps {
-	// Define your context state and any functions you need
 	screenSize: number;
 	navOpen: boolean;
 	setNavOpen: React.Dispatch<React.SetStateAction<boolean>>;
