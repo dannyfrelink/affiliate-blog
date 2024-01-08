@@ -10,12 +10,12 @@ const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = () => {
 
 	const handleScroll = () => {
 		const scrolled = window.scrollY;
-		setIsVisible(scrolled > 1500);
+		setIsVisible(scrolled > 150);
 	};
 
 	const scrollToTop = () => {
 		window.scrollTo({
-			top: screenSize < 750 ? 600 : screenSize < 1250 ? 800 : 1000,
+			top: 0,
 			behavior: "smooth",
 		});
 	};
@@ -35,7 +35,7 @@ const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = () => {
 					: screenSize < 1250
 					? "bottom-8 right-6 w-12 h-12"
 					: "bottom-10 right-8 w-14 h-14 [&>svg]:text-3xl"
-			} fixed bg-tertair text-primary shadow-subtle opacity-80 justify-center items-center rounded-full cursor-pointer`}
+			} fixed bg-secondary text-primary shadow-subtle opacity-80 justify-center items-center rounded-full cursor-pointer`}
 			onClick={scrollToTop}
 		>
 			<ArrowUpwardIcon />

@@ -2,13 +2,11 @@ import { useEffect } from "react";
 import { useAppContext } from "../config/AppContext";
 import Header from "../components/header/Header";
 import HeaderImage from "../images/mockup/hotel.png";
-import H2 from "../components/typography/H2";
 import BaseText from "../components/typography/BaseText";
 import Overview from "../components/pages/overview/Overview";
 import Footer from "../components/general/Footer";
 import data from "../data/accommodations.json";
 import AccommodationList from "../components/pages/overview/AccomodationList";
-import ScrollToTopButton from "../components/pages/overview/ScrollToTopButton";
 import IntroOverview from "../components/pages/overview/IntroOverview";
 
 export interface Destination {
@@ -82,8 +80,6 @@ const Accommodations = () => {
 					destinations={destinations}
 				/>
 			</Overview>
-
-			<ScrollToTopButton />
 
 			<Footer />
 		</div>
