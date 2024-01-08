@@ -8,7 +8,7 @@ const ScrollToTop: React.FC = () => {
 		window.scrollTo(0, 0);
 	}, [pathname]);
 
-	return null; // No need to render anything in the DOM
+	return null;
 };
 
 export default ScrollToTop;
