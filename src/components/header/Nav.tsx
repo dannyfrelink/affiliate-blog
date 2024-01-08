@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useAppContext } from "../../config/AppContext";
 import CloseButton from "../general/CloseButton";
@@ -7,6 +7,23 @@ interface NavProps {}
 
 const Nav: React.FC<NavProps> = ({}) => {
 	const { screenSize, navOpen, setNavOpen } = useAppContext();
+	const [scrolled, setScrolled] = useState<number>(window.scrollY);
+	const [scrolledUp, setScrolledUp] = useState<boolean>();
+	const prevScrollYRef = useRef<number>(window.scrollY);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const currentScrollY = window.scrollY;
+			setScrolled(currentScrollY);
+			setScrolledUp(prevScrollYRef.current > currentScrollY);
+			prevScrollYRef.current = currentScrollY;
+		};
+
+		window.addEventListener("scroll", handleScroll);
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
 
 	const checkActive = (isActive: boolean) => {
 		return isActive ? "font-bold text-secondary" : "";
@@ -24,9 +41,9 @@ const Nav: React.FC<NavProps> = ({}) => {
 	return (
 		<nav
 			onClick={handleClick}
-			className={`z-[99] fixed ${
+			className={`z-[99] ${
 				screenSize < 750 &&
-				`h-screen before:fixed before:w-screen before:bg-[#707070] before:opacity-75 ${
+				`h-screen fixed before:fixed before:w-screen before:bg-[#707070] before:opacity-75 ${
 					navOpen ? "left-0 before:inset-0" : "-left-[100vw]"
 				}`
 			}`}
@@ -38,7 +55,11 @@ const Nav: React.FC<NavProps> = ({}) => {
 								navOpen &&
 								"animate-[menuFadeIn_0.5s_ease-out_forwards]"
 						  }`
-						: `flex top-4 fixed before:fixed before:top-0 before:inset-x-0 before:h-16 before:bg-primary before:shadow-subtle before:z-[-1] ${
+						: `flex before:top-0 before:inset-x-0 before:h-16 before:z-[-1] ${
+								scrolled > 250 && scrolledUp
+									? "fixed before:fixed top-[18px] before:bg-primary before:shadow-subtle"
+									: "absolute before:absolute top-7 text-primary"
+						  } ${
 								screenSize < 1250
 									? "right-[9vw] [&>li:not(:last-child)]:mr-6 [&>div]:mr-4"
 									: "right-[10vw] [&>li:not(:last-child)]:mr-10 [&>div]:mr-8"
