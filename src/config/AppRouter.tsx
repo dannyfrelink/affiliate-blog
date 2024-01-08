@@ -5,10 +5,12 @@ import Home from "../pages/Home";
 import BlogOverview from "../pages/Blogs/BlogOverview";
 import BlogPost from "../pages/Blogs/BlogPost";
 import Accommodations from "../pages/Accommodations";
+import ScrollToTop from "./ScrollToTop";
 
 const AppRouter: React.FC = () => {
 	return (
 		<Router>
+			<ScrollToTop />
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/blogs" element={<BlogOverview />} />
