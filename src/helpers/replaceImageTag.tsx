@@ -1,21 +1,28 @@
 interface Image {
-	[image: string]: string;
+	src: {
+		[image: string]: string;
+	};
+	alt: {
+		[image: string]: string;
+	};
 }
 
-const replaceImageTags = (text: string, images: Image) => {
+const replaceImageTag = (text: string, images: Image) => {
 	// Use a regular expression to find all occurrences of <imageX> tags
-	const regex = /^image(\d+)^/g;
+	const regex = /<image(\d+)>/g;
 
 	// Replace each occurrence with the corresponding image value
 	const replacedText = text.replace(regex, (match, group1) => {
 		const imageKey = `image${group1}`;
-		return images[imageKey] || match; // If the image key is not found, keep the original tag
+		return images.src[imageKey]
+			? `<img src="${images.src[imageKey]}" alt="${images.alt[imageKey]}" />`
+			: match; // If the image key is not found, keep the original tag
 	});
 
 	return replacedText;
 };
 
-export default replaceImageTags;
+export default replaceImageTag;
 
 //   // Example usage
 //   const exampleText = "<p>Text with image: <image1></p>";

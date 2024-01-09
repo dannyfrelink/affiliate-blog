@@ -23,7 +23,12 @@ export interface Destination {
 		};
 	};
 	images: {
-		[image: string]: string;
+		src: {
+			[image: string]: string;
+		};
+		alt: {
+			[image: string]: string;
+		};
 	};
 }
 

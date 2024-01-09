@@ -1,21 +1,28 @@
 import React from "react";
 import BaseText from "../components/typography/BaseText";
 import H3 from "../components/typography/H3";
+import BlogImage from "../components/pages/blogs/BlogImage";
 
-interface HTMLProps {
+interface TextProps {
 	children: React.ReactNode;
 }
 
+interface ImageProps {
+	src: string;
+	alt: string;
+}
+
 interface TagToComponentMap {
-	[key: string]: React.FC<HTMLProps> | undefined;
+	[key: string]: React.FC<TextProps | ImageProps> | undefined;
 }
 
 const tagToComponent: TagToComponentMap = {
-	p: BaseText,
-	h3: H3,
+	p: BaseText as React.FC<TextProps | ImageProps>,
+	image: BlogImage as React.FC<TextProps | ImageProps>,
+	h3: H3 as React.FC<TextProps | ImageProps>,
 };
 
-function parseHTMLText(text: string) {
+function parseHTMLText(text: string, images: any) {
 	// Create a new HTML document
 	const doc = new DOMParser().parseFromString(text, "text/html");
 
@@ -24,7 +31,18 @@ function parseHTMLText(text: string) {
 		(element, index) => {
 			const TagComponent = tagToComponent[element.tagName.toLowerCase()];
 
-			if (TagComponent) {
+			if (element.tagName.toLowerCase() === "image") {
+				// If the element is an <image> tag, replace it with <BlogImage>
+				const imageKey = element.textContent || "";
+				const src = images.src[imageKey] || "";
+				const alt = images.alt[imageKey] || "";
+
+				return React.createElement(BlogImage, {
+					key: index,
+					src,
+					alt,
+				});
+			} else if (TagComponent) {
 				// If a mapping exists, create the React component
 				return React.createElement(TagComponent, {
 					key: index,

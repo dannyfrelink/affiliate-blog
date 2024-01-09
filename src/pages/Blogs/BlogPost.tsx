@@ -6,6 +6,7 @@ import Container from "../../components/general/Container";
 import H2 from "../../components/typography/H2";
 import Header from "../../components/header/Header";
 import parseHTMLText from "../../helpers/parseHTMLText";
+import replaceImageTag from "../../helpers/replaceImageTag";
 
 const BlogPost = () => {
 	const { id } = useParams();
@@ -31,8 +32,12 @@ const BlogPost = () => {
 				{sections.map((section, index) => {
 					const image = require(`../../images/mockup/${section.image}`);
 					const textTotal = section.text;
+					const textArr = [];
 
-					const test = parseHTMLText(textTotal);
+					// textTotal.split()
+
+					const test2 = replaceImageTag(textTotal, images);
+					const test = parseHTMLText(test2, images);
 
 					console.log(test);
 
