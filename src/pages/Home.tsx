@@ -1,7 +1,6 @@
-import { useEffect } from "react";
 import Header from "../components/header/Header";
 import { useAppContext } from "../config/AppContext";
-import HeaderImage from "../images/mockup/viewpoint.png";
+import HeaderImage from "../images/mockup/mountains.png";
 import Container from "../components/general/Container";
 import Carousel from "../components/pages/home/Carousel";
 import CarouselImg1 from "../images/mockup/mountains.png";
