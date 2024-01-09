@@ -59,9 +59,9 @@ const Nav: React.FC<NavProps> = ({}) => {
 								navOpen &&
 								"animate-[menuFadeIn_0.5s_ease-out_forwards]"
 						  }`
-						: `flex before:top-0 before:inset-x-0 before:h-16 before:z-[-1] ${
+						: `flex before:top-0 before:inset-x-0 before:h-[4.5rem] before:z-[-1] ${
 								scrolled > 250 && scrolledUp
-									? "fixed before:fixed top-[18px] before:bg-primary before:shadow-subtle"
+									? "fixed before:fixed top-[22px] before:bg-primary before:shadow-subtle"
 									: "absolute before:absolute top-7 text-primary"
 						  } ${
 								screenSize < 1250
