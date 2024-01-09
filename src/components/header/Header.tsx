@@ -34,7 +34,7 @@ const Header: React.FC<HeaderProps> = ({
 		>
 			<Image />
 
-			{screenSize < 750 && (
+			{screenSize < 1000 && (
 				<Button
 					onClick={() => setNavOpen(true)}
 					className="fixed top-6 right-4 z-[98]"

@@ -33,6 +33,10 @@ const Nav: React.FC<NavProps> = ({}) => {
 		const target = e.target;
 		const tagName = target.tagName.toLowerCase();
 
+		if (navOpen && tagName === "nav") {
+			setNavOpen(false);
+		}
+
 		if (tagName === "a") {
 			setNavOpen(false);
 		}
@@ -42,7 +46,7 @@ const Nav: React.FC<NavProps> = ({}) => {
 		<nav
 			onClick={handleClick}
 			className={`z-[99] ${scrolled > 250 && scrolledUp && "fixed"} ${
-				screenSize < 750 &&
+				screenSize < 1000 &&
 				`fixed h-screen before:fixed before:w-screen before:bg-[#707070] before:opacity-75 ${
 					navOpen ? "left-0 before:inset-0" : "-left-[100vw]"
 				}`
@@ -50,8 +54,8 @@ const Nav: React.FC<NavProps> = ({}) => {
 		>
 			<ul
 				className={`${
-					screenSize < 750
-						? `w-[90vw] h-full rounded-r-3xl bg-primary pl-6 pr-4 pt-32 [&>li:not(:last-of-type)]:mb-6 ${
+					screenSize < 1000
+						? `w-[90vw] max-w-[400px] h-full rounded-r-3xl bg-primary pl-6 pr-4 pt-32 [&>li:not(:last-of-type)]:mb-6 ${
 								navOpen &&
 								"animate-[menuFadeIn_0.5s_ease-out_forwards]"
 						  }`
@@ -66,7 +70,7 @@ const Nav: React.FC<NavProps> = ({}) => {
 						  }`
 				} text-black text-xl [&>li]:font-semibold`}
 			>
-				{screenSize < 750 && (
+				{screenSize < 1000 && (
 					<CloseButton
 						className="absolute top-6 right-4"
 						closeMenu={() => setNavOpen(false)}
