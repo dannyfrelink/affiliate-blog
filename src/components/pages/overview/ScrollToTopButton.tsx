@@ -35,7 +35,7 @@ const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = () => {
 					: screenSize < 1250
 					? "bottom-8 right-6 w-12 h-12"
 					: "bottom-10 right-8 w-14 h-14 [&>svg]:text-3xl"
-			} fixed bg-secondary text-primary shadow-subtle opacity-80 justify-center items-center rounded-full cursor-pointer`}
+			} fixed bg-secondary text-primary shadow-subtle opacity-80 justify-center items-center rounded-full z-[99] cursor-pointer`}
 			onClick={scrollToTop}
 		>
 			<ArrowUpwardIcon />
