@@ -38,10 +38,9 @@ const Overview: React.FC<OverviewProps> = ({ children, destinations }) => {
 							to={dest.toLowerCase().split(" ").join("-")}
 							smooth={true}
 							duration={500}
+							key={index}
 						>
-							<Button key={index} className="!bg-tertair">
-								{dest}
-							</Button>
+							<Button className="!bg-tertair">{dest}</Button>
 						</Link>
 					))}
 				</div>
