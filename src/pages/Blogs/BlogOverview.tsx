@@ -12,8 +12,19 @@ import Footer from "../../components/general/Footer";
 
 export interface Destination {
 	id: number;
+	date: string;
 	coverImage: string;
 	title: string;
+	content: {
+		[section: string]: {
+			title: string;
+			text: string;
+			image: string;
+		};
+	};
+	images: {
+		[image: string]: string;
+	};
 }
 
 export interface BlogsData {
@@ -31,7 +42,9 @@ const BlogOverview = ({}) => {
 			<Header
 				Image={() => <img src={HeaderImage} alt="Viewpoint" />}
 				title="Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet"
-				subTitle="Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
+				subTitle={
+					"Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
+				}
 			/>
 
 			<Overview destinations={destinations}>
