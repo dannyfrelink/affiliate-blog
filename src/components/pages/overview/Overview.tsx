@@ -34,15 +34,15 @@ const Overview: React.FC<OverviewProps> = ({ children, destinations }) => {
 					}`}
 				>
 					{destinations.map((dest, index) => (
-						<Button key={index} className="!bg-tertair">
-							<Link
-								to={dest.toLowerCase().split(" ").join("-")}
-								smooth={true}
-								duration={500}
-							>
+						<Link
+							to={dest.toLowerCase().split(" ").join("-")}
+							smooth={true}
+							duration={500}
+						>
+							<Button key={index} className="!bg-tertair">
 								{dest}
-							</Link>
-						</Button>
+							</Button>
+						</Link>
 					))}
 				</div>
 			</section>

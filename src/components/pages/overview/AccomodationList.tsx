@@ -1,11 +1,11 @@
 import React from "react";
 import H3 from "../../typography/H3";
-import Button from "../../general/Button";
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
 import { AccommodationsData } from "../../../pages/Accommodations";
 import BaseText from "../../typography/BaseText";
 import { useAppContext } from "../../../config/AppContext";
 import ListOverview from "./ListOverview";
+import ButtonLink from "../../general/ButtonLink";
 
 interface AccommodationListProps {
 	accommodations: AccommodationsData;
@@ -82,7 +82,7 @@ const AccommodationList: React.FC<AccommodationListProps> = ({
 										</BaseText>
 									</div>
 
-									<Button
+									<ButtonLink
 										link={accom.link}
 										className={
 											screenSize < 900
@@ -101,7 +101,7 @@ const AccommodationList: React.FC<AccommodationListProps> = ({
 													: "medium"
 											}
 										/>
-									</Button>
+									</ButtonLink>
 								</div>
 							);
 						})}
