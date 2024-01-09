@@ -23,10 +23,10 @@ const ListOverview: React.FC<ListOverviewProps> = ({
 			<Element
 				className={`text-center ${
 					screenSize < 900
-						? "pt-10"
+						? "mt-10"
 						: screenSize < 1250
-						? "pt-16 pb-8"
-						: "pt-20 pb-10"
+						? "mt-16 pb-8"
+						: "mt-20 pb-10"
 				}`}
 				name={destId}
 			>

@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import HeaderImage from "../../images/mockup/viewpoint.png";
 import Header from "../../components/header/Header";
 import { useAppContext } from "../../config/AppContext";
@@ -57,7 +56,7 @@ const BlogOverview = ({}) => {
 						totam.
 					</BaseText>
 				</IntroOverview>
-				<div className="[&>div:first-child>div]:!pt-0">
+				<div className="[&>div:first-child>div]:!mt-0">
 					{destinations.map((dest, index) => {
 						const blogsPerDest = blogs[dest];
 
@@ -69,10 +68,6 @@ const BlogOverview = ({}) => {
 							>
 								{blogsPerDest.map((blog, index) => {
 									const image = require(`../../images/mockup/${blog.coverImage}`);
-									const location = dest
-										.toLowerCase()
-										.split(" ")
-										.join("-");
 
 									return (
 										<Link
