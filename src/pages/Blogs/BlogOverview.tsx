@@ -17,9 +17,8 @@ export interface Destination {
 	title: string;
 	content: {
 		[section: string]: {
-			title: string;
 			text: string;
-			image: string;
+			image?: string;
 		};
 	};
 	images: {

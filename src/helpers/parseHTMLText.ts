@@ -2,6 +2,7 @@ import React from "react";
 import BaseText from "../components/typography/BaseText";
 import H3 from "../components/typography/H3";
 import BlogImage from "../components/pages/blogs/BlogImage";
+import H2 from "../components/typography/H2";
 
 interface TextProps {
 	children: React.ReactNode;
@@ -19,6 +20,7 @@ interface TagToComponentMap {
 const tagToComponent: TagToComponentMap = {
 	p: BaseText as React.FC<TextProps | ImageProps>,
 	image: BlogImage as React.FC<TextProps | ImageProps>,
+	h2: H2 as React.FC<TextProps | ImageProps>,
 	h3: H3 as React.FC<TextProps | ImageProps>,
 };
 
@@ -44,6 +46,18 @@ function parseHTMLText(text: string, images: any) {
 					src,
 					alt,
 				});
+			} else if (element.tagName.toLowerCase() === "div") {
+				const className = element.getAttribute("class");
+				const divContent: any = parseHTMLText(
+					element.innerHTML,
+					images
+				);
+
+				return React.createElement(
+					"div",
+					{ key: index, className },
+					divContent
+				);
 			} else if (TagComponent) {
 				// If a mapping exists, create the React component
 				return React.createElement(TagComponent, {
