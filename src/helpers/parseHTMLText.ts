@@ -31,11 +31,13 @@ function parseHTMLText(text: string, images: any) {
 		(element, index) => {
 			const TagComponent = tagToComponent[element.tagName.toLowerCase()];
 
-			if (element.tagName.toLowerCase() === "image") {
-				// If the element is an <image> tag, replace it with <BlogImage>
-				const imageKey = element.textContent || "";
-				const src = images.src[imageKey] || "";
-				const alt = images.alt[imageKey] || "";
+			if (element.tagName.toLowerCase() === "img") {
+				// If the element is an <img/> tag, replace it with <BlogImage>
+				const src =
+					require(`../images/mockup/${element.getAttribute(
+						"src"
+					)}`) || "";
+				const alt = element.getAttribute("alt") || "";
 
 				return React.createElement(BlogImage, {
 					key: index,
