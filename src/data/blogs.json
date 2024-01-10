@@ -22,12 +22,12 @@
 					"src": {
 						"image1": "mountains.png",
 						"image2": "dreamy.png",
-						"image3": "viewpoint.png"
+						"image3": "dreamy.png"
 					},
 					"alt": {
 						"image1": "mountains",
 						"image2": "dreamy",
-						"image3": "viewpoint"
+						"image3": "dreamy"
 					}
 				}
 			},
