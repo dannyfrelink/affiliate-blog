@@ -44,7 +44,7 @@ const BlogPost = () => {
 					})}
 				</div>
 
-				<SideBar />
+				<SideBar blogs={allBlogs} id={Number(id)} />
 			</div>
 
 			<Footer />
