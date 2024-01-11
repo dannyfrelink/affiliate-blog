@@ -19,7 +19,7 @@ const BlogPost = () => {
 	const sections = Object.values(blog.content);
 
 	return (
-		<div className="overflow-y-hidden">
+		<div>
 			<Header
 				Image={() => <img src={coverImage} alt="Viewpoint" />}
 				title={blog.title}
@@ -28,8 +28,13 @@ const BlogPost = () => {
 				align="bottom"
 			/>
 
-			<div className={screenSize >= 1000 ? "flex" : ""}>
-				<div>
+			<div className={screenSize >= 1000 ? "flex relative" : ""}>
+				<div
+					className={`z-[1] ${
+						screenSize > 1000 &&
+						"[&>*:first-child>section]:rounded-tr-none [&>*:last-child>section]:rounded-br-none"
+					}`}
+				>
 					{sections.map((section, index) => {
 						const text = section.text;
 
