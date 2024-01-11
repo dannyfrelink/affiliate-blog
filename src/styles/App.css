@@ -9,8 +9,8 @@
 }
 
 .blogImage-container > img {
-	height: 77vw;
-	width: 41.9vw;
+	height: auto;
+	width: 49%;
 	object-fit: cover;
 	object-position: center;
 }
@@ -27,11 +27,6 @@
 		margin-bottom: 1.5rem;
 	}
 
-	.blogImage-container > img {
-		height: 73vw;
-		width: 39.73vw;
-	}
-
 	.blogText-container > *:not(:last-child) {
 		margin-bottom: 0.88rem;
 	}
@@ -43,11 +38,6 @@
 	}
 	.blogImage-container:not(:last-child) {
 		margin-bottom: 2rem;
-	}
-
-	.blogImage-container > img {
-		height: 70vw;
-		width: 38.1vw;
 	}
 
 	.blogText-container > *:not(:last-child) {

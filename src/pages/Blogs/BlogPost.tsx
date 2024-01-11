@@ -5,8 +5,10 @@ import { BlogsData, Destination } from "./BlogOverview";
 import Header from "../../components/header/Header";
 import Footer from "../../components/general/Footer";
 import BlogContent from "../../components/pages/blogs/BlogContent";
+import { useAppContext } from "../../config/AppContext";
 
 const BlogPost = () => {
+	const { screenSize } = useAppContext();
 	const { id } = useParams();
 	const blogs: BlogsData = data.blogs;
 	const allBlogs: Destination[] = [];
@@ -17,7 +19,7 @@ const BlogPost = () => {
 	const sections = Object.values(blog.content);
 
 	return (
-		<div>
+		<div className="overflow-y-hidden">
 			<Header
 				Image={() => <img src={coverImage} alt="Viewpoint" />}
 				title={blog.title}
@@ -26,22 +28,24 @@ const BlogPost = () => {
 				align="bottom"
 			/>
 
-			<div>
-				{sections.map((section, index) => {
-					const text = section.text;
+			<div className={screenSize >= 1000 ? "flex" : ""}>
+				<div>
+					{sections.map((section, index) => {
+						const text = section.text;
 
-					return (
-						<BlogContent
-							key={index}
-							image={section.image}
-							text={text}
-							images={images}
-						></BlogContent>
-					);
-				})}
+						return (
+							<BlogContent
+								key={index}
+								image={section.image}
+								text={text}
+								images={images}
+							></BlogContent>
+						);
+					})}
+				</div>
+
+				<SideBar />
 			</div>
-
-			<SideBar />
 
 			<Footer />
 		</div>

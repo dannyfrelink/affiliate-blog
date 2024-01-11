@@ -48,8 +48,6 @@ const BlogContent: React.FC<BlogContentProps> = ({ image, text, images }) => {
 							? "h-[60vh]"
 							: screenSize < 750
 							? "h-[75vh]"
-							: screenSize < 1250
-							? "h-[85vh]"
 							: "h-[85vh]"
 					}`}
 				>
@@ -59,9 +57,11 @@ const BlogContent: React.FC<BlogContentProps> = ({ image, text, images }) => {
 								? "-bottom-32"
 								: screenSize < 750
 								? "-bottom-48"
-								: screenSize < 1250
+								: screenSize < 1000
 								? "-bottom-[16%]"
-								: "-bottom-[28%]"
+								: screenSize < 1400
+								? "-bottom-[10%]"
+								: "-bottom-[20%]"
 						}`}
 						src={img}
 						alt="Backdrop"
