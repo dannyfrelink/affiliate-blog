@@ -19,7 +19,9 @@ const SideBar: React.FC<SideBarProps> = ({ blogs, id }) => {
 					? ""
 					: screenSize < 1000
 					? ""
-					: `w-[1150px] ${screenSize < 1250 ? "!px-6" : "!px-10"}`
+					: `w-[1150px] ${screenSize < 1250 ? "!px-6" : "!px-10"} ${
+							screenSize > 1500 && "w-[900px] !px-12"
+					  }`
 			}`}
 		>
 			<div>
