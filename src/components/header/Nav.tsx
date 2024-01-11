@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { useAppContext } from "../../config/AppContext";
 import CloseButton from "../general/CloseButton";
@@ -6,24 +6,8 @@ import CloseButton from "../general/CloseButton";
 interface NavProps {}
 
 const Nav: React.FC<NavProps> = ({}) => {
-	const { screenSize, navOpen, setNavOpen } = useAppContext();
-	const [scrolled, setScrolled] = useState<number>(window.scrollY);
-	const [scrolledUp, setScrolledUp] = useState<boolean>();
-	const prevScrollYRef = useRef<number>(window.scrollY);
-
-	useEffect(() => {
-		const handleScroll = () => {
-			const currentScrollY = window.scrollY;
-			setScrolled(currentScrollY);
-			setScrolledUp(prevScrollYRef.current > currentScrollY);
-			prevScrollYRef.current = currentScrollY;
-		};
-
-		window.addEventListener("scroll", handleScroll);
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, []);
+	const { screenSize, navOpen, setNavOpen, scrolled, scrolledUp } =
+		useAppContext();
 
 	const checkActive = (isActive: boolean) => {
 		return isActive ? "font-bold text-secondary" : "";
