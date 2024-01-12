@@ -28,7 +28,7 @@ const BlogPost = () => {
 				align="bottom"
 			/>
 
-			<div className={screenSize >= 1000 ? "flex relative" : ""}>
+			<div className={screenSize >= 1000 ? "relative flex" : ""}>
 				<div
 					className={`z-[1] ${
 						screenSize > 1000 &&

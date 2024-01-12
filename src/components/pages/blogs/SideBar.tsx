@@ -9,11 +9,7 @@ interface SideBarProps {
 	blogs: Destination[];
 	id: number;
 }
-// ${
-// 	scrolled > 500 && scrolledUp
-// 		? "h-[calc(100vh-4.5rem)] top-[4.5rem]"
-// 		: "h-screen top-0"
-// }
+
 const SideBar: React.FC<SideBarProps> = ({ blogs, id }) => {
 	const { screenSize, scrolled, scrolledUp } = useAppContext();
 	return (
@@ -23,7 +19,7 @@ const SideBar: React.FC<SideBarProps> = ({ blogs, id }) => {
 					? ""
 					: screenSize < 1000
 					? ""
-					: `sticky h-screen overflow-y-scroll w-[1150px] rounded-l-none ${
+					: `sticky h-full w-[1150px] rounded-l-none ${
 							scrolled > 600 && scrolledUp
 								? "top-[4.5rem]"
 								: "top-0"
