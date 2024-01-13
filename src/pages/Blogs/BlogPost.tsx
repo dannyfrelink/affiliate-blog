@@ -27,12 +27,12 @@ const BlogPost = () => {
 				size="small"
 				align="bottom"
 			/>
-
+			{/*  */}
 			<div className={screenSize >= 1000 ? "relative flex" : ""}>
 				<div
 					className={`z-[1] ${
 						screenSize > 1000 &&
-						"[&>*:first-child>section]:rounded-tr-none [&>*:last-child>section]:rounded-br-none"
+						"[&>*>section]:rounded-none [&>*:first-child>section]:rounded-tl-2xl [&>*:last-child>section]:rounded-bl-2xl"
 					}`}
 				>
 					{sections.map((section, index) => {
