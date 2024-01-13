@@ -4,6 +4,8 @@ import Button from "../general/Button";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import { useAppContext } from "../../config/AppContext";
 import Title from "./Title";
+import LogoBlack from "../../images/logo/Logo-ReisFeeld-black.svg";
+import LogoPrimary from "../../images/logo/Logo-ReisFeeld-primary.svg";
 
 interface HeaderProps {
 	Image: React.FC<JSX.IntrinsicElements["img"]>;
@@ -20,7 +22,8 @@ const Header: React.FC<HeaderProps> = ({
 	size = "large",
 	align = "center",
 }) => {
-	const { setNavOpen, screenSize } = useAppContext();
+	const { navOpen, setNavOpen, screenSize, scrolled, scrolledUp } =
+		useAppContext();
 
 	return (
 		<header
@@ -41,6 +44,14 @@ const Header: React.FC<HeaderProps> = ({
 				>
 					<MenuRoundedIcon />
 				</Button>
+			)}
+
+			{screenSize < 1000 && (
+				<img
+					className="absolute top-4 left-4 block !h-12 !w-auto"
+					src={LogoPrimary}
+					alt="Logo ReisFeeld White"
+				/>
 			)}
 
 			<Nav />
