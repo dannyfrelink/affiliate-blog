@@ -35,7 +35,10 @@ const SideBar: React.FC<SideBarProps> = ({ blogs, id }) => {
 			<div className="[&>*:not(:last-child)]:mb-10">
 				<TableOfContents headers={activeBlog.headers} />
 
-				<Socials />
+				<div>
+					<H3 className="mb-4">Volg ons op</H3>
+					<Socials />
+				</div>
 
 				<div>
 					<H3
