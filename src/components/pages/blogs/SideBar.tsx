@@ -4,6 +4,7 @@ import { useAppContext } from "../../../config/AppContext";
 import NextBlogs from "./NextBlogs";
 import { Destination } from "../../../pages/Blogs/BlogOverview";
 import H3 from "../../typography/H3";
+import TableOfContents from "./TableOfContents";
 
 interface SideBarProps {
 	blogs: Destination[];
@@ -12,6 +13,8 @@ interface SideBarProps {
 
 const SideBar: React.FC<SideBarProps> = ({ blogs, id }) => {
 	const { screenSize, scrolled, scrolledUp } = useAppContext();
+	const activeBlog = blogs.filter((blog) => blog.id === id)[0];
+
 	return (
 		<Container
 			className={`${
@@ -19,7 +22,7 @@ const SideBar: React.FC<SideBarProps> = ({ blogs, id }) => {
 					? ""
 					: screenSize < 1000
 					? ""
-					: `sticky z-[-1] h-full w-[1050px] rounded-none rounded-tr-2xl ${
+					: `sticky h-full w-[1050px] rounded-none rounded-tr-2xl ${
 							scrolled > 600 && scrolledUp
 								? "top-[2.5rem]"
 								: "-top-8"
@@ -29,6 +32,8 @@ const SideBar: React.FC<SideBarProps> = ({ blogs, id }) => {
 			}`}
 		>
 			<div className={``}>
+				<TableOfContents headers={activeBlog.headers} />
+
 				<div>
 					<H3
 						className={`text-center ${

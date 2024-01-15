@@ -15,6 +15,7 @@ export interface Destination {
 	date: string;
 	coverImage: string;
 	title: string;
+	headers: string[];
 	content: {
 		[section: string]: {
 			text: string;
