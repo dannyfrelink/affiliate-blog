@@ -41,7 +41,9 @@ const Header: React.FC<HeaderProps> = ({
 			{screenSize < 1000 && (
 				<Button
 					onClick={() => setNavOpen(true)}
-					className="fixed top-6 right-4 z-[98]"
+					className={`fixed top-6 z-[98] ${
+						screenSize < 750 ? "right-4" : "right-10"
+					}`}
 				>
 					<MenuRoundedIcon />
 				</Button>
@@ -50,7 +52,9 @@ const Header: React.FC<HeaderProps> = ({
 			{screenSize < 1000 && (
 				<Link to="/">
 					<img
-						className="absolute top-4 left-4 block !h-12 !w-auto"
+						className={`absolute top-4 block !h-12 !w-auto ${
+							screenSize < 750 ? "left-4" : "left-10"
+						}`}
 						src={LogoPrimary}
 						alt="Logo ReisFeeld White"
 					/>
