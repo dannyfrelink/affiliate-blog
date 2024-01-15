@@ -52,17 +52,7 @@ const BlogContent: React.FC<BlogContentProps> = ({ image, text, images }) => {
 					}`}
 				>
 					<img
-						className={`absolute w-full z-[-99] ${
-							screenSize < 550
-								? "-bottom-32"
-								: screenSize < 750
-								? "-bottom-48"
-								: screenSize < 1000
-								? "-bottom-[16%]"
-								: screenSize < 1400
-								? "-bottom-[10%]"
-								: "-bottom-[20%]"
-						}`}
+						className="absolute w-full z-[-99] max-h-[1000px] object-cover object-center -bottom-6"
 						src={img}
 						alt="Backdrop"
 					/>
