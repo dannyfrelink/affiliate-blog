@@ -6,9 +6,16 @@ import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import H3 from "../../typography/H3";
 import { useAppContext } from "../../../config/AppContext";
+import { Link } from "react-router-dom";
+
+interface ItemProps {
+	id: number;
+	src: string;
+	title: string;
+}
 
 interface CarouselProps {
-	items: { src: string; title: string }[];
+	items: ItemProps[];
 }
 
 const Carousel: React.FC<CarouselProps> = ({ items }) => {
@@ -82,7 +89,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 			}`}
 		>
 			{items.map((item, index) => (
-				<div className="relative" key={index}>
+				<Link to={`/blogs/${item.id}`} className="relative" key={index}>
 					<img
 						src={item.src}
 						alt={`Slide ${index + 1}`}
@@ -103,7 +110,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 					>
 						{item.title}
 					</H3>
-				</div>
+				</Link>
 			))}
 		</Slider>
 	);

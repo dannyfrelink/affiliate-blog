@@ -39,18 +39,22 @@ const Home = () => {
 					<Carousel
 						items={[
 							{
+								id: 1,
 								src: CarouselImg1,
 								title: "Lorem ipsum dolor sit amet est explicabo blanditiis",
 							},
 							{
+								id: 2,
 								src: CarouselImg2,
 								title: "Lorem ipsum dolor sit amet est explicabo blanditiis",
 							},
 							{
+								id: 3,
 								src: CarouselImg1,
 								title: "Lorem ipsum dolor sit amet est explicabo blanditiis",
 							},
 							{
+								id: 4,
 								src: CarouselImg2,
 								title: "Lorem ipsum dolor sit amet est explicabo blanditiis",
 							},
