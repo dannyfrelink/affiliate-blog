@@ -4,6 +4,7 @@ import { useAppContext } from "../../config/AppContext";
 import CloseButton from "../general/CloseButton";
 import LogoBlack from "../../images/logo/Logo-ReisFeeld-black.svg";
 import LogoPrimary from "../../images/logo/Logo-ReisFeeld-primary.svg";
+import Socials from "../pages/blogs/Socials";
 
 interface NavProps {}
 
@@ -68,7 +69,7 @@ const Nav: React.FC<NavProps> = ({}) => {
 			<ul
 				className={`${
 					screenSize < 1000
-						? `w-[90vw] max-w-[400px] h-full rounded-r-3xl bg-primary pl-6 pr-4 pt-32 [&>li:not(:last-of-type)]:mb-6 ${
+						? `w-[90vw] max-w-[400px] h-full rounded-r-3xl bg-primary pl-6 pr-4 pt-32 [&>li:not(:last-of-type)]:mb-6 [&>li:last-of-type]:mb-12 ${
 								navOpen &&
 								"animate-[menuFadeIn_0.5s_ease-out_forwards]"
 						  }`
@@ -124,6 +125,12 @@ const Nav: React.FC<NavProps> = ({}) => {
 						Over ons
 					</NavLink>
 				</li>
+
+				{screenSize < 1000 && (
+					<div className="[&_a]:!w-9 [&>*]:gap-3.5">
+						<Socials />
+					</div>
+				)}
 			</ul>
 		</nav>
 	);
