@@ -40,7 +40,7 @@ const BottomBar: React.FC<BottomBarProps> = ({ blogs, id }) => {
 				}`}
 			>
 				{blogsArr.map((blog, index) => (
-					<NextBlog key={index} blog={blog} />
+					<NextBlog key={index} blog={blog} size="large" />
 				))}
 			</div>
 		</Container>

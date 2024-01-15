@@ -1,14 +1,16 @@
 import React from "react";
 import { Destination } from "../../../pages/Blogs/BlogOverview";
-import H4 from "../../typography/H4";
 import { useAppContext } from "../../../config/AppContext";
 import { Link } from "react-router-dom";
+import BaseText from "../../typography/BaseText";
+import H3 from "../../typography/H3";
 
 interface NextBlogProps {
 	blog: Destination;
+	size?: "small" | "large";
 }
 
-const NextBlog: React.FC<NextBlogProps> = ({ blog }) => {
+const NextBlog: React.FC<NextBlogProps> = ({ blog, size = "small" }) => {
 	const { screenSize } = useAppContext();
 	const coverImage = require(`../../../images/mockup/${blog.coverImage}`);
 
@@ -19,20 +21,35 @@ const NextBlog: React.FC<NextBlogProps> = ({ blog }) => {
 				src={coverImage}
 				alt="Blog Cover"
 			/>
-			<H4
-				className={`absolute z-10 ${
-					screenSize < 750
-						? "bottom-4 inset-x-4"
-						: screenSize < 1000
-						? "bottom-4 inset-x-4"
-						: screenSize < 1250
-						? "bottom-3 inset-x-3"
-						: "bottom-5 inset-x-4"
-				}`}
-				color="white"
-			>
-				{blog.title}
-			</H4>
+			{size === "small" ? (
+				<BaseText
+					className={`absolute z-10 font-semibold text-primary ${
+						screenSize < 750
+							? "bottom-4 inset-x-4"
+							: screenSize < 1000
+							? "bottom-4 inset-x-4"
+							: screenSize < 1250
+							? "bottom-3 inset-x-3"
+							: "bottom-5 inset-x-4"
+					}`}
+				>
+					{blog.title}
+				</BaseText>
+			) : (
+				<H3
+					className={`absolute z-10 font-semibold text-primary ${
+						screenSize < 750
+							? "bottom-4 inset-x-4"
+							: screenSize < 1000
+							? "bottom-4 inset-x-4"
+							: screenSize < 1250
+							? "bottom-3 inset-x-3"
+							: "bottom-5 inset-x-4"
+					}`}
+				>
+					{blog.title}
+				</H3>
+			)}
 		</Link>
 	);
 };
