@@ -7,15 +7,10 @@ import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRound
 import H3 from "../../typography/H3";
 import { useAppContext } from "../../../config/AppContext";
 import { Link } from "react-router-dom";
-
-interface ItemProps {
-	id: number;
-	src: string;
-	title: string;
-}
+import { Destination } from "../../../pages/Blogs/BlogOverview";
 
 interface CarouselProps {
-	items: ItemProps[];
+	items: Destination[];
 }
 
 const Carousel: React.FC<CarouselProps> = ({ items }) => {
@@ -88,30 +83,38 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 					  } [&>div.slick-dots]:mt-3 [&>div.slick-list>div>div]:pb-3`
 			}`}
 		>
-			{items.map((item, index) => (
-				<Link to={`/blogs/${item.id}`} className="relative" key={index}>
-					<img
-						src={item.src}
-						alt={`Slide ${index + 1}`}
-						className={`w-full object-cover object-center rounded-2xl ${
-							screenSize < 750
-								? "h-96"
-								: `shadow-subtle ${
-										screenSize < 1250
-											? "h-[420px]"
-											: "h-[470px]"
-								  }`
-						}`}
-					/>
+			{items.map((item, index) => {
+				const image = require(`../../../images/mockup/${item.coverImage}`);
 
-					<H3
-						color="white"
-						className="absolute bottom-6 w-[90%] left-[5%]"
+				return (
+					<Link
+						to={`/blogs/${item.id}`}
+						className="relative"
+						key={index}
 					>
-						{item.title}
-					</H3>
-				</Link>
-			))}
+						<img
+							src={image}
+							alt={`Slide ${index + 1}`}
+							className={`w-full object-cover object-center rounded-2xl ${
+								screenSize < 750
+									? "h-96"
+									: `shadow-subtle ${
+											screenSize < 1250
+												? "h-[420px]"
+												: "h-[470px]"
+									  }`
+							}`}
+						/>
+
+						<H3
+							color="white"
+							className="absolute bottom-6 w-[90%] left-[5%]"
+						>
+							{item.title}
+						</H3>
+					</Link>
+				);
+			})}
 		</Slider>
 	);
 };

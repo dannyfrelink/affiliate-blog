@@ -11,9 +11,17 @@ import FeatureImage from "../images/mockup/dreamy.png";
 import AboutImage from "../images/mockup/couple.png";
 import BaseText from "../components/typography/BaseText";
 import Footer from "../components/general/Footer";
+import blogData from "../data/blogs.json";
+import { Destination } from "./Blogs/BlogOverview";
 
 const Home = () => {
 	const { screenSize } = useAppContext();
+	const blogs: Destination[] = [];
+	Object.values(blogData.blogs).map((blogArr) =>
+		blogArr.map((blog) => blogs.push(blog))
+	);
+	const carouselBlogs = blogs.filter((blog) => blog.carousel);
+	const featuredBlog = blogs.filter((blog) => blog.featured)[0];
 
 	return (
 		<div>
@@ -36,35 +44,10 @@ const Home = () => {
 					>
 						Lorem ipsum dolor sit
 					</H2>
-					<Carousel
-						items={[
-							{
-								id: 1,
-								src: CarouselImg1,
-								title: "Lorem ipsum dolor sit amet est explicabo blanditiis",
-							},
-							{
-								id: 2,
-								src: CarouselImg2,
-								title: "Lorem ipsum dolor sit amet est explicabo blanditiis",
-							},
-							{
-								id: 3,
-								src: CarouselImg1,
-								title: "Lorem ipsum dolor sit amet est explicabo blanditiis",
-							},
-							{
-								id: 4,
-								src: CarouselImg2,
-								title: "Lorem ipsum dolor sit amet est explicabo blanditiis",
-							},
-						]}
-					/>
+					<Carousel items={carouselBlogs} />
 				</Container>
 
-				<Featured
-					Image={() => <img src={FeatureImage} alt="Viewpoint" />}
-				/>
+				<Featured blog={featuredBlog} />
 
 				<Container>
 					<section

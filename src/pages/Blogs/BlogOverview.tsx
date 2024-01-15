@@ -29,6 +29,8 @@ export interface Destination {
 			[image: string]: string;
 		};
 	};
+	featured?: string;
+	carousel?: boolean;
 }
 
 export interface BlogsData {

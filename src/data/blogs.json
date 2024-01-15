@@ -31,7 +31,8 @@
 						"image2": "dreamy",
 						"image3": "scenary"
 					}
-				}
+				},
+				"featured": "Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet."
 			},
 			{
 				"id": 2,
@@ -117,7 +118,8 @@
 						"image2": "dreamy",
 						"image3": "viewpoint"
 					}
-				}
+				},
+				"carousel": true
 			},
 			{
 				"id": 5,
@@ -203,7 +205,8 @@
 						"image2": "dreamy",
 						"image3": "viewpoint"
 					}
-				}
+				},
+				"carousel": true
 			},
 			{
 				"id": 8,
@@ -289,7 +292,8 @@
 						"image2": "dreamy",
 						"image3": "viewpoint"
 					}
-				}
+				},
+				"carousel": true
 			},
 			{
 				"id": 11,
@@ -345,7 +349,8 @@
 						"image2": "dreamy",
 						"image3": "viewpoint"
 					}
-				}
+				},
+				"carousel": true
 			}
 		]
 	}

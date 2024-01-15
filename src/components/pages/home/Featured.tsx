@@ -4,16 +4,18 @@ import H2 from "../../typography/H2";
 import BaseText from "../../typography/BaseText";
 import Button from "../../general/Button";
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
+import { Destination } from "../../../pages/Blogs/BlogOverview";
 
 interface FeaturedProps {
-	Image: React.FC<JSX.IntrinsicElements["img"]>;
+	blog: Destination;
 }
 
-const Featured: React.FC<FeaturedProps> = ({ Image }) => {
+const Featured: React.FC<FeaturedProps> = ({ blog }) => {
 	const { screenSize } = useAppContext();
+	const image = require(`../../../images/mockup/${blog.coverImage}`);
 	return (
 		<div className="flex items-center relative h-[calc(95vh-(24px*2))] [&>img]:w-full [&>img]:h-[95vh] [&>img]:object-cover [&>img]:object-[50%_65%] [&>img]:absolute [&>img]:-top-6 [&>img]:z-[-1]">
-			<Image />
+			<img src={image} alt="Blog Cover" />
 
 			<section
 				className={`text-primary w-[85vw] max-w-[650px] ${
@@ -26,12 +28,9 @@ const Featured: React.FC<FeaturedProps> = ({ Image }) => {
 			>
 				<div>
 					<BaseText className="italic mb-1">Uitgelicht</BaseText>
-					<H2>Lorem ipsum dolor sit amet est explicabo blanditiis</H2>
+					<H2>{blog.title}</H2>
 				</div>
-				<BaseText>
-					Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem
-					ipsum dolor sit amet lorem ipsum dolor sit amet
-				</BaseText>
+				<BaseText>{blog.featured}</BaseText>
 
 				<Button>
 					Ontdek ervaring{" "}
