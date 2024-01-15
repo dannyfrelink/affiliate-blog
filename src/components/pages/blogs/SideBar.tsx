@@ -21,8 +21,8 @@ const SideBar: React.FC<SideBarProps> = ({ blogs, id }) => {
 					? ""
 					: `sticky h-full w-[1050px] rounded-none rounded-tr-2xl ${
 							scrolled > 600 && scrolledUp
-								? "top-[4.5rem]"
-								: "top-0"
+								? "top-[2.5rem]"
+								: "-top-8"
 					  } ${screenSize < 1250 ? "!px-10" : "!px-12"} ${
 							screenSize > 1500 && "w-[884px] !px-16"
 					  }`
