@@ -1,21 +1,56 @@
 import React, { useState, useEffect } from "react";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { useAppContext } from "../../../config/AppContext";
+import { useLocation } from "react-router-dom";
 
 interface ScrollToTopButtonProps {}
 
 const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = () => {
+	const location = useLocation();
+	const scrollFilter = location.pathname;
+
 	const [isVisible, setIsVisible] = useState(false);
 	const { screenSize } = useAppContext();
 
 	const handleScroll = () => {
 		const scrolled = window.scrollY;
-		setIsVisible(scrolled > 150);
+		setIsVisible(
+			scrollFilter === "/blogs"
+				? screenSize < 750
+					? scrolled > 1000
+					: screenSize < 1250
+					? scrolled > 950
+					: scrolled > 1100
+				: scrollFilter === "/accommodaties"
+				? screenSize < 550
+					? scrolled > 700
+					: screenSize < 750
+					? scrolled > 850
+					: screenSize < 1250
+					? scrolled > 1050
+					: scrolled > 1300
+				: scrolled > 150
+		);
 	};
 
 	const scrollToTop = () => {
 		window.scrollTo({
-			top: 0,
+			top:
+				scrollFilter === "/blogs"
+					? screenSize < 750
+						? 900
+						: screenSize < 1250
+						? 800
+						: 900
+					: scrollFilter === "/accommodaties"
+					? screenSize < 550
+						? 600
+						: screenSize < 750
+						? 500
+						: screenSize < 1250
+						? 900
+						: 1000
+					: 0,
 			behavior: "smooth",
 		});
 	};
