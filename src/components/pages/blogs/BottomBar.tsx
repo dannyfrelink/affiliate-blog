@@ -16,8 +16,6 @@ const BottomBar: React.FC<BottomBarProps> = ({ blogs, id }) => {
 	const { screenSize } = useAppContext();
 	const optionalBlogs = blogs.filter((blog) => blog.id !== id);
 	const blogsArr = getRandomBlogs(optionalBlogs, 4);
-
-	console.log(blogsArr);
 	return (
 		<Container className="rounded-t-none">
 			<H2
