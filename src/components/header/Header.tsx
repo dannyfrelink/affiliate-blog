@@ -6,6 +6,7 @@ import { useAppContext } from "../../config/AppContext";
 import Title from "./Title";
 import LogoBlack from "../../images/logo/Logo-ReisFeeld-black.svg";
 import LogoPrimary from "../../images/logo/Logo-ReisFeeld-primary.svg";
+import { Link } from "react-router-dom";
 
 interface HeaderProps {
 	Image: React.FC<JSX.IntrinsicElements["img"]>;
@@ -47,11 +48,13 @@ const Header: React.FC<HeaderProps> = ({
 			)}
 
 			{screenSize < 1000 && (
-				<img
-					className="absolute top-4 left-4 block !h-12 !w-auto"
-					src={LogoPrimary}
-					alt="Logo ReisFeeld White"
-				/>
+				<Link to="/">
+					<img
+						className="absolute top-4 left-4 block !h-12 !w-auto"
+						src={LogoPrimary}
+						alt="Logo ReisFeeld White"
+					/>
+				</Link>
 			)}
 
 			<Nav />
