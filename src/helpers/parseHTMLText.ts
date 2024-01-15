@@ -8,6 +8,7 @@ import { Element } from "react-scroll";
 interface TextProps {
 	children: React.ReactNode;
 	id?: string;
+	className?: string | null;
 }
 
 interface ImageProps {
@@ -76,6 +77,14 @@ function parseHTMLText(text: string, images: any) {
 						children: React.createElement(TagComponent, {
 							children: element.innerHTML,
 						}),
+					});
+				} else if (tagName === "p" || tagName === "h3") {
+					const className = element.getAttribute("class");
+
+					return React.createElement(TagComponent, {
+						key: index,
+						children: element.innerHTML,
+						className,
 					});
 				} else {
 					return React.createElement(TagComponent, {
