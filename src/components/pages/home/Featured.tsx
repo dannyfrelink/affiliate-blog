@@ -5,6 +5,7 @@ import BaseText from "../../typography/BaseText";
 import Button from "../../general/Button";
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
 import { Destination } from "../../../pages/Blogs/BlogOverview";
+import ButtonLink from "../../general/ButtonLink";
 
 interface FeaturedProps {
 	blog: Destination;
@@ -32,12 +33,12 @@ const Featured: React.FC<FeaturedProps> = ({ blog }) => {
 				</div>
 				<BaseText>{blog.featured}</BaseText>
 
-				<Button>
+				<ButtonLink link={`/blogs/${blog.id}`}>
 					Ontdek ervaring{" "}
 					<ArrowForwardRoundedIcon
 						fontSize={screenSize < 750 ? "small" : "medium"}
 					/>
-				</Button>
+				</ButtonLink>
 			</section>
 		</div>
 	);

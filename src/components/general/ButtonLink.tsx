@@ -5,7 +5,7 @@ import Button from "./Button";
 interface ButtonLinkProps {
 	children: React.ReactNode;
 	link: string;
-	blank: boolean;
+	blank?: boolean;
 	className?: string;
 }
 
