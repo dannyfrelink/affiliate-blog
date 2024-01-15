@@ -19,7 +19,7 @@ const SideBar: React.FC<SideBarProps> = ({ blogs, id }) => {
 					? ""
 					: screenSize < 1000
 					? ""
-					: `sticky h-full w-[1050px] rounded-none rounded-tr-2xl ${
+					: `sticky z-[-1] h-full w-[1050px] rounded-none rounded-tr-2xl ${
 							scrolled > 600 && scrolledUp
 								? "top-[2.5rem]"
 								: "-top-8"
