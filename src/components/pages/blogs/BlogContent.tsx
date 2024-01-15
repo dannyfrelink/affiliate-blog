@@ -3,6 +3,9 @@ import Container from "../../general/Container";
 import { useAppContext } from "../../../config/AppContext";
 import replaceImageTag from "../../../helpers/replaceImageTag";
 import parseHTMLText from "../../../helpers/parseHTMLText";
+import H2 from "../../typography/H2";
+import TableOfContents from "./TableOfContents";
+import { Destination } from "../../../pages/Blogs/BlogOverview";
 
 interface Images {
 	src: {
@@ -14,12 +17,20 @@ interface Images {
 }
 
 interface BlogContentProps {
+	index: number;
 	image?: string;
 	text: string;
 	images: Images;
+	blog: Destination;
 }
 
-const BlogContent: React.FC<BlogContentProps> = ({ image, text, images }) => {
+const BlogContent: React.FC<BlogContentProps> = ({
+	index,
+	image,
+	text,
+	images,
+	blog,
+}) => {
 	const { screenSize } = useAppContext();
 	const img = image && require(`../../../images/mockup/${image}`);
 
@@ -29,6 +40,13 @@ const BlogContent: React.FC<BlogContentProps> = ({ image, text, images }) => {
 	return (
 		<div className="relative">
 			<Container>
+				{index === 0 && screenSize < 1000 && (
+					<div className="mb-4">
+						<H2 className="mb-3">{blog.title}</H2>
+						<TableOfContents headers={blog.headers} />
+					</div>
+				)}
+
 				<div
 					className={`[&>img]:w-full [&_img]:rounded-2xl [&_img]:shadow-subtle [&>h3]:font-medium ${
 						screenSize < 750

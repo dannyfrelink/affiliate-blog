@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRounded";
 import { useAppContext } from "../../config/AppContext";
+import H4 from "../typography/H4";
 
 interface DetailsProps {
 	children: React.ReactNode;
@@ -20,34 +21,33 @@ const Details: React.FC<DetailsProps> = ({
 	const { screenSize } = useAppContext();
 
 	return (
-		<div className={className}>
+		<div className="bg-tertair w-fit rounded-2xl text-primary">
 			<button
-				className="flex justify-between"
+				className="flex justify-between items-center py-1.5 px-4"
 				onClick={() => setOpen(!open)}
 			>
-				<li className={summaryClass}>{summary}</li>
+				<H4 className="" color="white">
+					{summary}
+				</H4>
 
 				{open ? (
 					<KeyboardArrowUpRoundedIcon
 						className="!max-h-7"
 						fontSize="large"
+						color="inherit"
 					/>
 				) : (
 					<KeyboardArrowDownRoundedIcon
 						className="!max-h-7"
 						fontSize="large"
+						color="inherit"
 					/>
 				)}
 			</button>
 
 			<div
 				className={`${
-					open
-						? `block ${
-								screenSize > 750 &&
-								"absolute animate-[blogsFadeIn_0.5s_ease-out_forwards] -ml-11 bg-primary rounded-b-xl pt-2 pb-4 px-8 shadow-subtle z-[-2]"
-						  }`
-						: "hidden"
+					open ? `block ${screenSize > 750 && "block"}` : "hidden"
 				}`}
 			>
 				{children}

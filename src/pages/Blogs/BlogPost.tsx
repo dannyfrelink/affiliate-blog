@@ -43,9 +43,11 @@ const BlogPost = () => {
 						return (
 							<BlogContent
 								key={index}
+								index={index}
 								image={section.image}
 								text={text}
 								images={images}
+								blog={blog}
 							></BlogContent>
 						);
 					})}
