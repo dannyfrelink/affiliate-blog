@@ -40,10 +40,12 @@ const BlogContent: React.FC<BlogContentProps> = ({
 	return (
 		<div className="relative">
 			<Container>
-				{index === 0 && screenSize < 1000 && (
+				{index === 0 && (
 					<div className="mb-4">
 						<H2 className="mb-3">{blog.title}</H2>
-						<TableOfContents headers={blog.headers} />
+						{screenSize < 1000 && (
+							<TableOfContents headers={blog.headers} />
+						)}
 					</div>
 				)}
 
