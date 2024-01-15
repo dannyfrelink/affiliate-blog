@@ -31,28 +31,10 @@ const SideBar: React.FC<SideBarProps> = ({ blogs, id }) => {
 					  }`
 			}`}
 		>
-			<div className={``}>
+			<div className="[&>*:not(:last-child)]:mb-10">
 				<TableOfContents headers={activeBlog.headers} />
 
 				<div>
-					<H3
-						className={`text-center ${
-							screenSize < 750
-								? "mb-3"
-								: screenSize < 1000
-								? "mb-4"
-								: `!text-left ${
-										screenSize < 1250 ? "mb-4" : "mb-5"
-								  }`
-						}`}
-					>
-						Ontdek meer
-					</H3>
-
-					<NextBlogs blogs={blogs} id={id} />
-				</div>
-
-				<div className="mt-10">
 					<H3
 						className={`text-center ${
 							screenSize < 750
