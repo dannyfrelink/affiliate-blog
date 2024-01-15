@@ -31,7 +31,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headers }) => {
 				</Details>
 			) : (
 				<div>
-					<H3 className="mb-3" color="black">
+					<H3 className="mb-4" color="black">
 						Inhoud
 					</H3>
 
