@@ -6,6 +6,7 @@ import Header from "../../components/header/Header";
 import Footer from "../../components/general/Footer";
 import BlogContent from "../../components/pages/blogs/BlogContent";
 import { useAppContext } from "../../config/AppContext";
+import BottomBar from "../../components/pages/blogs/BottomBar";
 
 const BlogPost = () => {
 	const { screenSize } = useAppContext();
@@ -28,11 +29,12 @@ const BlogPost = () => {
 				align="bottom"
 			/>
 
-			<div className={screenSize >= 1000 ? "relative flex" : ""}>
+			<div className={screenSize < 1000 ? "" : "relative flex"}>
 				<div
 					className={`z-[1] ${
-						screenSize > 1000 &&
-						"[&>*>section]:rounded-none [&>*:first-child>section]:rounded-tl-2xl [&>*:last-child>section]:rounded-bl-2xl"
+						screenSize < 1000
+							? "[&>*:last-child>section]:!rounded-b-none"
+							: "[&>*>section]:rounded-none [&>*:first-child>section]:rounded-tl-2xl"
 					}`}
 				>
 					{sections.map((section, index) => {
@@ -49,8 +51,12 @@ const BlogPost = () => {
 					})}
 				</div>
 
-				<SideBar blogs={allBlogs} id={Number(id)} />
+				{screenSize >= 1000 && (
+					<SideBar blogs={allBlogs} id={Number(id)} />
+				)}
 			</div>
+
+			<BottomBar blogs={allBlogs} id={Number(id)} />
 
 			<Footer />
 		</div>
