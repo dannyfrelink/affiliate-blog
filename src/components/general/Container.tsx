@@ -15,8 +15,8 @@ const Container: React.FC<ContainerProps> = ({ children, className }) => {
 				screenSize < 750
 					? "px-[7.5vw] py-7"
 					: screenSize < 1250
-					? "px-[9vw] py-10"
-					: "px-[10vw] py-12"
+					? "px-[9vw] py-12"
+					: "px-[10vw] py-16"
 			}`}
 		>
 			{children}
