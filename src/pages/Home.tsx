@@ -3,16 +3,14 @@ import { useAppContext } from "../config/AppContext";
 import HeaderImage from "../images/mockup/mountains.png";
 import Container from "../components/general/Container";
 import Carousel from "../components/pages/home/Carousel";
-import CarouselImg1 from "../images/mockup/mountains.png";
-import CarouselImg2 from "../images/mockup/couple.png";
 import H2 from "../components/typography/H2";
 import Featured from "../components/pages/home/Featured";
-import FeatureImage from "../images/mockup/dreamy.png";
 import AboutImage from "../images/mockup/couple.png";
 import BaseText from "../components/typography/BaseText";
 import Footer from "../components/general/Footer";
 import blogData from "../data/blogs.json";
 import { Destination } from "./Blogs/BlogOverview";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
 	const { screenSize } = useAppContext();
@@ -25,6 +23,11 @@ const Home = () => {
 
 	return (
 		<div>
+			<Helmet prioritizeSeoTags>
+				<title>Test</title>
+				<meta name="description" content="Testing this page" />
+			</Helmet>
+
 			<Header
 				Image={() => <img src={HeaderImage} alt="Viewpoint" />}
 				title="Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet"
