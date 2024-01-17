@@ -6,7 +6,7 @@ import LogoBlack from "../../images/logo/Logo-ReisFeeld-black.svg";
 import LogoPrimary from "../../images/logo/Logo-ReisFeeld-primary.svg";
 import Socials from "../pages/blogs/Socials";
 
-const Nav: React.FC = ({}) => {
+const Nav: React.FC = () => {
 	const { screenSize, navOpen, setNavOpen, scrolled, scrolledUp } =
 		useAppContext();
 
