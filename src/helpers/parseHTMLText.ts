@@ -71,6 +71,7 @@ function parseHTMLText(text: string, images: any) {
 					.toLowerCase();
 
 				if (tagName === "h2") {
+					// If h2 tag, create Element component with H2 component inside
 					return React.createElement(Element, {
 						key: index,
 						name,
@@ -79,6 +80,7 @@ function parseHTMLText(text: string, images: any) {
 						}),
 					});
 				} else if (tagName === "p" || tagName === "h3") {
+					// If p or h3 tag, create BaseText or H3 component with given class attribute
 					const className = element.getAttribute("class");
 
 					return React.createElement(TagComponent, {
@@ -87,6 +89,7 @@ function parseHTMLText(text: string, images: any) {
 						className,
 					});
 				} else {
+					// Render leftover TagComponent elements
 					return React.createElement(TagComponent, {
 						key: index,
 						children: element.innerHTML,

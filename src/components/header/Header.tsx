@@ -4,7 +4,6 @@ import Button from "../general/Button";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import { useAppContext } from "../../config/AppContext";
 import Title from "./Title";
-import LogoBlack from "../../images/logo/Logo-ReisFeeld-black.svg";
 import LogoPrimary from "../../images/logo/Logo-ReisFeeld-primary.svg";
 import { Link } from "react-router-dom";
 
@@ -23,8 +22,7 @@ const Header: React.FC<HeaderProps> = ({
 	size = "large",
 	align = "center",
 }) => {
-	const { navOpen, setNavOpen, screenSize, scrolled, scrolledUp } =
-		useAppContext();
+	const { setNavOpen, screenSize } = useAppContext();
 
 	return (
 		<header

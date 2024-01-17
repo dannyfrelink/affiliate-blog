@@ -2,7 +2,6 @@ import React from "react";
 import { useAppContext } from "../../../config/AppContext";
 import H2 from "../../typography/H2";
 import BaseText from "../../typography/BaseText";
-import Button from "../../general/Button";
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
 import { Destination } from "../../../pages/Blogs/BlogOverview";
 import ButtonLink from "../../general/ButtonLink";

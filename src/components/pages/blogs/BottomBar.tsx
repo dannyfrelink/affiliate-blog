@@ -3,7 +3,6 @@ import Container from "../../general/Container";
 import { Destination } from "../../../pages/Blogs/BlogOverview";
 import { useAppContext } from "../../../config/AppContext";
 import { getRandomBlogs } from "../../../helpers/getRandomBlogs";
-import NextBlogs from "./NextBlogs";
 import NextBlog from "./NextBlog";
 import H2 from "../../typography/H2";
 

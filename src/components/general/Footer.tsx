@@ -3,15 +3,12 @@ import BaseText from "../typography/BaseText";
 import { useAppContext } from "../../config/AppContext";
 import ScrollToTopButton from "../pages/overview/ScrollToTopButton";
 import LogoBlack from "../../images/logo/Logo-ReisFeeld-black.svg";
-import H4 from "../typography/H4";
 import Socials from "../pages/blogs/Socials";
 import H3 from "../typography/H3";
 import { Link } from "react-router-dom";
 import ButtonLink from "./ButtonLink";
 
-interface FooterProps {}
-
-const Footer: React.FC<FooterProps> = () => {
+const Footer: React.FC = () => {
 	const { screenSize } = useAppContext();
 	return (
 		<div>

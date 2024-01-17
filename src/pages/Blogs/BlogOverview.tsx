@@ -38,7 +38,7 @@ export interface BlogsData {
 	[destination: string]: Destination[];
 }
 
-const BlogOverview = ({}) => {
+const BlogOverview = () => {
 	const { screenSize } = useAppContext();
 
 	const blogs: BlogsData = data.blogs;

@@ -11,12 +11,7 @@ interface DetailsProps {
 	summaryClass?: string;
 }
 
-const Details: React.FC<DetailsProps> = ({
-	children,
-	className = "",
-	summary,
-	summaryClass = "",
-}) => {
+const Details: React.FC<DetailsProps> = ({ children, summary }) => {
 	const [open, setOpen] = useState<boolean>(false);
 	const { screenSize } = useAppContext();
 

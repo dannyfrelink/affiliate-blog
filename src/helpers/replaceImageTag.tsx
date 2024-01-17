@@ -23,13 +23,3 @@ const replaceImageTag = (text: string, images: Image) => {
 };
 
 export default replaceImageTag;
-
-//   // Example usage
-//   const exampleText = "<p>Text with image: <image1></p>";
-//   const images = {
-//     image1: "mountains.png",
-//     // ... other image values
-//   };
-
-//   const replacedText = replaceImageTags(exampleText, images);
-//   console.log(replacedText);

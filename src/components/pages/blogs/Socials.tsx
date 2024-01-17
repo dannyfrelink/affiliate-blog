@@ -1,10 +1,7 @@
 import React from "react";
-import H3 from "../../typography/H3";
 import { Link } from "react-router-dom";
 
-interface SocialsProps {}
-
-const Socials: React.FC<SocialsProps> = () => {
+const Socials: React.FC = () => {
 	const socials = [
 		{
 			src: "icons8-instagram.svg",
