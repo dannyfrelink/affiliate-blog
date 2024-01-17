@@ -1,11 +1,7 @@
 const express = require("express");
-const { renderToNodeStream } = require("react-dom/server");
-const { StaticRouter } = require("react-router-dom");
-const { matchRoutes } = require("react-router-config");
-const { SitemapStream, streamToPromise } = require("sitemap");
-// const routes = require("./src/routes");
-
 const app = express();
+const { SitemapStream, streamToPromise } = require("sitemap");
+const blogData = require("../src/data/blogs.json");
 
 const routes = [
 	{ path: "/", exact: true, component: "Home" },
@@ -14,7 +10,6 @@ const routes = [
 	{ path: "/accommodaties", component: "Accommodations" },
 	{ path: "/over-ons", component: "About" },
 ];
-
 const routeStrings = routes.map((route) => route.path);
 
 app.get("/sitemap.xml", (req, res) => {
@@ -22,12 +17,42 @@ app.get("/sitemap.xml", (req, res) => {
 		hostname: "http://localhost:3000",
 	});
 
-	routeStrings.map((url) => {
+	const writeSitemap = (url, changefreq, priority) => {
 		sitemap.write({
 			url,
-			changefreq: "monthly",
-			priority: 0.7,
+			changefreq,
+			priority,
 		});
+	};
+
+	routeStrings.map((url) => {
+		const blogs = [];
+		Object.values(blogData.blogs).map((blog) =>
+			blog.map((b) => blogs.push(b))
+		);
+		let changefreq;
+		let priority;
+
+		if (url === "/blogs/:id") {
+			blogs.map((blog) => {
+				url = `/blogs/${blog.id}`;
+				changefreq = "weekly";
+				priority = 1;
+				writeSitemap(url, changefreq, priority);
+			});
+		} else if (url === "/blogs" || url === "/accommodaties") {
+			changefreq = "weekly";
+			priority = 0.9;
+			writeSitemap(url, changefreq, priority);
+		} else if (url === "/") {
+			changefreq = "monthly";
+			priority = 0.8;
+			writeSitemap(url, changefreq, priority);
+		} else {
+			changefreq = "yearly";
+			priority = 0.7;
+			writeSitemap(url, changefreq, priority);
+		}
 	});
 
 	sitemap.end();
