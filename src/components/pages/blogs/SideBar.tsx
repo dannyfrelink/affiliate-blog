@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Container from "../../general/Container";
 import { useAppContext } from "../../../config/AppContext";
 import NextBlogs from "./NextBlogs";
@@ -16,23 +16,37 @@ const SideBar: React.FC<SideBarProps> = ({ blogs, id }) => {
 	const { screenSize, scrolled, scrolledUp } = useAppContext();
 	const activeBlog = blogs.filter((blog) => blog.id === id)[0];
 
+	const [sideBarSticky, setSideBarSticky] = useState<boolean>(false);
+	const sideBarRef = useRef(null);
+	useEffect(() => {
+		const handleScroll = () => {
+			const sidebar = sideBarRef.current;
+
+			if (sidebar) {
+				const { offsetTop, offsetHeight } = sidebar;
+
+				if (window.scrollY > offsetTop + offsetHeight) {
+					setSideBarSticky(true);
+				} else {
+					setSideBarSticky(false);
+				}
+			}
+		};
+
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
+
 	return (
 		<Container
-			className={`${
-				screenSize < 750
-					? ""
-					: screenSize < 1000
-					? ""
-					: `sticky h-full w-[1050px] rounded-none rounded-tr-2xl ${
-							scrolled > 600 && scrolledUp
-								? "top-[2.5rem]"
-								: "-top-8"
-					  } ${screenSize < 1250 ? "!px-10" : "!px-12"} ${
-							screenSize > 1500 && "w-[884px] !px-16"
-					  }`
+			containerRef={sideBarRef}
+			className={`h-full rounded-none rounded-tr-2xl	${
+				sideBarSticky && `sticky top-0`
+			} ${screenSize < 1250 ? "!w-2/6 !px-10" : "!px-12"} w-[30%] ${
+				screenSize >= 1500 && "!px-16 !w-1/4"
 			}`}
 		>
-			<div className="[&>*:not(:last-child)]:mb-10">
+			<div className={`[&>*:not(:last-child)]:mb-10`}>
 				<TableOfContents headers={activeBlog.headers} />
 
 				<div>
