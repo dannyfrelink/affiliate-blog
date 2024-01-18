@@ -31,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({
 					? size === "large"
 						? "h-[90vh] [&>img]:h-full"
 						: "h-[40vh] [&>img]:h-1/2"
-					: "h-[90vh] [&>img]:h-full"
+					: "h-[90vh] [&>img]:h-[110%]"
 			} [&>img]:w-full [&>img]:object-cover [&>img]:object-center [&>img]:absolute [&>img]:z-[-2] text-primary`}
 		>
 			<Image />

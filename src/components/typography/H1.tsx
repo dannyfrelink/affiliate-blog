@@ -12,10 +12,10 @@ const H1: React.FC<H1Props> = ({ children, subTitle }) => {
 		<h1
 			className={`font-extrabold ${
 				screenSize < 750
-					? `text-2xl ${subTitle !== "" && "mb-3"}`
+					? `text-5xl ${subTitle !== "" && "mb-3"}`
 					: screenSize < 1250
-					? `text-3xl ${subTitle !== "" && "mb-6"}`
-					: `text-[42px] leading-[44px] ${subTitle !== "" && "mb-10"}`
+					? `text-[75px] ${subTitle !== "" && "mb-6"}`
+					: `text-[110px] ${subTitle !== "" && "mb-10"}`
 			}`}
 		>
 			{children}

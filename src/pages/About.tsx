@@ -2,8 +2,8 @@ import Container from "../components/general/Container";
 import Header from "../components/header/Header";
 import BaseText from "../components/typography/BaseText";
 import H2 from "../components/typography/H2";
-import HeaderImage from "../assets/mockup/viewpoint.png";
-import AboutImage from "../assets/mockup/couple.png";
+import HeaderImage from "../assets/header/about.jpg";
+import AboutImage from "../assets/pages/about/couple.jpg";
 import Footer from "../components/general/Footer";
 import { useAppContext } from "../config/AppContext";
 
@@ -13,9 +13,8 @@ const About = () => {
 	return (
 		<div>
 			<Header
-				Image={() => <img src={HeaderImage} alt="Viewpoint" />}
-				title="Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet"
-				subTitle="Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
+				Image={() => <img src={HeaderImage} alt="Vulcano viewpoint" />}
+				title="Over ReisFeeld"
 			/>
 
 			<Container>

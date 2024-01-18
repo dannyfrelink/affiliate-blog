@@ -22,7 +22,7 @@ const Title: React.FC<TitleProps> = ({ title, subTitle, align, size }) => {
 								: "justify-end pb-5"
 					  } ${size === "large" ? "h-[90vh]" : "h-[40vh]"}`
 					: `h-[90vh] justify-center items-center text-center ${
-							screenSize < 1250 ? "w-4/5" : "w-7/12"
+							screenSize < 1250 ? "w-4/5" : "w-3/4"
 					  }`
 			} flex flex-col mx-auto`}
 		>
