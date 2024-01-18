@@ -18,19 +18,15 @@ const SideBar: React.FC<SideBarProps> = ({ blogs, id }) => {
 
 	return (
 		<Container
-			className={`${
-				screenSize < 750
-					? ""
-					: screenSize < 1000
-					? ""
-					: `sticky h-full w-[1050px] rounded-none rounded-tr-2xl ${
-							scrolled > 600 && scrolledUp
-								? "top-[2.5rem]"
-								: "-top-8"
-					  } ${screenSize < 1250 ? "!px-10" : "!px-12"} ${
-							screenSize > 1500 && "w-[884px] !px-16"
-					  }`
-			}`}
+			className={`sticky h-full rounded-none rounded-tr-2xl ${
+				screenSize < 1250
+					? "w-2/6"
+					: screenSize < 1500
+					? "w-[30%]"
+					: "w-1/4"
+			} ${scrolled > 600 && scrolledUp ? "top-[2.5rem]" : "-top-8"} ${
+				screenSize < 1250 ? "!px-10" : "!px-12"
+			} ${screenSize > 1500 && "w-[884px] !px-16"}`}
 		>
 			<div className="[&>*:not(:last-child)]:mb-10">
 				<TableOfContents headers={activeBlog.headers} />

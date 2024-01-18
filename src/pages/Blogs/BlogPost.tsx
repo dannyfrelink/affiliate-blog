@@ -40,7 +40,13 @@ const BlogPost = () => {
 					className={`z-[1] ${
 						screenSize < 1000
 							? "[&>*:last-child>section]:!rounded-b-none"
-							: "[&>*>section]:rounded-none [&>*:first-child>section]:rounded-tl-2xl"
+							: `[&>*>section]:rounded-none [&>*:first-child>section]:rounded-tl-2xl ${
+									screenSize < 1250
+										? "w-4/6"
+										: screenSize < 1500
+										? "w-[70%]"
+										: "w-3/4"
+							  }`
 					}`}
 				>
 					{sections.map((section, index) => {
