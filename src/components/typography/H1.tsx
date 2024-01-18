@@ -10,7 +10,7 @@ const H1: React.FC<H1Props> = ({ children, subTitle }) => {
 	const { screenSize } = useAppContext();
 	return (
 		<h1
-			className={`font-extrabold ${
+			className={`font-bold ${
 				screenSize < 750
 					? `text-5xl ${subTitle !== "" && "mb-3"}`
 					: screenSize < 1250
