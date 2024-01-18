@@ -7,6 +7,7 @@ import Footer from "../../components/general/Footer";
 import BlogContent from "../../components/pages/blogs/BlogContent";
 import { useAppContext } from "../../config/AppContext";
 import BottomBar from "../../components/pages/blogs/BottomBar";
+import { Helmet } from "react-helmet-async";
 
 const BlogPost = () => {
 	const { screenSize } = useAppContext();
@@ -21,6 +22,11 @@ const BlogPost = () => {
 
 	return (
 		<div>
+			<Helmet>
+				<title>{blog.title}</title>
+				<meta name="description" content={blog.metaDesc} />
+			</Helmet>
+
 			<Header
 				Image={() => <img src={coverImage} alt="Viewpoint" />}
 				title={blog.title}

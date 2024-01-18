@@ -12,6 +12,7 @@ import Footer from "../../components/general/Footer";
 
 export interface Destination {
 	id: number;
+	metaDesc: string;
 	date: string;
 	coverImage: string;
 	title: string;
