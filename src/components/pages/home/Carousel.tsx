@@ -84,7 +84,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 			}`}
 		>
 			{items.map((item, index) => {
-				const image = require(`../../../images/mockup/${item.coverImage}`);
+				const image = require(`../../../assets/mockup/${item.coverImage}`);
 
 				return (
 					<Link

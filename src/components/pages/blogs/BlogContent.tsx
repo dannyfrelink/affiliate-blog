@@ -32,7 +32,7 @@ const BlogContent: React.FC<BlogContentProps> = ({
 	blog,
 }) => {
 	const { screenSize } = useAppContext();
-	const img = image && require(`../../../images/mockup/${image}`);
+	const img = image && require(`../../../assets/mockup/${image}`);
 
 	const parsedImg = replaceImageTag(text, images);
 	const parsedText = parseHTMLText(parsedImg, images);

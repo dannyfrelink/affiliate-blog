@@ -12,7 +12,7 @@ interface NextBlogProps {
 
 const NextBlog: React.FC<NextBlogProps> = ({ blog, size = "small" }) => {
 	const { screenSize } = useAppContext();
-	const coverImage = require(`../../../images/mockup/${blog.coverImage}`);
+	const coverImage = require(`../../../assets/mockup/${blog.coverImage}`);
 
 	return (
 		<Link to={`/blogs/${blog.id}`} className="relative block">

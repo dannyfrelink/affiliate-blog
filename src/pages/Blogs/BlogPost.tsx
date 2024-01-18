@@ -15,7 +15,7 @@ const BlogPost = () => {
 	const allBlogs: Destination[] = [];
 	Object.values(blogs).map((blog) => blog.map((b) => allBlogs.push(b)));
 	const blog = allBlogs.filter((b) => b.id === Number(id))[0];
-	const coverImage = require(`../../images/mockup/${blog.coverImage}`);
+	const coverImage = require(`../../assets/mockup/${blog.coverImage}`);
 	const images = blog.images;
 	const sections = Object.values(blog.content);
 

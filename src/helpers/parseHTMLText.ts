@@ -40,7 +40,7 @@ function parseHTMLText(text: string, images: any) {
 			if (tagName === "img") {
 				// If the element is an <img/> tag, replace it with <BlogImage>
 				const src =
-					require(`../images/mockup/${element.getAttribute(
+					require(`../assets/mockup/${element.getAttribute(
 						"src"
 					)}`) || "";
 				const alt = element.getAttribute("alt") || "";
@@ -63,7 +63,26 @@ function parseHTMLText(text: string, images: any) {
 					{ key: index, className },
 					divContent
 				);
-			} else if (TagComponent) {
+			}
+			// else if (tagName === "video") {
+			// 	// If the element is a <video> tag, parse HTML children as well
+			// 	const autoplay = element.getAttribute("autoplay");
+			// 	const controls = element.getAttribute("controls");
+
+			// 	console.log(element);
+
+			// 	const divContent: any = parseHTMLText(
+			// 		element.innerHTML,
+			// 		images
+			// 	);
+
+			// 	return React.createElement(
+			// 		"video",
+			// 		{ key: index, autoplay, controls },
+			// 		divContent
+			// 	);
+			// }
+			else if (TagComponent) {
 				// If a mapping exists, create the React component
 				const name = element.innerHTML
 					.split(" ")

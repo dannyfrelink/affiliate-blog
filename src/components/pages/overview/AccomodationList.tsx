@@ -30,7 +30,7 @@ const AccommodationList: React.FC<AccommodationListProps> = ({
 						key={index}
 					>
 						{accoms.map((accom, index) => {
-							const image = require(`../../../images/mockup/${accom.image}`);
+							const image = require(`../../../assets/mockup/${accom.image}`);
 
 							return (
 								<div

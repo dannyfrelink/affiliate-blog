@@ -2,8 +2,8 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useAppContext } from "../../config/AppContext";
 import CloseButton from "../general/CloseButton";
-import LogoBlack from "../../images/logo/Logo-ReisFeeld-black.svg";
-import LogoPrimary from "../../images/logo/Logo-ReisFeeld-primary.svg";
+import LogoBlack from "../../assets/logo/Logo-ReisFeeld-black.svg";
+import LogoPrimary from "../../assets/logo/Logo-ReisFeeld-primary.svg";
 import Socials from "../pages/blogs/Socials";
 
 const Nav: React.FC = () => {

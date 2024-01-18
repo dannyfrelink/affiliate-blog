@@ -4,7 +4,7 @@ import Button from "../general/Button";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import { useAppContext } from "../../config/AppContext";
 import Title from "./Title";
-import LogoPrimary from "../../images/logo/Logo-ReisFeeld-primary.svg";
+import LogoPrimary from "../../assets/logo/Logo-ReisFeeld-primary.svg";
 import { Link } from "react-router-dom";
 
 interface HeaderProps {

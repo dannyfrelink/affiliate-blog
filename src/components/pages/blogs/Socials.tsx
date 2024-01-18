@@ -24,7 +24,7 @@ const Socials: React.FC = () => {
 	return (
 		<div className="flex gap-3 [&>*]:w-10">
 			{socials.map((social, index) => {
-				const src = require(`../../../images/socials/${social.src}`);
+				const src = require(`../../../assets/socials/${social.src}`);
 				const alt = social.src.split("icons8-")[1].split(".svg")[0];
 
 				return (

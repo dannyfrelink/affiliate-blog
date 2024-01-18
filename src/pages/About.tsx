@@ -2,8 +2,8 @@ import Container from "../components/general/Container";
 import Header from "../components/header/Header";
 import BaseText from "../components/typography/BaseText";
 import H2 from "../components/typography/H2";
-import HeaderImage from "../images/mockup/viewpoint.png";
-import AboutImage from "../images/mockup/couple.png";
+import HeaderImage from "../assets/mockup/viewpoint.png";
+import AboutImage from "../assets/mockup/couple.png";
 import Footer from "../components/general/Footer";
 import { useAppContext } from "../config/AppContext";
 

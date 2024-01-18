@@ -2,7 +2,7 @@ import React from "react";
 import BaseText from "../typography/BaseText";
 import { useAppContext } from "../../config/AppContext";
 import ScrollToTopButton from "../pages/overview/ScrollToTopButton";
-import LogoBlack from "../../images/logo/Logo-ReisFeeld-black.svg";
+import LogoBlack from "../../assets/logo/Logo-ReisFeeld-black.svg";
 import Socials from "../pages/blogs/Socials";
 import H3 from "../typography/H3";
 import { Link } from "react-router-dom";

@@ -1,4 +1,4 @@
-import HeaderImage from "../../images/mockup/viewpoint.png";
+import HeaderImage from "../../assets/mockup/viewpoint.png";
 import Header from "../../components/header/Header";
 import { useAppContext } from "../../config/AppContext";
 import Overview from "../../components/pages/overview/Overview";
@@ -87,7 +87,7 @@ const BlogOverview = () => {
 								key={index}
 							>
 								{blogsPerDest.map((blog, index) => {
-									const image = require(`../../images/mockup/${blog.coverImage}`);
+									const image = require(`../../assets/mockup/${blog.coverImage}`);
 
 									return (
 										<Link

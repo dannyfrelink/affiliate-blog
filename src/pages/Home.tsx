@@ -1,11 +1,11 @@
 import Header from "../components/header/Header";
 import { useAppContext } from "../config/AppContext";
-import HeaderImage from "../images/mockup/mountains.png";
+import HeaderImage from "../assets/mockup/mountains.png";
 import Container from "../components/general/Container";
 import Carousel from "../components/pages/home/Carousel";
 import H2 from "../components/typography/H2";
 import Featured from "../components/pages/home/Featured";
-import AboutImage from "../images/mockup/couple.png";
+import AboutImage from "../assets/mockup/couple.png";
 import BaseText from "../components/typography/BaseText";
 import Footer from "../components/general/Footer";
 import blogData from "../data/blogs.json";
