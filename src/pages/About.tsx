@@ -31,10 +31,10 @@ const About = () => {
 					<div
 						className={`max-w-[750px] mx-auto ${
 							screenSize < 750
-								? "[&>p:not(:last-of-type)]:mb-3"
+								? "[&>p:not(:last-child)]:mb-3"
 								: screenSize < 1250
-								? "[&>p:not(:last-of-type)]:mb-3.5"
-								: "[&>p:not(:last-of-type)]:mb-4"
+								? "[&>p:not(:last-child)]:mb-3.5"
+								: "[&>p:not(:last-child)]:mb-4"
 						}`}
 					>
 						<H2
@@ -46,40 +46,61 @@ const About = () => {
 									: "mb-3"
 							}
 						>
-							Lorem ipsum dolor sit amet est explicabo blanditiis
+							Hi, wij zijn Danny en Lisa!
 						</H2>
-						<BaseText className="">
-							Et dolorem rerum qui doloremque consectetur aut
-							incidunt fugit ad voluptatibus dignissimos aut
-							laborum excepturi et dicta dicta quo fuga enim. Est
-							ipsum possimus a corporis dolores qui placeat dolor
-							aut veritatis eveniet non cumque autem sed iure
-							veritatis est suscipit sequi. Est asperiores porro
-							non officia incidunt sed autem dolor est dolores
-							illo et molestiae quas aut error totam.
+						<BaseText>
+							In 2018 zijn wij voor het eerst voor acht maanden
+							samen op reis geweest en we voelde allebei dat we
+							dit veel te leuk vonden. Sinds 2018 hebben wij dan
+							ook meerdere reizen gemaakt en in 2022 hebben we
+							zelfs vijf maanden op Bali gewoond. We zijn dan ook
+							allebei een beetje verliefd geworden op Indonesië en
+							komen hier graag terug.
 						</BaseText>
 						<BaseText>
-							Et optio veniam aut veniam voluptatem et explicabo
-							ullam id aperiam cumque aut neque laborum ex
-							voluptatem facere. Eum rerum aperiam eos fugiat
-							dolor et quis cupiditate sed animi enim et ducimus
-							beatae. Et velit magni et fugiat voluptas est
-							inventore recusandae eum nihil dolorum sed ipsa
-							totam ea praesentium ipsum qui temporibus saepe.
+							Geregeld krijgen we vragen over onze reizen en we
+							vinden het dan ook geweldig om hierover te
+							vertellen. Danny werkt als webdeveloper en Lisa
+							houdt zich bezig met Marketing, de perfecte
+							combinatie om een reisblog te starten! Hierdoor
+							kunnen wij ons werk combineren met onze passie,
+							reizen natuurlijk!
+						</BaseText>
+
+						<BaseText>
+							We zullen al onze reizen, tips, accommodaties en
+							veel meer gaan delen op Reisfeeld.nl.
 						</BaseText>
 
 						{screenSize >= 1250 && (
-							<BaseText>
-								Et dolorem rerum qui doloremque consectetur aut
-								incidunt fugit ad voluptatibus dignissimos aut
-								laborum excepturi et dicta dicta quo fuga enim.
-								Est ipsum possimus a corporis dolores qui
-								placeat dolor aut veritatis eveniet non cumque
-								autem sed iure veritatis est suscipit sequi. Est
-								asperiores porro non officia incidunt sed autem
-								dolor est dolores illo et molestiae quas aut
-								error totam.
-							</BaseText>
+							<div
+								className={
+									screenSize < 750
+										? "[&>p:not(:last-of-type)]:mb-3"
+										: screenSize < 1250
+										? "[&>p:not(:last-of-type)]:mb-3.5"
+										: "[&>p:not(:last-of-type)]:mb-4"
+								}
+							>
+								<BaseText>
+									Reisfeeld heeft eigenlijk drie betekenissen.
+									Natuurlijk staat het woord ‘reis’ erin, wat
+									doelt op onze reisverhalen. Daarnaast kan je
+									dit woord op zijn Engels uitspreken,
+									waardoor ‘rice field’ ontstaat. Dit verwijst
+									naar de prachtige rijstvelden op Bali. Als
+									laatste staat het woord ‘feel’ erin. Dit is
+									de Engelse vertaling van ‘gevoel’ en
+									verwijst naar ons gevoel van geluk als wij
+									aan het reizen zijn. Een naam met veel
+									betekenis dus.
+								</BaseText>
+								<BaseText>
+									Met onze tips en ervaringen hopen wij jouw
+									voorbereidingen én reis een stukje leuker te
+									maken!
+								</BaseText>
+							</div>
 						)}
 					</div>
 
@@ -95,16 +116,33 @@ const About = () => {
 					/>
 
 					{screenSize < 1250 && (
-						<BaseText className="max-w-[750px] mx-auto">
-							Et dolorem rerum qui doloremque consectetur aut
-							incidunt fugit ad voluptatibus dignissimos aut
-							laborum excepturi et dicta dicta quo fuga enim. Est
-							ipsum possimus a corporis dolores qui placeat dolor
-							aut veritatis eveniet non cumque autem sed iure
-							veritatis est suscipit sequi. Est asperiores porro
-							non officia incidunt sed autem dolor est dolores
-							illo et molestiae quas aut error totam.
-						</BaseText>
+						<div
+							className={`max-w-[750px] mx-auto ${
+								screenSize < 750
+									? "[&>p:not(:last-of-type)]:mb-3"
+									: screenSize < 1250
+									? "[&>p:not(:last-of-type)]:mb-3.5"
+									: "[&>p:not(:last-of-type)]:mb-4"
+							}`}
+						>
+							<BaseText>
+								De naam heeft eigenlijk drie betekenissen.
+								Natuurlijk staat het woord ‘reis’ erin, wat
+								doelt op onze reisverhalen. Daarnaast kan je dit
+								woord op zijn Engels uitspreken, waardoor
+								‘Ricefield’ ontstaat. Dit verwijst naar de
+								prachtige rijstvelden op Bali. Als laatste staat
+								het woord ‘feel’ erin. Dit is de Engelse
+								vertaling van ‘gevoel’ en verwijst naar ons
+								gevoel van geluk als wij aan het reizen zijn.
+								Een naam met veel betekenis dus.
+							</BaseText>
+							<BaseText>
+								Met onze tips en ervaringen hopen wij jouw
+								voorbereidingen én reis een stukje leuker te
+								maken!
+							</BaseText>
+						</div>
 					)}
 				</div>
 			</Container>
