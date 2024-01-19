@@ -1,4 +1,4 @@
-import HeaderImage from "../../assets/mockup/viewpoint.png";
+import HeaderImage from "../../assets/header/blogs.jpg";
 import Header from "../../components/header/Header";
 import { useAppContext } from "../../config/AppContext";
 import Overview from "../../components/pages/overview/Overview";
