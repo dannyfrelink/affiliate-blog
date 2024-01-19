@@ -30,8 +30,8 @@ const Home = () => {
 
 			<Header
 				Image={() => <img src={HeaderImage} alt="Viewpoint" />}
-				title="Over ReisFeeld"
-				subTitle="Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
+				title="JOUW AVONTUUR ONS VERHAAL"
+				subTitle="Beleef de reis van jouw dromen met al onze tips en tricks"
 			/>
 
 			<main className="rounded-3xl">

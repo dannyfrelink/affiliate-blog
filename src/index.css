@@ -2,11 +2,15 @@
 
 body {
 	margin: 0;
-	font-family: "Inter" Helvetica sans-serif;
+	font-family: "Libre Franklin", Helvetica, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+	font-family: "Tenor Sans", Helvetica, sans-serif;
+}
+
 code {
-	font-family: "Inter" Helvetica sans-serif;
+	font-family: "Libre Franklin", Helvetica, sans-serif;
 }
