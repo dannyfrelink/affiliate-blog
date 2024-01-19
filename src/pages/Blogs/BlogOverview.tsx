@@ -85,7 +85,7 @@ const BlogOverview = () => {
 
 									return (
 										<Link
-											to={`/blogs/${blog.id}`}
+											to={`/indonesie/${blog.id}`}
 											className={`relative ${
 												screenSize < 900
 													? "[&>*:not(:first-child)]:mt-2 pt-5 max-w-[550px]"

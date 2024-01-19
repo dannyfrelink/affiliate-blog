@@ -101,9 +101,9 @@ const Nav: React.FC = () => {
 				<li>
 					<NavLink
 						className={({ isActive }) => checkActive(isActive)}
-						to="/blogs"
+						to="/indonesie"
 					>
-						Blogs
+						Indonesië
 					</NavLink>
 				</li>
 

@@ -15,7 +15,7 @@ const NextBlog: React.FC<NextBlogProps> = ({ blog, size = "small" }) => {
 	const coverImage = require(`../../../assets/mockup/${blog.coverImage}`);
 
 	return (
-		<Link to={`/blogs/${blog.id}`} className="relative block">
+		<Link to={`/indonesie/${blog.id}`} className="relative block">
 			<img
 				className="rounded-2xl w-full"
 				src={coverImage}

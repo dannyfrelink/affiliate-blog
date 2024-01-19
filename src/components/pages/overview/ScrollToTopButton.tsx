@@ -15,7 +15,7 @@ const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = () => {
 	const handleScroll = () => {
 		const scrolled = window.scrollY;
 		setIsVisible(
-			scrollFilter === "/blogs"
+			scrollFilter === "/indonesie"
 				? screenSize < 750
 					? scrolled > 1000
 					: screenSize < 1250
@@ -36,7 +36,7 @@ const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = () => {
 	const scrollToTop = () => {
 		window.scrollTo({
 			top:
-				scrollFilter === "/blogs"
+				scrollFilter === "/indonesie"
 					? screenSize < 750
 						? 900
 						: screenSize < 1250

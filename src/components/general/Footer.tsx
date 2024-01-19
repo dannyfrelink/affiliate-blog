@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
 						}`}
 					>
 						<ButtonLink link="/">Home</ButtonLink>
-						<ButtonLink link="/blogs">Blogs</ButtonLink>
+						<ButtonLink link="/indonesie">Indonesië</ButtonLink>
 						<ButtonLink link="/accommodaties">
 							Accommodaties
 						</ButtonLink>

@@ -88,7 +88,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 
 				return (
 					<Link
-						to={`/blogs/${item.id}`}
+						to={`/indonesie/${item.id}`}
 						className="relative"
 						key={index}
 					>

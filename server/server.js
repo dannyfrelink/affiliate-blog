@@ -5,8 +5,8 @@ const blogData = require("../src/data/blogs.json");
 
 const routes = [
 	{ path: "/", exact: true, component: "Home" },
-	{ path: "/blogs", component: "BlogOverview" },
-	{ path: "/blogs/:id", component: "BlogPost" },
+	{ path: "/indonesie", component: "BlogOverview" },
+	{ path: "/indonesie/:id", component: "BlogPost" },
 	{ path: "/accommodaties", component: "Accommodations" },
 	{ path: "/over-ons", component: "About" },
 ];
@@ -33,14 +33,14 @@ app.get("/sitemap.xml", (req, res) => {
 		let changefreq;
 		let priority;
 
-		if (url === "/blogs/:id") {
+		if (url === "/indonesie/:id") {
 			blogs.map((blog) => {
-				url = `/blogs/${blog.id}`;
+				url = `/indonesie/${blog.id}`;
 				changefreq = "weekly";
 				priority = 1;
 				writeSitemap(url, changefreq, priority);
 			});
-		} else if (url === "/blogs" || url === "/accommodaties") {
+		} else if (url === "/indonesie" || url === "/accommodaties") {
 			changefreq = "weekly";
 			priority = 0.9;
 			writeSitemap(url, changefreq, priority);
