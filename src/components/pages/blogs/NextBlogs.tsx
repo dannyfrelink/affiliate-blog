@@ -15,7 +15,7 @@ const NextBlogs: React.FC<NextBlogsProps> = ({ blogs, id }) => {
 	const blogsArr = getRandomBlogs(optionalBlogs, 4);
 
 	return (
-		<div
+		<article
 			className={`${
 				screenSize < 500
 					? "[&>*:not(:last-child)]:mb-6"
@@ -27,7 +27,7 @@ const NextBlogs: React.FC<NextBlogsProps> = ({ blogs, id }) => {
 			{blogsArr.map((blog, index) => (
 				<NextBlog key={index} blog={blog} />
 			))}
-		</div>
+		</article>
 	);
 };
 

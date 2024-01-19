@@ -35,8 +35,8 @@ const BlogPost = () => {
 				align="bottom"
 			/>
 
-			<div className={screenSize < 1000 ? "" : "relative flex"}>
-				<div
+			<main className={screenSize < 1000 ? "" : "relative flex"}>
+				<article
 					className={`z-[1] ${
 						screenSize < 1000
 							? "[&>*:last-child>section]:!rounded-b-none"
@@ -63,12 +63,12 @@ const BlogPost = () => {
 							></BlogContent>
 						);
 					})}
-				</div>
+				</article>
 
 				{screenSize >= 1000 && (
 					<SideBar blogs={allBlogs} id={Number(id)} />
 				)}
-			</div>
+			</main>
 
 			<BottomBar blogs={allBlogs} id={Number(id)} />
 

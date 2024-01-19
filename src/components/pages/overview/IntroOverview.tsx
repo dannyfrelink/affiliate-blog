@@ -10,9 +10,9 @@ interface IntroOverviewProps {
 const IntroOverview: React.FC<IntroOverviewProps> = ({ title, children }) => {
 	const { screenSize } = useAppContext();
 	return (
-		<div className="max-w-[1000px] mx-auto">
+		<section className="max-w-[1000px] mx-auto">
 			<H2 className={screenSize < 1250 ? "mb-2" : "mb-3"}>{title}</H2>
-			<div
+			<article
 				className={
 					screenSize < 1250
 						? "[&>*:not(:last-child)]:mb-3"
@@ -20,8 +20,8 @@ const IntroOverview: React.FC<IntroOverviewProps> = ({ title, children }) => {
 				}
 			>
 				{children}
-			</div>
-		</div>
+			</article>
+		</section>
 	);
 };
 

@@ -49,7 +49,7 @@ const BlogContent: React.FC<BlogContentProps> = ({
 					</div>
 				)}
 
-				<div
+				<article
 					className={`[&>img]:w-full [&_img]:rounded-2xl [&_img]:shadow-subtle [&>h3]:font-medium ${
 						screenSize < 750
 							? "[&>*:not(:last-child)]:mb-3 [&>h2:not(:first-child)]:mt-6 [&>h2]:!mb-2 [&>h3]:!mb-2 [&>img:not(:last-child)]:mb-4 [&>img]:mt-4"
@@ -59,7 +59,7 @@ const BlogContent: React.FC<BlogContentProps> = ({
 					}`}
 				>
 					{parsedText}
-				</div>
+				</article>
 			</Container>
 			{img && (
 				<div

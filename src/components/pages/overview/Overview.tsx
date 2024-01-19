@@ -46,7 +46,7 @@ const Overview: React.FC<OverviewProps> = ({ children, destinations }) => {
 				</div>
 			</section>
 
-			<Container className="">{children[1]}</Container>
+			<Container>{children[1]}</Container>
 		</main>
 	);
 };

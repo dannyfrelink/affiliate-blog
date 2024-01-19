@@ -16,7 +16,7 @@ const Details: React.FC<DetailsProps> = ({ children, summary }) => {
 	const { screenSize } = useAppContext();
 
 	return (
-		<div className="bg-tertair w-fit rounded-2xl text-primary">
+		<section className="bg-tertair w-fit rounded-2xl text-primary">
 			<button
 				className="flex justify-between items-center py-1.5 px-4"
 				onClick={() => setOpen(!open)}
@@ -40,14 +40,8 @@ const Details: React.FC<DetailsProps> = ({ children, summary }) => {
 				)}
 			</button>
 
-			<div
-				className={`${
-					open ? `block ${screenSize > 750 && "block"}` : "hidden"
-				}`}
-			>
-				{children}
-			</div>
-		</div>
+			<div className={`${open ? `block` : "hidden"}`}>{children}</div>
+		</section>
 	);
 };
 

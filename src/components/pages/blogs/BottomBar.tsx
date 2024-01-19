@@ -29,7 +29,7 @@ const BottomBar: React.FC<BottomBarProps> = ({ blogs, id }) => {
 				Ontdek meer
 			</H2>
 
-			<div
+			<article
 				className={`grid gap-6 ${
 					screenSize < 650
 						? ""
@@ -39,7 +39,7 @@ const BottomBar: React.FC<BottomBarProps> = ({ blogs, id }) => {
 				{blogsArr.map((blog, index) => (
 					<NextBlog key={index} blog={blog} size="large" />
 				))}
-			</div>
+			</article>
 		</Container>
 	);
 };

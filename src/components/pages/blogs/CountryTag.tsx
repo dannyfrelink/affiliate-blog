@@ -11,7 +11,7 @@ interface CountryTagProps {
 const CountryTag: React.FC<CountryTagProps> = ({ title, value, icon }) => {
 	const { screenSize } = useAppContext();
 	return (
-		<div
+		<section
 			className={`flex  items-center mx-auto ${
 				screenSize < 1000 && "flex-col"
 			}`}
@@ -28,11 +28,11 @@ const CountryTag: React.FC<CountryTagProps> = ({ title, value, icon }) => {
 				{icon}
 			</div>
 
-			<div>
+			<article>
 				<BaseText className="font-semibold">{title}</BaseText>
 				<BaseText>{value}</BaseText>
-			</div>
-		</div>
+			</article>
+		</section>
 	);
 };
 

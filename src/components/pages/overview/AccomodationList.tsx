@@ -33,7 +33,7 @@ const AccommodationList: React.FC<AccommodationListProps> = ({
 							const image = require(`../../../assets/mockup/${accom.image}`);
 
 							return (
-								<div
+								<section
 									className={
 										screenSize < 900
 											? "[&>*:not(:first-child)]:mt-2 pt-5 max-w-[550px]"
@@ -64,23 +64,23 @@ const AccommodationList: React.FC<AccommodationListProps> = ({
 									</H3>
 									<BaseText>{accom.description}</BaseText>
 
-									<div>
+									<article>
 										<BaseText className="font-medium">
 											Laagseizoen
 										</BaseText>
 										<BaseText>
 											Prijzen vanaf €{accom.prices.low}
 										</BaseText>
-									</div>
+									</article>
 
-									<div>
+									<article>
 										<BaseText className="font-medium">
 											Hoogseizoen
 										</BaseText>
 										<BaseText>
 											Prijzen vanaf €{accom.prices.high}
 										</BaseText>
-									</div>
+									</article>
 
 									<ButtonLink
 										link={accom.link}
@@ -102,7 +102,7 @@ const AccommodationList: React.FC<AccommodationListProps> = ({
 											}
 										/>
 									</ButtonLink>
-								</div>
+								</section>
 							);
 						})}
 					</ListOverview>

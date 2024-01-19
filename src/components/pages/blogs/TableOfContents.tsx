@@ -11,7 +11,7 @@ interface TableOfContentsProps {
 const TableOfContents: React.FC<TableOfContentsProps> = ({ headers }) => {
 	const { screenSize } = useAppContext();
 	return (
-		<div>
+		<>
 			{screenSize < 1000 ? (
 				<Details summary="Inhoud">
 					<ul className=" px-4 pt-2 pb-6 rounded-2xl [&>a:not(:last-child)]:mb-2">
@@ -30,7 +30,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headers }) => {
 					</ul>
 				</Details>
 			) : (
-				<div>
+				<section>
 					<H3 className="mb-4" color="black">
 						Inhoud
 					</H3>
@@ -49,9 +49,9 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headers }) => {
 							</Link>
 						))}
 					</ul>
-				</div>
+				</section>
 			)}
-		</div>
+		</>
 	);
 };
 

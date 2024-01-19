@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
 							/>
 						</Link>
 
-						<div
+						<section
 							className={`[&_a]:!w-7 mb-7 ${
 								screenSize < 1000
 									? "[&_a]:!w-7 [&>*]:justify-center [&>h3]:mb-1.5"
@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
 						>
 							<H3>Volg ons op</H3>
 							<Socials />
-						</div>
+						</section>
 
 						<div>
 							<BaseText className="font-medium">
@@ -79,8 +79,8 @@ const Footer: React.FC = () => {
 						</div>
 					</div>
 
-					<div
-						className={`flex flex-wrap gap-3 [&>a]:h-fit ${
+					<nav
+						className={`flex flex-wrap gap-3 gap-y-5 [&>a]:h-fit ${
 							screenSize < 1000
 								? "justify-center"
 								: "max-w-[400px]"
@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
 							Accommodaties
 						</ButtonLink>
 						<ButtonLink link="/over-ons">Over ons</ButtonLink>
-					</div>
+					</nav>
 				</div>
 
 				<BaseText className="mt-8 text-center">

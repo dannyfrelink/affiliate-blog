@@ -83,7 +83,7 @@ const BlogOverview = () => {
 			/>
 
 			<Overview destinations={destinations}>
-				<div className="max-w-[1000px] mx-auto">
+				<section className="max-w-[1000px] mx-auto">
 					<div
 						className={`${
 							screenSize < 1000
@@ -107,7 +107,7 @@ const BlogOverview = () => {
 					<H2 className={screenSize < 1250 ? "mb-2" : "mb-3"}>
 						Reizen naar Indonesië
 					</H2>
-					<div
+					<article
 						className={
 							screenSize < 1250
 								? "[&>*:not(:last-child)]:mb-3"
@@ -127,23 +127,10 @@ const BlogOverview = () => {
 							watervallen, vulkanen, mooie uitzichtpunten en niet
 							te vergeten: rijstvelden!
 						</BaseText>
-					</div>
-				</div>
-				{/* <IntroOverview title="Reizen naar Indonesië">
-					<BaseText>
-						Indonesië is echt onze favoriete reisbestemming! Je kunt
-						hier alles vinden, van prachtige stranden tot groene
-						jungles en van helderblauw water tot een interessante
-						cultuur. Ook kan je ervoor kiezen om goedkoop te reizen,
-						een mooie middenweg te nemen of uit te pakken met mega
-						luxe verblijven. De bevolking is ontzettend gastvrij en
-						behulpzaam en voor de Indische keuken kan je ons echt
-						wakker maken. In de natuur kan je hier van alles vinden,
-						denk aan watervallen, vulkanen, mooie uitzichtpunten en
-						niet te vergeten: rijstvelden!
-					</BaseText>
-				</IntroOverview> */}
-				<div className="[&>div:first-child>div]:!mt-0">
+					</article>
+				</section>
+
+				<section className="[&>div:first-child>div]:!mt-0">
 					{destinations.map((dest, index) => {
 						const blogsPerDest = blogs[dest];
 
@@ -191,7 +178,7 @@ const BlogOverview = () => {
 							</ListOverview>
 						);
 					})}
-				</div>
+				</section>
 			</Overview>
 
 			<Footer />

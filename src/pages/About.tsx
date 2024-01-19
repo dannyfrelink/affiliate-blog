@@ -18,7 +18,7 @@ const About = () => {
 			/>
 
 			<Container>
-				<div
+				<section
 					className={`${
 						screenSize < 750
 							? "[&>*:not(:last-child)]:mb-5"
@@ -27,7 +27,7 @@ const About = () => {
 							: "flex justify-center"
 					}`}
 				>
-					<div
+					<article
 						className={`max-w-[750px] mx-auto ${
 							screenSize < 750
 								? "[&>p:not(:last-child)]:mb-3"
@@ -101,7 +101,7 @@ const About = () => {
 								</BaseText>
 							</div>
 						)}
-					</div>
+					</article>
 
 					<img
 						className={`w-full max-w-[500px] object-cover object-center mx-auto rounded-2xl shadow-subtle ${
@@ -115,7 +115,7 @@ const About = () => {
 					/>
 
 					{screenSize < 1250 && (
-						<div
+						<article
 							className={`max-w-[750px] mx-auto ${
 								screenSize < 750
 									? "[&>p:not(:last-of-type)]:mb-3"
@@ -141,9 +141,9 @@ const About = () => {
 								voorbereidingen én reis een stukje leuker te
 								maken!
 							</BaseText>
-						</div>
+						</article>
 					)}
-				</div>
+				</section>
 			</Container>
 
 			<Footer />
