@@ -68,7 +68,7 @@ const BlogOverview = () => {
 		{
 			icon: <FlightRoundedIcon />,
 			title: "Vliegtijd",
-			value: "16h",
+			value: "16 uur",
 		},
 	];
 

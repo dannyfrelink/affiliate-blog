@@ -104,7 +104,7 @@ const About = () => {
 					</div>
 
 					<img
-						className={`w-full max-w-[500px] object-cover object-center mx-auto rounded-2xl ${
+						className={`w-full max-w-[500px] object-cover object-center mx-auto rounded-2xl shadow-subtle ${
 							screenSize >= 1250 &&
 							`mr-0 my-auto h-[500px] max-h-[500px] ${
 								screenSize < 1400 ? "ml-16" : "ml-16"
