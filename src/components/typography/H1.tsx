@@ -14,8 +14,10 @@ const H1: React.FC<H1Props> = ({ children, subTitle }) => {
 				screenSize < 750
 					? `text-5xl ${subTitle !== "" && "mb-3"}`
 					: screenSize < 1250
-					? `text-[75px] ${subTitle !== "" && "mb-6"}`
-					: `text-[110px] ${subTitle !== "" && "mb-10"}`
+					? `text-[75px] leading-[75px] ${subTitle !== "" && "mb-6"}`
+					: `text-[110px] leading-[110px] ${
+							subTitle !== "" && "mb-10"
+					  }`
 			}`}
 		>
 			{children}
