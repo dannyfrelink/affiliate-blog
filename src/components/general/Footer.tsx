@@ -38,18 +38,15 @@ const Footer: React.FC = () => {
 								: "max-w-[500px]"
 						}
 					>
-						<img
-							className={`h-12 ${screenSize < 1000 && "mx-auto"}`}
-							src={LogoBlack}
-							alt="Logo ReisFeeld"
-						/>
-
-						<BaseText className="mt-3 mb-6">
-							Lorem ipsum dolor sit amet. Est explicabo blanditiis
-							eum perferendis harum eum galisum voluptas quo natus
-							nihil aut aspernatur voluptas rem ipsum dolorum aut
-							fugiat cumque.
-						</BaseText>
+						<Link to="/">
+							<img
+								className={`h-12 mb-6 ${
+									screenSize < 1000 && "mx-auto"
+								}`}
+								src={LogoBlack}
+								alt="Logo ReisFeeld"
+							/>
+						</Link>
 
 						<div
 							className={`[&_a]:!w-7 mb-7 ${
