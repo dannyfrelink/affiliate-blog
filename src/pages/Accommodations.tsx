@@ -32,38 +32,28 @@ const Accommodations = () => {
 				size="small"
 				align="bottom"
 				Image={() => <img src={HeaderImage} alt="Hotel Room" />}
-				title="Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet"
+				title="Accommodaties"
 			/>
 
 			<Overview destinations={destinations}>
-				<IntroOverview title="Lorem ipsum dolor sit amet est explicabo blanditiis">
+				<IntroOverview title="Accommodatie tips in Indonesië!">
 					<BaseText>
-						Lorem ipsum dolor sit amet. Est explicabo blanditiis eum
-						perferendis harum eum galisum voluptas quo natus nihil
-						aut aspernatur voluptas rem ipsum dolorum aut fugiat
-						cumque. Et officiis iure et asperiores totam quo sunt
-						alias. Sed illum perferendis quo possimus inventore et
-						reiciendis modi. Sed quos voluptate nam deleniti veniam
-						ut nihil consequatur.
+						Zelf speuren wij altijd het internet af om op zoek te
+						gaan naar de mooiste verblijven. Soms zoeken wij meer
+						budget opties en af en toe verblijven we op een plek die
+						wat duurder is. In Indonesië kan je echt van alles
+						vinden: een guesthouse met lieve eigenaren, een luxe
+						privé villa en alles wat hier tussenin zit. Een ding is
+						zeker, al deze verblijven hebben onze ervaring een
+						stukje mooier gemaakt. Wij hebben al op heel wat plekken
+						verbleven en onze aanraders kan je op deze pagina
+						vinden.
 					</BaseText>
 					<BaseText>
-						Et dolorem rerum qui doloremque consectetur aut incidunt
-						fugit ad voluptatibus dignissimos aut laborum excepturi
-						et dicta dicta quo fuga enim. Est ipsum possimus a
-						corporis dolores qui placeat dolor aut veritatis eveniet
-						non cumque autem sed iure veritatis est suscipit sequi.
-						Est asperiores porro non officia incidunt sed autem
-						dolor est dolores illo et molestiae quas aut error
-						totam.
-					</BaseText>
-					<BaseText>
-						Et optio veniam aut veniam voluptatem et explicabo ullam
-						id aperiam cumque aut neque laborum ex voluptatem
-						facere. Eum rerum aperiam eos fugiat dolor et quis
-						cupiditate sed animi enim et ducimus beatae. Et velit
-						magni et fugiat voluptas est inventore recusandae eum
-						nihil dolorum sed ipsa totam ea praesentium ipsum qui
-						temporibus saepe.
+						Omdat Indonesië tegenwoordig heel populair is, is het
+						verstandig van tevoren wat accommodaties vast te leggen.
+						Dit kan vaak met gratis annulering, waardoor je altijd
+						nog je plannen kan wijzigen.
 					</BaseText>
 				</IntroOverview>
 

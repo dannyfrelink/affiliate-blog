@@ -49,32 +49,25 @@ const BlogOverview = () => {
 		<div>
 			<Header
 				Image={() => <img src={HeaderImage} alt="Viewpoint" />}
-				title="Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet"
+				title="Indonesië"
 				subTitle={
 					"Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
 				}
 			/>
 
 			<Overview destinations={destinations}>
-				<IntroOverview title="Lorem ipsum dolor sit amet est explicabo blanditiis">
+				<IntroOverview title="Reizen naar Indonesië">
 					<BaseText>
-						Lorem ipsum dolor sit amet. Est explicabo blanditiis eum
-						perferendis harum eum galisum voluptas quo natus nihil
-						aut aspernatur voluptas rem ipsum dolorum aut fugiat
-						cumque. Et officiis iure et asperiores totam quo sunt
-						alias. Sed illum perferendis quo possimus inventore et
-						reiciendis modi. Sed quos voluptate nam deleniti veniam
-						ut nihil consequatur.
-					</BaseText>
-					<BaseText>
-						Et dolorem rerum qui doloremque consectetur aut incidunt
-						fugit ad voluptatibus dignissimos aut laborum excepturi
-						et dicta dicta quo fuga enim. Est ipsum possimus a
-						corporis dolores qui placeat dolor aut veritatis eveniet
-						non cumque autem sed iure veritatis est suscipit sequi.
-						Est asperiores porro non officia incidunt sed autem
-						dolor est dolores illo et molestiae quas aut error
-						totam.
+						Indonesië is echt onze favoriete reisbestemming! Je kunt
+						hier alles vinden, van prachtige stranden tot groene
+						jungles en van helderblauw water tot een interessante
+						cultuur. Ook kan je ervoor kiezen om goedkoop te reizen,
+						een mooie middenweg te nemen of uit te pakken met mega
+						luxe verblijven. De bevolking is ontzettend gastvrij en
+						behulpzaam en voor de Indische keuken kan je ons echt
+						wakker maken. In de natuur kan je hier van alles vinden,
+						denk aan watervallen, vulkanen, mooie uitzichtpunten en
+						niet te vergeten: rijstvelden!
 					</BaseText>
 				</IntroOverview>
 				<div className="[&>div:first-child>div]:!mt-0">

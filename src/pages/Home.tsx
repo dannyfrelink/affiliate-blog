@@ -30,7 +30,7 @@ const Home = () => {
 
 			<Header
 				Image={() => <img src={HeaderImage} alt="Viewpoint" />}
-				title="Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet"
+				title="Over ReisFeeld"
 				subTitle="Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
 			/>
 

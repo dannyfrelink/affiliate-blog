@@ -29,7 +29,7 @@ const BlogPost = () => {
 
 			<Header
 				Image={() => <img src={coverImage} alt="Viewpoint" />}
-				title={blog.title}
+				title="Over ReisFeeld"
 				subTitle={blog.date}
 				size="small"
 				align="bottom"
