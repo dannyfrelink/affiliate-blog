@@ -29,12 +29,23 @@ const Header: React.FC<HeaderProps> = ({
 			className={`${
 				screenSize < 750
 					? size === "large"
-						? "h-[90vh] [&>img]:h-full"
-						: "h-[40vh] [&>img]:h-1/2"
-					: "h-[90vh] [&>img]:h-[110%]"
-			} [&>img]:w-full [&>img]:object-cover [&>img]:object-center [&>img]:absolute [&>img]:z-[-2] text-primary`}
+						? "h-[90vh]"
+						: "h-[40vh]"
+					: "h-[90vh]"
+			} text-primary`}
 		>
-			<Image />
+			<div
+				className={`absolute w-full z-[-2] [&>img]:w-full [&>img]:h-full [&>img]:object-cover [&>img]:object-center ${
+					screenSize < 750
+						? size === "large"
+							? "h-full"
+							: "h-1/2"
+						: "h-[110%]"
+				}`}
+			>
+				<div className="absolute top-0 w-screen h-1/2 opacity-70 bg-gradient-to-b from-gray-900 to-transparent"></div>
+				<Image />
+			</div>
 
 			{screenSize < 1000 && (
 				<Button
