@@ -35,7 +35,7 @@ const Nav: React.FC = () => {
 					? `fixed h-screen before:fixed before:w-screen before:bg-[#707070] before:opacity-75 ${
 							navOpen ? "left-0 before:inset-0" : "-left-[100vw]"
 					  }`
-					: "before:absolute before:inset-0 before:h-32 before:w-screen before:opacity-70 before:bg-gradient-to-b before:from-gray-900 before:via-gray-900 before:to-transparent"
+					: "before:absolute before:inset-0 before:h-1/2 before:w-screen before:opacity-70 before:bg-gradient-to-b before:from-gray-900 before:to-transparent"
 			}`}
 		>
 			<Link to="/">
@@ -81,7 +81,7 @@ const Nav: React.FC = () => {
 									? "right-[9vw] [&>li:not(:last-child)]:mr-6 [&>div]:mr-4"
 									: "right-[10vw] [&>li:not(:last-child)]:mr-10 [&>div]:mr-8"
 						  }`
-				} text-black text-lg [&>li]:font-extrabold`}
+				} text-black text-lg [&>li]:font-bold`}
 			>
 				{screenSize < 1000 && (
 					<CloseButton
