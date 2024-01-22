@@ -53,7 +53,7 @@ const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = () => {
 	}, []);
 
 	return (
-		<div
+		<button
 			className={`${isVisible ? "flex" : "hidden"} ${
 				screenSize < 750
 					? "bottom-6 right-4 w-10 h-10 [&>svg]:text-xl"
@@ -64,7 +64,7 @@ const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = () => {
 			onClick={scrollToTop}
 		>
 			<ArrowUpwardIcon />
-		</div>
+		</button>
 	);
 };
 

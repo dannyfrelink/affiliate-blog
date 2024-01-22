@@ -32,6 +32,17 @@
 	}
 }
 
+@media (min-width: 1000px) {
+	button:hover,
+	a:hover {
+		opacity: 0.9;
+	}
+
+	a:hover {
+		color: #687b68;
+	}
+}
+
 @media (min-width: 1250px) {
 	.blogImage-container {
 		margin-top: 2rem;
