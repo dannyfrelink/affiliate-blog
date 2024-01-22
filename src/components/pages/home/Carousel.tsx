@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -16,6 +16,7 @@ interface CarouselProps {
 const Carousel: React.FC<CarouselProps> = ({ items }) => {
 	const { screenSize } = useAppContext();
 	const sliderRef = useRef<Slider>(null);
+	const [autoplaySpeed, setAutoplaySpeed] = useState(1000);
 
 	const nextSlide = () => {
 		if (sliderRef.current) {
@@ -29,6 +30,12 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 		}
 	};
 
+	const handleAfterChange = (currentSlide: number) => {
+		if (currentSlide > 0) {
+			setAutoplaySpeed(3500);
+		}
+	};
+
 	const settings = {
 		dots: true,
 		arrows: false,
@@ -38,6 +45,9 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 		slidesToScroll: 1,
 		centerMode: true,
 		centerPadding: screenSize > 750 ? "28%" : "0",
+		autoplay: true,
+		autoplaySpeed: autoplaySpeed,
+		afterChange: handleAfterChange,
 		appendDots: (dots: React.ReactNode) => (
 			<div>
 				<ArrowBackIosRoundedIcon
