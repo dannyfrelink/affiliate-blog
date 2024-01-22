@@ -33,9 +33,9 @@ app.get("/sitemap.xml", (req, res) => {
 		let changefreq;
 		let priority;
 
-		if (url === "/indonesie/:id") {
+		if (url === "/indonesie/:href") {
 			blogs.map((blog) => {
-				url = `/indonesie/${blog.id}`;
+				url = `/indonesie/${blog.href}`;
 				changefreq = "weekly";
 				priority = 1;
 				writeSitemap(url, changefreq, priority);

@@ -11,11 +11,11 @@ import { Helmet } from "react-helmet-async";
 
 const BlogPost = () => {
 	const { screenSize } = useAppContext();
-	const { id } = useParams();
+	const { href } = useParams();
 	const blogs: BlogsData = data.blogs;
 	const allBlogs: Destination[] = [];
 	Object.values(blogs).map((blog) => blog.map((b) => allBlogs.push(b)));
-	const blog = allBlogs.filter((b) => b.id === Number(id))[0];
+	const blog = allBlogs.filter((b) => b.href === href)[0];
 	const coverImage = require(`../../assets/pages/blogposts/${blog.coverImage.src}`);
 	const images = blog.images;
 	const sections = Object.values(blog.content);
@@ -65,12 +65,10 @@ const BlogPost = () => {
 					})}
 				</article>
 
-				{screenSize >= 1000 && (
-					<SideBar blogs={allBlogs} id={Number(id)} />
-				)}
+				{screenSize >= 1000 && <SideBar blogs={allBlogs} href={href} />}
 			</main>
 
-			<BottomBar blogs={allBlogs} id={Number(id)} />
+			<BottomBar blogs={allBlogs} href={href} />
 
 			<Footer />
 		</div>

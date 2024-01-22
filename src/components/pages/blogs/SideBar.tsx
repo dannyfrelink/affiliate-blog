@@ -9,12 +9,12 @@ import Socials from "./Socials";
 
 interface SideBarProps {
 	blogs: Destination[];
-	id: number;
+	href: string | undefined;
 }
 
-const SideBar: React.FC<SideBarProps> = ({ blogs, id }) => {
+const SideBar: React.FC<SideBarProps> = ({ blogs, href }) => {
 	const { screenSize, scrolled, scrolledUp } = useAppContext();
-	const activeBlog = blogs.filter((blog) => blog.id === id)[0];
+	const activeBlog = blogs.filter((blog) => blog.href === href)[0];
 
 	return (
 		<Container
@@ -51,7 +51,7 @@ const SideBar: React.FC<SideBarProps> = ({ blogs, id }) => {
 						Ontdek meer
 					</H3>
 
-					<NextBlogs blogs={blogs} id={id} />
+					<NextBlogs blogs={blogs} href={href} />
 				</section>
 			</div>
 		</Container>

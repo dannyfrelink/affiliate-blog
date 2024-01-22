@@ -8,12 +8,12 @@ import H2 from "../../typography/H2";
 
 interface BottomBarProps {
 	blogs: Destination[];
-	id: number;
+	href: string | undefined;
 }
 
-const BottomBar: React.FC<BottomBarProps> = ({ blogs, id }) => {
+const BottomBar: React.FC<BottomBarProps> = ({ blogs, href }) => {
 	const { screenSize } = useAppContext();
-	const optionalBlogs = blogs.filter((blog) => blog.id !== id);
+	const optionalBlogs = blogs.filter((blog) => blog.href !== href);
 	const [blogArr, setBlogArr] = useState<BottomBarProps["blogs"]>([]);
 	const array = getRandomBlogs(optionalBlogs, 4);
 	blogArr.length === 0 && setBlogArr(array);
@@ -35,7 +35,7 @@ const BottomBar: React.FC<BottomBarProps> = ({ blogs, id }) => {
 			<article
 				className={`grid gap-6 grid-rows-[1fr_1fr_1fr_1fr] ${
 					screenSize > 650 &&
-					`grid-cols-2 !grid-rows-[1fr_1fr] ${
+					`grid-cols-2 grid-rows-[1fr_1fr] ${
 						screenSize >= 1250 && "!gap-10"
 					}`
 				}`}

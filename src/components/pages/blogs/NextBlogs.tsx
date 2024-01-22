@@ -5,11 +5,11 @@ import { getRandomBlogs } from "../../../helpers/getRandomBlogs";
 
 export interface NextBlogsProps {
 	blogs: Destination[];
-	id: number;
+	href: string | undefined;
 }
 
-const NextBlogs: React.FC<NextBlogsProps> = ({ blogs, id }) => {
-	const optionalBlogs = blogs.filter((blog) => blog.id !== id);
+const NextBlogs: React.FC<NextBlogsProps> = ({ blogs, href }) => {
+	const optionalBlogs = blogs.filter((blog) => blog.href !== href);
 	const [blogArr, setBlogArr] = useState<NextBlogsProps["blogs"]>([]);
 	const array = getRandomBlogs(optionalBlogs, 4);
 	blogArr.length === 0 && setBlogArr(array);

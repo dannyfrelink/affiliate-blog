@@ -19,6 +19,7 @@ export interface Destination {
 	id: number;
 	metaDesc: string;
 	date: string;
+	href: string;
 	coverImage: {
 		src: string;
 		alt: string;
@@ -155,7 +156,7 @@ const BlogOverview = () => {
 
 									return (
 										<Link
-											to={`/indonesie/${blog.id}`}
+											to={`/indonesie/${blog.href}`}
 											className={`relative ${
 												screenSize < 900
 													? "w-full [&>*:not(:nth-child[1])]:mt-2 mt-5 max-w-[550px]"

@@ -37,7 +37,7 @@ const Featured: React.FC<FeaturedProps> = ({ blog }) => {
 				</div>
 				<BaseText>{blog.featured}</BaseText>
 
-				<ButtonLink link={`/indonesie/${blog.id}`}>
+				<ButtonLink link={`/indonesie/${blog.href}`}>
 					Ontdek ervaring{" "}
 					<ArrowForwardRoundedIcon
 						fontSize={screenSize < 750 ? "small" : "medium"}
