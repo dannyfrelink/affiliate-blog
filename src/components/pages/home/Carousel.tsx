@@ -50,12 +50,11 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 		afterChange: handleAfterChange,
 		appendDots: (dots: React.ReactNode) => (
 			<div>
-				<ArrowBackIosRoundedIcon
-					className={`cursor-pointer ${
-						screenSize > 750 && "!text-3xl"
-					}`}
-					onClick={prevSlide}
-				/>
+				<button onClick={prevSlide}>
+					<ArrowBackIosRoundedIcon
+						className={screenSize > 750 ? "!text-3xl" : ""}
+					/>
+				</button>
 				<ul
 					className={`flex justify-center list-none [&>li>button::before]:!text-secondary [&>li>button::before]:flex [&>li>button::before]:items-center ${
 						screenSize < 750
@@ -67,12 +66,11 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 				>
 					{dots}
 				</ul>
-				<ArrowForwardIosRoundedIcon
-					className={`cursor-pointer ${
-						screenSize > 750 && "!text-3xl"
-					}`}
-					onClick={nextSlide}
-				/>
+				<button onClick={nextSlide}>
+					<ArrowForwardIosRoundedIcon
+						className={screenSize > 750 ? "!text-3xl" : ""}
+					/>
+				</button>
 			</div>
 		),
 	};
