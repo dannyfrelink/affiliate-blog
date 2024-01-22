@@ -40,11 +40,11 @@ const Nav: React.FC = () => {
 			<Link
 				className={`absolute z-[99] ${
 					screenSize < 1000
-						? "left-6 top-4"
+						? `left-6 top-4 hidden ${navOpen && "!block"}`
 						: `top-[12px] ${
-								scrolled > 250 && scrolledUp
-									? "!fixed !top-3.5"
-									: ""
+								scrolled > 250 &&
+								scrolledUp &&
+								"!fixed !top-3.5"
 						  } ${screenSize < 1250 ? "left-[9vw]" : "left-[10vw]"}`
 				}`}
 				to="/"
@@ -74,9 +74,9 @@ const Nav: React.FC = () => {
 			<ul
 				className={`${
 					screenSize < 1000
-						? `w-[90vw] max-w-[400px] h-full rounded-r-3xl bg-primary pl-6 pr-4 pt-32 [&>li:not(:last-of-type)]:mb-6 [&>li:last-of-type]:mb-12 ${
+						? `w-[90vw] max-w-[400px] h-full rounded-r-3xl bg-primary pl-6 pr-4 pt-32 [&>li:not(:last-of-type)]:mb-6 [&>li:last-of-type]:mb-12 hidden ${
 								navOpen &&
-								"animate-[menuFadeIn_0.5s_ease-out_forwards]"
+								"animate-[menuFadeIn_0.5s_ease-out_forwards] !block"
 						  }`
 						: `flex before:top-0 before:inset-x-0 before:h-[4.5rem] before:z-[-1] ${
 								scrolled > 250 && scrolledUp
