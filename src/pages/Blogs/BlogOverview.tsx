@@ -30,10 +30,10 @@ export interface Destination {
 	};
 	images: {
 		src: {
-			[image: string]: string;
+			[image: string]: string | undefined;
 		};
 		alt: {
-			[image: string]: string;
+			[image: string]: string | undefined;
 		};
 	};
 	featured?: string;

@@ -40,7 +40,7 @@ function parseHTMLText(text: string, images: any) {
 			if (tagName === "img") {
 				// If the element is an <img/> tag, replace it with <BlogImage>
 				const src =
-					require(`../assets/mockup/${element.getAttribute(
+					require(`../assets/pages/blogposts/${element.getAttribute(
 						"src"
 					)}`) || "";
 				const alt = element.getAttribute("alt") || "";

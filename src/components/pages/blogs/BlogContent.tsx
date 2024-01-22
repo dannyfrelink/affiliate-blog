@@ -9,10 +9,10 @@ import { Destination } from "../../../pages/Blogs/BlogOverview";
 
 interface Images {
 	src: {
-		[image: string]: string;
+		[image: string]: string | undefined;
 	};
 	alt: {
-		[image: string]: string;
+		[image: string]: string | undefined;
 	};
 }
 
@@ -32,7 +32,7 @@ const BlogContent: React.FC<BlogContentProps> = ({
 	blog,
 }) => {
 	const { screenSize } = useAppContext();
-	const img = image && require(`../../../assets/mockup/${image}`);
+	const img = image && require(`../../../assets/pages/blogposts/${image}`);
 
 	const parsedImg = replaceImageTag(text, images);
 	const parsedText = parseHTMLText(parsedImg, images);
@@ -63,7 +63,7 @@ const BlogContent: React.FC<BlogContentProps> = ({
 			</Container>
 			{img && (
 				<div
-					className={`w-full ${
+					className={`w-full relative ${
 						screenSize < 550
 							? "h-[60vh]"
 							: screenSize < 750
@@ -72,7 +72,13 @@ const BlogContent: React.FC<BlogContentProps> = ({
 					}`}
 				>
 					<img
-						className="absolute w-full z-[-99] max-h-[1000px] object-cover object-center -bottom-6"
+						className={`absolute w-full z-[-99] max-h-[1000px] object-cover object-center -top-6 ${
+							screenSize < 550
+								? "h-[calc(60vh+48px)]"
+								: screenSize < 750
+								? "h-[calc(75vh+48px)]"
+								: "h-[calc(85vh+48px)]"
+						}`}
 						src={img}
 						alt="Backdrop"
 					/>

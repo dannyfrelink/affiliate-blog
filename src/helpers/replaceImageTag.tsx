@@ -1,9 +1,9 @@
 interface Image {
 	src: {
-		[image: string]: string;
+		[image: string]: string | undefined;
 	};
 	alt: {
-		[image: string]: string;
+		[image: string]: string | undefined;
 	};
 }
 
