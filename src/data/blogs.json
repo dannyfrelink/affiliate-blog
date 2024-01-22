@@ -17,7 +17,10 @@
 				"content": {
 					"section1": {
 						"text": "<p class='font-semibold'>Nusa Penida is een eiland naast Bali en met ongeveer 30 minuten varen begeef je je in een hele andere omgeving. Waar Bali op sommige plekken heel druk kan zijn, is Nusa Penida nog een stuk rustiger en zijn er veel minder toeristen. Toch kunnen er op de toeristische trekpleisters van het eiland nog best druk zijn, omdat er veel dagtrips vanuit Bali worden georganiseerd. Zorg er dan ook voor dat je vroeg start en het liefst verblijft op het eiland zelf of op het naastgelegen Nusa Lembongan. In deze blog lichten wij een aantal mooie en leuke plekken uit die je in één dag zou kunnen bezoeken. Mocht je hier verblijven en meer willen zien, dan heeft Nusa Penida nog veel meer moois te bieden!</p>//<p class='tip'>Tip: Trek goede schoenen aan als je op pad gaat op Nusa Penida. Veel plekken zijn rotsachtig en soms moet je best een stukje lopen. Doe dit dan ook niet op slippers, want dit kan soms erg gevaarlijk en oncomfortabel zijn.</p>//<div class='blogImage-container'><image1><image2></div>//<h2>Peguyangan Waterval</h2>//<p>Probeer deze stop zo vroeg mogelijk te plannen, want je zal heel wat inspanning moeten leveren om naar benden en weer omhoog te komen. Je gaat een steile blauwe trap naar beneden en hebt de meest prachtige uitzichten. Soms kan je zelfs zo goed de zee inkijken dat je manta’s ziet zwemmen. Zoals de naam je misschien laat denken, is het geen echte waterval. Als je beneden komt heb je wel wat kleine waterbronnen waar je in zou kunnen afkoelen.</p>//<div class='blogImage-container'><image3><image4></div>//<image5>//<h2>Het bekende Kelingking Beach</h2>//<p>Een plek die veel mensen kennen van de foto’s is Kelingking Beach. Een uitzichtpunt waar je van bovenaf een rots ziet in de vorm van een T-Rex, maar waar je ook een afdaling naar beneden kan maken om het strand te zien. Deze afdaling is niet geheel risico vrij, dus trek goede schoenen aan en zorg dat je goed oplet tijdens het lopen. Mocht je niet naar benden gaan, is de plek nog steeds prachtig om te zien.</p>",
-						"image": "een-dagtrip-op-nusa-penida/kelingking.jpg"
+						"image": {
+							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
+							"alt": "Kelingking Beach"
+						}
 					},
 					"section2": {
 						"text": "<h2>AMARTA</h2>//<p>Tijdens de dagtour moet er natuurlijk ook geluncht worden. AMARTA is een hele leuke plek met een prachtig uitzicht en heerlijk eten. Toen wij hier kwamen heette het nog ‘Greenkubu’, maar ze hebben recent een naamsverandering gehad. Mocht je even willen afkoelen, kan je ook nog gebruik maken van het zwembad wat bij dit restaurant zit.</p>//<image6>//<div class='blogImage-container'><image7><image8></div>//<h2>Angel’s Billabong</h2><p>Angel’s Billabong is een natuurlijke infinity pool die je kan zien wanneer het eb is. Je kan hier dan zelfs het water even in. Doe wel voorzichtig, want het kan glad zijn en door de rotsen kan je je echt bezeren. Ook moet je goed opletten wanneer het weer vloed wordt, want dan kan het gevaarlijk worden. Als er een golf de infinity pool inkomt en je meetrekt in de zee, kan dit niet goed aflopen. Lees je daarom goed in over eb en vloed.</p>//<image9>//<h2>Broken Beach</h2>//<p>Dicht bij Angel’s Billabong vind je Broken Beach. Dit is zo’n mooie plek, dat wij hier uren naar kunnen kijken. Je kan een rondje lopen over de boog die je aan de andere kant kan zien, zodat je ook het strand goed kan bekijken. Ook kan je hier prachtige drone beelden maken.</p>//<image10>"
@@ -37,16 +40,16 @@
 						"image10": "een-dagtrip-op-nusa-penida/broken-beach-1.jpg"
 					},
 					"alt": {
-						"image1": "",
-						"image2": "",
-						"image3": "",
-						"image4": "",
-						"image5": "",
-						"image6": "",
-						"image7": "",
-						"image8": "",
-						"image9": "",
-						"image10": ""
+						"image1": "Kelingking Beach",
+						"image2": "Broken Beach",
+						"image3": "Peguyangan Waterfall",
+						"image4": "Peguyangan Waterfall",
+						"image5": "Peguyangan Waterfall",
+						"image6": "AMARTA",
+						"image7": "AMARTA",
+						"image8": "AMARTA",
+						"image9": "Angel's Billabong",
+						"image10": "Broken Beach"
 					}
 				},
 				"featured": "Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet."
@@ -65,11 +68,17 @@
 				"content": {
 					"section1": {
 						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image1>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
-						"image": "dreamy.png"
+						"image": {
+							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
+							"alt": "Kelingking Beach"
+						}
 					},
 					"section2": {
 						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image2><image3>//<h3>Lorem ipsum</h3>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
-						"image": "dreamy.png"
+						"image": {
+							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
+							"alt": "Kelingking Beach"
+						}
 					}
 				},
 				"images": {
@@ -99,11 +108,17 @@
 				"content": {
 					"section1": {
 						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image1>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
-						"image": "dreamy.png"
+						"image": {
+							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
+							"alt": "Kelingking Beach"
+						}
 					},
 					"section2": {
 						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image2><image3>//<h3>Lorem ipsum</h3>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
-						"image": "dreamy.png"
+						"image": {
+							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
+							"alt": "Kelingking Beach"
+						}
 					}
 				},
 				"images": {
@@ -135,11 +150,17 @@
 				"content": {
 					"section1": {
 						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image1>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
-						"image": "dreamy.png"
+						"image": {
+							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
+							"alt": "Kelingking Beach"
+						}
 					},
 					"section2": {
 						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image2><image3>//<h3>Lorem ipsum</h3>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
-						"image": "dreamy.png"
+						"image": {
+							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
+							"alt": "Kelingking Beach"
+						}
 					}
 				},
 				"images": {
@@ -170,11 +191,17 @@
 				"content": {
 					"section1": {
 						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image1>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
-						"image": "dreamy.png"
+						"image": {
+							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
+							"alt": "Kelingking Beach"
+						}
 					},
 					"section2": {
 						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image2><image3>//<h3>Lorem ipsum</h3>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
-						"image": "dreamy.png"
+						"image": {
+							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
+							"alt": "Kelingking Beach"
+						}
 					}
 				},
 				"images": {
@@ -204,11 +231,17 @@
 				"content": {
 					"section1": {
 						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image1>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
-						"image": "dreamy.png"
+						"image": {
+							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
+							"alt": "Kelingking Beach"
+						}
 					},
 					"section2": {
 						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image2><image3>//<h3>Lorem ipsum</h3>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
-						"image": "dreamy.png"
+						"image": {
+							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
+							"alt": "Kelingking Beach"
+						}
 					}
 				},
 				"images": {
@@ -240,11 +273,17 @@
 				"content": {
 					"section1": {
 						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image1>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
-						"image": "dreamy.png"
+						"image": {
+							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
+							"alt": "Kelingking Beach"
+						}
 					},
 					"section2": {
 						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image2><image3>//<h3>Lorem ipsum</h3>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
-						"image": "dreamy.png"
+						"image": {
+							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
+							"alt": "Kelingking Beach"
+						}
 					}
 				},
 				"images": {
@@ -275,11 +314,17 @@
 				"content": {
 					"section1": {
 						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image1>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
-						"image": "dreamy.png"
+						"image": {
+							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
+							"alt": "Kelingking Beach"
+						}
 					},
 					"section2": {
 						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image2><image3>//<h3>Lorem ipsum</h3>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
-						"image": "dreamy.png"
+						"image": {
+							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
+							"alt": "Kelingking Beach"
+						}
 					}
 				},
 				"images": {
@@ -311,11 +356,17 @@
 				"content": {
 					"section1": {
 						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image1>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
-						"image": "dreamy.png"
+						"image": {
+							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
+							"alt": "Kelingking Beach"
+						}
 					},
 					"section2": {
 						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image2><image3>//<h3>Lorem ipsum</h3>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
-						"image": "dreamy.png"
+						"image": {
+							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
+							"alt": "Kelingking Beach"
+						}
 					}
 				},
 				"images": {
@@ -345,11 +396,17 @@
 				"content": {
 					"section1": {
 						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image1>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
-						"image": "dreamy.png"
+						"image": {
+							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
+							"alt": "Kelingking Beach"
+						}
 					},
 					"section2": {
 						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image2><image3>//<h3>Lorem ipsum</h3>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
-						"image": "dreamy.png"
+						"image": {
+							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
+							"alt": "Kelingking Beach"
+						}
 					}
 				},
 				"images": {
@@ -380,11 +437,17 @@
 				"content": {
 					"section1": {
 						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image1>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
-						"image": "dreamy.png"
+						"image": {
+							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
+							"alt": "Kelingking Beach"
+						}
 					},
 					"section2": {
 						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image2><image3>//<h3>Lorem ipsum</h3>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
-						"image": "dreamy.png"
+						"image": {
+							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
+							"alt": "Kelingking Beach"
+						}
 					}
 				},
 				"images": {
@@ -414,11 +477,17 @@
 				"content": {
 					"section1": {
 						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image1>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
-						"image": "dreamy.png"
+						"image": {
+							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
+							"alt": "Kelingking Beach"
+						}
 					},
 					"section2": {
 						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image2><image3>//<h3>Lorem ipsum</h3>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
-						"image": "dreamy.png"
+						"image": {
+							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
+							"alt": "Kelingking Beach"
+						}
 					}
 				},
 				"images": {

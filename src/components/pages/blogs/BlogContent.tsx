@@ -18,7 +18,10 @@ interface Images {
 
 interface BlogContentProps {
 	index: number;
-	image?: string;
+	image?: {
+		src: string;
+		alt: string;
+	};
 	text: string;
 	images: Images;
 	blog: Destination;
@@ -32,7 +35,8 @@ const BlogContent: React.FC<BlogContentProps> = ({
 	blog,
 }) => {
 	const { screenSize } = useAppContext();
-	const img = image && require(`../../../assets/pages/blogposts/${image}`);
+	const img =
+		image && require(`../../../assets/pages/blogposts/${image.src}`);
 
 	const parsedImg = replaceImageTag(text, images);
 	const parsedText = parseHTMLText(parsedImg, images);
@@ -80,7 +84,7 @@ const BlogContent: React.FC<BlogContentProps> = ({
 								: "h-[calc(85vh+48px)]"
 						}`}
 						src={img}
-						alt="Backdrop"
+						alt={image.alt}
 					/>
 				</div>
 			)}

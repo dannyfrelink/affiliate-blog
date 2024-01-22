@@ -25,7 +25,10 @@ export interface Destination {
 	content: {
 		[section: string]: {
 			text: string;
-			image?: string;
+			image?: {
+				src: string;
+				alt: string;
+			};
 		};
 	};
 	images: {
