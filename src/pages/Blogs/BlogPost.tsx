@@ -50,13 +50,13 @@ const BlogPost = () => {
 					}`}
 				>
 					{sections.map((section, index) => {
-						const text = section.text;
+						const text = section && section.text;
 
 						return (
 							<BlogContent
 								key={index}
 								index={index}
-								image={section.image}
+								image={section && section.image}
 								text={text}
 								images={images}
 								blog={blog}

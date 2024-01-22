@@ -22,7 +22,7 @@ interface BlogContentProps {
 		src: string;
 		alt: string;
 	};
-	text: string;
+	text: string | undefined;
 	images: Images;
 	blog: Destination;
 }

@@ -26,13 +26,15 @@ export interface Destination {
 	title: string;
 	headers: string[];
 	content: {
-		[section: string]: {
-			text: string;
-			image?: {
-				src: string;
-				alt: string;
-			};
-		};
+		[section: string]:
+			| {
+					text: string;
+					image?: {
+						src: string;
+						alt: string;
+					};
+			  }
+			| undefined;
 	};
 	images: {
 		src: {

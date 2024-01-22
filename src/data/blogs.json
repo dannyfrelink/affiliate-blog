@@ -61,41 +61,67 @@
 				"metaDesc": "Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.",
 				"date": "28 augustus, 2023",
 				"coverImage": {
-					"src": "een-dagtrip-op-nusa-penida/broken-beach-1.jpg",
+					"src": "wat-te-doen-op-nusa-lembongan/cover.jpg",
 					"alt": "Broken Beach"
 				},
-				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis",
+				"title": "Wat te doen op Nusa Lembongan",
 				"headers": [
-					"Lorem ipsum dolor sit amet est explicabo blanditiis",
-					"Et officiis iure et asperiores totam quo sunt alias",
-					"Sed quos voluptate nam deleniti veniam ut nihil consequatur"
+					"Devil's Tear",
+					"Schildpadden en manta’s spotten met een snorkeltour",
+					"Yellow Bridge",
+					"Blue Lagoon",
+					"Chillen bij Tigerlillys Beach Shack",
+					"Souvenir shoppen bij Ketut Souvenir Shop",
+					"Zwemmen bij Ohana’s beachclub",
+					"Touren over het eiland",
+					"Ontspannen bij Spring Spa",
+					"Dagtrip naar Nusa Penida"
 				],
 				"content": {
 					"section1": {
-						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image1>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
+						"text": "<p class='font-semibold'>Nusa Lembongan is een prachtig klein eiland naast Bali. Vanaf Bali kan je de boot pakken en met 20 tot 30 minuten sta je op dit geweldige eiland. Als je hier aankomt, zie je gelijk de witte stranden en het mooie blauwe water. Wat ons betreft is dit eiland echt de moeite en staat het dan ook zeker op ons favorieten lijstje in Indonesië. Op Nusa Lembongan kan je heerlijk een paar dagen relaxen, genieten van lekker eten bij de leukste restaurants en tijdens het touren de leukste plekjes ontdekken. Naast relaxen kan je hier ook een aantal activiteiten doen en mooie plekken bezoeken. In deze blog vind je 10 leuke dingen die je kan doen op Nusa Lembongan!</p>//<image1>//<h2>Devil's Tear</h2>//<p>Aan de westkant van Nusa Lembongan vind je Devil’s Tear, een plek waar de golven tegen de rotsen slaan en je een prachtig uitzicht hebt op de zonsondergang. De golven zijn soms zo hoog dat je moet oppassen om niet nat te worden (al is dit helemaal niet erg als het zo warm is). Een paar jaar geleden stond hier nog geen afbakening omheen, maar voor de veiligheid kan je tegenwoordig niet meer tot de rand lopen. De entree is 25K per persoon en dit kaartje kan je onbeperkt gebruiken.</p>//<image2>//<h2>Schildpadden en manta’s spotten met een snorkeltour</h2>//<p>De snorkeltour is echt een activiteit die je niet mag missen als je op Nusa Lembongan verblijft. Wij hebben deze tour al twee keer met de organisatie Aquaman gedaan en dit is 100% een aanrader! Je vertrekt ’s ochtends om 8 uur vanaf het strand waarna je drie snorkelspots bezoekt. Het kan per dag verschillen, maar je gaat in ieder geval op zoek naar manta roggen, schildpadden en mooie tropische vissen. Ook is er altijd een gids mee in het water en maakt deze ook mooie onderwaterfoto’s die je na de tour toegestuurd krijgt.</p>//<p>Op de boot krijg je een handdoek, water, snacks en snorkelmateriaal mocht je dit zelf niet hebben. Wij betaalde voor deze tour 250K per persoon inclusief alles wat wij hierboven hebben benoemd.</p>//<image3>//<image4>//<h2>Yellow Bridge</h2>//<p>De Yellow Brigde is de brug die de eilanden Nusa Lembongan en Nusa Ceningan met elkaar verbindt. Je kan alleen als voetganger, met de fiets of met een scooter over deze brug heen, want hij is te smal voor auto’s. De brug is niet alleen functioneel, maar ook een plaatje om te zien.</p>",
 						"image": {
-							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
-							"alt": "Kelingking Beach"
+							"src": "wat-te-doen-op-nusa-lembongan/yellow-bridge.jpg",
+							"alt": "Yellow Bridge"
 						}
 					},
 					"section2": {
-						"text": "<p>Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.</p>//<p>Et dolorem rerum qui doloremque consectetur aut incidunt fugit ad voluptatibus dignissimos aut laborum excepturi et dicta dicta quo fuga enim. Est ipsum possimus a corporis dolores qui placeat dolor aut veritatis eveniet non cumque autem sed iure veritatis est suscipit sequi. Est asperiores porro non officia incidunt sed autem dolor est dolores illo et molestiae quas aut error totam.</p>//<image2><image3>//<h3>Lorem ipsum</h3>//<p>Et optio veniam aut veniam voluptatem et explicabo ullam id aperiam cumque aut neque laborum ex voluptatem facere. Eum rerum aperiam eos fugiat dolor et quis cupiditate sed animi enim et ducimus beatae. Et velit magni et fugiat voluptas est inventore recusandae eum nihil dolorum sed ipsa totam ea praesentium ipsum qui temporibus saepe.</p>",
+						"text": "<h2>Blue Lagoon</h2>//<p>Om bij de Blue Lagoon te komen, moet je de Yellow Bridge over naar het eiland Nusa Ceningan. Vanaf de Yellow Bridge ben je ongeveer 10 minuutjes onderweg en kan je je scooter parkeren voor de ingang. Dit is gewoon een stuk zand, dus verwacht geen fancy parkeerplek. Eenmaal bij de Blue Lagoon aangekomen kijk je uit over het blauwste water van het eiland. Hoe verleidelijk het er ook uit ziet om er in te zwemmen, is dit helaas niet mogelijk door alle rotsen en de sterke stroming.</p>//<image5>//<h2>Chillen bij Tigerlillys Beach Shack</h2>//<p>Wil je een paar uurtjes (of de hele dag) relaxen op het strand? Dan is deze plek echt een aanrader. Je hoeft hier geen minimaal bedrag uit te geven en kan plaatsnemen op één van de heerlijke ligbedjes, zitzakken of normale stoelen. Je kan hier heerlijk eten, drinken en zwemmen in de zee. Ons favoriete ontbijt was hier zeker de French Toast Bites!</p>//<image6>//<div class='blogImage-container'><image7><image8></div>//<h2>Souvenir shoppen bij Ketut Souvenir Shop</h2>//<p>De eigenaar van deze winkel is zo lief en gepassioneerd over zijn winkel, dat ik deze wel moest benoemen in deze blog. Je kan hier echt leuke souvenirs kopen voor een lage prijs en bijna alles is handgemaakt. De eigenaar vertelt graag over het maken van de souvenirs en laat het ook aan je zien. Dit winkeltje is dus zeker een bezoekje waard! Je kan het winkeltje <a href='https://maps.app.goo.gl/kg1aMYzGztj78cCq7?g_st=iw' target='_blank'>hier</a> vinden.</p>//<h2>Zwemmen bij Ohana’s beachclub</h2>//<p>Ohana’s Beachclub is wat aan de duurdere kant, maar je kan hier heerlijk genieten van de muziek, een zwembad en een goede menukaart. Je hebt hier verschillende soorten bedjes en zitzakken, waarbij je soms wel een bepaald bedrag moet besteden om hier te mogen liggen.</p>//<div class='blogImage-container'><image9><image10></div>//<h2>Touren over het eiland</h2>//<p>Soms kom je de leukste plekjes tegen door gewoon een rondje op de scooter te rijden. Ook als je op zoek bent naar een leuk restaurantje of een leuke plek om even aan het strand te liggen, kan het soms leuker zijn om dit gewoon op de bonnefooi te doen. Je kan bijna niet verdwalen op deze eilanden, dus pak je scooter en ga erop uit.</p>",
 						"image": {
-							"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
-							"alt": "Kelingking Beach"
+							"src": "wat-te-doen-op-nusa-lembongan/touren.jpg",
+							"alt": "Uitzicht Nusa Lembongan"
 						}
+					},
+					"section3": {
+						"text": "<h2>Ontspannen bij Spring Spa</h2>//<p>Dit is één van de mooiste locaties voor een spa die wij ooit hebben gezien. Met uitzicht op zee en een prachtig interieur is dit een heerlijke plek om even te ontspannen. Je kan hier een massage nemen, je nagels laten doen of verschillende facials proberen. Om hier te komen moet je wel een stukje lopen, want je kan hier niet met de scooter naartoe.</p>//<h2>Dagtrip naar Nusa Penida</h2>//<p>Als je op Nusa Lembongan verblijft, kan je ook een dag tour doen op Nusa Penida. Op dit eiland zijn namelijk een aantal prachtige plekken die je eigenlijk niet mag missen. Denk bijvoorbeeld aan Kelingking Beach, Angel’s Billabong en Broken Beach. Vanaf Nusa Lembongan kan je een boot nemen die je binnen 10 minuten naar Nusa Penida brengt. Hier kan je zelf een scooter huren en het eiland ontdekken of een privéchauffeur huren die je het hele eiland rondrijdt. In deze blog kan je meer lezen over een leuke dag tour op Nusa Penida.</p>//<image11>"
 					}
 				},
 				"images": {
 					"src": {
-						"image1": "mountains.png",
-						"image2": "dreamy.png",
-						"image3": "viewpoint.png"
+						"image1": "wat-te-doen-op-nusa-lembongan/intro.jpg",
+						"image2": "wat-te-doen-op-nusa-lembongan/devils-tear.jpg",
+						"image3": "wat-te-doen-op-nusa-lembongan/snorkling-1.jpg",
+						"image4": "wat-te-doen-op-nusa-lembongan/snorkling-2.jpg",
+						"image5": "wat-te-doen-op-nusa-lembongan/blue-lagoon.jpg",
+						"image6": "wat-te-doen-op-nusa-lembongan/tigerlillys-1.jpg",
+						"image7": "wat-te-doen-op-nusa-lembongan/tigerlillys-2.jpg",
+						"image8": "wat-te-doen-op-nusa-lembongan/tigerlillys-3.jpg",
+						"image9": "wat-te-doen-op-nusa-lembongan/ohana-1.jpg",
+						"image10": "wat-te-doen-op-nusa-lembongan/ohana-2.jpg",
+						"image11": "een-dagtrip-op-nusa-penida/kelingking.jpg"
 					},
 					"alt": {
-						"image1": "mountains",
-						"image2": "dreamy",
-						"image3": "viewpoint"
+						"image1": "",
+						"image2": "",
+						"image3": "",
+						"image4": "",
+						"image5": "",
+						"image6": "",
+						"image7": "",
+						"image8": "",
+						"image9": "",
+						"image10": "",
+						"image11": ""
 					}
 				}
 			},

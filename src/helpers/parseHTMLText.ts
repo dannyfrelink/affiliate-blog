@@ -27,13 +27,14 @@ const tagToComponent: TagToComponentMap = {
 	h3: H3 as React.FC<TextProps | ImageProps>,
 };
 
-function parseHTMLText(text: string, images: any) {
+function parseHTMLText(text: string | undefined, images: any) {
 	// Create a new HTML document
-	const doc = new DOMParser().parseFromString(text, "text/html");
+	const doc = text && new DOMParser().parseFromString(text, "text/html");
 
 	// Iterate over each element in the body and create corresponding React components
-	const reactComponents = Array.from(doc.body.children).map(
-		(element, index) => {
+	const reactComponents =
+		doc &&
+		Array.from(doc.body.children).map((element, index) => {
 			const tagName = element.tagName.toLowerCase();
 			const TagComponent = tagToComponent[tagName];
 
@@ -103,8 +104,7 @@ function parseHTMLText(text: string, images: any) {
 					element.innerHTML
 				);
 			}
-		}
-	);
+		});
 
 	return reactComponents;
 }
