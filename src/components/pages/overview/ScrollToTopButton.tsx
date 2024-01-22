@@ -19,16 +19,14 @@ const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = () => {
 				? screenSize < 750
 					? scrolled > 1000
 					: screenSize < 1250
-					? scrolled > 950
+					? scrolled > 1050
 					: scrolled > 1100
 				: scrollFilter === "/accommodaties"
 				? screenSize < 550
 					? scrolled > 700
 					: screenSize < 750
-					? scrolled > 850
-					: screenSize < 1250
-					? scrolled > 1050
-					: scrolled > 1300
+					? scrolled > 600
+					: scrolled > 1100
 				: scrolled > 150
 		);
 	};
@@ -37,19 +35,11 @@ const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = () => {
 		window.scrollTo({
 			top:
 				scrollFilter === "/indonesie"
-					? screenSize < 750
-						? 900
-						: screenSize < 1250
-						? 800
-						: 900
+					? 900
 					: scrollFilter === "/accommodaties"
-					? screenSize < 550
-						? 600
-						: screenSize < 750
-						? 500
-						: screenSize < 1250
-						? 900
-						: 1000
+					? screenSize < 750
+						? 400
+						: 750
 					: 0,
 			behavior: "smooth",
 		});
