@@ -19,7 +19,10 @@ export interface Destination {
 	id: number;
 	metaDesc: string;
 	date: string;
-	coverImage: string;
+	coverImage: {
+		src: string;
+		alt: string;
+	};
 	title: string;
 	headers: string[];
 	content: {
@@ -144,7 +147,7 @@ const BlogOverview = () => {
 								key={index}
 							>
 								{blogsPerDest.map((blog, index) => {
-									const image = require(`../../assets/mockup/${blog.coverImage}`);
+									const image = require(`../../assets/pages/blogposts/${blog.coverImage.src}`);
 
 									return (
 										<Link
@@ -162,7 +165,7 @@ const BlogOverview = () => {
 										>
 											<img
 												src={image}
-												alt="Blog Cover"
+												alt={blog.coverImage.alt}
 												className="w-full max-h-[325px] object-cover object-center rounded-2xl shadow-subtle"
 											/>
 

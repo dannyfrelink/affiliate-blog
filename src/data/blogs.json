@@ -5,7 +5,10 @@
 				"id": 1,
 				"metaDesc": "Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.",
 				"date": "22 januari, 2024",
-				"coverImage": "mountains.png",
+				"coverImage": {
+					"src": "een-dagtrip-op-nusa-penida/broken-beach-1.jpg",
+					"alt": "Broken Beach"
+				},
 				"title": "Een dagtrip op Nusa Penida",
 				"headers": [
 					"Peguyangan Waterval",
@@ -58,7 +61,10 @@
 				"id": 2,
 				"metaDesc": "Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.",
 				"date": "28 augustus, 2023",
-				"coverImage": "mountains.png",
+				"coverImage": {
+					"src": "een-dagtrip-op-nusa-penida/broken-beach-1.jpg",
+					"alt": "Broken Beach"
+				},
 				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis",
 				"headers": [
 					"Lorem ipsum dolor sit amet est explicabo blanditiis",
@@ -98,7 +104,10 @@
 				"id": 3,
 				"metaDesc": "Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.",
 				"date": "28 augustus, 2023",
-				"coverImage": "mountains.png",
+				"coverImage": {
+					"src": "een-dagtrip-op-nusa-penida/broken-beach-1.jpg",
+					"alt": "Broken Beach"
+				},
 				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis",
 				"headers": [
 					"Lorem ipsum dolor sit amet est explicabo blanditiis",
@@ -140,7 +149,10 @@
 				"id": 4,
 				"metaDesc": "Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.",
 				"date": "28 augustus, 2023",
-				"coverImage": "couple.png",
+				"coverImage": {
+					"src": "een-dagtrip-op-nusa-penida/broken-beach-1.jpg",
+					"alt": "Broken Beach"
+				},
 				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis",
 				"headers": [
 					"Lorem ipsum dolor sit amet est explicabo blanditiis",
@@ -181,7 +193,10 @@
 				"id": 5,
 				"metaDesc": "Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.",
 				"date": "28 augustus, 2023",
-				"coverImage": "mountains.png",
+				"coverImage": {
+					"src": "een-dagtrip-op-nusa-penida/broken-beach-1.jpg",
+					"alt": "Broken Beach"
+				},
 				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis",
 				"headers": [
 					"Lorem ipsum dolor sit amet est explicabo blanditiis",
@@ -221,7 +236,10 @@
 				"id": 6,
 				"metaDesc": "Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.",
 				"date": "28 augustus, 2023",
-				"coverImage": "mountains.png",
+				"coverImage": {
+					"src": "een-dagtrip-op-nusa-penida/broken-beach-1.jpg",
+					"alt": "Broken Beach"
+				},
 				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis",
 				"headers": [
 					"Lorem ipsum dolor sit amet est explicabo blanditiis",
@@ -263,7 +281,10 @@
 				"id": 7,
 				"metaDesc": "Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.",
 				"date": "28 augustus, 2023",
-				"coverImage": "mountains.png",
+				"coverImage": {
+					"src": "een-dagtrip-op-nusa-penida/broken-beach-1.jpg",
+					"alt": "Broken Beach"
+				},
 				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis",
 				"headers": [
 					"Lorem ipsum dolor sit amet est explicabo blanditiis",
@@ -304,7 +325,10 @@
 				"id": 8,
 				"metaDesc": "Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.",
 				"date": "28 augustus, 2023",
-				"coverImage": "mountains.png",
+				"coverImage": {
+					"src": "een-dagtrip-op-nusa-penida/broken-beach-1.jpg",
+					"alt": "Broken Beach"
+				},
 				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis",
 				"headers": [
 					"Lorem ipsum dolor sit amet est explicabo blanditiis",
@@ -346,7 +370,10 @@
 				"id": 9,
 				"metaDesc": "Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.",
 				"date": "28 augustus, 2023",
-				"coverImage": "mountains.png",
+				"coverImage": {
+					"src": "een-dagtrip-op-nusa-penida/broken-beach-1.jpg",
+					"alt": "Broken Beach"
+				},
 				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis",
 				"headers": [
 					"Lorem ipsum dolor sit amet est explicabo blanditiis",
@@ -386,7 +413,10 @@
 				"id": 10,
 				"metaDesc": "Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.",
 				"date": "28 augustus, 2023",
-				"coverImage": "couple.png",
+				"coverImage": {
+					"src": "een-dagtrip-op-nusa-penida/broken-beach-1.jpg",
+					"alt": "Broken Beach"
+				},
 				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis",
 				"headers": [
 					"Lorem ipsum dolor sit amet est explicabo blanditiis",
@@ -427,7 +457,10 @@
 				"id": 11,
 				"metaDesc": "Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.",
 				"date": "28 augustus, 2023",
-				"coverImage": "mountains.png",
+				"coverImage": {
+					"src": "een-dagtrip-op-nusa-penida/broken-beach-1.jpg",
+					"alt": "Broken Beach"
+				},
 				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis",
 				"headers": [
 					"Lorem ipsum dolor sit amet est explicabo blanditiis",
@@ -467,7 +500,10 @@
 				"id": 12,
 				"metaDesc": "Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.",
 				"date": "28 augustus, 2023",
-				"coverImage": "mountains.png",
+				"coverImage": {
+					"src": "een-dagtrip-op-nusa-penida/broken-beach-1.jpg",
+					"alt": "Broken Beach"
+				},
 				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis",
 				"headers": [
 					"Lorem ipsum dolor sit amet est explicabo blanditiis",

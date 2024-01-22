@@ -92,7 +92,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 			}`}
 		>
 			{items.map((item, index) => {
-				const image = require(`../../../assets/mockup/${item.coverImage}`);
+				const image = require(`../../../assets/pages/blogposts/${item.coverImage.src}`);
 
 				return (
 					<Link
@@ -102,7 +102,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 					>
 						<img
 							src={image}
-							alt={`Slide ${index + 1}`}
+							alt={`Slide ${index + 1} ${item.coverImage.alt}`}
 							className={`w-full object-cover object-center rounded-2xl ${
 								screenSize < 750
 									? "h-96"

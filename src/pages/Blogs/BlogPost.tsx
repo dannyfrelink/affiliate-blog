@@ -16,7 +16,7 @@ const BlogPost = () => {
 	const allBlogs: Destination[] = [];
 	Object.values(blogs).map((blog) => blog.map((b) => allBlogs.push(b)));
 	const blog = allBlogs.filter((b) => b.id === Number(id))[0];
-	const coverImage = require(`../../assets/mockup/${blog.coverImage}`);
+	const coverImage = require(`../../assets/pages/blogposts/${blog.coverImage.src}`);
 	const images = blog.images;
 	const sections = Object.values(blog.content);
 
@@ -28,7 +28,7 @@ const BlogPost = () => {
 			</Helmet>
 
 			<Header
-				Image={() => <img src={coverImage} alt="Viewpoint" />}
+				Image={() => <img src={coverImage} alt={blog.coverImage.alt} />}
 				title={blog.title}
 				subTitle={blog.date}
 				size="small"
