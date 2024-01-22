@@ -29,7 +29,7 @@ const BlogPost = () => {
 
 			<Header
 				Image={() => <img src={coverImage} alt="Viewpoint" />}
-				title="OVER REISFEELD"
+				title={blog.title}
 				subTitle={blog.date}
 				size="small"
 				align="bottom"
