@@ -16,7 +16,7 @@ const Details: React.FC<DetailsProps> = ({ children, summary }) => {
 	const { screenSize } = useAppContext();
 
 	return (
-		<section className="bg-tertair w-fit rounded-2xl text-primary">
+		<section className="bg-secondary w-fit rounded-2xl text-primary">
 			<button
 				className="flex justify-between items-center py-1.5 px-4"
 				onClick={() => setOpen(!open)}

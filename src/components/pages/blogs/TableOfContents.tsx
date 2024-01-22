@@ -35,7 +35,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headers }) => {
 						Inhoud
 					</H3>
 
-					<ul className="bg-tertair px-5 py-6 text-primary rounded-2xl [&>a:not(:last-child)]:mb-2">
+					<ul className="bg-secondary px-5 py-6 text-primary rounded-2xl [&>a:not(:last-child)]:mb-2">
 						{headers.map((header, index) => (
 							<Link
 								className="cursor-pointer block hover:underline"
