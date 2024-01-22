@@ -13,7 +13,8 @@ const About = () => {
 	return (
 		<div>
 			<Header
-				Image={() => <img src={HeaderImage} alt="Vulcano viewpoint" />}
+				Image={() => <img src={HeaderImage} alt="Ijen Vulkaan" />}
+				imageHeight="small"
 				title="Over ReisFeeld"
 			/>
 

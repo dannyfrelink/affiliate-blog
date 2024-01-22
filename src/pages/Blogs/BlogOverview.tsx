@@ -81,7 +81,9 @@ const BlogOverview = () => {
 	return (
 		<div>
 			<Header
-				Image={() => <img src={HeaderImage} alt="Viewpoint" />}
+				Image={() => (
+					<img src={HeaderImage} alt="Rijstvelden Indonesië" />
+				)}
 				title="Indonesië"
 				subTitle={
 					"Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"

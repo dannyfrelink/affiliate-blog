@@ -29,7 +29,7 @@ const Home = () => {
 			</Helmet>
 
 			<Header
-				Image={() => <img src={HeaderImage} alt="Viewpoint" />}
+				Image={() => <img src={HeaderImage} alt="Bromo Vulkaan" />}
 				title="Jouw Avontuur Ons Verhaal"
 				subTitle="Beleef de reis van jouw dromen met al onze tips en tricks"
 			/>

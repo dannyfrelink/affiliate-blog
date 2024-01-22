@@ -31,7 +31,8 @@ const Accommodations = () => {
 			<Header
 				size="small"
 				align="bottom"
-				Image={() => <img src={HeaderImage} alt="Hotel Room" />}
+				Image={() => <img src={HeaderImage} alt="Hotels op Bali" />}
+				imageHeight="small"
 				title="Accommodaties"
 			/>
 

@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 
 interface HeaderProps {
 	Image: React.FC<JSX.IntrinsicElements["img"]>;
+	imageHeight?: "small" | "large";
 	title: string;
 	subTitle?: string;
 	size?: "small" | "large";
@@ -17,6 +18,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({
 	Image,
+	imageHeight = "large",
 	title,
 	subTitle,
 	size = "large",
@@ -35,7 +37,11 @@ const Header: React.FC<HeaderProps> = ({
 			} text-primary`}
 		>
 			<div
-				className={`absolute w-full z-[-2] [&>img]:w-full [&>img]:h-full [&>img]:object-cover [&>img]:object-center ${
+				className={`absolute w-full z-[-2] [&>img]:w-full [&>img]:object-cover [&>img]:object-center ${
+					imageHeight === "large"
+						? "[&>img]:h-full"
+						: "[&>img]:h-[calc(90vh+24px)]"
+				} ${
 					screenSize < 750
 						? size === "large"
 							? "h-full"
