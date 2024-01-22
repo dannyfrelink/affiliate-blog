@@ -4,11 +4,16 @@ import H3 from "../components/typography/H3";
 import BlogImage from "../components/pages/blogs/BlogImage";
 import H2 from "../components/typography/H2";
 import { Element } from "react-scroll";
+import { Link } from "react-router-dom";
 
 interface TextProps {
 	children: React.ReactNode;
 	id?: string;
 	className?: string | null;
+}
+
+interface AnchorProps {
+	to: string | null;
 }
 
 interface ImageProps {
@@ -17,14 +22,15 @@ interface ImageProps {
 }
 
 interface TagToComponentMap {
-	[key: string]: React.FC<TextProps | ImageProps> | undefined;
+	[key: string]: React.FC<AnchorProps | TextProps | ImageProps> | undefined;
 }
 
 const tagToComponent: TagToComponentMap = {
-	p: BaseText as React.FC<TextProps | ImageProps>,
-	image: BlogImage as React.FC<TextProps | ImageProps>,
-	h2: H2 as React.FC<TextProps | ImageProps>,
-	h3: H3 as React.FC<TextProps | ImageProps>,
+	a: Link as React.FC<AnchorProps | TextProps | ImageProps>,
+	p: BaseText as React.FC<AnchorProps | TextProps | ImageProps>,
+	image: BlogImage as React.FC<AnchorProps | TextProps | ImageProps>,
+	h2: H2 as React.FC<AnchorProps | TextProps | ImageProps>,
+	h3: H3 as React.FC<AnchorProps | TextProps | ImageProps>,
 };
 
 function parseHTMLText(text: string | undefined, images: any) {
@@ -64,6 +70,14 @@ function parseHTMLText(text: string | undefined, images: any) {
 					{ key: index, className },
 					divContent
 				);
+			} else if (tagName === "a") {
+				// If the element is an <a> tag, recursively parse its children
+				return React.createElement("a", {
+					key: index,
+					href: element.getAttribute("href"),
+					target: element.getAttribute("target"),
+					children: element.innerHTML,
+				});
 			} else if (TagComponent) {
 				// If a mapping exists, create the React component
 				const name = element.innerHTML
@@ -83,6 +97,55 @@ function parseHTMLText(text: string | undefined, images: any) {
 				} else if (tagName === "p" || tagName === "h3") {
 					// If p or h3 tag, create BaseText or H3 component with given class attribute
 					const className = element.getAttribute("class");
+
+					// if (tagName === "p" && element.innerHTML.includes("</a>")) {
+					// 	console.log(element);
+					// 	const children: any = Array.from(element.children).map(
+					// 		(child, index) => {
+					// 			if (child.nodeType === 1) {
+					// 				const childTagName =
+					// 					child.tagName?.toLowerCase();
+					// 				const childComponent =
+					// 					tagToComponent[childTagName];
+
+					// 				if (childComponent) {
+					// 					// If a mapping exists, create the React component
+					// 					return React.createElement(
+					// 						childComponent,
+					// 						{
+					// 							key: index,
+					// 							to: child.getAttribute("href"),
+					// 							children: child.innerHTML,
+					// 						}
+					// 					);
+					// 				} else {
+					// 					// If no mapping exists, include the plain text
+					// 					return parseHTMLText(
+					// 						child.outerHTML,
+					// 						images
+					// 					);
+					// 				}
+					// 			} else {
+					// 				// If it's a text node
+					// 				return child.textContent || "";
+					// 			}
+					// 		}
+					// 	);
+
+					// 	return React.createElement(BaseText, {
+					// 		key: index,
+					// 		children,
+					// 	});
+
+					// 	// const anchor = parseHTMLText(element.innerHTML, images);
+
+					// 	// const test = element.innerHTML.replace(
+					// 	// 	/<a[^>]*>.*?<\/a>/g,
+					// 	// 	anchor
+					// 	// );
+
+					// 	// console.log(test);
+					// }
 
 					return React.createElement(TagComponent, {
 						key: index,
