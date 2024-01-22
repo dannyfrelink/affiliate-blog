@@ -37,22 +37,29 @@ const Nav: React.FC = () => {
 				}`
 			}`}
 		>
-			<Link to="/">
+			<Link
+				className={`absolute z-[99] ${
+					screenSize < 1000
+						? "left-6 top-4"
+						: `top-[12px] ${
+								scrolled > 250 && scrolledUp
+									? "!fixed !top-3.5"
+									: ""
+						  } ${screenSize < 1250 ? "left-[9vw]" : "left-[10vw]"}`
+				}`}
+				to="/"
+			>
 				<img
-					className={`absolute z-[99] ${
+					className={` ${
 						screenSize < 1000
-							? `left-6 top-4 h-[52px] ${
+							? `h-[52px] ${
 									navOpen &&
 									"animate-[menuFadeIn_0.5s_ease-out_forwards]"
 							  }`
-							: `top-[12px] ${
+							: `${
 									scrolled > 250 && scrolledUp
-										? "!fixed !top-3.5 h-12"
+										? "h-12"
 										: "h-16"
-							  } ${
-									screenSize < 1250
-										? "left-[9vw]"
-										: "left-[10vw]"
 							  }`
 					}`}
 					src={

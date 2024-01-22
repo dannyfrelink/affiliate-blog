@@ -34,11 +34,13 @@
 
 @media (min-width: 1000px) {
 	button:hover,
-	a:hover {
+	button:focus a:hover,
+	a:focus {
 		opacity: 0.9;
 	}
 
-	a:hover {
+	a:hover,
+	a:focus {
 		color: #687b68;
 	}
 }

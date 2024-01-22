@@ -59,11 +59,14 @@ const Header: React.FC<HeaderProps> = ({
 			)}
 
 			{screenSize < 1000 && (
-				<Link to="/">
+				<Link
+					className={`absolute top-4 ${
+						screenSize < 750 ? "left-4" : "left-10"
+					}`}
+					to="/"
+				>
 					<img
-						className={`absolute top-4 block !h-12 !w-auto ${
-							screenSize < 750 ? "left-4" : "left-10"
-						}`}
+						className={`block !h-12 !w-auto`}
 						src={LogoPrimary}
 						alt="Logo ReisFeeld White"
 					/>

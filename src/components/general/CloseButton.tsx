@@ -8,11 +8,9 @@ interface CloseButtonProps {
 
 const CloseButton: React.FC<CloseButtonProps> = ({ className, closeMenu }) => {
 	return (
-		<CloseRoundedIcon
-			className={className}
-			onClick={closeMenu}
-			fontSize="large"
-		/>
+		<button className={className}>
+			<CloseRoundedIcon onClick={closeMenu} fontSize="large" />
+		</button>
 	);
 };
 
