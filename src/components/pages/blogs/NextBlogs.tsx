@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import NextBlog from "./NextBlog";
 import { Destination } from "../../../pages/Blogs/BlogOverview";
-import { useAppContext } from "../../../config/AppContext";
 import { getRandomBlogs } from "../../../helpers/getRandomBlogs";
 
 export interface NextBlogsProps {
@@ -10,21 +9,16 @@ export interface NextBlogsProps {
 }
 
 const NextBlogs: React.FC<NextBlogsProps> = ({ blogs, id }) => {
-	const { screenSize } = useAppContext();
 	const optionalBlogs = blogs.filter((blog) => blog.id !== id);
-	const blogsArr = getRandomBlogs(optionalBlogs, 4);
+	const [blogArr, setBlogArr] = useState<NextBlogsProps["blogs"]>([]);
+	const array = getRandomBlogs(optionalBlogs, 4);
+	blogArr.length === 0 && setBlogArr(array);
 
 	return (
 		<article
-			className={`${
-				screenSize < 500
-					? "[&>*:not(:last-child)]:mb-6"
-					: screenSize < 1000
-					? "grid grid-cols-2 gap-x-3 gap-y-6"
-					: "[&>*:not(:last-child)]:mb-6"
-			}`}
+			className={`grid gap-y-6 grid-rows-[1fr_1fr_1fr_1fr] [&_img]:max-h-[200px]`}
 		>
-			{blogsArr.map((blog, index) => (
+			{blogArr.map((blog, index) => (
 				<NextBlog key={index} blog={blog} />
 			))}
 		</article>

@@ -17,7 +17,7 @@ const NextBlog: React.FC<NextBlogProps> = ({ blog, size = "small" }) => {
 	return (
 		<Link to={`/indonesie/${blog.id}`} className="relative block">
 			<img
-				className="rounded-2xl w-full"
+				className="rounded-2xl w-full h-full max-h-[400px] object-cover object-center"
 				src={coverImage}
 				alt="Blog Cover"
 			/>

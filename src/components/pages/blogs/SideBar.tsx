@@ -23,10 +23,10 @@ const SideBar: React.FC<SideBarProps> = ({ blogs, id }) => {
 					? "w-2/6"
 					: screenSize < 1500
 					? "w-[30%]"
-					: "w-1/4"
+					: "w-[27.5%]"
 			} ${scrolled > 600 && scrolledUp ? "top-[2.5rem]" : "-top-8"} ${
 				screenSize < 1250 ? "!px-10" : "!px-12"
-			} ${screenSize > 1500 && "w-[884px] !px-16"}`}
+			} ${screenSize > 1500 && "!px-16"}`}
 		>
 			<div className="[&>*:not(:last-child)]:mb-10">
 				<TableOfContents headers={activeBlog.headers} />

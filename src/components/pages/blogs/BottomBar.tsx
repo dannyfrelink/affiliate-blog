@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "../../general/Container";
 import { Destination } from "../../../pages/Blogs/BlogOverview";
 import { useAppContext } from "../../../config/AppContext";
@@ -14,7 +14,10 @@ interface BottomBarProps {
 const BottomBar: React.FC<BottomBarProps> = ({ blogs, id }) => {
 	const { screenSize } = useAppContext();
 	const optionalBlogs = blogs.filter((blog) => blog.id !== id);
-	const blogsArr = getRandomBlogs(optionalBlogs, 4);
+	const [blogArr, setBlogArr] = useState<BottomBarProps["blogs"]>([]);
+	const array = getRandomBlogs(optionalBlogs, 4);
+	blogArr.length === 0 && setBlogArr(array);
+
 	return (
 		<Container className="rounded-t-none">
 			<H2
@@ -30,13 +33,14 @@ const BottomBar: React.FC<BottomBarProps> = ({ blogs, id }) => {
 			</H2>
 
 			<article
-				className={`grid gap-6 ${
-					screenSize < 650
-						? ""
-						: `grid-cols-2 ${screenSize >= 1250 && "!gap-10"}`
+				className={`grid gap-6 grid-rows-[1fr_1fr_1fr_1fr] ${
+					screenSize > 650 &&
+					`grid-cols-2 !grid-rows-[1fr_1fr] ${
+						screenSize >= 1250 && "!gap-10"
+					}`
 				}`}
 			>
-				{blogsArr.map((blog, index) => (
+				{blogArr.map((blog, index) => (
 					<NextBlog key={index} blog={blog} size="large" />
 				))}
 			</article>
