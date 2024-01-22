@@ -14,7 +14,7 @@ const About = () => {
 		<div>
 			<Header
 				Image={() => <img src={HeaderImage} alt="Vulcano viewpoint" />}
-				title="OVER REISFEELD"
+				title="Over ReisFeeld"
 			/>
 
 			<Container>

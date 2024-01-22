@@ -30,7 +30,7 @@ const Home = () => {
 
 			<Header
 				Image={() => <img src={HeaderImage} alt="Viewpoint" />}
-				title="JOUW AVONTUUR ONS VERHAAL"
+				title="Jouw Avontuur Ons Verhaal"
 				subTitle="Beleef de reis van jouw dromen met al onze tips en tricks"
 			/>
 

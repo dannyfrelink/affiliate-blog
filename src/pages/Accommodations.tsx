@@ -32,7 +32,7 @@ const Accommodations = () => {
 				size="small"
 				align="bottom"
 				Image={() => <img src={HeaderImage} alt="Hotel Room" />}
-				title="ACCOMMODATIES"
+				title="Accommodaties"
 			/>
 
 			<Overview destinations={destinations}>

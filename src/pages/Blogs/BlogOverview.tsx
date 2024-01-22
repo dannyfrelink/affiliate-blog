@@ -76,7 +76,7 @@ const BlogOverview = () => {
 		<div>
 			<Header
 				Image={() => <img src={HeaderImage} alt="Viewpoint" />}
-				title="INDONESIË"
+				title="Indonesië"
 				subTitle={
 					"Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
 				}
