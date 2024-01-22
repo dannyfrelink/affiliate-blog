@@ -154,15 +154,17 @@ const BlogOverview = () => {
 											to={`/indonesie/${blog.id}`}
 											className={`relative ${
 												screenSize < 900
-													? "[&>*:not(:first-child)]:mt-2 pt-5 max-w-[550px]"
+													? "w-full [&>*:not(:nth-child[1])]:mt-2 mt-5 max-w-[550px]"
 													: `w-[36vw] ${
 															screenSize < 1250
-																? "[&>*:not(:first-child)]:mt-2.5"
-																: "[&>*:not(:first-child)]:mt-3"
+																? "[&>*:not(:nth-child[1])]:mt-2.5"
+																: "[&>*:not(:nth-child[1])]:mt-3"
 													  }`
 											}`}
 											key={index}
 										>
+											<div className="absolute bottom-0 w-full rounded-2xl h-full opacity-60 bg-gradient-to-t from-gray-700 via-transparent via-80% to-gray-400"></div>
+
 											<img
 												src={image}
 												alt={blog.coverImage.alt}

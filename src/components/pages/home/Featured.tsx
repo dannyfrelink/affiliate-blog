@@ -15,8 +15,12 @@ const Featured: React.FC<FeaturedProps> = ({ blog }) => {
 	const image = require(`../../../assets/pages/blogposts/${blog.coverImage.src}`);
 
 	return (
-		<div className="flex items-center relative h-[calc(95vh-(24px*2))] [&>img]:w-full [&>img]:h-[95vh] [&>img]:object-cover [&>img]:object-[50%_65%] [&>img]:absolute [&>img]:-top-6 [&>img]:z-[-1]">
-			<img src={image} alt={blog.coverImage.alt} />
+		<div className="flex items-center relative h-[calc(95vh-(24px*2))]">
+			<img
+				className="w-full h-[95vh] absolute -top-6 z-[-1] object-cover object-[50%_65%] "
+				src={image}
+				alt={blog.coverImage.alt}
+			/>
 
 			<section
 				className={`text-primary w-[85vw] max-w-[650px] ${

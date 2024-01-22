@@ -88,7 +88,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 								: screenSize < 1500
 								? "[&>div.slick-list>div>div]:px-7"
 								: "[&>div.slick-list>div>div]:px-10"
-					  } [&>div.slick-dots]:mt-3 [&>div.slick-list>div>div]:pb-3`
+					  } [&>div.slick-dots]:mt-6 [&>div.slick-list>div>div]:pb-3 [&>div.slick-list>div>div]:pt-3`
 			}`}
 		>
 			{items.map((item, index) => {
@@ -100,6 +100,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 						className="relative"
 						key={index}
 					>
+						<div className="absolute bottom-0 w-full rounded-2xl h-full opacity-60 bg-gradient-to-t from-gray-700 via-transparent via-80% to-gray-400"></div>
 						<img
 							src={image}
 							alt={`Slide ${index + 1} ${item.coverImage.alt}`}

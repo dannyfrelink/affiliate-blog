@@ -48,7 +48,7 @@ const ListOverview: React.FC<ListOverviewProps> = ({
 			<section
 				className={`flex  ${
 					screenSize < 900
-						? "items-center flex-col [&>*:not(:last-child)]:pb-5"
+						? "items-center flex-col [&>*:not(:last-child)]:mb-5"
 						: `justify-between flex-wrap ${
 								screenSize < 1250 ? "gap-y-14" : "gap-y-20"
 						  }`

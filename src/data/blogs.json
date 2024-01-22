@@ -54,8 +54,7 @@
 						"image9": "Angel's Billabong",
 						"image10": "Broken Beach"
 					}
-				},
-				"featured": "Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet."
+				}
 			},
 			{
 				"id": 2,
@@ -150,7 +149,7 @@
 				"metaDesc": "Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.",
 				"date": "28 augustus, 2023",
 				"coverImage": {
-					"src": "een-dagtrip-op-nusa-penida/broken-beach-1.jpg",
+					"src": "een-dagtrip-op-nusa-penida/kelingking.jpg",
 					"alt": "Broken Beach"
 				},
 				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis",
@@ -501,7 +500,7 @@
 				"metaDesc": "Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.",
 				"date": "28 augustus, 2023",
 				"coverImage": {
-					"src": "een-dagtrip-op-nusa-penida/broken-beach-1.jpg",
+					"src": "een-dagtrip-op-nusa-penida/amarta-1.jpg",
 					"alt": "Broken Beach"
 				},
 				"title": "Lorem ipsum dolor sit amet est explicabo blanditiis",
@@ -538,7 +537,8 @@
 						"image3": "viewpoint"
 					}
 				},
-				"carousel": true
+				"carousel": true,
+				"featured": "Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet."
 			}
 		]
 	}
