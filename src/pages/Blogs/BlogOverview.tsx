@@ -67,7 +67,7 @@ const BlogOverview = () => {
 		{
 			icon: <AttachMoneyRoundedIcon />,
 			title: "Valuta",
-			value: "Indonesische rupiah",
+			value: "Indonesische Rupiah",
 		},
 		{
 			icon: <AccessTimeFilledRoundedIcon />,
