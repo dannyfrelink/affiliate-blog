@@ -11,6 +11,7 @@ import Footer from "../components/general/Footer";
 import blogData from "../data/blogs.json";
 import { Destination } from "./Blogs/BlogOverview";
 import { Helmet } from "react-helmet-async";
+import { useEffect, useState } from "react";
 
 const Home = () => {
 	const { screenSize } = useAppContext();
@@ -20,6 +21,10 @@ const Home = () => {
 	);
 	const carouselBlogs = blogs.filter((blog) => blog.carousel);
 	const featuredBlog = blogs.filter((blog) => blog.featured)[0];
+	const [headerImage, setHeaderImage] = useState<string>();
+	useEffect(() => {
+		headerImage !== "" && setHeaderImage(HeaderImage);
+	}, []);
 
 	return (
 		<div>
@@ -29,7 +34,7 @@ const Home = () => {
 			</Helmet>
 
 			<Header
-				Image={() => <img src={HeaderImage} alt="Bromo Vulkaan" />}
+				Image={() => <img src={headerImage} alt="Bromo Vulkaan" />}
 				title="Jouw Avontuur Ons Verhaal"
 				subTitle="Beleef de reis van jouw dromen met al onze tips en tricks"
 			/>

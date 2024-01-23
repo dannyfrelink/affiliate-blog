@@ -14,6 +14,7 @@ import AttachMoneyRoundedIcon from "@mui/icons-material/AttachMoneyRounded";
 import AccessTimeFilledRoundedIcon from "@mui/icons-material/AccessTimeFilledRounded";
 import FlightRoundedIcon from "@mui/icons-material/FlightRounded";
 import CountryTag from "../../components/pages/blogs/CountryTag";
+import { useEffect, useState } from "react";
 
 export interface Destination {
 	id: number;
@@ -57,6 +58,10 @@ const BlogOverview = () => {
 	const { screenSize } = useAppContext();
 	const blogs: BlogsData = data.blogs;
 	const destinations = Object.keys(blogs);
+	const [headerImage, setHeaderImage] = useState<string>();
+	useEffect(() => {
+		headerImage !== "" && setHeaderImage(HeaderImage);
+	}, []);
 
 	const tags = [
 		{
@@ -85,7 +90,7 @@ const BlogOverview = () => {
 		<div>
 			<Header
 				Image={() => (
-					<img src={HeaderImage} alt="Rijstvelden Indonesië" />
+					<img src={headerImage} alt="Rijstvelden Indonesië" />
 				)}
 				title="Indonesië"
 				subTitle={

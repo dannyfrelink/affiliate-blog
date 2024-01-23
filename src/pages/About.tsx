@@ -6,14 +6,19 @@ import HeaderImage from "../assets/header/about.jpg";
 import AboutImage from "../assets/pages/about/couple.jpg";
 import Footer from "../components/general/Footer";
 import { useAppContext } from "../config/AppContext";
+import { useEffect, useState } from "react";
 
 const About = () => {
 	const { screenSize } = useAppContext();
+	const [headerImage, setHeaderImage] = useState<string>();
+	useEffect(() => {
+		headerImage !== "" && setHeaderImage(HeaderImage);
+	}, []);
 
 	return (
 		<div>
 			<Header
-				Image={() => <img src={HeaderImage} alt="Ijen Vulkaan" />}
+				Image={() => <img src={headerImage} alt="Ijen Vulkaan" />}
 				imageHeight="small"
 				title="Over ReisFeeld"
 			/>

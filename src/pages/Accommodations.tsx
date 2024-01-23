@@ -6,6 +6,7 @@ import Footer from "../components/general/Footer";
 import data from "../data/accommodations.json";
 import AccommodationList from "../components/pages/overview/AccomodationList";
 import IntroOverview from "../components/pages/overview/IntroOverview";
+import { useEffect, useState } from "react";
 
 export interface Destination {
 	image: string;
@@ -25,13 +26,17 @@ export interface AccommodationsData {
 const Accommodations = () => {
 	const accommodations: AccommodationsData = data.accommodations;
 	const destinations = Object.keys(accommodations);
+	const [headerImage, setHeaderImage] = useState<string>();
+	useEffect(() => {
+		headerImage !== "" && setHeaderImage(HeaderImage);
+	}, []);
 
 	return (
 		<div>
 			<Header
 				size="small"
 				align="bottom"
-				Image={() => <img src={HeaderImage} alt="Hotels op Bali" />}
+				Image={() => <img src={headerImage} alt="Hotels op Bali" />}
 				imageHeight="small"
 				title="Accommodaties"
 			/>
