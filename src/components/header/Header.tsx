@@ -52,7 +52,7 @@ const Header: React.FC<HeaderProps> = ({
 				}`}
 			>
 				<div
-					className={`absolute top-0 w-screen opacity-70 bg-gradient-to-b from-gray-900 to-transparent h-1/2 ${
+					className={`absolute top-0 w-screen opacity-70 bg-gradient-to-b from-gray-900 ${
 						isBlog && screenSize < 750
 							? "via-transparent via-20% to-gray-900 h-full"
 							: "to-transparent h-1/2"
