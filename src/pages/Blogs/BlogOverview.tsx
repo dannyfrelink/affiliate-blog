@@ -176,13 +176,7 @@ const BlogOverview = () => {
 												className="w-full max-h-[325px] object-cover object-center rounded-2xl shadow-subtle"
 											/>
 
-											<H3
-												className={`absolute w-[90%] left-[5%] text-primary ${
-													screenSize < 900
-														? "bottom-9"
-														: "bottom-4"
-												}`}
-											>
+											<H3 className="absolute w-[90%] left-[5%] text-primary bottom-4">
 												{blog.title}
 											</H3>
 										</Link>
