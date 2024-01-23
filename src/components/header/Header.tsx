@@ -42,6 +42,10 @@ const Header: React.FC<HeaderProps> = ({
 				className={`absolute w-full z-[-2] [&>img]:w-full [&>img]:object-cover [&>img]:object-center ${
 					imageHeight === "large"
 						? "[&>img]:h-full"
+						: screenSize < 750
+						? size === "large"
+							? "[&>img]:h-[calc(90vh+24px)]"
+							: "[&>img]:h-[calc(40vh+24px)]"
 						: "[&>img]:h-[calc(90vh+24px)]"
 				} ${
 					screenSize < 750
@@ -53,8 +57,10 @@ const Header: React.FC<HeaderProps> = ({
 			>
 				<div
 					className={`absolute top-0 w-screen opacity-70 bg-gradient-to-b from-gray-900 ${
-						isBlog && screenSize < 750
-							? "via-transparent via-20% to-gray-900 h-full"
+						size === "small" && screenSize < 750
+							? `via-transparent to-gray-900 h-full ${
+									isBlog ? "via-20%" : "via-40%"
+							  }`
 							: "to-transparent h-1/2"
 					}`}
 				></div>
