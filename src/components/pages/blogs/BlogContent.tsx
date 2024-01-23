@@ -69,19 +69,19 @@ const BlogContent: React.FC<BlogContentProps> = ({
 				<div
 					className={`w-full relative ${
 						screenSize < 550
-							? "h-[60vh]"
+							? "h-[60dvh]"
 							: screenSize < 750
-							? "h-[75vh]"
-							: "h-[85vh]"
+							? "h-[75dvh]"
+							: "h-[85dvh]"
 					}`}
 				>
 					<img
 						className={`absolute w-full z-[-99] max-h-[1000px] object-cover object-center -top-6 ${
 							screenSize < 550
-								? "h-[calc(60vh+48px)]"
+								? "h-[calc(60dvh+48px)]"
 								: screenSize < 750
-								? "h-[calc(75vh+48px)]"
-								: "h-[calc(85vh+48px)]"
+								? "h-[calc(75dvh+48px)]"
+								: "h-[calc(85dvh+48px)]"
 						}`}
 						src={img}
 						alt={image.alt}

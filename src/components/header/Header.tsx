@@ -33,9 +33,9 @@ const Header: React.FC<HeaderProps> = ({
 			className={`${
 				screenSize < 750
 					? size === "large"
-						? "h-[90vh]"
-						: "h-[40vh]"
-					: "h-[90vh]"
+						? "h-[90dvh]"
+						: "h-[40dvh]"
+					: "h-[90dvh]"
 			} text-primary`}
 		>
 			<div
@@ -44,9 +44,9 @@ const Header: React.FC<HeaderProps> = ({
 						? "[&>img]:h-full"
 						: screenSize < 750
 						? size === "large"
-							? "[&>img]:h-[calc(90vh+24px)]"
-							: "[&>img]:h-[calc(40vh+24px)]"
-						: "[&>img]:h-[calc(90vh+24px)]"
+							? "[&>img]:h-[calc(90dvh+24px)]"
+							: "[&>img]:h-[calc(40dvh+24px)]"
+						: "[&>img]:h-[calc(90dvh+24px)]"
 				} ${
 					screenSize < 750
 						? size === "large"
