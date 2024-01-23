@@ -91,65 +91,19 @@ function parseHTMLText(text: string | undefined, images: any) {
 						key: index,
 						name,
 						children: React.createElement(TagComponent, {
-							children: element.innerHTML,
+							children: element.innerHTML.replaceAll(
+								"&amp;",
+								"&"
+							),
 						}),
 					});
 				} else if (tagName === "p" || tagName === "h3") {
 					// If p or h3 tag, create BaseText or H3 component with given class attribute
 					const className = element.getAttribute("class");
 
-					// if (tagName === "p" && element.innerHTML.includes("</a>")) {
-					// 	console.log(element);
-					// 	const children: any = Array.from(element.children).map(
-					// 		(child, index) => {
-					// 			if (child.nodeType === 1) {
-					// 				const childTagName =
-					// 					child.tagName?.toLowerCase();
-					// 				const childComponent =
-					// 					tagToComponent[childTagName];
-
-					// 				if (childComponent) {
-					// 					// If a mapping exists, create the React component
-					// 					return React.createElement(
-					// 						childComponent,
-					// 						{
-					// 							key: index,
-					// 							to: child.getAttribute("href"),
-					// 							children: child.innerHTML,
-					// 						}
-					// 					);
-					// 				} else {
-					// 					// If no mapping exists, include the plain text
-					// 					return parseHTMLText(
-					// 						child.outerHTML,
-					// 						images
-					// 					);
-					// 				}
-					// 			} else {
-					// 				// If it's a text node
-					// 				return child.textContent || "";
-					// 			}
-					// 		}
-					// 	);
-
-					// 	return React.createElement(BaseText, {
-					// 		key: index,
-					// 		children,
-					// 	});
-
-					// 	// const anchor = parseHTMLText(element.innerHTML, images);
-
-					// 	// const test = element.innerHTML.replace(
-					// 	// 	/<a[^>]*>.*?<\/a>/g,
-					// 	// 	anchor
-					// 	// );
-
-					// 	// console.log(test);
-					// }
-
 					return React.createElement(TagComponent, {
 						key: index,
-						children: element.innerHTML,
+						children: element.innerHTML.replaceAll("&amp;", "&"),
 						className,
 					});
 				} else {
