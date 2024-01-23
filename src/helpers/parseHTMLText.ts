@@ -89,7 +89,7 @@ function parseHTMLText(text: string | undefined, images: any) {
 					// If h2 tag, create Element component with H2 component inside
 					return React.createElement(Element, {
 						key: index,
-						name,
+						name: name.replaceAll("&amp;", "&"),
 						children: React.createElement(TagComponent, {
 							children: element.innerHTML.replaceAll(
 								"&amp;",

@@ -14,7 +14,11 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headers }) => {
 		<>
 			{screenSize < 1000 ? (
 				<Details summary="Inhoud">
-					<ul className=" px-4 pt-2 pb-6 rounded-2xl [&>a:not(:last-child)]:mb-2">
+					<ul
+						className={`px-4 pt-2 pb-6 rounded-2xl [&>a:not(:last-child)]:mb-2 ${
+							screenSize < 550 ? "min-w-[250px]" : "min-w-[300px]"
+						}`}
+					>
 						{headers.map((header, index) => (
 							<Link
 								className="cursor-pointer block hover:underline text-sm"
