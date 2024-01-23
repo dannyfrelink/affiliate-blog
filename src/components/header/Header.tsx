@@ -51,7 +51,13 @@ const Header: React.FC<HeaderProps> = ({
 						: "h-[110%]"
 				}`}
 			>
-				<div className="absolute top-0 w-screen h-1/2 opacity-70 bg-gradient-to-b from-gray-900 to-transparent"></div>
+				<div
+					className={`absolute top-0 w-screen opacity-70 bg-gradient-to-b from-gray-900 to-transparent h-1/2 ${
+						isBlog && screenSize < 750
+							? "via-transparent via-20% to-gray-900 h-full"
+							: "to-transparent h-1/2"
+					}`}
+				></div>
 				<Image />
 			</div>
 
