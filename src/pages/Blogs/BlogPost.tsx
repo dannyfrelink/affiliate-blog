@@ -33,6 +33,7 @@ const BlogPost = () => {
 				subTitle={blog.date}
 				size="small"
 				align="bottom"
+				isBlog
 			/>
 
 			<main className={screenSize < 1000 ? "" : "relative flex"}>

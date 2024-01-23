@@ -7,9 +7,16 @@ interface TitleProps {
 	subTitle?: string;
 	align?: string;
 	size?: string;
+	isBlog: boolean;
 }
 
-const Title: React.FC<TitleProps> = ({ title, subTitle, align, size }) => {
+const Title: React.FC<TitleProps> = ({
+	title,
+	subTitle,
+	align,
+	size,
+	isBlog,
+}) => {
 	const { screenSize } = useAppContext();
 
 	return (
@@ -26,7 +33,9 @@ const Title: React.FC<TitleProps> = ({ title, subTitle, align, size }) => {
 					  }`
 			} flex flex-col mx-auto`}
 		>
-			<H1 subTitle={subTitle ? subTitle : ""}>{title}</H1>
+			<H1 subTitle={subTitle ? subTitle : ""} isBlog={isBlog}>
+				{title}
+			</H1>
 
 			{subTitle && (
 				<p
@@ -35,7 +44,7 @@ const Title: React.FC<TitleProps> = ({ title, subTitle, align, size }) => {
 							? `text-sm ${
 									align === "center"
 										? "font-semibold w-3/4 mx-auto"
-										: "text-[#C3C3C3]"
+										: "text-primary font-bold"
 							  }`
 							: `font-semibold mx-auto ${
 									screenSize < 1250

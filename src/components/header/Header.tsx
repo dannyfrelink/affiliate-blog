@@ -14,6 +14,7 @@ interface HeaderProps {
 	subTitle?: string;
 	size?: "small" | "large";
 	align?: "center" | "bottom";
+	isBlog?: boolean;
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -23,6 +24,7 @@ const Header: React.FC<HeaderProps> = ({
 	subTitle,
 	size = "large",
 	align = "center",
+	isBlog = false,
 }) => {
 	const { setNavOpen, screenSize } = useAppContext();
 
@@ -86,6 +88,7 @@ const Header: React.FC<HeaderProps> = ({
 				subTitle={subTitle}
 				align={align}
 				size={size}
+				isBlog={isBlog}
 			/>
 		</header>
 	);
