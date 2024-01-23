@@ -56,10 +56,10 @@ const BlogContent: React.FC<BlogContentProps> = ({
 				<article
 					className={`[&>img]:w-full [&_img]:rounded-2xl [&_img]:shadow-subtle [&_h3]:font-medium ${
 						screenSize < 750
-							? "[&>*:not(:last-child)]:mb-3 [&>div:not(:first-child)>h2]:mt-6 [&_h2]:!mb-2 [&_h3]:!mb-2 [&>img:not(:last-child)]:mb-4 [&>img]:mt-4"
+							? "[&>*:not(:last-child)]:mb-3 [&>div:not(:first-child)_h2]:mt-6 [&_h2]:!mb-2 [&_h3]:!mb-2 [&>img:not(:last-child)]:mb-4 [&>img]:mt-4"
 							: screenSize < 1250
-							? "[&>*:not(:last-child)]:mb-3.5 [&>div:not(:first-child)>h2]:mt-7 [&_h2]:!mb-2.5 [&_h3]:!mb-2.5 [&>img:not(:last-child)]:mb-6 [&>img]:mt-6"
-							: "[&>*:not(:last-child)]:mb-4 [&>div:not(:first-child)>h2]:mt-14 [&_h2]:!mb-3 [&_h3]:!mb-3 [&>img:not(:last-child)]:mb-8 [&>img]:mt-8"
+							? "[&>*:not(:last-child)]:mb-3.5 [&>div:not(:first-child)_h2]:mt-7 [&_h2]:!mb-2.5 [&_h3]:!mb-2.5 [&>img:not(:last-child)]:mb-6 [&>img]:mt-6"
+							: "[&>*:not(:last-child)]:mb-4 [&>div:not(:first-child)_h2]:mt-14 [&_h2]:!mb-3 [&_h3]:!mb-3 [&>img:not(:last-child)]:mb-8 [&>img]:mt-8"
 					}`}
 				>
 					{parsedText}
