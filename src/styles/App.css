@@ -55,6 +55,11 @@
 		opacity: 0.9;
 	}
 
+	a:focus > div,
+	a > div:hover {
+		opacity: 0.4;
+	}
+
 	a:hover,
 	a:focus {
 		color: #687b68;
