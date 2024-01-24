@@ -120,15 +120,19 @@ const BlogOverview = () => {
 						})}
 					</div>
 
-					<H2 className={screenSize < 1250 ? "mb-2" : "mb-3"}>
+					<H2
+						className={`text-center ${
+							screenSize < 1250 ? "mb-2" : "mb-3"
+						}`}
+					>
 						Reizen naar Indonesië
 					</H2>
 					<article
-						className={
+						className={`text-center ${
 							screenSize < 1250
 								? "[&>*:not(:last-child)]:mb-3"
 								: "[&>*:not(:last-child)]:mb-4"
-						}
+						}`}
 					>
 						<BaseText>
 							Indonesië is echt onze favoriete reisbestemming! Je
