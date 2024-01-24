@@ -164,8 +164,8 @@ const BlogOverview = () => {
 											to={`/indonesie/${blog.href}`}
 											className={`relative ${
 												screenSize < 900
-													? "w-full [&>*:not(:nth-child[1])]:mt-2 mt-5 max-w-[550px]"
-													: `w-[36vw] ${
+													? "w-full max-w-[550px] h-[56vw] max-h-[325px] [&>*:not(:nth-child[1])]:mt-2 mt-5"
+													: `w-[36vw] max-w-[650px] h-[24vw] max-h-[375px] mx-auto ${
 															screenSize < 1250
 																? "[&>*:not(:nth-child[1])]:mt-2.5"
 																: "[&>*:not(:nth-child[1])]:mt-3"
@@ -178,7 +178,7 @@ const BlogOverview = () => {
 											<img
 												src={image}
 												alt={blog.coverImage.alt}
-												className="w-full max-h-[325px] object-cover object-center rounded-2xl shadow-subtle"
+												className="w-screen h-full object-cover object-center rounded-2xl shadow-subtle"
 											/>
 
 											<H3 className="absolute w-[90%] left-[5%] text-primary bottom-4">
