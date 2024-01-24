@@ -56,8 +56,8 @@
 	}
 
 	a:focus > div,
-	a > div:hover {
-		opacity: 0.4;
+	a:hover > div {
+		opacity: 0.5;
 	}
 
 	a:hover,
