@@ -85,8 +85,8 @@ function parseHTMLText(text: string | undefined, images: any) {
 					.join("-")
 					.toLowerCase();
 
-				if (tagName === "h2") {
-					// If h2 tag, create Element component with H2 component inside
+				if (tagName === "h3") {
+					// If h3 tag, create Element component with H3 component inside
 					return React.createElement(Element, {
 						key: index,
 						name: name.replaceAll("&amp;", "&"),
@@ -97,8 +97,8 @@ function parseHTMLText(text: string | undefined, images: any) {
 							),
 						}),
 					});
-				} else if (tagName === "p" || tagName === "h3") {
-					// If p or h3 tag, create BaseText or H3 component with given class attribute
+				} else if (tagName === "p") {
+					// If p tag, create BaseText component with given class attribute
 					const className = element.getAttribute("class");
 
 					return React.createElement(TagComponent, {
