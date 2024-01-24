@@ -2,13 +2,11 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-.overflow-y-scroll,
-body {
+.overflow-y-scroll {
 	-ms-overflow-style: none;
 	scrollbar-width: none;
 }
 
-.overflow-y-scroll::-webkit-scrollbar,
-body::-webkit-scrollbar {
+.overflow-y-scroll::-webkit-scrollbar {
 	display: none;
 }
