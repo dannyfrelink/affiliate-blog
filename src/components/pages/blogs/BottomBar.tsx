@@ -35,7 +35,7 @@ const BottomBar: React.FC<BottomBarProps> = ({ blogs, href }) => {
 			<article
 				className={`grid gap-6 grid-rows-[1fr_1fr_1fr_1fr] ${
 					screenSize > 650 &&
-					`grid-cols-2 grid-rows-[1fr_1fr] ${
+					`grid-cols-2 !grid-rows-[1fr_1fr] ${
 						screenSize >= 1250 && "!gap-10"
 					}`
 				}`}
