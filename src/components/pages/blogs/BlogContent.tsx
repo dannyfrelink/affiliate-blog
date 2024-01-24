@@ -54,12 +54,17 @@ const BlogContent: React.FC<BlogContentProps> = ({
 				)}
 
 				<article
-					className={`[&>img]:w-full [&_img]:rounded-2xl [&_img]:shadow-subtle [&_h3]:font-medium ${
+					className={`[&>img]:w-full [&_img]:rounded-2xl [&_img]:shadow-subtle [&>img]:object-center [&>img]:object-cover [&>img]:max-h-[500px] [&_h3]:font-medium ${
+						screenSize < 1000
+							? "[&>img]:h-[50.3vw] [&>div>img]:h-[62.6vw]"
+							: screenSize < 1250 &&
+							  "[&>img]:h-[30vw] [&>div>img]:h-[37.2vw]"
+					} ${
 						screenSize < 750
-							? "[&>*:not(:last-child)]:mb-3 [&>div:not(:first-child)_h3]:mt-6 [&_h3]:!mb-2 [&>img:not(:last-child)]:mb-4 [&>img]:mt-4"
+							? "[&>*:not(:last-child)]:mb-3 [&>div:not(:first-child)_h3]:mt-6 [&_h3]:!mb-2 [&>img:not(:last-child)]:mb-4 [&>img]:mt-4 [&>img]:h-[52vw] [&>div>img]:h-[65.1vw]"
 							: screenSize < 1250
-							? "[&>*:not(:last-child)]:mb-3.5 [&>div:not(:first-child)_h3]:mt-7 [&_h3]:!mb-2.5 [&>img:not(:last-child)]:mb-6 [&>img]:mt-6"
-							: "[&>*:not(:last-child)]:mb-4 [&>div:not(:first-child)_h3]:mt-14 [&_h3]:!mb-3 [&>img:not(:last-child)]:mb-8 [&>img]:mt-8"
+							? "[&>*:not(:last-child)]:mb-3.5 [&>div:not(:first-child)_h3]:mt-7 [&_h3]:!mb-2.5 [&>img:not(:last-child)]:mb-6 [&>img]:mt-6 "
+							: "[&>*:not(:last-child)]:mb-4 [&>div:not(:first-child)_h3]:mt-14 [&_h3]:!mb-3 [&>img:not(:last-child)]:mb-8 [&>img]:mt-8 [&>img]:h-[30.7vw] [&>img]:max-h-[550px] [&>div>img]:h-[38.2vw]"
 					}`}
 				>
 					{parsedText}
