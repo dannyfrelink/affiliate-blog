@@ -22,7 +22,7 @@ const Socials: React.FC = () => {
 	];
 
 	return (
-		<div className="flex gap-3 [&>*]:w-10">
+		<div className="flex gap-3 [&>*]:w-10 [&>*:hover>img]:opacity-85 [&>*:focus>img]:opacity-85">
 			{socials.map((social, index) => {
 				const src = require(`../../../assets/socials/${social.src}`);
 				const alt = social.src.split("icons8-")[1].split(".svg")[0];
