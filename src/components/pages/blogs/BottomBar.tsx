@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Container from "../../general/Container";
 import { Destination } from "../../../pages/Blogs/BlogOverview";
 import { useAppContext } from "../../../config/AppContext";
@@ -16,7 +16,10 @@ const BottomBar: React.FC<BottomBarProps> = ({ blogs, href }) => {
 	const optionalBlogs = blogs.filter((blog) => blog.href !== href);
 	const [blogArr, setBlogArr] = useState<BottomBarProps["blogs"]>([]);
 	const array = getRandomBlogs(optionalBlogs, 4);
-	blogArr.length === 0 && setBlogArr(array);
+
+	useEffect(() => {
+		setBlogArr(array);
+	}, [href]);
 
 	return (
 		<Container className="rounded-t-none">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NextBlog from "./NextBlog";
 import { Destination } from "../../../pages/Blogs/BlogOverview";
 import { getRandomBlogs } from "../../../helpers/getRandomBlogs";
@@ -12,7 +12,10 @@ const NextBlogs: React.FC<NextBlogsProps> = ({ blogs, href }) => {
 	const optionalBlogs = blogs.filter((blog) => blog.href !== href);
 	const [blogArr, setBlogArr] = useState<NextBlogsProps["blogs"]>([]);
 	const array = getRandomBlogs(optionalBlogs, 4);
-	blogArr.length === 0 && setBlogArr(array);
+
+	useEffect(() => {
+		setBlogArr(array);
+	}, [href]);
 
 	return (
 		<article
