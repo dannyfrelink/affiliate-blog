@@ -38,10 +38,10 @@ const BlogPost = () => {
 
 			<main className={screenSize < 1000 ? "" : "relative flex"}>
 				<article
-					className={`z-[1] ${
+					className={`z-[1] relative ${
 						screenSize < 1000
-							? "[&>*:last-child>section]:!rounded-b-none"
-							: `[&>*>section]:rounded-none [&>*:first-child>section]:rounded-tl-2xl ${
+							? "[&>section:last-child]:!rounded-b-none"
+							: `[&>section]:rounded-none [&>section:first-child]:rounded-tl-2xl ${
 									screenSize < 1250
 										? "w-4/6"
 										: screenSize < 1500

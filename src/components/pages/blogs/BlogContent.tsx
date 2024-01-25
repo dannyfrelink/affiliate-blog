@@ -42,7 +42,7 @@ const BlogContent: React.FC<BlogContentProps> = ({
 	const parsedText = parseHTMLText(parsedImg, images);
 
 	return (
-		<div className="relative">
+		<>
 			<Container>
 				{index === 0 && (
 					<div className="mb-4">
@@ -93,7 +93,7 @@ const BlogContent: React.FC<BlogContentProps> = ({
 					/>
 				</div>
 			)}
-		</div>
+		</>
 	);
 };
 
