@@ -112,6 +112,7 @@ const BlogOverview = () => {
 						{tags.map((tag, index) => {
 							return (
 								<CountryTag
+									key={index}
 									title={tag.title}
 									value={tag.value}
 									icon={tag.icon}
