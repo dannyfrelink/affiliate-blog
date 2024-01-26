@@ -71,8 +71,8 @@
 		opacity: 0.9;
 	}
 
-	a:hover,
-	a:focus {
+	a:not(.contentsLink):hover,
+	a:not(.contentsLink):focus {
 		color: #687b68;
 	}
 }

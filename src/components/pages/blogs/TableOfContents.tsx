@@ -58,14 +58,14 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headers }) => {
 					<ul className="bg-secondary px-5 py-6 text-primary rounded-2xl [&>a:not(:last-child)]:mb-2.5">
 						{headers.map((header, index) => (
 							<Link
-								className="block"
+								className="block contentsLink"
 								to={header.toLowerCase().split(" ").join("-")}
 								smooth={true}
 								offset={-100}
 								duration={500}
 								key={index}
 							>
-								<button className="hover:text-primary hover:underline focus:text-primary focus:underline flex [&>li]:text-left">
+								<button className="hover:underline focus:underline flex [&>li]:text-left">
 									<img
 										className="w-3 mr-3 mt-1"
 										src={palmTree}
