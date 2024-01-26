@@ -22,6 +22,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headers }) => {
 					>
 						{headers.map((header, index) => (
 							<Link
+								tabIndex={index}
 								className="cursor-pointer hover:!text-primary text-sm flex items-center"
 								to={header.toLowerCase().split(" ").join("-")}
 								smooth={true}
@@ -58,7 +59,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headers }) => {
 								key={index}
 							>
 								<img
-									className="w-3 h-fit mr-3 mt-1"
+									className="w-3 mr-3 mt-1"
 									src={palmTree}
 									alt="Palm Tree Icon"
 								/>
