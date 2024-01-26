@@ -23,30 +23,32 @@ const BottomBar: React.FC<BottomBarProps> = ({ blogs, href }) => {
 
 	return (
 		<Container className="rounded-t-none">
-			<H2
-				className={`text-center ${
-					screenSize < 750
-						? "mb-5"
-						: screenSize < 1250
-						? "mb-7"
-						: "mb-9"
-				}`}
-			>
-				Ontdek meer
-			</H2>
+			<div className="max-w-[1400px] mx-auto">
+				<H2
+					className={`text-center ${
+						screenSize < 750
+							? "mb-5"
+							: screenSize < 1250
+							? "mb-7"
+							: "mb-9"
+					}`}
+				>
+					Ontdek meer
+				</H2>
 
-			<article
-				className={`grid gap-6 grid-rows-[1fr_1fr_1fr_1fr] ${
-					screenSize > 650 &&
-					`grid-cols-2 !grid-rows-[1fr_1fr] ${
-						screenSize >= 1250 && "!gap-10"
-					}`
-				}`}
-			>
-				{blogArr.map((blog, index) => (
-					<NextBlog key={index} blog={blog} size="large" />
-				))}
-			</article>
+				<article
+					className={`grid gap-6 grid-rows-[1fr_1fr_1fr_1fr] ${
+						screenSize > 650 &&
+						`grid-cols-2 !grid-rows-[1fr_1fr] ${
+							screenSize >= 1250 && "!gap-10"
+						}`
+					}`}
+				>
+					{blogArr.map((blog, index) => (
+						<NextBlog key={index} blog={blog} size="large" />
+					))}
+				</article>
+			</div>
 		</Container>
 	);
 };

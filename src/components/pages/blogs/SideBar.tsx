@@ -84,11 +84,14 @@ const SideBar: React.FC<SideBarProps> = ({ blogs, href }) => {
 				screenSize < 1250
 					? "w-2/6 !px-10"
 					: `!px-12 ${
-							screenSize < 1500 ? "w-[30%]" : "w-[27.5%] !px-16"
+							screenSize < 1500 ? "w-[30%]" : "!px-16 w-[27.5%]"
 					  }`
 			}`}
 		>
-			<div ref={contentRef} className={`[&>*:not(:last-child)]:mb-10`}>
+			<div
+				ref={contentRef}
+				className={`[&>*:not(:last-child)]:mb-10 max-w-[350px]`}
+			>
 				<TableOfContents headers={activeBlog.headers} />
 
 				<section>

@@ -43,7 +43,13 @@ const BlogContent: React.FC<BlogContentProps> = ({
 
 	return (
 		<>
-			<Container>
+			<Container
+				className={
+					screenSize > 1800
+						? `!pl-0 ${screenSize > 2400 && "!pr-[5vw]"}`
+						: ""
+				}
+			>
 				{index === 0 && (
 					<div className="mb-4">
 						<H2 className="mb-3">{blog.title}</H2>
@@ -64,7 +70,7 @@ const BlogContent: React.FC<BlogContentProps> = ({
 							? "[&>*:not(:last-child)]:mb-3 [&>div:not(:first-child)_h3]:mt-6 [&_h3]:!mb-2 [&>img:not(:last-child)]:mb-4 [&>img]:mt-4 [&>img]:h-[52vw] [&>div>img]:h-[65.1vw]"
 							: screenSize < 1250
 							? "[&>*:not(:last-child)]:mb-3.5 [&>div:not(:first-child)_h3]:mt-7 [&_h3]:!mb-2.5 [&>img:not(:last-child)]:mb-6 [&>img]:mt-6 "
-							: "[&>*:not(:last-child)]:mb-4 [&>div:not(:first-child)_h3]:mt-14 [&_h3]:!mb-3 [&>img:not(:last-child)]:mb-8 [&>img]:mt-8 [&>img]:h-[30.7vw] [&>img]:max-h-[550px] [&>div>img]:h-[38.2vw]"
+							: "[&>*:not(:last-child)]:mb-4 [&>div:not(:first-child)_h3]:mt-14 [&_h3]:!mb-3 [&>img:not(:last-child)]:mb-8 [&>img]:mt-8 [&>img]:h-[30.7vw] [&>img]:max-h-[550px] [&>div>img]:h-[38.2vw] [&>div>img]:max-h-[800px]"
 					}`}
 				>
 					{parsedText}
@@ -77,7 +83,7 @@ const BlogContent: React.FC<BlogContentProps> = ({
 							? "h-[60dvh]"
 							: screenSize < 750
 							? "h-[75dvh]"
-							: "h-[85dvh]"
+							: "h-[85dvh] max-h-[1000px]"
 					}`}
 				>
 					<img

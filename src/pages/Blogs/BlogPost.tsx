@@ -36,41 +36,48 @@ const BlogPost = () => {
 				isBlog
 			/>
 
-			<main
-				className={
-					screenSize < 1000 ? "" : "relative flex flex-row-reverse"
-				}
-			>
-				{screenSize >= 1000 && <SideBar blogs={allBlogs} href={href} />}
-
-				<article
-					className={`z-[1] relative ${
-						screenSize < 1000
-							? "[&>section:last-child]:!rounded-b-none"
-							: `[&>section]:rounded-none [&>section:first-child]:rounded-tl-2xl ${
-									screenSize < 1250
-										? "w-4/6"
-										: screenSize < 1500
-										? "w-[70%]"
-										: "w-[72.5%]"
-							  }`
+			<main className="relative">
+				<div
+					className={`max-w-[1800px] mx-auto ${
+						screenSize > 1000 && "flex flex-row-reverse"
+					} ${
+						screenSize > 1800 &&
+						"before:absolute before:inset-0 before:bg-primary before:rounded-2xl"
 					}`}
 				>
-					{sections.map((section, index) => {
-						const text = section && section.text;
+					{screenSize >= 1000 && (
+						<SideBar blogs={allBlogs} href={href} />
+					)}
 
-						return (
-							<BlogContent
-								key={index}
-								index={index}
-								image={section && section.image}
-								text={text}
-								images={images}
-								blog={blog}
-							></BlogContent>
-						);
-					})}
-				</article>
+					<article
+						className={`z-[1] relative ${
+							screenSize < 1000
+								? "[&>section:last-child]:!rounded-b-none"
+								: `[&>section]:rounded-none [&>section:first-child]:rounded-tl-2xl ${
+										screenSize < 1250
+											? "w-4/6"
+											: screenSize < 1500
+											? "w-[70%]"
+											: "w-[72.5%]"
+								  }`
+						}`}
+					>
+						{sections.map((section, index) => {
+							const text = section && section.text;
+
+							return (
+								<BlogContent
+									key={index}
+									index={index}
+									image={section && section.image}
+									text={text}
+									images={images}
+									blog={blog}
+								></BlogContent>
+							);
+						})}
+					</article>
+				</div>
 			</main>
 
 			<BottomBar blogs={allBlogs} href={href} />
