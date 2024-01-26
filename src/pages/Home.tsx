@@ -64,7 +64,7 @@ const Home = () => {
 							screenSize < 750 && "max-w-[500px] mx-auto"
 						} ${
 							screenSize > 1350 &&
-							"flex justify-between flex-row-reverse"
+							"flex justify-around flex-row-reverse"
 						}`}
 					>
 						{screenSize < 750 && (
