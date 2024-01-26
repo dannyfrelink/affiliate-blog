@@ -11,7 +11,7 @@ const Nav: React.FC = () => {
 		useAppContext();
 
 	const checkActive = (isActive: boolean) => {
-		return isActive ? "font-bold text-secondary" : "";
+		return isActive ? "font-bold text-[#729172]" : "";
 	};
 
 	const handleClick = (e: any) => {
@@ -32,7 +32,7 @@ const Nav: React.FC = () => {
 			onClick={handleClick}
 			className={`z-[99] ${scrolled > 250 && scrolledUp && "fixed"} ${
 				screenSize < 1000 &&
-				`fixed h-screen before:fixed before:w-screen before:bg-[#707070] before:opacity-75 ${
+				`fixed h-screen before:fixed before:w-screen before:bg-[#707070] before:opacity-75  ${
 					navOpen ? "left-0 before:inset-0" : "-left-[100vw]"
 				}`
 			}`}
@@ -79,7 +79,7 @@ const Nav: React.FC = () => {
 								navOpen &&
 								"animate-[menuFadeIn_0.5s_ease-out_forwards] !block"
 						  }`
-						: `flex before:top-0 before:inset-x-0 before:h-[4.5rem] before:z-[-1] ${
+						: `flex before:top-0 before:inset-x-0 before:h-[4.5rem] before:z-[-1] [&_a:hover]:text-[#729172] [&_a:focus]:text-[#729172] ${
 								scrolled > 250 && scrolledUp
 									? "fixed before:fixed top-[22px] before:bg-primary before:shadow-subtle"
 									: "absolute before:absolute top-7 text-primary"
