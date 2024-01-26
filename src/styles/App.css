@@ -75,6 +75,11 @@
 	a:not(.contentsLink):focus {
 		color: #687b68;
 	}
+
+	.contentsLink button:hover,
+	.contentsLink button:focus {
+		text-decoration: underline;
+	}
 }
 
 @media (min-width: 1250px) {

@@ -65,7 +65,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headers }) => {
 								duration={500}
 								key={index}
 							>
-								<button className="hover:underline focus:underline flex [&>li]:text-left">
+								<button className="flex [&>li]:text-left">
 									<img
 										className="w-3 mr-3 mt-1"
 										src={palmTree}
