@@ -13,6 +13,7 @@ import { Destination } from "./Blogs/BlogOverview";
 import { Helmet } from "react-helmet-async";
 import { useEffect, useState } from "react";
 import ButtonLink from "../components/general/ButtonLink";
+import ScrollBar from "../components/general/ScrollBar";
 
 const Home = () => {
 	const { screenSize } = useAppContext();
@@ -28,98 +29,101 @@ const Home = () => {
 	}, []);
 
 	return (
-		<div>
-			<Helmet prioritizeSeoTags>
-				<title>Test</title>
-				<meta name="description" content="Testing this page" />
-			</Helmet>
+		<ScrollBar>
+			<div>
+				<Helmet prioritizeSeoTags>
+					<title>Test</title>
+					<meta name="description" content="Testing this page" />
+				</Helmet>
 
-			<Header
-				Image={() => <img src={headerImage} alt="Bromo Vulkaan" />}
-				title="Jouw Avontuur Ons Verhaal"
-				subTitle="Beleef de reis van jouw dromen met al onze tips en tricks"
-			/>
+				<Header
+					Image={() => <img src={headerImage} alt="Bromo Vulkaan" />}
+					title="Jouw Avontuur Ons Verhaal"
+					subTitle="Beleef de reis van jouw dromen met al onze tips en tricks"
+				/>
 
-			<main className="rounded-3xl">
-				<Container className={screenSize > 750 ? "!px-0" : ""}>
-					<div className="max-w-[1800px] mx-auto">
-						<H2
-							className={`text-center ${
-								screenSize < 750
-									? "mb-5"
-									: screenSize < 1250
-									? "mb-7"
-									: "mb-7"
-							}`}
-						>
-							De nieuwste blogs
-						</H2>
-						<Carousel items={carouselBlogs} />
-					</div>
-				</Container>
-
-				<Featured blog={featuredBlog} />
-
-				<Container>
-					<section
-						className={`[&>*:not(:last-child)]:mb-5 ${
-							screenSize < 850 && "max-w-[500px] mx-auto"
-						} ${
-							screenSize > 1350 &&
-							"flex justify-between flex-row-reverse max-w-[1400px] mx-auto"
-						}`}
-					>
-						{screenSize < 850 && (
-							<H2 className="text-center">
-								Hi, wij zijn Danny & Lisa!
+				<main className="rounded-3xl">
+					<Container className={screenSize > 750 ? "!px-0" : ""}>
+						<div className="max-w-[1800px] mx-auto">
+							<H2
+								className={`text-center ${
+									screenSize < 750
+										? "mb-5"
+										: screenSize < 1250
+										? "mb-7"
+										: "mb-7"
+								}`}
+							>
+								De nieuwste blogs
 							</H2>
-						)}
-						<img
-							className={`h-[85vw] w-[85vw] object-cover object-center rounded-2xl shadow-subtle ${
-								screenSize < 850
-									? "max-h-[300px] mx-auto"
-									: `max-w-[475px] float-right !mb-0 ml-10 ${
-											screenSize < 1250
-												? "max-h-[280px]"
-												: "max-h-[320px]"
-									  }`
-							}`}
-							src={AboutImage}
-							alt="Us"
-						/>
+							<Carousel items={carouselBlogs} />
+						</div>
+					</Container>
 
-						<article
-							className={`[&>*:not(:last-child)]:mb-5 max-w-[600px] ${
-								screenSize < 850 &&
-								"flex flex-col items-center text-center"
+					<Featured blog={featuredBlog} />
+
+					<Container>
+						<section
+							className={`[&>*:not(:last-child)]:mb-5 ${
+								screenSize < 850 && "max-w-[500px] mx-auto"
+							} ${
+								screenSize > 1350 &&
+								"flex justify-between flex-row-reverse max-w-[1400px] mx-auto"
 							}`}
 						>
-							{screenSize >= 850 && (
-								<H2>Hi, wij zijn Danny & Lisa!</H2>
+							{screenSize < 850 && (
+								<H2 className="text-center">
+									Hi, wij zijn Danny & Lisa!
+								</H2>
 							)}
-							<BaseText>
-								In 2018 zijn wij voor het eerst voor acht
-								maanden samen op reis geweest en hebben wij
-								ontdekt dat dit is wat wij het liefste doen.
-								Vele reizen verder hebben wij besloten al onze
-								reizen, tips, accommodaties en veel meer gaan
-								delen op Reisfeeld.nl. Met onze tips en
-								ervaringen hopen wij jouw voorbereidingen én
-								reis een stukje leuker te maken! We zijn nog
-								lang niet klaar met reizen, dus houd ook onze
-								socials in de gaten voor leuke reiscontent!
-							</BaseText>
+							<img
+								className={`h-[85vw] w-[85vw] object-cover object-center rounded-2xl shadow-subtle ${
+									screenSize < 850
+										? "max-h-[300px] mx-auto"
+										: `max-w-[475px] float-right !mb-0 ml-10 ${
+												screenSize < 1250
+													? "max-h-[280px]"
+													: "max-h-[320px]"
+										  }`
+								}`}
+								src={AboutImage}
+								alt="Us"
+							/>
 
-							<ButtonLink link="/over-ons">
-								Leer ons beter kennen
-							</ButtonLink>
-						</article>
-					</section>
-				</Container>
-			</main>
+							<article
+								className={`[&>*:not(:last-child)]:mb-5 max-w-[600px] ${
+									screenSize < 850 &&
+									"flex flex-col items-center text-center"
+								}`}
+							>
+								{screenSize >= 850 && (
+									<H2>Hi, wij zijn Danny & Lisa!</H2>
+								)}
+								<BaseText>
+									In 2018 zijn wij voor het eerst voor acht
+									maanden samen op reis geweest en hebben wij
+									ontdekt dat dit is wat wij het liefste doen.
+									Vele reizen verder hebben wij besloten al
+									onze reizen, tips, accommodaties en veel
+									meer gaan delen op Reisfeeld.nl. Met onze
+									tips en ervaringen hopen wij jouw
+									voorbereidingen én reis een stukje leuker te
+									maken! We zijn nog lang niet klaar met
+									reizen, dus houd ook onze socials in de
+									gaten voor leuke reiscontent!
+								</BaseText>
 
-			<Footer />
-		</div>
+								<ButtonLink link="/over-ons">
+									Leer ons beter kennen
+								</ButtonLink>
+							</article>
+						</section>
+					</Container>
+				</main>
+
+				<Footer />
+			</div>
+		</ScrollBar>
 	);
 };
 
