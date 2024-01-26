@@ -59,15 +59,16 @@
 }
 
 @media (min-width: 1000px) {
-	button:hover,
-	button:focus a:hover,
-	a:focus {
-		opacity: 0.9;
+	a:focus > div:not(.buttonLink),
+	a:hover > div:not(.buttonLink) {
+		opacity: 0.5;
 	}
 
-	a:focus > div,
-	a:hover > div {
-		opacity: 0.5;
+	a:focus > .buttonLink,
+	a:hover > .buttonLink,
+	button:hover,
+	button:focus {
+		opacity: 0.9;
 	}
 
 	a:hover,
