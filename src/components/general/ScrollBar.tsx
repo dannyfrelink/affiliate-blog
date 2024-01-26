@@ -44,7 +44,7 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 
 			<div className="fixed right-1.5 inset-y-2 w-2 z-[99]">
 				<div
-					className="bg-gray-800 bg-opacity-70 rounded-full"
+					className="bg-gray-900 bg-opacity-65 rounded-full"
 					ref={scrollBarRef}
 				></div>
 			</div>
