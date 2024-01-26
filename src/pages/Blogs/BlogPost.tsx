@@ -36,7 +36,13 @@ const BlogPost = () => {
 				isBlog
 			/>
 
-			<main className={screenSize < 1000 ? "" : "relative flex"}>
+			<main
+				className={
+					screenSize < 1000 ? "" : "relative flex flex-row-reverse"
+				}
+			>
+				{screenSize >= 1000 && <SideBar blogs={allBlogs} href={href} />}
+
 				<article
 					className={`z-[1] relative ${
 						screenSize < 1000
@@ -65,8 +71,6 @@ const BlogPost = () => {
 						);
 					})}
 				</article>
-
-				{screenSize >= 1000 && <SideBar blogs={allBlogs} href={href} />}
 			</main>
 
 			<BottomBar blogs={allBlogs} href={href} />

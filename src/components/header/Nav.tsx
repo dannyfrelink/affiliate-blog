@@ -38,7 +38,6 @@ const Nav: React.FC = () => {
 			}`}
 		>
 			<Link
-				tabIndex={1}
 				className={`absolute z-[99] ${
 					screenSize < 1000
 						? `left-6 top-4 hidden ${navOpen && "!block"}`
@@ -100,7 +99,6 @@ const Nav: React.FC = () => {
 
 				<li>
 					<NavLink
-						tabIndex={2}
 						className={({ isActive }) => checkActive(isActive)}
 						to="/"
 					>
@@ -110,7 +108,6 @@ const Nav: React.FC = () => {
 
 				<li>
 					<NavLink
-						tabIndex={3}
 						className={({ isActive }) => checkActive(isActive)}
 						to="/indonesie"
 					>
@@ -120,7 +117,6 @@ const Nav: React.FC = () => {
 
 				<li>
 					<NavLink
-						tabIndex={4}
 						className={({ isActive }) => checkActive(isActive)}
 						to="/accommodaties"
 					>
@@ -129,7 +125,6 @@ const Nav: React.FC = () => {
 				</li>
 				<li>
 					<NavLink
-						tabIndex={5}
 						className={({ isActive }) => checkActive(isActive)}
 						to="/over-ons"
 					>

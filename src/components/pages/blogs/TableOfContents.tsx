@@ -17,26 +17,34 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headers }) => {
 				<Details summary="Inhoud">
 					<ul
 						className={`px-4 pt-2 pb-6 rounded-2xl [&>a:not(:last-child)]:mb-2.5 ${
-							screenSize < 550 ? "min-w-[250px]" : "min-w-[300px]"
+							screenSize < 550
+								? "min-w-[250px] max-w-[325px]"
+								: `min-w-[300px] ${
+										screenSize < 750
+											? "max-w-[325px]"
+											: "max-w-[350px]"
+								  }`
 						}`}
 					>
 						{headers.map((header, index) => (
 							<Link
-								className="cursor-pointer hover:!text-primary text-sm flex items-center"
+								className="block"
 								to={header.toLowerCase().split(" ").join("-")}
 								smooth={true}
 								offset={-100}
 								duration={500}
 								key={index}
 							>
-								<img
-									className={`mr-3 ${
-										screenSize < 1000 ? "w-2.5" : "w-3"
-									}`}
-									src={palmTree}
-									alt="Palm Tree Icon"
-								/>
-								<li>{header}</li>
+								<button className="cursor-pointer hover:!text-primary text-sm flex items-center text-left">
+									<img
+										className={`mr-3 ${
+											screenSize < 1000 ? "w-2.5" : "w-3"
+										}`}
+										src={palmTree}
+										alt="Palm Tree Icon"
+									/>
+									<li>{header}</li>
+								</button>
 							</Link>
 						))}
 					</ul>
@@ -50,20 +58,21 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headers }) => {
 					<ul className="bg-secondary px-5 py-6 text-primary rounded-2xl [&>a:not(:last-child)]:mb-2.5">
 						{headers.map((header, index) => (
 							<Link
-								tabIndex={index + 6}
-								className="cursor-pointer hover:text-primary hover:underline focus:text-primary focus:underline flex"
+								className="block"
 								to={header.toLowerCase().split(" ").join("-")}
 								smooth={true}
 								offset={-100}
 								duration={500}
 								key={index}
 							>
-								<img
-									className="w-3 mr-3 mt-1"
-									src={palmTree}
-									alt="Palm Tree Icon"
-								/>
-								<li>{header}</li>
+								<button className="hover:text-primary hover:underline focus:text-primary focus:underline flex [&>li]:text-left">
+									<img
+										className="w-3 mr-3 mt-1"
+										src={palmTree}
+										alt="Palm Tree Icon"
+									/>
+									<li>{header}</li>
+								</button>
 							</Link>
 						))}
 					</ul>
