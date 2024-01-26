@@ -12,6 +12,7 @@ import blogData from "../data/blogs.json";
 import { Destination } from "./Blogs/BlogOverview";
 import { Helmet } from "react-helmet-async";
 import { useEffect, useState } from "react";
+import ButtonLink from "../components/general/ButtonLink";
 
 const Home = () => {
 	const { screenSize } = useAppContext();
@@ -47,10 +48,10 @@ const Home = () => {
 								? "mb-5"
 								: screenSize < 1250
 								? "mb-7"
-								: "mb-9"
+								: "mb-7"
 						}`}
 					>
-						Lorem ipsum dolor sit
+						De nieuwste blogs
 					</H2>
 					<Carousel items={carouselBlogs} />
 				</Container>
@@ -67,44 +68,50 @@ const Home = () => {
 						}`}
 					>
 						{screenSize < 750 && (
-							<H2 className="text-center">Over ons</H2>
+							<H2 className="text-center">
+								Hi, wij zijn Danny & Lisa!
+							</H2>
 						)}
 						<img
-							className={`h-[85vw] w-[85vw] max-h-[350px] object-cover object-center rounded-2xl shadow-subtle ${
+							className={`h-[85vw] w-[85vw] object-cover object-center rounded-2xl shadow-subtle ${
 								screenSize < 750
-									? "mx-auto"
-									: `max-w-[450px] float-right !mb-0 ${
-											screenSize < 1250 ? "ml-6" : "ml-10"
+									? "max-h-[300px] mx-auto"
+									: `max-w-[475px] float-right !mb-0 ml-10 ${
+											screenSize < 1250
+												? "max-h-[280px]"
+												: "max-h-[320px]"
 									  }`
 							}`}
 							src={AboutImage}
 							alt="Us"
 						/>
 
-						<div className="[&>*:not(:last-child)]:mb-5 max-w-[750px]">
-							{screenSize > 750 && <H2>Over ons</H2>}
+						<article
+							className={`[&>*:not(:last-child)]:mb-5 max-w-[600px] ${
+								screenSize < 750 &&
+								"flex flex-col items-center text-center"
+							}`}
+						>
+							{screenSize > 750 && (
+								<H2>Hi, wij zijn Danny & Lisa!</H2>
+							)}
 							<BaseText>
-								Lorem ipsum dolor sit amet. Est explicabo
-								blanditiis eum perferendis harum eum galisum
-								voluptas quo natus nihil aut aspernatur voluptas
-								rem ipsum dolorum aut fugiat cumque. Et officiis
-								iure et asperiores totam quo sunt alias. Sed
-								illum perferendis quo possimus inventore et
-								reiciendis modi. Sed quos voluptate nam deleniti
-								veniam ut nihil consequatur.
+								In 2018 zijn wij voor het eerst voor acht
+								maanden samen op reis geweest en hebben wij
+								ontdekt dat dit is wat wij het liefste doen.
+								Vele reizen verder hebben wij besloten al onze
+								reizen, tips, accommodaties en veel meer gaan
+								delen op Reisfeeld.nl. Met onze tips en
+								ervaringen hopen wij jouw voorbereidingen én
+								reis een stukje leuker te maken! We zijn nog
+								lang niet klaar met reizen, dus houd ook onze
+								socials in de gaten voor leuke reiscontent!
 							</BaseText>
-							<BaseText>
-								Et dolorem rerum qui doloremque consectetur aut
-								incidunt fugit ad voluptatibus dignissimos aut
-								laborum excepturi et dicta dicta quo fuga enim.
-								Est ipsum possimus a corporis dolores qui
-								placeat dolor aut veritatis eveniet non cumque
-								autem sed iure veritatis est suscipit sequi. Est
-								asperiores porro non officia incidunt sed autem
-								dolor est dolores illo et molestiae quas aut
-								error totam.
-							</BaseText>
-						</div>
+
+							<ButtonLink link="/over-ons">
+								Leer ons beter kennen
+							</ButtonLink>
+						</article>
 					</section>
 				</Container>
 			</main>
