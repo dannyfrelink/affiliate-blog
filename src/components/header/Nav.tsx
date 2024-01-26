@@ -50,12 +50,13 @@ const Nav: React.FC = () => {
 				to="/"
 			>
 				<img
-					className={` ${
-						screenSize < 1000
-							? `h-[52px] ${
-									navOpen &&
-									"animate-[menuFadeIn_0.5s_ease-out_forwards]"
-							  }`
+					className={`${
+						navOpen && "animate-[menuFadeIn_0.5s_ease-out_forwards]"
+					} ${
+						screenSize < 750
+							? `h-12`
+							: screenSize < 1000
+							? "h-[52px]"
 							: `${
 									scrolled > 250 && scrolledUp
 										? "h-12"

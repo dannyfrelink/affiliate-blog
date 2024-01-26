@@ -86,7 +86,9 @@ const Header: React.FC<HeaderProps> = ({
 					to="/"
 				>
 					<img
-						className={`block !h-12 !w-auto`}
+						className={`block !w-auto ${
+							screenSize < 750 ? "!h-12" : "!h-[52px]"
+						}`}
 						src={LogoPrimary}
 						alt="Logo ReisFeeld White"
 					/>
