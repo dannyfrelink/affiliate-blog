@@ -79,7 +79,7 @@ const Nav: React.FC = () => {
 								navOpen &&
 								"animate-[menuFadeIn_0.5s_ease-out_forwards] !block"
 						  }`
-						: `flex before:top-0 before:inset-x-0 before:h-[4.5rem] before:z-[-1] [&_a:hover]:text-[#729172] [&_a:focus]:text-[#729172] ${
+						: `flex before:top-0 before:inset-x-0 before:h-[4.5rem] before:z-[-1] [&_a:hover]:!text-[#729172] [&_a:focus]:!text-[#729172] ${
 								scrolled > 250 && scrolledUp
 									? "fixed before:fixed top-[22px] before:bg-primary before:shadow-subtle"
 									: "absolute before:absolute top-7 text-primary"
