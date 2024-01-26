@@ -22,7 +22,6 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headers }) => {
 					>
 						{headers.map((header, index) => (
 							<Link
-								tabIndex={index}
 								className="cursor-pointer hover:!text-primary text-sm flex items-center"
 								to={header.toLowerCase().split(" ").join("-")}
 								smooth={true}
@@ -51,7 +50,8 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headers }) => {
 					<ul className="bg-secondary px-5 py-6 text-primary rounded-2xl [&>a:not(:last-child)]:mb-2.5">
 						{headers.map((header, index) => (
 							<Link
-								className="cursor-pointer hover:text-primary hover:underline flex"
+								tabIndex={index + 6}
+								className="cursor-pointer hover:text-primary hover:underline focus:text-primary focus:underline flex"
 								to={header.toLowerCase().split(" ").join("-")}
 								smooth={true}
 								offset={-100}
