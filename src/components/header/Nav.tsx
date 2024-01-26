@@ -32,7 +32,7 @@ const Nav: React.FC = () => {
 			onClick={handleClick}
 			className={`z-[99] ${scrolled > 250 && scrolledUp && "fixed"} ${
 				screenSize < 1000 &&
-				`fixed h-screen before:fixed before:w-screen before:bg-[#707070] before:opacity-75  ${
+				`fixed h-screen before:fixed before:w-screen before:bg-[#707070] before:opacity-75 ${
 					navOpen ? "left-0 before:inset-0" : "-left-[100vw]"
 				}`
 			}`}

@@ -34,74 +34,88 @@ const AccommodationList: React.FC<AccommodationListProps> = ({
 
 							return (
 								<section
-									className={
+									className={`flex flex-col items-center ${
 										screenSize < 900
-											? "[&>*:not(:first-child)]:mt-2 pt-5 max-w-[550px]"
-											: `w-[35vw] ${
-													screenSize < 1250
-														? "[&>*:not(:first-child)]:mt-2.5"
-														: "[&>*:not(:first-child)]:mt-3"
-											  }`
-									}
+											? "pt-5 max-w-[550px]"
+											: ""
+									}`}
 									key={index}
 								>
 									<img
 										src={image}
 										alt="Accommodatie"
-										className="mb-4 w-full max-h-[325px] object-cover object-center rounded-2xl shadow-subtle"
+										className={`mb-4 object-cover object-center rounded-2xl shadow-subtle ${
+											screenSize < 900
+												? "w-full max-w-[550px] h-[56vw] max-h-[325px]"
+												: "w-[36vw] max-w-[650px] h-[24vw] max-h-[375px]"
+										}`}
 									/>
 
-									<H3
+									<div
 										className={
 											screenSize < 900
-												? "!mt-3"
-												: screenSize < 1250
-												? "!mt-4"
-												: "!mt-6"
+												? "[&>*]:mt-2 max-w-[550px]"
+												: `w-[88%] max-w-[650px] ${
+														screenSize < 1250
+															? "[&>*]:mt-2.5"
+															: "[&>*]:mt-3"
+												  }`
 										}
 									>
-										{accom.name}
-									</H3>
-									<BaseText>{accom.description}</BaseText>
-
-									<article>
-										<BaseText className="font-medium">
-											Laagseizoen
-										</BaseText>
-										<BaseText>
-											Prijzen vanaf €{accom.prices.low}
-										</BaseText>
-									</article>
-
-									<article>
-										<BaseText className="font-medium">
-											Hoogseizoen
-										</BaseText>
-										<BaseText>
-											Prijzen vanaf €{accom.prices.high}
-										</BaseText>
-									</article>
-
-									<ButtonLink
-										link={accom.link}
-										className={
-											screenSize < 900
-												? "!mt-3"
-												: screenSize < 1250
-												? "!mt-4"
-												: "!mt-5"
-										}
-										blank
-									>
-										Bekijk accommodatie{" "}
-										<ArrowForwardRoundedIcon
-											fontSize={
-												screenSize < 750
-													? "small"
-													: "medium"
+										<H3
+											className={
+												screenSize < 900
+													? "!mt-3"
+													: screenSize < 1250
+													? "!mt-4"
+													: "!mt-6"
 											}
-										/>
-									</ButtonLink>
+										>
+											{accom.name}
+										</H3>
+										<BaseText>{accom.description}</BaseText>
+
+										<article>
+											<BaseText className="font-medium">
+												Laagseizoen
+											</BaseText>
+											<BaseText>
+												Prijzen vanaf €
+												{accom.prices.low}
+											</BaseText>
+										</article>
+
+										<article>
+											<BaseText className="font-medium">
+												Hoogseizoen
+											</BaseText>
+											<BaseText>
+												Prijzen vanaf €
+												{accom.prices.high}
+											</BaseText>
+										</article>
+
+										<ButtonLink
+											link={accom.link}
+											className={
+												screenSize < 900
+													? "!mt-3"
+													: screenSize < 1250
+													? "!mt-4"
+													: "!mt-5"
+											}
+											blank
+										>
+											Bekijk accommodatie{" "}
+											<ArrowForwardRoundedIcon
+												fontSize={
+													screenSize < 750
+														? "small"
+														: "medium"
+												}
+											/>
+										</ButtonLink>
+									</div>
 								</section>
 							);
 						})}

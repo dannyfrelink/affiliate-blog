@@ -16,34 +16,50 @@ const Featured: React.FC<FeaturedProps> = ({ blog }) => {
 
 	return (
 		<div className="flex items-center relative w-full h-[calc(95dvh-(24px*2))]">
+			<div className="absolute bottom-0 -left-0 w-full h-full opacity-60  bg-gradient-to-b from-transparent via-gray-700 to-transparent z-[-1]"></div>
 			<img
 				className="w-full h-[95dvh] absolute -top-6 z-[-2] object-cover object-[50%_65%]"
 				src={image}
 				alt={blog.coverImage.alt}
 			/>
 
-			<section
-				className={`text-primary w-[85vw] max-w-[650px] before:absolute before:bottom-0 before:-left-0 before:w-full before:h-full before:opacity-60  before:bg-gradient-to-b before:from-transparent before:via-gray-700 before:to-transparent before:z-[-1] ${
-					screenSize < 750
-						? "[&>*:not(:last-child)]:mb-4 mx-auto"
-						: screenSize < 1250
-						? "[&>*:not(:last-child)]:mb-5 ml-[9vw]"
-						: "[&>*:not(:last-child)]:mb-6 ml-[10vw]"
+			<div
+				className={`w-full ${
+					screenSize > 750
+						? screenSize < 1250
+							? "pl-[9vw]"
+							: screenSize < 1750 && "pl-[10vw]"
+						: ""
 				}`}
 			>
-				<div>
-					<BaseText className="italic mb-1">Uitgelicht</BaseText>
-					<H2>{blog.title}</H2>
-				</div>
-				<BaseText>{blog.featured}</BaseText>
+				<section
+					className={`text-primary w-[85vw]  ${
+						screenSize < 750
+							? "[&>*:not(:last-child)]:mb-4 mx-auto"
+							: screenSize < 1250
+							? "[&>*:not(:last-child)]:mb-5"
+							: `[&>*:not(:last-child)]:mb-6 ${
+									screenSize > 1750 &&
+									"max-w-[1400px] mx-auto"
+							  }`
+					}`}
+				>
+					<div className="max-w-[650px]">
+						<BaseText className="italic mb-1">Uitgelicht</BaseText>
+						<H2>{blog.title}</H2>
+					</div>
+					<BaseText className="max-w-[650px]">
+						{blog.featured}
+					</BaseText>
 
-				<ButtonLink link={`/indonesie/${blog.href}`}>
-					Ontdek ervaring{" "}
-					<ArrowForwardRoundedIcon
-						fontSize={screenSize < 750 ? "small" : "medium"}
-					/>
-				</ButtonLink>
-			</section>
+					<ButtonLink link={`/indonesie/${blog.href}`}>
+						Ontdek ervaring{" "}
+						<ArrowForwardRoundedIcon
+							fontSize={screenSize < 750 ? "small" : "medium"}
+						/>
+					</ButtonLink>
+				</section>
+			</div>
 		</div>
 	);
 };

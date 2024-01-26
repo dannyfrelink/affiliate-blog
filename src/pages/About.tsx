@@ -30,13 +30,13 @@ const About = () => {
 							? "[&>*:not(:last-child)]:mb-5"
 							: screenSize < 1250
 							? "[&>*:not(:last-child)]:mb-8"
-							: "flex justify-center"
+							: "flex justify-between max-w-[1400px] mx-auto"
 					}`}
 				>
 					<article
-						className={`max-w-[750px] mx-auto ${
+						className={`max-w-[750px] ${
 							screenSize < 750
-								? "[&>p:not(:last-child)]:mb-3"
+								? "[&>p:not(:last-child)]:mb-3 mx-auto"
 								: screenSize < 1250
 								? "[&>p:not(:last-child)]:mb-3.5"
 								: "[&>p:not(:last-child)]:mb-4"

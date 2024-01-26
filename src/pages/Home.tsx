@@ -42,18 +42,20 @@ const Home = () => {
 
 			<main className="rounded-3xl">
 				<Container className={screenSize > 750 ? "!px-0" : ""}>
-					<H2
-						className={`text-center ${
-							screenSize < 750
-								? "mb-5"
-								: screenSize < 1250
-								? "mb-7"
-								: "mb-7"
-						}`}
-					>
-						De nieuwste blogs
-					</H2>
-					<Carousel items={carouselBlogs} />
+					<div className="max-w-[1800px] mx-auto">
+						<H2
+							className={`text-center ${
+								screenSize < 750
+									? "mb-5"
+									: screenSize < 1250
+									? "mb-7"
+									: "mb-7"
+							}`}
+						>
+							De nieuwste blogs
+						</H2>
+						<Carousel items={carouselBlogs} />
+					</div>
 				</Container>
 
 				<Featured blog={featuredBlog} />
@@ -61,20 +63,20 @@ const Home = () => {
 				<Container>
 					<section
 						className={`[&>*:not(:last-child)]:mb-5 ${
-							screenSize < 750 && "max-w-[500px] mx-auto"
+							screenSize < 850 && "max-w-[500px] mx-auto"
 						} ${
 							screenSize > 1350 &&
-							"flex justify-around flex-row-reverse"
+							"flex justify-between flex-row-reverse max-w-[1400px] mx-auto"
 						}`}
 					>
-						{screenSize < 750 && (
+						{screenSize < 850 && (
 							<H2 className="text-center">
 								Hi, wij zijn Danny & Lisa!
 							</H2>
 						)}
 						<img
 							className={`h-[85vw] w-[85vw] object-cover object-center rounded-2xl shadow-subtle ${
-								screenSize < 750
+								screenSize < 850
 									? "max-h-[300px] mx-auto"
 									: `max-w-[475px] float-right !mb-0 ml-10 ${
 											screenSize < 1250
@@ -88,11 +90,11 @@ const Home = () => {
 
 						<article
 							className={`[&>*:not(:last-child)]:mb-5 max-w-[600px] ${
-								screenSize < 750 &&
+								screenSize < 850 &&
 								"flex flex-col items-center text-center"
 							}`}
 						>
-							{screenSize > 750 && (
+							{screenSize >= 850 && (
 								<H2>Hi, wij zijn Danny & Lisa!</H2>
 							)}
 							<BaseText>

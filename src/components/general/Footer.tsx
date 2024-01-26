@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
 					className={`flex ${
 						screenSize < 1000
 							? "flex-col justify-center gap-8"
-							: "items-start justify-between gap-16"
+							: "items-start justify-between gap-16 max-w-[1400px] mx-auto"
 					}`}
 				>
 					<div

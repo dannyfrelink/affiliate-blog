@@ -41,10 +41,17 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 		arrows: false,
 		infinite: true,
 		speed: 500,
-		slidesToShow: 1,
+		slidesToShow: screenSize < 1800 ? 1 : 3,
 		slidesToScroll: 1,
 		centerMode: true,
-		centerPadding: screenSize > 750 ? "28%" : "0",
+		centerPadding:
+			screenSize > 750
+				? screenSize < 1000
+					? "20%"
+					: screenSize < 1800
+					? "28%"
+					: "0"
+				: "0",
 		autoplay: true,
 		autoplaySpeed: autoplaySpeed,
 		afterChange: handleAfterChange,
