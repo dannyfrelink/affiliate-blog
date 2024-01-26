@@ -71,7 +71,9 @@ const Header: React.FC<HeaderProps> = ({
 				<Button
 					onClick={() => setNavOpen(true)}
 					className={`fixed top-6 z-[98] ${
-						screenSize < 750 ? "right-4" : "right-10"
+						screenSize < 750
+							? "right-4 !py-1.5 !px-2.5"
+							: "right-10 !py-2 !px-3"
 					}`}
 				>
 					<MenuRoundedIcon />
