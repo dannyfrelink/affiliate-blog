@@ -11,9 +11,27 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 	const scrollBarRef = useRef<HTMLButtonElement>(null);
 	const [isDragging, setIsDragging] = useState<boolean>(false);
 	const [dragStartY, setDragStartY] = useState<number>(0);
+	const [isVisible, setIsVisible] = useState<boolean>(false);
+	const lastScrolledRef = useRef<number>(scrolled);
 
 	useEffect(() => {
-		if (scrollBarRef.current && contentRef.current) {
+		setIsVisible(true);
+
+		const timeoutId = setTimeout(() => {
+			if (scrolled === lastScrolledRef.current) {
+				setIsVisible(false);
+			}
+		}, 750);
+
+		return () => clearTimeout(timeoutId);
+	}, [scrolled]);
+
+	useEffect(() => {
+		lastScrolledRef.current = scrolled;
+	}, [scrolled]);
+
+	useEffect(() => {
+		if (scrollBarRef.current && contentRef.current && isVisible) {
 			const screenHeight = window.innerHeight;
 			const contentHeight =
 				contentRef.current.getBoundingClientRect().height;
@@ -21,11 +39,26 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 			scrollBarRef.current.style.height = `${
 				(screenHeight / contentHeight) * 800
 			}px`;
+
+			const classes = scrollBarRef.current.getAttribute("class");
+			classes &&
+				scrollBarRef.current.setAttribute(
+					"class",
+					classes.split(" notVisible")[0]
+				);
+		} else if (scrollBarRef.current && !isVisible) {
+			const classes = scrollBarRef.current.getAttribute("class");
+			scrollBarRef.current.setAttribute("class", `${classes} notVisible`);
 		}
-	}, []);
+	}, [isVisible]);
 
 	useEffect(() => {
-		if (scrollBarRef.current && contentRef.current && !isDragging) {
+		if (
+			scrollBarRef.current &&
+			contentRef.current &&
+			!isDragging &&
+			isVisible
+		) {
 			const screenHeight = window.innerHeight;
 			const contentHeight =
 				contentRef.current.getBoundingClientRect().height;
@@ -38,7 +71,7 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 
 			scrollBarRef.current.style.marginTop = `${scrolledDistance}px`;
 		}
-	}, [scrolled, isDragging]);
+	}, [scrolled, isDragging, isVisible]);
 
 	const handleStartDrag = (e: React.MouseEvent) => {
 		setIsDragging(true);
@@ -113,6 +146,10 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 
 	const handleDrop = () => {
 		setIsDragging(false);
+
+		setTimeout(() => {
+			setIsVisible(false);
+		}, 750);
 	};
 
 	return (
@@ -121,7 +158,7 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 
 			<div
 				onMouseDown={handleStartDrag}
-				className="fixed right-1.5 inset-y-2 w-2 z-[99]"
+				className="fixed right-1 inset-y-2 w-2 z-[99]"
 			>
 				<button
 					tabIndex={-1}

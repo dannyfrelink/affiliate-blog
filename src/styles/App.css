@@ -36,6 +36,21 @@
 	border-radius: 1rem;
 }
 
+@keyframes fadeOutScrollbar {
+	0% {
+		display: block;
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		display: none;
+	}
+}
+
+.notVisible {
+	animation: fadeOutScrollbar 0.3s ease-out forwards;
+}
+
 @media (min-width: 750px) {
 	.blogImage-container {
 		margin-top: 1.5rem;
