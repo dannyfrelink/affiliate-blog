@@ -63,7 +63,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 					/>
 				</button>
 				<ul
-					className={`flex justify-center list-none [&>li>button::before]:!text-secondary [&>li>button::before]:flex [&>li>button::before]:items-center ${
+					className={`flex justify-center list-none [&>li>button::before]:!text-tertair [&>li>button::before]:flex [&>li>button::before]:items-center ${
 						screenSize < 750
 							? "mx-2 [&>li>button::before]:!text-base"
 							: screenSize < 1250
