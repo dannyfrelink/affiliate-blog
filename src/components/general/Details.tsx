@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRounded";
-import { useAppContext } from "../../config/AppContext";
 import H4 from "../typography/H4";
 
 interface DetailsProps {
@@ -13,7 +12,6 @@ interface DetailsProps {
 
 const Details: React.FC<DetailsProps> = ({ children, summary }) => {
 	const [open, setOpen] = useState<boolean>(false);
-	const { screenSize } = useAppContext();
 
 	return (
 		<section className="bg-secondary w-fit rounded-2xl text-primary">
