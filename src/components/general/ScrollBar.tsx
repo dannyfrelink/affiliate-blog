@@ -18,7 +18,7 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 		setIsVisible(true);
 
 		const timeoutId = setTimeout(() => {
-			if (scrolled === lastScrolledRef.current) {
+			if (scrolled === lastScrolledRef.current && !isDragging) {
 				setIsVisible(false);
 			}
 		}, 500);
@@ -51,6 +51,14 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 			scrollBarRef.current.setAttribute("class", `${classes} notVisible`);
 		}
 	}, [isVisible]);
+
+	useEffect(() => {
+		document.addEventListener("mouseup", handleDrop);
+
+		return () => {
+			document.removeEventListener("mouseup", handleDrop);
+		};
+	}, [isDragging, isVisible]);
 
 	useEffect(() => {
 		if (
@@ -134,8 +142,6 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 						? contentHeight * scrollPercentage
 						: contentHeight * 1;
 
-				console.log(scrollPercentage);
-
 				setScrolled(scrollTo);
 				window.scrollTo({
 					top: scrollTo,
@@ -146,7 +152,7 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 		}
 	};
 
-	const handleDrop = () => {
+	const handleDrop = (e: any) => {
 		setIsDragging(false);
 
 		setTimeout(() => {
@@ -155,7 +161,7 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 	};
 
 	return (
-		<div onMouseMove={handleDrag} onMouseUp={handleDrop}>
+		<div onMouseMove={handleDrag}>
 			<div ref={contentRef}>{children}</div>
 
 			<div
