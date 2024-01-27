@@ -6,7 +6,7 @@ interface ScrollBarProps {
 }
 
 const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
-	const { scrolled, setScrolled } = useAppContext();
+	const { screenSize, scrolled, setScrolled } = useAppContext();
 	const contentRef = useRef<HTMLDivElement>(null);
 	const scrollBarRef = useRef<HTMLButtonElement>(null);
 	const [isDragging, setIsDragging] = useState<boolean>(false);
@@ -21,7 +21,7 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 			if (scrolled === lastScrolledRef.current) {
 				setIsVisible(false);
 			}
-		}, 750);
+		}, 500);
 
 		return () => clearTimeout(timeoutId);
 	}, [scrolled]);
@@ -37,7 +37,7 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 				contentRef.current.getBoundingClientRect().height;
 
 			scrollBarRef.current.style.height = `${
-				(screenHeight / contentHeight) * 800
+				(screenHeight / contentHeight) * 750
 			}px`;
 
 			const classes = scrollBarRef.current.getAttribute("class");
@@ -65,7 +65,7 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 
 			const scrolledPercentage =
 				scrolled / (contentHeight - screenHeight);
-			const scrollBarHeight = (screenHeight / contentHeight) * 800;
+			const scrollBarHeight = (screenHeight / contentHeight) * 750;
 			const distance = screenHeight - scrollBarHeight - 16;
 			const scrolledDistance = distance * scrolledPercentage;
 
@@ -149,7 +149,7 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 
 		setTimeout(() => {
 			setIsVisible(false);
-		}, 750);
+		}, 500);
 	};
 
 	return (
@@ -158,11 +158,17 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 
 			<div
 				onMouseDown={handleStartDrag}
-				className="fixed right-1 inset-y-2 w-2 z-[99]"
+				className={`fixed right-1 inset-y-2 z-[99] ${
+					screenSize < 750
+						? "w-1"
+						: screenSize < 1250
+						? "w-1.5"
+						: "w-2"
+				}`}
 			>
 				<button
 					tabIndex={-1}
-					className="w-full bg-gray-900 bg-opacity-100 rounded-full"
+					className="w-full bg-gray-800 bg-opacity-60 rounded-full"
 					ref={scrollBarRef}
 				></button>
 			</div>
