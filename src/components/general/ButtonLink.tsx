@@ -18,7 +18,11 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
 }) => {
 	const { screenSize } = useAppContext();
 	return (
-		<Link to={link} target={blank ? "blank" : undefined}>
+		<Link
+			className="block w-fit"
+			to={link}
+			target={blank ? "blank" : undefined}
+		>
 			<div
 				className={`buttonLink ${className} ${
 					screenSize < 750
