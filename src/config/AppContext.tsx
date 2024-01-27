@@ -11,6 +11,7 @@ interface AppContextProps {
 	navOpen: boolean;
 	setNavOpen: React.Dispatch<React.SetStateAction<boolean>>;
 	scrolled: number;
+	setScrolled: React.Dispatch<React.SetStateAction<number>>;
 	scrolledUp: boolean;
 }
 
@@ -53,6 +54,7 @@ export const AppProvider: React.FC<AppProps> = ({ children }) => {
 		navOpen,
 		setNavOpen,
 		scrolled,
+		setScrolled,
 		scrolledUp,
 	};
 
