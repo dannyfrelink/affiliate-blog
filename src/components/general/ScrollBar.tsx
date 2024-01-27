@@ -126,13 +126,15 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 				});
 			} else {
 				scrollPercentage =
-					(scrollBarRef.current.getBoundingClientRect().top - 8) /
+					scrollBarRef.current.getBoundingClientRect().top /
 					screenHeight;
 
 				const scrollTo =
-					scrollPercentage < 1
+					scrollPercentage <= 1
 						? contentHeight * scrollPercentage
 						: contentHeight * 1;
+
+				console.log(scrollPercentage);
 
 				setScrolled(scrollTo);
 				window.scrollTo({
