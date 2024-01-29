@@ -1,6 +1,6 @@
 import Header from "../components/header/Header";
 import { useAppContext } from "../config/AppContext";
-import HeaderImage from "../assets/header/home.jpg";
+import HeaderImage from "../assets/header/home.webp";
 import Container from "../components/general/Container";
 import Carousel from "../components/pages/home/Carousel";
 import H2 from "../components/typography/H2";

@@ -2,7 +2,7 @@ import Container from "../components/general/Container";
 import Header from "../components/header/Header";
 import BaseText from "../components/typography/BaseText";
 import H2 from "../components/typography/H2";
-import HeaderImage from "../assets/header/about.jpg";
+import HeaderImage from "../assets/header/about.webp";
 import AboutImage from "../assets/pages/about/couple.jpg";
 import Footer from "../components/general/Footer";
 import { useAppContext } from "../config/AppContext";

@@ -1,4 +1,4 @@
-import HeaderImage from "../../assets/header/blogs.jpg";
+import HeaderImage from "../../assets/header/blogs.webp";
 import Header from "../../components/header/Header";
 import { useAppContext } from "../../config/AppContext";
 import Overview from "../../components/pages/overview/Overview";

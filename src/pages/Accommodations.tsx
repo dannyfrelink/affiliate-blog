@@ -1,5 +1,5 @@
 import Header from "../components/header/Header";
-import HeaderImage from "../assets/header/accommodations.jpg";
+import HeaderImage from "../assets/header/accommodations.webp";
 import BaseText from "../components/typography/BaseText";
 import Overview from "../components/pages/overview/Overview";
 import Footer from "../components/general/Footer";
