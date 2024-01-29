@@ -9,16 +9,34 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 	const { screenSize, scrolled, setScrolled } = useAppContext();
 	const contentRef = useRef<HTMLDivElement>(null);
 	const scrollBarRef = useRef<HTMLButtonElement>(null);
+	const scrollBarContainerRef = useRef<HTMLDivElement>(null);
 	const [isDragging, setIsDragging] = useState<boolean>(false);
 	const [dragStartY, setDragStartY] = useState<number>(0);
 	const [isVisible, setIsVisible] = useState<boolean>(false);
+	const [isHovered, setIsHovered] = useState<boolean>(false);
 	const lastScrolledRef = useRef<number>(scrolled);
+
+	const handleMouseEnter = () => {
+		setIsHovered(true);
+	};
+
+	const handleMouseLeave = () => {
+		setIsVisible(true);
+
+		if (!isDragging) {
+			setIsHovered(false);
+
+			setTimeout(() => {
+				setIsVisible(false);
+			}, 500);
+		}
+	};
 
 	useEffect(() => {
 		setIsVisible(true);
 
 		const timeoutId = setTimeout(() => {
-			if (scrolled === lastScrolledRef.current && !isDragging) {
+			if (scrolled === lastScrolledRef.current || !isDragging) {
 				setIsVisible(false);
 			}
 		}, 500);
@@ -40,25 +58,47 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 				(screenHeight / contentHeight) * 750
 			}px`;
 
-			const classes = scrollBarRef.current.getAttribute("class");
+			const classes =
+				scrollBarContainerRef.current?.getAttribute("class");
 			classes &&
-				scrollBarRef.current.setAttribute(
+				scrollBarContainerRef.current?.setAttribute(
 					"class",
-					classes.split(" notVisible")[0]
+					classes.split(" scrollbar-notVisible")[0]
 				);
-		} else if (scrollBarRef.current && !isVisible) {
-			const classes = scrollBarRef.current.getAttribute("class");
-			scrollBarRef.current.setAttribute("class", `${classes} notVisible`);
+		} else if (scrollBarContainerRef.current && !isVisible) {
+			const classes = scrollBarContainerRef.current.getAttribute("class");
+			scrollBarContainerRef.current.setAttribute(
+				"class",
+				`${classes} scrollbar-notVisible`
+			);
 		}
 	}, [isVisible]);
 
 	useEffect(() => {
 		document.addEventListener("mouseup", handleDrop);
 
+		scrollBarContainerRef.current?.addEventListener(
+			"mouseenter",
+			handleMouseEnter
+		);
+		scrollBarContainerRef.current?.addEventListener(
+			"mouseleave",
+			handleMouseLeave
+		);
+
 		return () => {
 			document.removeEventListener("mouseup", handleDrop);
+
+			scrollBarContainerRef.current?.removeEventListener(
+				"mouseenter",
+				handleMouseEnter
+			);
+			scrollBarContainerRef.current?.removeEventListener(
+				"mouseleave",
+				handleMouseLeave
+			);
 		};
-	}, [isDragging, isVisible]);
+	}, [isDragging, isVisible, scrollBarRef.current]);
 
 	useEffect(() => {
 		if (
@@ -154,6 +194,7 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 
 	const handleDrop = (e: any) => {
 		setIsDragging(false);
+		setIsHovered(false);
 
 		setTimeout(() => {
 			setIsVisible(false);
@@ -166,17 +207,26 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 
 			<div
 				onMouseDown={handleStartDrag}
-				className={`fixed right-1 inset-y-2 z-[99] ${
+				ref={scrollBarContainerRef}
+				className={`fixed right-0 inset-y-0 py-2 z-[99] ${
+					isHovered && screenSize > 1000 && "scrollbar-hovered"
+				} ${
 					screenSize < 750
-						? "w-1"
+						? "w-2"
 						: screenSize < 1250
-						? "w-1.5"
-						: "w-2"
+						? "w-2.5"
+						: "w-3"
 				}`}
 			>
 				<button
 					tabIndex={-1}
-					className="w-full bg-gray-800 bg-opacity-60 rounded-full"
+					className={`bg-gray-800 bg-opacity-60 rounded-full ${
+						screenSize < 750
+							? "w-1"
+							: screenSize < 1250
+							? "w-1.5"
+							: "w-2"
+					}`}
 					ref={scrollBarRef}
 				></button>
 			</div>
