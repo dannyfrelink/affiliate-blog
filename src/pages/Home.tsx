@@ -5,7 +5,7 @@ import Container from "../components/general/Container";
 import Carousel from "../components/pages/home/Carousel";
 import H2 from "../components/typography/H2";
 import Featured from "../components/pages/home/Featured";
-import AboutImage from "../assets/mockup/couple.png";
+import AboutImage from "../assets/pages/about/couple.jpg";
 import BaseText from "../components/typography/BaseText";
 import Footer from "../components/general/Footer";
 import blogData from "../data/blogs.json";
@@ -77,7 +77,7 @@ const Home = () => {
 								</H2>
 							)}
 							<img
-								className={`h-[85vw] w-[85vw] object-cover object-center rounded-2xl shadow-subtle ${
+								className={`h-[85vw] w-[85vw] object-cover object-[50%_75%] rounded-2xl shadow-subtle ${
 									screenSize < 850
 										? "max-h-[300px] mx-auto"
 										: `max-w-[475px] float-right !mb-0 ml-10 ${
