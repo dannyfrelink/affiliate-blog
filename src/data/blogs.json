@@ -3,7 +3,7 @@
 		"Canggu (Bali)": [
 			{
 				"id": 3,
-				"metaDesc": "Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.",
+				"metaDesc": "Eettentjes in Canggu | 20 leuke restaurants in Canggu: La Baracca | Milu by Nook | Copenhagen | Sushimi | Penny Lane | Butterman | Calle | Cinta | Machinery | Barboa",
 				"date": "24 januari, 2024",
 				"href": "leukste-restaurants-canggu",
 				"coverImage": {
@@ -153,7 +153,7 @@
 		"Nusa Eilanden": [
 			{
 				"id": 1,
-				"metaDesc": "Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.",
+				"metaDesc": "Tips voor Nusa Penida | Mooie bezienswaardigheden op Nusa Penida: Kelingking Beach | Angel’s Billabong | Broken Beach | Peguyangan Waterval | lunchen bij AMARTA",
 				"href": "nusa-penida-tips",
 				"date": "22 januari, 2024",
 				"coverImage": {
@@ -209,7 +209,7 @@
 			},
 			{
 				"id": 2,
-				"metaDesc": "Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.",
+				"metaDesc": "Tips voor Nusa Lembongan | Leuke activiteiten op Nusa Lembongan: Blue Lagoon | Devil’s Tear | Snorkelen met manta’s | Beachclub Ohana’s | Touren over het eiland",
 				"href": "wat-te-doen-op-nusa-lembongan",
 				"date": "23 januari, 2024",
 				"coverImage": {
@@ -281,12 +281,12 @@
 		"Ubud (Bali)": [
 			{
 				"id": 5,
-				"metaDesc": "Lorem ipsum dolor sit amet. Est explicabo blanditiis eum perferendis harum eum galisum voluptas quo natus nihil aut aspernatur voluptas rem ipsum dolorum aut fugiat cumque. Et officiis iure et asperiores totam quo sunt alias. Sed illum perferendis quo possimus inventore et reiciendis modi. Sed quos voluptate nam deleniti veniam ut nihil consequatur.",
-				"date": "28 augustus, 2023",
+				"metaDesc": "Bezienswaardigheden in Ubud | Leuke activiteiten in Ubud: Mount Batur | Kanto Lampo waterval | Monkey Forest | Jatiluwih rijstvelden | Markt in Ubud",
+				"date": "29 januari, 2024",
 				"href": "7",
 				"coverImage": {
 					"src": "wat-te-doen-in-ubud/cover.JPG",
-					"alt": "Broken Beach"
+					"alt": "Pura Tirta Empul Tempel Ubud"
 				},
 				"title": "Wat te doen in Ubud?",
 				"headers": [
@@ -348,14 +348,14 @@
 						"image6": "Jatiluwih Rijstvelden Ubud",
 						"image7": "Jatiluwih Rijstvelden Ubud",
 						"image8": "Jatiluwih Rijstvelden Ubud",
-						"image9": "Mount Batur",
-						"image10": "Mount Batur",
+						"image9": "Mount Batur Vulkaan",
+						"image10": "Mount Batur Vulkaan",
 						"image11": "Kanto Lampo Waterval Ubud",
 						"image12": "Tegenungan Waterval Ubud",
-						"image13": "Pura Tirta Empul Ubud",
-						"image14": "Gunung Kawi Ubud",
-						"image15": "Monkey Forest Ubud",
-						"image16": "Monkey Forest Ubud"
+						"image13": "Pura Tirta Empul Tempel Ubud",
+						"image14": "Gunung Kawi Tempel Ubud",
+						"image15": "Monkey Forest/Apenbos Ubud",
+						"image16": "Monkey Forest/Apenbos Ubud"
 					}
 				},
 				"carousel": true
