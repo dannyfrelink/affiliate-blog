@@ -82,6 +82,10 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 			handleMouseEnter
 		);
 		scrollBarContainerRef.current?.addEventListener(
+			"click",
+			handleMouseEnter
+		);
+		scrollBarContainerRef.current?.addEventListener(
 			"mouseleave",
 			handleMouseLeave
 		);
@@ -91,6 +95,10 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 
 			scrollBarContainerRef.current?.removeEventListener(
 				"mouseenter",
+				handleMouseEnter
+			);
+			scrollBarContainerRef.current?.removeEventListener(
+				"click",
 				handleMouseEnter
 			);
 			scrollBarContainerRef.current?.removeEventListener(
@@ -120,6 +128,68 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 			scrollBarRef.current.style.marginTop = `${scrolledDistance}px`;
 		}
 	}, [scrolled, isDragging, isVisible]);
+
+	const handleClickBar = (e: any) => {
+		setIsHovered(true);
+
+		const target = e.target;
+		const screenHeight = window.innerHeight;
+		const contentHeight =
+			contentRef.current?.getBoundingClientRect().height;
+		const scrollBarHeight = Number(
+			scrollBarRef.current?.style.height.split("px")[0]
+		);
+		const currentMarginTop = Number(
+			scrollBarRef.current?.style.marginTop.split("px")[0]
+		);
+		const scrollRange = screenHeight - scrollBarHeight - 12;
+		const skips = screenHeight / 5;
+
+		if (target.tagName.toLowerCase() !== "button" && scrollBarRef.current) {
+			let newMarginTop;
+
+			if (currentMarginTop < e.clientY) {
+				if (scrollRange - currentMarginTop < skips) {
+					newMarginTop = scrollRange;
+				} else {
+					newMarginTop = currentMarginTop + skips;
+				}
+			} else {
+				if (currentMarginTop < skips) {
+					newMarginTop = 0;
+				} else {
+					newMarginTop = currentMarginTop - skips;
+				}
+			}
+
+			let scrollPercentage;
+			if (currentMarginTop < scrollBarHeight) {
+				scrollPercentage = (newMarginTop - 8) / screenHeight;
+
+				const scrollTo =
+					scrollPercentage > 0
+						? contentHeight && contentHeight * scrollPercentage
+						: contentHeight && contentHeight * 0;
+
+				window.scrollTo({
+					top: scrollTo,
+					behavior: "smooth",
+				});
+			} else {
+				scrollPercentage = newMarginTop / screenHeight;
+
+				const scrollTo =
+					scrollPercentage <= 1
+						? contentHeight && contentHeight * scrollPercentage
+						: contentHeight && contentHeight * 1;
+
+				window.scrollTo({
+					top: scrollTo,
+					behavior: "smooth",
+				});
+			}
+		}
+	};
 
 	const handleStartDrag = (e: React.MouseEvent) => {
 		setIsDragging(true);
@@ -206,7 +276,7 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 			<div ref={contentRef}>{children}</div>
 
 			<div
-				onMouseDown={handleStartDrag}
+				onClick={handleClickBar}
 				ref={scrollBarContainerRef}
 				className={`fixed right-0 inset-y-0 py-2 z-[99] ${
 					isHovered && screenSize > 1000 && "scrollbar-hovered"
@@ -219,6 +289,7 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 				}`}
 			>
 				<button
+					onMouseDown={handleStartDrag}
 					tabIndex={-1}
 					className={`bg-gray-800 bg-opacity-60 rounded-full ${
 						screenSize < 750
