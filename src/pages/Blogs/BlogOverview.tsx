@@ -19,6 +19,7 @@ import ScrollBar from "../../components/general/ScrollBar";
 
 export interface Destination {
 	id: number;
+	metaTitle: string;
 	metaDesc: string;
 	date: string;
 	href: string;

@@ -25,7 +25,7 @@ const BlogPost = () => {
 		<ScrollBar>
 			<div>
 				<Helmet>
-					<title>{blog.title}</title>
+					<title>{blog.metaTitle}</title>
 					<meta name="description" content={blog.metaDesc} />
 				</Helmet>
 
