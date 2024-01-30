@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useAppContext } from "../../config/AppContext";
+import e from "express";
 
 interface ScrollBarProps {
 	children: React.ReactNode;
@@ -124,8 +125,11 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 			const scrollBarHeight = (screenHeight / contentHeight) * 750;
 			const distance = screenHeight - scrollBarHeight - 16;
 			const scrolledDistance = distance * scrolledPercentage;
+			const scrollRange = screenHeight - scrollBarHeight - 12;
 
-			scrollBarRef.current.style.marginTop = `${scrolledDistance}px`;
+			scrollBarRef.current.style.marginTop = `${
+				scrolledDistance < scrollRange ? scrolledDistance : scrollRange
+			}px`;
 		}
 	}, [scrolled, isDragging, isVisible]);
 
