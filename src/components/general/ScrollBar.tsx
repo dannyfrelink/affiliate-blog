@@ -78,34 +78,38 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 	useEffect(() => {
 		document.addEventListener("mouseup", handleDrop);
 
-		scrollBarContainerRef.current?.addEventListener(
-			"mouseenter",
-			handleMouseEnter
-		);
-		scrollBarContainerRef.current?.addEventListener(
-			"click",
-			handleMouseEnter
-		);
-		scrollBarContainerRef.current?.addEventListener(
-			"mouseleave",
-			handleMouseLeave
-		);
+		if (screenSize > 1000) {
+			scrollBarContainerRef.current?.addEventListener(
+				"mouseenter",
+				handleMouseEnter
+			);
+			scrollBarContainerRef.current?.addEventListener(
+				"click",
+				handleMouseEnter
+			);
+			scrollBarContainerRef.current?.addEventListener(
+				"mouseleave",
+				handleMouseLeave
+			);
+		}
 
 		return () => {
 			document.removeEventListener("mouseup", handleDrop);
 
-			scrollBarContainerRef.current?.removeEventListener(
-				"mouseenter",
-				handleMouseEnter
-			);
-			scrollBarContainerRef.current?.removeEventListener(
-				"click",
-				handleMouseEnter
-			);
-			scrollBarContainerRef.current?.removeEventListener(
-				"mouseleave",
-				handleMouseLeave
-			);
+			if (screenSize > 1000) {
+				scrollBarContainerRef.current?.removeEventListener(
+					"mouseenter",
+					handleMouseEnter
+				);
+				scrollBarContainerRef.current?.removeEventListener(
+					"click",
+					handleMouseEnter
+				);
+				scrollBarContainerRef.current?.removeEventListener(
+					"mouseleave",
+					handleMouseLeave
+				);
+			}
 		};
 	}, [isDragging, isVisible, scrollBarRef.current]);
 
@@ -281,11 +285,11 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 	};
 
 	return (
-		<div onMouseMove={handleDrag}>
+		<div onMouseMove={screenSize >= 1000 ? handleDrag : () => {}}>
 			<div ref={contentRef}>{children}</div>
 
 			<div
-				onClick={handleClickBar}
+				onClick={screenSize >= 1000 ? handleClickBar : () => {}}
 				ref={scrollBarContainerRef}
 				className={`fixed right-0 inset-y-0 py-2 z-[99] ${
 					isHovered && screenSize > 1000 && "scrollbar-hovered"
@@ -298,7 +302,9 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 				}`}
 			>
 				<button
-					onMouseDown={handleStartDrag}
+					onMouseDown={
+						screenSize >= 1000 ? handleStartDrag : () => {}
+					}
 					tabIndex={-1}
 					className={`bg-gray-800 bg-opacity-60 rounded-full ${
 						screenSize < 750
