@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useAppContext } from "../../config/AppContext";
-import e from "express";
+const uaParser = require("ua-parser-js");
+const userAgent = uaParser(navigator.userAgent);
+const device = userAgent.device.model.toLowerCase();
 
 interface ScrollBarProps {
 	children: React.ReactNode;
@@ -296,36 +298,38 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 		<div onMouseMove={screenSize >= 1000 ? handleDrag : () => {}}>
 			<div ref={contentRef}>{children}</div>
 
-			<div
-				onClick={screenSize >= 1000 ? handleClickBar : () => {}}
-				ref={scrollBarContainerRef}
-				className={`fixed right-0 inset-y-0 py-2 z-[99] ${
-					isHovered && screenSize >= 1000 && "scrollbar-hovered"
-				} ${
-					screenSize < 750
-						? "w-2"
-						: screenSize < 1250
-						? "w-2.5"
-						: "w-3"
-				}`}
-			>
-				<button
-					onMouseDown={
-						screenSize >= 1000 ? handleStartDrag : () => {}
-					}
-					tabIndex={-1}
-					className={`bg-gray-800 bg-opacity-60 rounded-full ${
-						screenSize < 1000 ? "cursor-default" : "cursor-grab"
+			{device !== "iphone" && (
+				<div
+					onClick={screenSize >= 1000 ? handleClickBar : () => {}}
+					ref={scrollBarContainerRef}
+					className={`fixed right-0 inset-y-0 py-2 z-[99] ${
+						isHovered && screenSize >= 1000 && "scrollbar-hovered"
 					} ${
 						screenSize < 750
-							? "w-1"
+							? "w-2"
 							: screenSize < 1250
-							? "w-1.5"
-							: "w-2"
+							? "w-2.5"
+							: "w-3"
 					}`}
-					ref={scrollBarRef}
-				></button>
-			</div>
+				>
+					<button
+						onMouseDown={
+							screenSize >= 1000 ? handleStartDrag : () => {}
+						}
+						tabIndex={-1}
+						className={`bg-gray-800 bg-opacity-60 rounded-full ${
+							screenSize < 1000 ? "cursor-default" : "cursor-grab"
+						} ${
+							screenSize < 750
+								? "w-1"
+								: screenSize < 1250
+								? "w-1.5"
+								: "w-2"
+						}`}
+						ref={scrollBarRef}
+					></button>
+				</div>
+			)}
 		</div>
 	);
 };
