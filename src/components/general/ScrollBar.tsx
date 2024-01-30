@@ -207,6 +207,10 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 	const handleStartDrag = (e: React.MouseEvent) => {
 		setIsDragging(true);
 		setDragStartY(e.clientY);
+
+		if (contentRef.current) {
+			contentRef.current.style.cursor = "grab";
+		}
 	};
 
 	const handleDrag = (e: React.MouseEvent) => {
@@ -279,6 +283,10 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 		setIsDragging(false);
 		setIsHovered(false);
 
+		if (contentRef.current) {
+			contentRef.current.style.cursor = "default";
+		}
+
 		setTimeout(() => {
 			setIsVisible(false);
 		}, 500);
@@ -306,7 +314,9 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 						screenSize >= 1000 ? handleStartDrag : () => {}
 					}
 					tabIndex={-1}
-					className={`bg-gray-800 bg-opacity-60 rounded-full ${
+					className={`bg-gray-800 bg-opacity-60 rounded-full cursor-grab ${
+						screenSize < 1000 && "cursor-default"
+					} ${
 						screenSize < 750
 							? "w-1"
 							: screenSize < 1250
