@@ -19,7 +19,7 @@ const H1: React.FC<H1Props> = ({ children, subTitle, isBlog }) => {
 			className={`font-bold max-w-[1000px] ${
 				screenSize < 750
 					? `${checkAccom && "!text-3xl"} ${
-							isBlog ? "text-3xl" : "text-5xl"
+							isBlog ? "text-2xl" : "text-5xl"
 					  } ${subTitle !== "" && "mb-3"}`
 					: screenSize < 1250
 					? `${isBlog ? "text-5xl" : "text-[75px] leading-[85px]"} ${
