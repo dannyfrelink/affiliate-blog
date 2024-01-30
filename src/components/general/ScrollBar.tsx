@@ -314,8 +314,8 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 						screenSize >= 1000 ? handleStartDrag : () => {}
 					}
 					tabIndex={-1}
-					className={`bg-gray-800 bg-opacity-60 rounded-full cursor-grab ${
-						screenSize < 1000 && "cursor-default"
+					className={`bg-gray-800 bg-opacity-60 rounded-full ${
+						screenSize < 1000 ? "cursor-default" : "cursor-grab"
 					} ${
 						screenSize < 750
 							? "w-1"
