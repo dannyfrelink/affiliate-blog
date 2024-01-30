@@ -188,7 +188,7 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 
 				window.scrollTo({
 					top: scrollTo,
-					// behavior: "smooth",
+					behavior: "smooth",
 				});
 			} else {
 				scrollPercentage = newMarginTop / screenHeight;
@@ -200,7 +200,7 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 
 				window.scrollTo({
 					top: scrollTo,
-					// behavior: "smooth",
+					behavior: "smooth",
 				});
 			}
 		}
