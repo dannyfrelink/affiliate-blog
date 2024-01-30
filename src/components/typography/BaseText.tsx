@@ -12,11 +12,7 @@ const BaseText: React.FC<BaseTextProps> = ({ children, className }) => {
 	return (
 		<p
 			className={`${className} ${
-				screenSize < 750
-					? "text-base"
-					: screenSize < 1250
-					? "text-lg"
-					: "text-lg"
+				screenSize < 750 ? "text-base" : "text-lg"
 			}`}
 		>
 			{children}
