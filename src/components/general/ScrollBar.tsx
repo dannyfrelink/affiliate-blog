@@ -143,9 +143,14 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 			scrollBarRef.current?.style.marginTop.split("px")[0]
 		);
 		const scrollRange = screenHeight - scrollBarHeight - 12;
-		const skips = screenHeight / 5;
+		const skips =
+			contentHeight && (screenHeight / contentHeight) * scrollRange;
 
-		if (target.tagName.toLowerCase() !== "button" && scrollBarRef.current) {
+		if (
+			target.tagName.toLowerCase() !== "button" &&
+			scrollBarRef.current &&
+			skips
+		) {
 			let newMarginTop;
 
 			if (currentMarginTop < e.clientY) {
@@ -173,7 +178,7 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 
 				window.scrollTo({
 					top: scrollTo,
-					behavior: "smooth",
+					// behavior: "smooth",
 				});
 			} else {
 				scrollPercentage = newMarginTop / screenHeight;
@@ -185,7 +190,7 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 
 				window.scrollTo({
 					top: scrollTo,
-					behavior: "smooth",
+					// behavior: "smooth",
 				});
 			}
 		}
