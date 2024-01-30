@@ -78,7 +78,7 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 	useEffect(() => {
 		document.addEventListener("mouseup", handleDrop);
 
-		if (screenSize > 1000) {
+		if (screenSize >= 1000) {
 			scrollBarContainerRef.current?.addEventListener(
 				"mouseenter",
 				handleMouseEnter
@@ -96,7 +96,7 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 		return () => {
 			document.removeEventListener("mouseup", handleDrop);
 
-			if (screenSize > 1000) {
+			if (screenSize >= 1000) {
 				scrollBarContainerRef.current?.removeEventListener(
 					"mouseenter",
 					handleMouseEnter
@@ -292,7 +292,7 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 				onClick={screenSize >= 1000 ? handleClickBar : () => {}}
 				ref={scrollBarContainerRef}
 				className={`fixed right-0 inset-y-0 py-2 z-[99] ${
-					isHovered && screenSize > 1000 && "scrollbar-hovered"
+					isHovered && screenSize >= 1000 && "scrollbar-hovered"
 				} ${
 					screenSize < 750
 						? "w-2"
