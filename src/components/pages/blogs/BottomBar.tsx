@@ -15,11 +15,12 @@ const BottomBar: React.FC<BottomBarProps> = ({ blogs, href }) => {
 	const { screenSize } = useAppContext();
 	const optionalBlogs = blogs.filter((blog) => blog.href !== href);
 	const [blogArr, setBlogArr] = useState<BottomBarProps["blogs"]>([]);
-	const array = getRandomBlogs(optionalBlogs, 4);
+	const [oldHref, setOldHref] = useState<string | undefined>("");
 
 	useEffect(() => {
-		setBlogArr(array);
-	}, [href, array]);
+		href !== oldHref && setBlogArr(getRandomBlogs(optionalBlogs, 4));
+		setOldHref(href);
+	}, [href, oldHref, optionalBlogs]);
 
 	return (
 		<Container className="rounded-t-none">

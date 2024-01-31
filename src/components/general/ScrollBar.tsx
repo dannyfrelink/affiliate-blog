@@ -9,7 +9,7 @@ interface ScrollBarProps {
 }
 
 const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
-	const { screenSize, scrolled, setScrolled } = useAppContext();
+	const { screenSize } = useAppContext();
 	const contentRef = useRef<HTMLDivElement>(null);
 	const scrollBarRef = useRef<HTMLButtonElement>(null);
 	const scrollBarContainerRef = useRef<HTMLDivElement>(null);
@@ -17,8 +17,22 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 	const [dragStartY, setDragStartY] = useState<number>(0);
 	const [isVisible, setIsVisible] = useState<boolean>(false);
 	const [isHovered, setIsHovered] = useState<boolean>(false);
+	const [scrolled, setScrolled] = useState<number>(window.scrollY);
 	const lastScrolledRef = useRef<number>(scrolled);
-	// const prevScrollYRef = useRef<number>(window.scrollY);
+
+	const handleScroll = useCallback(() => {
+		const currentScrollY = window.scrollY;
+		setScrolled(currentScrollY);
+		lastScrolledRef.current = currentScrollY;
+	}, []);
+
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll);
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, [handleScroll]);
 
 	const handleMouseEnter = () => {
 		setIsHovered(true);

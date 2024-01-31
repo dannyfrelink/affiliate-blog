@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useAppContext } from "../../config/AppContext";
 import CloseButton from "../general/CloseButton";
@@ -7,8 +7,25 @@ import LogoPrimary from "../../assets/logo/Logo-ReisFeeld-primary.svg";
 import Socials from "../pages/blogs/Socials";
 
 const Nav: React.FC = () => {
-	const { screenSize, navOpen, setNavOpen, scrolled, scrolledUp } =
-		useAppContext();
+	const { screenSize, navOpen, setNavOpen } = useAppContext();
+	const [scrolled, setScrolled] = useState<number>(window.scrollY);
+	const [scrolledUp, setScrolledUp] = useState<boolean>(false);
+	const lastScrolledRef = useRef<number>(scrolled);
+
+	const handleScroll = useCallback(() => {
+		const currentScrollY = window.scrollY;
+		setScrolled(currentScrollY);
+		setScrolledUp(lastScrolledRef.current > currentScrollY);
+		lastScrolledRef.current = currentScrollY;
+	}, []);
+
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll);
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, [handleScroll]);
 
 	const checkActive = (isActive: boolean) => {
 		return isActive ? "font-bold text-[#729172]" : "";

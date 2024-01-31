@@ -30,8 +30,6 @@ const Home: React.FC = React.memo(() => {
 		headerImage !== "" && setHeaderImage(HeaderImage);
 	}, [headerImage]);
 
-	console.log("test");
-
 	return (
 		<ScrollBar>
 			<div>

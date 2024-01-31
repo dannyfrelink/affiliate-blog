@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Container from "../../general/Container";
 import { useAppContext } from "../../../config/AppContext";
 import NextBlogs from "./NextBlogs";
@@ -13,13 +13,31 @@ interface SideBarProps {
 }
 
 const SideBar: React.FC<SideBarProps> = ({ blogs, href }) => {
-	const { screenSize, scrolled, scrolledUp } = useAppContext();
+	const { screenSize } = useAppContext();
 	const activeBlog = blogs.filter((blog) => blog.href === href)[0];
 	const sidebarRef = useRef<HTMLDivElement>(null);
 	const contentRef = useRef<HTMLDivElement>(null);
 	const [oldScroll, setOldScroll] = useState<number>(0);
 	const [topValue, setTopValue] = useState<number>(0);
 	const [initialStick, setInitialStick] = useState<boolean>(false);
+	const [scrolled, setScrolled] = useState<number>(window.scrollY);
+	const [scrolledUp, setScrolledUp] = useState<boolean>(false);
+	const lastScrolledRef = useRef<number>(scrolled);
+
+	const handleScroll = useCallback(() => {
+		const currentScrollY = window.scrollY;
+		setScrolled(currentScrollY);
+		setScrolledUp(lastScrolledRef.current > currentScrollY);
+		lastScrolledRef.current = currentScrollY;
+	}, []);
+
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll);
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, [handleScroll]);
 
 	useEffect(() => {
 		if (contentRef.current && sidebarRef.current) {

@@ -3,7 +3,6 @@ import React, {
 	useState,
 	useContext,
 	useEffect,
-	useRef,
 	useCallback,
 } from "react";
 
@@ -11,9 +10,6 @@ interface AppContextProps {
 	screenSize: number;
 	navOpen: boolean;
 	setNavOpen: React.Dispatch<React.SetStateAction<boolean>>;
-	scrolled: number;
-	setScrolled: React.Dispatch<React.SetStateAction<number>>;
-	scrolledUp: boolean;
 }
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
@@ -25,38 +21,23 @@ interface AppProps {
 export const AppProvider: React.FC<AppProps> = ({ children }) => {
 	const [screenSize, setScreenSize] = useState<number>(window.innerWidth);
 	const [navOpen, setNavOpen] = useState<boolean>(false);
-	const [scrolled, setScrolled] = useState<number>(window.scrollY);
-	const [scrolledUp, setScrolledUp] = useState<boolean>(false);
-	const prevScrollYRef = useRef<number>(window.scrollY);
 
 	const handleWindowResize = useCallback(() => {
 		setScreenSize(window.innerWidth);
 	}, []);
 
-	const handleScroll = useCallback(() => {
-		const currentScrollY = window.scrollY;
-		setScrolled(currentScrollY);
-		setScrolledUp(prevScrollYRef.current > currentScrollY);
-		prevScrollYRef.current = currentScrollY;
-	}, []);
-
 	useEffect(() => {
 		window.addEventListener("resize", handleWindowResize);
-		window.addEventListener("scroll", handleScroll);
 
 		return () => {
 			window.removeEventListener("resize", handleWindowResize);
-			window.removeEventListener("scroll", handleScroll);
 		};
-	}, [handleWindowResize, handleScroll]);
+	}, [handleWindowResize]);
 
 	const contextValue: AppContextProps = {
 		screenSize,
 		navOpen,
 		setNavOpen,
-		scrolled,
-		setScrolled,
-		scrolledUp,
 	};
 
 	return (

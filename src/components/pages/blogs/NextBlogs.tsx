@@ -11,11 +11,12 @@ export interface NextBlogsProps {
 const NextBlogs: React.FC<NextBlogsProps> = ({ blogs, href }) => {
 	const optionalBlogs = blogs.filter((blog) => blog.href !== href);
 	const [blogArr, setBlogArr] = useState<NextBlogsProps["blogs"]>([]);
-	const array = getRandomBlogs(optionalBlogs, 4);
+	const [oldHref, setOldHref] = useState<string | undefined>("");
 
 	useEffect(() => {
-		setBlogArr(array);
-	}, [href, array]);
+		href !== oldHref && setBlogArr(getRandomBlogs(optionalBlogs, 4));
+		setOldHref(href);
+	}, [href, oldHref, optionalBlogs]);
 
 	return (
 		<article

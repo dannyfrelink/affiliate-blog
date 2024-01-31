@@ -9,8 +9,9 @@ import { useAppContext } from "../../config/AppContext";
 import BottomBar from "../../components/pages/blogs/BottomBar";
 import { Helmet } from "react-helmet-async";
 import ScrollBar from "../../components/general/ScrollBar";
+import React from "react";
 
-const BlogPost = () => {
+const BlogPost: React.FC = React.memo(() => {
 	const { screenSize } = useAppContext();
 	const { href } = useParams();
 	const blogs: BlogsData = data.blogs;
@@ -90,6 +91,6 @@ const BlogPost = () => {
 			</div>
 		</ScrollBar>
 	);
-};
+});
 
 export default BlogPost;
