@@ -58,7 +58,7 @@ const Nav: React.FC = () => {
 				className={`absolute z-[99] ${
 					screenSize < 1000
 						? `left-6 top-4 hidden ${navOpen && "!block"}`
-						: `top-[12px] ${
+						: `top-[16px] ${
 								scrolled > 250 &&
 								scrolledUp &&
 								"!fixed !top-3.5"
