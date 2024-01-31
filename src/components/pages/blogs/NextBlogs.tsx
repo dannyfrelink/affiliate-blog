@@ -15,7 +15,7 @@ const NextBlogs: React.FC<NextBlogsProps> = ({ blogs, href }) => {
 
 	useEffect(() => {
 		setBlogArr(array);
-	}, [href]);
+	}, [href, array]);
 
 	return (
 		<article

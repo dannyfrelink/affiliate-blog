@@ -4,6 +4,7 @@ import React, {
 	useContext,
 	useEffect,
 	useRef,
+	useCallback,
 } from "react";
 
 interface AppContextProps {
@@ -28,18 +29,18 @@ export const AppProvider: React.FC<AppProps> = ({ children }) => {
 	const [scrolledUp, setScrolledUp] = useState<boolean>(false);
 	const prevScrollYRef = useRef<number>(window.scrollY);
 
+	const handleWindowResize = useCallback(() => {
+		setScreenSize(window.innerWidth);
+	}, []);
+
+	const handleScroll = useCallback(() => {
+		const currentScrollY = window.scrollY;
+		setScrolled(currentScrollY);
+		setScrolledUp(prevScrollYRef.current > currentScrollY);
+		prevScrollYRef.current = currentScrollY;
+	}, []);
+
 	useEffect(() => {
-		const handleWindowResize = () => {
-			setScreenSize(window.innerWidth);
-		};
-
-		const handleScroll = () => {
-			const currentScrollY = window.scrollY;
-			setScrolled(currentScrollY);
-			setScrolledUp(prevScrollYRef.current > currentScrollY);
-			prevScrollYRef.current = currentScrollY;
-		};
-
 		window.addEventListener("resize", handleWindowResize);
 		window.addEventListener("scroll", handleScroll);
 
@@ -47,7 +48,7 @@ export const AppProvider: React.FC<AppProps> = ({ children }) => {
 			window.removeEventListener("resize", handleWindowResize);
 			window.removeEventListener("scroll", handleScroll);
 		};
-	}, []);
+	}, [handleWindowResize, handleScroll]);
 
 	const contextValue: AppContextProps = {
 		screenSize,

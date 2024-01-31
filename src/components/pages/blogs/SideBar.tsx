@@ -75,7 +75,7 @@ const SideBar: React.FC<SideBarProps> = ({ blogs, href }) => {
 				contentRef.current.style.top = "";
 			}
 		}
-	}, [scrolled]);
+	}, [scrolled, initialStick, oldScroll, scrolledUp, topValue]);
 
 	return (
 		<Container

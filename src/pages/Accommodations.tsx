@@ -30,7 +30,7 @@ const Accommodations = () => {
 	const [headerImage, setHeaderImage] = useState<string>();
 	useEffect(() => {
 		headerImage !== "" && setHeaderImage(HeaderImage);
-	}, []);
+	}, [headerImage, setHeaderImage]);
 
 	return (
 		<ScrollBar>

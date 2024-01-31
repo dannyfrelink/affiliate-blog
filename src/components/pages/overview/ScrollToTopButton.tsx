@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { useAppContext } from "../../../config/AppContext";
 import { useLocation } from "react-router-dom";
@@ -12,7 +12,7 @@ const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = () => {
 	const [isVisible, setIsVisible] = useState(false);
 	const { screenSize } = useAppContext();
 
-	const handleScroll = () => {
+	const handleScroll = useCallback(() => {
 		const scrolled = window.scrollY;
 		setIsVisible(
 			scrollFilter === "/indonesie"
@@ -29,7 +29,7 @@ const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = () => {
 					: scrolled > 1100
 				: scrolled > 150
 		);
-	};
+	}, [screenSize, scrollFilter]);
 
 	const scrollToTop = () => {
 		window.scrollTo({
@@ -50,7 +50,7 @@ const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = () => {
 		return () => {
 			window.removeEventListener("scroll", handleScroll);
 		};
-	}, []);
+	}, [handleScroll]);
 
 	return (
 		<button

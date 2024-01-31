@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useAppContext } from "../../config/AppContext";
 const uaParser = require("ua-parser-js");
 const userAgent = uaParser(navigator.userAgent);
@@ -18,12 +18,13 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 	const [isVisible, setIsVisible] = useState<boolean>(false);
 	const [isHovered, setIsHovered] = useState<boolean>(false);
 	const lastScrolledRef = useRef<number>(scrolled);
+	// const prevScrollYRef = useRef<number>(window.scrollY);
 
 	const handleMouseEnter = () => {
 		setIsHovered(true);
 	};
 
-	const handleMouseLeave = () => {
+	const handleMouseLeave = useCallback(() => {
 		setIsVisible(true);
 
 		if (!isDragging) {
@@ -33,7 +34,14 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 				setIsVisible(false);
 			}, 500);
 		}
-	};
+	}, [isDragging]);
+
+	// const handleScroll = useCallback(() => {
+	// 	const currentScrollY = window.scrollY;
+	// 	setScrolled(currentScrollY);
+	// 	setScrolledUp(prevScrollYRef.current > currentScrollY);
+	// 	prevScrollYRef.current = currentScrollY;
+	// }, []);
 
 	useEffect(() => {
 		setIsVisible(true);
@@ -45,7 +53,7 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 		}, 500);
 
 		return () => clearTimeout(timeoutId);
-	}, [scrolled]);
+	}, [scrolled, isDragging]);
 
 	useEffect(() => {
 		lastScrolledRef.current = scrolled;
@@ -78,42 +86,34 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 	}, [isVisible]);
 
 	useEffect(() => {
-		document.addEventListener("mouseup", handleDrop);
+		const containerRef = scrollBarContainerRef.current;
 
-		if (screenSize >= 1000) {
-			scrollBarContainerRef.current?.addEventListener(
-				"mouseenter",
-				handleMouseEnter
-			);
-			scrollBarContainerRef.current?.addEventListener(
-				"click",
-				handleMouseEnter
-			);
-			scrollBarContainerRef.current?.addEventListener(
-				"mouseleave",
-				handleMouseLeave
-			);
+		document.addEventListener("mouseup", handleDrop);
+		// window.addEventListener("scroll", handleScroll);
+
+		if (screenSize >= 1000 && containerRef) {
+			containerRef.addEventListener("mouseenter", handleMouseEnter);
+			containerRef.addEventListener("click", handleMouseEnter);
+			containerRef.addEventListener("mouseleave", handleMouseLeave);
 		}
 
 		return () => {
 			document.removeEventListener("mouseup", handleDrop);
+			// window.removeEventListener("scroll", handleScroll);
 
-			if (screenSize >= 1000) {
-				scrollBarContainerRef.current?.removeEventListener(
+			if (screenSize >= 1000 && containerRef) {
+				containerRef.removeEventListener(
 					"mouseenter",
 					handleMouseEnter
 				);
-				scrollBarContainerRef.current?.removeEventListener(
-					"click",
-					handleMouseEnter
-				);
-				scrollBarContainerRef.current?.removeEventListener(
+				containerRef.removeEventListener("click", handleMouseEnter);
+				containerRef.removeEventListener(
 					"mouseleave",
 					handleMouseLeave
 				);
 			}
 		};
-	}, [isDragging, isVisible, scrollBarRef.current]);
+	}, [isDragging, isVisible, screenSize, handleMouseLeave]);
 
 	useEffect(() => {
 		if (

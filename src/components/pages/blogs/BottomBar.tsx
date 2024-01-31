@@ -19,7 +19,7 @@ const BottomBar: React.FC<BottomBarProps> = ({ blogs, href }) => {
 
 	useEffect(() => {
 		setBlogArr(array);
-	}, [href]);
+	}, [href, array]);
 
 	return (
 		<Container className="rounded-t-none">

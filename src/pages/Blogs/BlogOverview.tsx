@@ -63,7 +63,7 @@ const BlogOverview = () => {
 	const [headerImage, setHeaderImage] = useState<string>();
 	useEffect(() => {
 		headerImage !== "" && setHeaderImage(HeaderImage);
-	}, []);
+	}, [headerImage, setHeaderImage]);
 
 	const tags = [
 		{

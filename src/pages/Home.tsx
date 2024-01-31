@@ -14,8 +14,9 @@ import { Helmet } from "react-helmet-async";
 import { useEffect, useState } from "react";
 import ButtonLink from "../components/general/ButtonLink";
 import ScrollBar from "../components/general/ScrollBar";
+import React from "react";
 
-const Home = () => {
+const Home: React.FC = React.memo(() => {
 	const { screenSize } = useAppContext();
 	const blogs: Destination[] = [];
 	Object.values(blogData.blogs).map((blogArr) =>
@@ -24,9 +25,12 @@ const Home = () => {
 	const carouselBlogs = blogs.filter((blog) => blog.carousel);
 	const featuredBlog = blogs.filter((blog) => blog.featured)[0];
 	const [headerImage, setHeaderImage] = useState<string>();
+
 	useEffect(() => {
 		headerImage !== "" && setHeaderImage(HeaderImage);
-	}, []);
+	}, [headerImage]);
+
+	console.log("test");
 
 	return (
 		<ScrollBar>
@@ -125,6 +129,6 @@ const Home = () => {
 			</div>
 		</ScrollBar>
 	);
-};
+});
 
 export default Home;

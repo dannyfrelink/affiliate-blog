@@ -9,7 +9,7 @@ const ScrollToTop: React.FC = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 		setNavOpen(false);
-	}, [pathname]);
+	}, [pathname, setNavOpen]);
 
 	return null;
 };
