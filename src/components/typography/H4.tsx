@@ -15,9 +15,9 @@ const H4: React.FC<H4Props> = ({ children, color = "black", className }) => {
 				color === "black" ? "text-black" : "text-primary"
 			} ${
 				screenSize < 750
-					? "text-sm"
-					: screenSize < 1250
 					? "text-base"
+					: screenSize < 1250
+					? "text-lg"
 					: "text-xl"
 			}`}
 		>

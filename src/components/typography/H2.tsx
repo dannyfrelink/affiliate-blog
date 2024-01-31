@@ -14,7 +14,7 @@ const H2: React.FC<H2Props> = ({ children, id, className }) => {
 			id={id}
 			className={`font-semibold ${className} ${
 				screenSize < 750
-					? "text-lg"
+					? "text-xl"
 					: screenSize < 1250
 					? "text-2xl"
 					: "text-3xl"

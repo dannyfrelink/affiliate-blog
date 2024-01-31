@@ -1,6 +1,7 @@
 import React from "react";
 import { useAppContext } from "../../config/AppContext";
 import H1 from "../typography/H1";
+import BaseText from "../typography/BaseText";
 
 interface TitleProps {
 	title: string;
@@ -41,9 +42,9 @@ const Title: React.FC<TitleProps> = ({
 				<p
 					className={`${
 						screenSize < 750
-							? `text-sm ${
+							? `text-base mt-2 ${
 									align === "center"
-										? "font-semibold w-3/4 mx-auto"
+										? "font-semibold w-5/6 mx-auto"
 										: "text-primary font-bold"
 							  }`
 							: `font-semibold mx-auto ${

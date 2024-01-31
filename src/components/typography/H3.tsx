@@ -15,7 +15,7 @@ const H3: React.FC<H3Props> = ({ children, color = "black", className }) => {
 				color === "black" ? "text-black" : "text-primary"
 			} ${
 				screenSize < 750
-					? "text-base"
+					? "text-lg"
 					: screenSize < 1250
 					? "text-xl"
 					: "text-2xl"
