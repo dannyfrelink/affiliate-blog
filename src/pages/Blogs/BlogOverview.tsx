@@ -14,7 +14,7 @@ import AttachMoneyRoundedIcon from "@mui/icons-material/AttachMoneyRounded";
 import AccessTimeFilledRoundedIcon from "@mui/icons-material/AccessTimeFilledRounded";
 import FlightRoundedIcon from "@mui/icons-material/FlightRounded";
 import CountryTag from "../../components/pages/blogs/CountryTag";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ScrollBar from "../../components/general/ScrollBar";
 
 export interface Destination {
@@ -56,7 +56,7 @@ export interface BlogsData {
 	[destination: string]: Destination[];
 }
 
-const BlogOverview = () => {
+const BlogOverview: React.FC = React.memo(() => {
 	const { screenSize } = useAppContext();
 	const blogs: BlogsData = data.blogs;
 	const destinations = Object.keys(blogs);
@@ -209,6 +209,6 @@ const BlogOverview = () => {
 			</div>
 		</ScrollBar>
 	);
-};
+});
 
 export default BlogOverview;

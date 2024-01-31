@@ -8,6 +8,7 @@ import AccommodationList from "../components/pages/overview/AccomodationList";
 import IntroOverview from "../components/pages/overview/IntroOverview";
 import { useEffect, useState } from "react";
 import ScrollBar from "../components/general/ScrollBar";
+import React from "react";
 
 export interface Destination {
 	image: string;
@@ -24,7 +25,7 @@ export interface AccommodationsData {
 	[destination: string]: Destination[];
 }
 
-const Accommodations = () => {
+const Accommodations = React.memo(() => {
 	const accommodations: AccommodationsData = data.accommodations;
 	const destinations = Object.keys(accommodations);
 	const [headerImage, setHeaderImage] = useState<string>();
@@ -75,6 +76,6 @@ const Accommodations = () => {
 			</div>
 		</ScrollBar>
 	);
-};
+});
 
 export default Accommodations;

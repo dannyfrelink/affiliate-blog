@@ -6,10 +6,10 @@ import HeaderImage from "../assets/header/about.webp";
 import AboutImage from "../assets/pages/about/couple.jpg";
 import Footer from "../components/general/Footer";
 import { useAppContext } from "../config/AppContext";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ScrollBar from "../components/general/ScrollBar";
 
-const About = () => {
+const About: React.FC = React.memo(() => {
 	const { screenSize } = useAppContext();
 	const [headerImage, setHeaderImage] = useState<string>();
 	useEffect(() => {
@@ -161,6 +161,6 @@ const About = () => {
 			</div>
 		</ScrollBar>
 	);
-};
+});
 
 export default About;
