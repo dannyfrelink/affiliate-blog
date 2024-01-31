@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRounded";
 import H4 from "../typography/H4";
+import { useLocation } from "react-router";
 
 interface DetailsProps {
 	children: React.ReactNode;
@@ -12,6 +13,13 @@ interface DetailsProps {
 
 const Details: React.FC<DetailsProps> = ({ children, summary }) => {
 	const [open, setOpen] = useState<boolean>(false);
+	const location = useLocation();
+	const [oldLocation, setOldLocation] = useState<string>();
+
+	useEffect(() => {
+		!oldLocation && setOldLocation(location.pathname);
+		oldLocation !== location.pathname && setOpen(false);
+	});
 
 	return (
 		<section className="bg-secondary w-fit rounded-2xl text-primary">
