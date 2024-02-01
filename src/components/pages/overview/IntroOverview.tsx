@@ -11,7 +11,7 @@ const IntroOverview: React.FC<IntroOverviewProps> = ({ title, children }) => {
 	const { screenSize } = useAppContext();
 	return (
 		<section className="max-w-[1000px] mx-auto text-center">
-			<H2 className={screenSize < 1250 ? "mb-2" : "mb-3"}>{title}</H2>
+			<H2 className={screenSize < 1250 ? "mb-4" : "mb-6"}>{title}</H2>
 			<article
 				className={
 					screenSize < 1250

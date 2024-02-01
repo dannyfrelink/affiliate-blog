@@ -19,7 +19,7 @@ const AccommodationList: React.FC<AccommodationListProps> = ({
 	const { screenSize } = useAppContext();
 
 	return (
-		<div className="[&>div:first-child>div]:!mt-0">
+		<div className="[&>div:first-child>div]:!mt-0 [&>div:first-child>div]:!pt-0">
 			{destinations.map((dest, index) => {
 				const accoms = accommodations[dest];
 

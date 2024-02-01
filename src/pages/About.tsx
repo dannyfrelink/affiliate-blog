@@ -38,21 +38,13 @@ const About: React.FC = React.memo(() => {
 						<article
 							className={`max-w-[750px] ${
 								screenSize < 750
-									? "[&>p:not(:last-child)]:mb-3 mx-auto"
+									? "[&>p:not(:last-child)]:mb-3 mx-auto text-center"
 									: screenSize < 1250
-									? "[&>p:not(:last-child)]:mb-3.5"
+									? "[&>p:not(:last-child)]:mb-3.5 text-center mx-auto"
 									: "[&>p:not(:last-child)]:mb-4"
 							}`}
 						>
-							<H2
-								className={
-									screenSize < 750
-										? "mb-2"
-										: screenSize < 1250
-										? "mb-2.5"
-										: "mb-3"
-								}
-							>
+							<H2 className={screenSize < 1250 ? "mb-4" : "mb-6"}>
 								Hi, wij zijn Danny en Lisa!
 							</H2>
 							<BaseText>
@@ -81,15 +73,7 @@ const About: React.FC = React.memo(() => {
 							</BaseText>
 
 							{screenSize >= 1250 && (
-								<div
-									className={
-										screenSize < 750
-											? "[&>p:not(:last-of-type)]:mb-3"
-											: screenSize < 1250
-											? "[&>p:not(:last-of-type)]:mb-3.5"
-											: "[&>p:not(:last-of-type)]:mb-4"
-									}
-								>
+								<div className="[&>p:not(:last-of-type)]:mb-4">
 									<BaseText>
 										Reisfeeld heeft eigenlijk drie
 										betekenissen. Natuurlijk staat het woord
@@ -114,9 +98,9 @@ const About: React.FC = React.memo(() => {
 						</article>
 
 						<img
-							className={`w-full max-w-[500px] object-cover object-center mx-auto rounded-2xl shadow-subtle ${
+							className={`w-full max-w-[500px] max-h-[400px] object-cover object-[50%_75%] mx-auto rounded-2xl shadow-subtle ${
 								screenSize >= 1250 &&
-								`mr-0 my-auto h-[500px] max-h-[500px] ${
+								`mr-0 my-auto max-h-[500px] ${
 									screenSize < 1400 ? "ml-16" : "ml-16"
 								} `
 							}`}
@@ -128,9 +112,9 @@ const About: React.FC = React.memo(() => {
 							<article
 								className={`max-w-[750px] mx-auto ${
 									screenSize < 750
-										? "[&>p:not(:last-of-type)]:mb-3"
+										? "[&>p:not(:last-of-type)]:mb-3 text-center"
 										: screenSize < 1250
-										? "[&>p:not(:last-of-type)]:mb-3.5"
+										? "[&>p:not(:last-of-type)]:mb-3.5 text-center"
 										: "[&>p:not(:last-of-type)]:mb-4"
 								}`}
 							>

@@ -128,7 +128,7 @@ const BlogOverview: React.FC = React.memo(() => {
 
 						<H2
 							className={`text-center ${
-								screenSize < 1250 ? "mb-2" : "mb-3"
+								screenSize < 1250 ? "mb-4" : "mb-6"
 							}`}
 						>
 							Reizen naar Indonesië
@@ -157,7 +157,7 @@ const BlogOverview: React.FC = React.memo(() => {
 						</article>
 					</section>
 
-					<section className="[&>div:first-child>div]:!mt-0">
+					<section className="[&>div:first-child>div]:!mt-0 [&>div:first-child>div]:!pt-0">
 						{destinations.map((dest, index) => {
 							const blogsPerDest = blogs[dest];
 
