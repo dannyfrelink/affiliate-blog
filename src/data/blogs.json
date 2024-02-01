@@ -103,7 +103,7 @@
 						"image22": "HoiAn Restaurant"
 					}
 				},
-				"featured": "Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet."
+				"carousel": true
 			},
 			{
 				"id": 4,
@@ -201,7 +201,8 @@
 						"image9": "Angel's Billabong",
 						"image10": "Broken Beach"
 					}
-				}
+				},
+				"carousel": true
 			},
 			{
 				"id": 2,
@@ -272,7 +273,8 @@
 						"image10": "Ohana's Beach Club",
 						"image11": "Kelingking Beach"
 					}
-				}
+				},
+				"carousel": true
 			}
 		],
 		"Ubud (Bali)": [
@@ -356,7 +358,7 @@
 						"image16": "Monkey Forest/Apenbos Ubud"
 					}
 				},
-				"carousel": true
+				"featured": "Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet."
 			}
 		]
 	}
