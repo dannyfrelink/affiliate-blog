@@ -21,8 +21,11 @@ const About: React.FC = React.memo(() => {
 		<ScrollBar>
 			<div>
 				<Helmet prioritizeSeoTags>
-					<title>Test</title>
-					<meta name="description" content="Testing this page" />
+					<title>Reisfeeld | Over ons</title>
+					<meta
+						name="description"
+						content="Met onze tips en ervaringen hopen wij jouw voorbereidingen én reis een stukje leuker te maken. En wij zijn nog lang niet klaar met reizen!"
+					/>
 				</Helmet>
 
 				<Header

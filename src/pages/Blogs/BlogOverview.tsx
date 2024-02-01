@@ -93,8 +93,11 @@ const BlogOverview: React.FC = React.memo(() => {
 		<ScrollBar>
 			<div>
 				<Helmet prioritizeSeoTags>
-					<title>Test</title>
-					<meta name="description" content="Testing this page" />
+					<title>Reizen naar Indonesië</title>
+					<meta
+						name="description"
+						content="Indonesië is een prachtige reisbestemming. Je kunt hier alles vinden, zoals prachtige stranden, groene jungles en een interessante cultuur."
+					/>
 				</Helmet>
 
 				<Header

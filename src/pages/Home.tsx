@@ -34,8 +34,11 @@ const Home: React.FC = React.memo(() => {
 		<ScrollBar>
 			<div>
 				<Helmet prioritizeSeoTags>
-					<title>Test</title>
-					<meta name="description" content="Testing this page" />
+					<title>ReisFeeld.nl | Jouw avontuur, ons verhaal!</title>
+					<meta
+						name="description"
+						content="Beleef de reis van jouw dromen met al onze tips en tricks. Ontdek de leukste activiteiten, mooiste plekjes en beste restaurants!"
+					/>
 				</Helmet>
 
 				<Header

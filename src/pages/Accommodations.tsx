@@ -38,8 +38,11 @@ const Accommodations = React.memo(() => {
 		<ScrollBar>
 			<div>
 				<Helmet prioritizeSeoTags>
-					<title>Test</title>
-					<meta name="description" content="Testing this page" />
+					<title>Slaap op de leukste plekken in Indonesië!</title>
+					<meta
+						name="description"
+						content="In Indonesië kan je echt van alles vinden: een guesthouse met lieve eigenaren, een luxe privé villa en alles wat hier tussenin zit."
+					/>
 				</Helmet>
 
 				<Header
