@@ -82,7 +82,7 @@ const Header: React.FC<HeaderProps> = ({
 
 			{screenSize < 1000 && (
 				<Link
-					className={`absolute top-4 ${
+					className={`absolute top-5 ${
 						screenSize < 750 ? "left-4" : "left-10"
 					}`}
 					to="/"

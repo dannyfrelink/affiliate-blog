@@ -55,10 +55,10 @@ const Nav: React.FC = () => {
 			}`}
 		>
 			<Link
-				className={`absolute z-[99] ${
+				className={`absolute z-[99] top-4 ${
 					screenSize < 1000
-						? `left-6 top-4 hidden ${navOpen && "!block"}`
-						: `top-[16px] ${
+						? `left-6 hidden ${navOpen && "!block"}`
+						: `${
 								scrolled > 250 &&
 								scrolledUp &&
 								"!fixed !top-3.5"
