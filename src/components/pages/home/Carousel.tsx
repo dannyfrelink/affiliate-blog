@@ -17,6 +17,12 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 	const { screenSize } = useAppContext();
 	const sliderRef = useRef<Slider>(null);
 	const [autoplaySpeed, setAutoplaySpeed] = useState(1000);
+	items.sort((a, b) => {
+		const dateA = new Date(a.date).getTime();
+		const dateB = new Date(b.date).getTime();
+
+		return dateB - dateA;
+	});
 
 	const nextSlide = () => {
 		if (sliderRef.current) {
