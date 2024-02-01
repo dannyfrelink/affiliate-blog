@@ -14,16 +14,16 @@ interface DetailsProps {
 const Details: React.FC<DetailsProps> = ({ children, summary }) => {
 	const [open, setOpen] = useState<boolean>(false);
 	const location = useLocation();
-	// const [oldLocation, setOldLocation] = useState<string>();
+	const [oldLocation, setOldLocation] = useState<string>();
 
-	// useEffect(() => {
-	// 	!oldLocation && setOldLocation(location.pathname);
+	useEffect(() => {
+		!oldLocation && setOldLocation(location.pathname);
 
-	// 	if (oldLocation !== location.pathname) {
-	// 		setOpen(false);
-	// 		setOldLocation(location.pathname);
-	// 	}
-	// });
+		if (oldLocation !== location.pathname) {
+			setOpen(false);
+			setOldLocation(location.pathname);
+		}
+	});
 
 	return (
 		<section className="bg-secondary w-fit rounded-2xl text-primary">
