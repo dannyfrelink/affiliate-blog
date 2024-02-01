@@ -97,7 +97,7 @@ const BlogOverview: React.FC = React.memo(() => {
 					)}
 					title="Indonesië"
 					subTitle={
-						"Waar gastvrijheid, cultuur, lekker eten en een prachtige natuur allemaal samen komen."
+						"Waar gastvrijheid, cultuur, lekker eten en prachtige natuur allemaal samen komen."
 					}
 				/>
 

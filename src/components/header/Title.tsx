@@ -50,7 +50,7 @@ const Title: React.FC<TitleProps> = ({
 							: `font-semibold mx-auto ${
 									screenSize < 1250
 										? "w-3/4 text-xl"
-										: "w-4/6 text-2xl"
+										: "w-3/5 text-2xl"
 							  }`
 					}`}
 				>
