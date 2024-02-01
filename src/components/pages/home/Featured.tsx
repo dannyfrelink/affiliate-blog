@@ -45,7 +45,15 @@ const Featured: React.FC<FeaturedProps> = ({ blog }) => {
 					}`}
 				>
 					<div className="max-w-[650px]">
-						<BaseText className="italic mb-1">Uitgelicht</BaseText>
+						<p
+							className={`italic ${
+								screenSize < 750
+									? "text-sm mb-2"
+									: "text-base mb-2.5"
+							}`}
+						>
+							Uitgelicht
+						</p>
 						<H2>{blog.title}</H2>
 					</div>
 					<BaseText className="max-w-[650px]">
