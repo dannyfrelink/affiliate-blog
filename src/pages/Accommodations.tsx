@@ -9,6 +9,7 @@ import IntroOverview from "../components/pages/overview/IntroOverview";
 import { useEffect, useState } from "react";
 import ScrollBar from "../components/general/ScrollBar";
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 export interface Destination {
 	image: string;
@@ -36,6 +37,11 @@ const Accommodations = React.memo(() => {
 	return (
 		<ScrollBar>
 			<div>
+				<Helmet prioritizeSeoTags>
+					<title>Test</title>
+					<meta name="description" content="Testing this page" />
+				</Helmet>
+
 				<Header
 					size="small"
 					align="bottom"

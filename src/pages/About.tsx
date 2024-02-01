@@ -8,6 +8,7 @@ import Footer from "../components/general/Footer";
 import { useAppContext } from "../config/AppContext";
 import React, { useEffect, useState } from "react";
 import ScrollBar from "../components/general/ScrollBar";
+import { Helmet } from "react-helmet-async";
 
 const About: React.FC = React.memo(() => {
 	const { screenSize } = useAppContext();
@@ -19,6 +20,11 @@ const About: React.FC = React.memo(() => {
 	return (
 		<ScrollBar>
 			<div>
+				<Helmet prioritizeSeoTags>
+					<title>Test</title>
+					<meta name="description" content="Testing this page" />
+				</Helmet>
+
 				<Header
 					Image={() => <img src={headerImage} alt="Ijen Vulkaan" />}
 					imageHeight="small"
