@@ -105,7 +105,7 @@ const Nav: React.FC = () => {
 									? "right-[9vw] [&>li:not(:last-child)]:mr-6 [&>div]:mr-4"
 									: "right-[10vw] [&>li:not(:last-child)]:mr-10 [&>div]:mr-8"
 						  }`
-				} text-black text-lg [&>li]:font-bold`}
+				} text-black text-xl [&>li]:font-bold`}
 			>
 				{screenSize < 1000 && (
 					<CloseButton
@@ -119,7 +119,7 @@ const Nav: React.FC = () => {
 						className={({ isActive }) => checkActive(isActive)}
 						to="/"
 					>
-						HOME
+						Home
 					</NavLink>
 				</li>
 
@@ -128,7 +128,7 @@ const Nav: React.FC = () => {
 						className={({ isActive }) => checkActive(isActive)}
 						to="/indonesie"
 					>
-						INDONESIË
+						Indonesië
 					</NavLink>
 				</li>
 
@@ -137,7 +137,7 @@ const Nav: React.FC = () => {
 						className={({ isActive }) => checkActive(isActive)}
 						to="/accommodaties"
 					>
-						ACCOMMODATIES
+						Accommodaties
 					</NavLink>
 				</li>
 				<li>
@@ -145,7 +145,7 @@ const Nav: React.FC = () => {
 						className={({ isActive }) => checkActive(isActive)}
 						to="/over-ons"
 					>
-						OVER ONS
+						Over ons
 					</NavLink>
 				</li>
 
