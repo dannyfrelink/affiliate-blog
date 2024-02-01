@@ -38,11 +38,14 @@ const Footer: React.FC = () => {
 								: "max-w-[500px]"
 						}
 					>
-						<Link to="/">
+						<Link
+							className={`block mb-6 w-fit ${
+								screenSize < 1000 && "mx-auto"
+							}`}
+							to="/"
+						>
 							<img
-								className={`h-12 mb-6 ${
-									screenSize < 1000 && "mx-auto"
-								}`}
+								className="h-12"
 								src={LogoBlack}
 								alt="Logo ReisFeeld"
 							/>
