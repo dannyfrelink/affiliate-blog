@@ -30,7 +30,7 @@ const AccommodationList: React.FC<AccommodationListProps> = ({
 						key={index}
 					>
 						{accoms.map((accom, index) => {
-							const image = require(`../../../assets/mockup/${accom.image}`);
+							const image = require(`../../../assets/pages/accommodations/${accom.image.src}`);
 
 							return (
 								<section
@@ -43,7 +43,7 @@ const AccommodationList: React.FC<AccommodationListProps> = ({
 								>
 									<img
 										src={image}
-										alt="Accommodatie"
+										alt={accom.image.alt}
 										className={`mb-4 object-cover object-center rounded-2xl shadow-subtle ${
 											screenSize < 900
 												? "w-full max-w-[550px] h-[56vw] max-h-[325px]"

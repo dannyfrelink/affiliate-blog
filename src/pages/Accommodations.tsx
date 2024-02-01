@@ -12,7 +12,10 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 
 export interface Destination {
-	image: string;
+	image: {
+		src: string;
+		alt: string;
+	};
 	name: string;
 	description: string;
 	prices: {
