@@ -45,7 +45,7 @@ const Title: React.FC<TitleProps> = ({
 							? `text-base mt-2 ${
 									align === "center"
 										? "font-semibold w-5/6 mx-auto"
-										: "text-primary font-bold"
+										: "text-primary"
 							  }`
 							: `font-semibold mx-auto ${
 									screenSize < 1250
