@@ -1,7 +1,6 @@
 import React from "react";
 import { useAppContext } from "../../config/AppContext";
 import H1 from "../typography/H1";
-import BaseText from "../typography/BaseText";
 
 interface TitleProps {
 	title: string;
