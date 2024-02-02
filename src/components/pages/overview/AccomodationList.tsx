@@ -50,10 +50,10 @@ const AccommodationList: React.FC<AccommodationListProps> = ({
 									/>
 
 									<div
-										className={`flex-1 grid [&>a]:self-end ${
+										className={`flex-1 grid ${
 											screenSize < 900
 												? "[&>*:not(:last-child)]:mb-2 max-w-[550px] [&>a]:mt-3"
-												: `w-[88%] max-w-[650px] ${
+												: `w-[88%] max-w-[650px] [&>a]:self-end ${
 														screenSize < 1250
 															? "[&>*:not(:last-child)]:mb-2.5 [&>a]:mt-4"
 															: "[&>*:not(:last-child)]:mb-3 [&>a]:!mt-5"
