@@ -34,10 +34,8 @@ const AccommodationList: React.FC<AccommodationListProps> = ({
 
 							return (
 								<section
-									className={`flex flex-col items-center ${
-										screenSize < 900
-											? "pt-5 max-w-[550px]"
-											: ""
+									className={`flex flex-col items-center h-full ${
+										screenSize < 900 && "pt-5 max-w-[550px]"
 									}`}
 									key={index}
 								>
@@ -52,23 +50,23 @@ const AccommodationList: React.FC<AccommodationListProps> = ({
 									/>
 
 									<div
-										className={
+										className={`flex-1 grid [&>a]:self-end ${
 											screenSize < 900
-												? "[&>*]:mt-2 max-w-[550px]"
+												? "[&>*:not(:last-child)]:mb-2 max-w-[550px] [&>a]:mt-3"
 												: `w-[88%] max-w-[650px] ${
 														screenSize < 1250
-															? "[&>*]:mt-2.5"
-															: "[&>*]:mt-3"
+															? "[&>*:not(:last-child)]:mb-2.5 [&>a]:mt-4"
+															: "[&>*:not(:last-child)]:mb-3 [&>a]:!mt-5"
 												  }`
-										}
+										}`}
 									>
 										<H3
 											className={
-												screenSize < 900
-													? "!mt-3"
+												screenSize < 750
+													? "mt-1.5"
 													: screenSize < 1250
-													? "!mt-4"
-													: "!mt-6"
+													? "mt-3"
+													: "mt-[18px]"
 											}
 										>
 											{accom.name}
@@ -95,17 +93,7 @@ const AccommodationList: React.FC<AccommodationListProps> = ({
 											</BaseText>
 										</article>
 
-										<ButtonLink
-											link={accom.link}
-											className={
-												screenSize < 900
-													? "!mt-3"
-													: screenSize < 1250
-													? "!mt-4"
-													: "!mt-5"
-											}
-											blank
-										>
+										<ButtonLink link={accom.link} blank>
 											Bekijk accommodatie{" "}
 											<ArrowForwardRoundedIcon
 												fontSize={

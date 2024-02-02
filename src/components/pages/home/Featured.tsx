@@ -25,11 +25,9 @@ const Featured: React.FC<FeaturedProps> = ({ blog }) => {
 
 			<div
 				className={`w-full ${
-					screenSize > 750
-						? screenSize < 1250
-							? "pl-[9vw]"
-							: screenSize < 1750 && "pl-[10vw]"
-						: ""
+					screenSize > 750 && screenSize < 1250
+						? "pl-[9vw]"
+						: screenSize < 1750 && "pl-[10vw]"
 				}`}
 			>
 				<section
