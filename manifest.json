@@ -1,0 +1,20 @@
+{
+	"short_name": "ReisFeeld",
+	"name": "ReisFeeld reisblog",
+	"icons": [
+		{
+			"src": "favicon.ico",
+			"sizes": "400x400",
+			"type": "image/x-icon"
+		},
+		{
+			"src": "favicon.ico",
+			"sizes": "400x400",
+			"type": "image/x-icon"
+		}
+	],
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#000000",
+	"background_color": "#ffffff"
+}
