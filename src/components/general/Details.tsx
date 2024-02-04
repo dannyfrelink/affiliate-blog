@@ -23,7 +23,7 @@ const Details: React.FC<DetailsProps> = ({ children, summary }) => {
 			setOpen(false);
 			setOldLocation(location.pathname);
 		}
-	});
+	}, [location]);
 
 	return (
 		<section className="bg-secondary w-fit rounded-2xl text-primary">
