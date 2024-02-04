@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const { SitemapStream, streamToPromise } = require("sitemap");
 const blogData = require("../src/data/blogs.json");
+const PORT = process.env.PORT || 3000;
 
 const routes = [
 	{ path: "/", exact: true, component: "Home" },
@@ -62,4 +63,4 @@ app.get("/sitemap.xml", (req, res) => {
 	});
 });
 
-app.listen(3000, () => console.log("Server started on port 3000"));
+app.listen(PORT, () => console.log("Server started on port 3000"));
