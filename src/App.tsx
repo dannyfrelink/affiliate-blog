@@ -3,7 +3,7 @@ import { AppProvider } from "./config/AppContext";
 import AppRouter from "./config/AppRouter";
 import { HelmetProvider } from "react-helmet-async";
 
-function App() {
+const App = () => {
 	return (
 		<HelmetProvider>
 			<AppProvider>
@@ -11,6 +11,6 @@ function App() {
 			</AppProvider>
 		</HelmetProvider>
 	);
-}
+};
 
 export default App;
