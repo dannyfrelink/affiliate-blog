@@ -50,13 +50,6 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 		}
 	}, [isDragging]);
 
-	// const handleScroll = useCallback(() => {
-	// 	const currentScrollY = window.scrollY;
-	// 	setScrolled(currentScrollY);
-	// 	setScrolledUp(prevScrollYRef.current > currentScrollY);
-	// 	prevScrollYRef.current = currentScrollY;
-	// }, []);
-
 	useEffect(() => {
 		setIsVisible(true);
 
