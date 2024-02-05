@@ -44,9 +44,11 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 		if (!isDragging) {
 			setIsHovered(false);
 
-			setTimeout(() => {
+			const timeoutId = setTimeout(() => {
 				setIsVisible(false);
 			}, 500);
+
+			return () => clearTimeout(timeoutId);
 		}
 	}, [isDragging]);
 
@@ -296,9 +298,11 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 			contentRef.current.style.cursor = "default";
 		}
 
-		setTimeout(() => {
+		const timeoutId = setTimeout(() => {
 			setIsVisible(false);
 		}, 500);
+
+		return () => clearTimeout(timeoutId);
 	};
 
 	return (
