@@ -98,7 +98,6 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 		const containerRef = scrollBarContainerRef.current;
 
 		document.addEventListener("mouseup", handleDrop);
-		// window.addEventListener("scroll", handleScroll);
 
 		if (screenSize >= 1000 && containerRef) {
 			containerRef.addEventListener("mouseenter", handleMouseEnter);
@@ -108,7 +107,6 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ children }) => {
 
 		return () => {
 			document.removeEventListener("mouseup", handleDrop);
-			// window.removeEventListener("scroll", handleScroll);
 
 			if (screenSize >= 1000 && containerRef) {
 				containerRef.removeEventListener(
