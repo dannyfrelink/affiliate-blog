@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useAppContext } from "../../config/AppContext";
 const uaParser = require("ua-parser-js");
 const userAgent = uaParser(navigator.userAgent);
-const device = userAgent.device.model.toLowerCase();
+const device = userAgent && userAgent.device.model.toLowerCase();
 
 interface ScrollBarProps {
 	children: React.ReactNode;
