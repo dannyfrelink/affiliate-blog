@@ -35,7 +35,6 @@ const BlogPost: React.FC = React.memo(() => {
 						<img src={coverImage} alt={blog.coverImage.alt} />
 					)}
 					title={blog.title}
-					subTitle={blog.date}
 					size="small"
 					align="bottom"
 					isBlog
