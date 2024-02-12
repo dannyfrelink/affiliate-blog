@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/affiliate-blog/static/css/main.93a783fb.css",
-    "main.js": "/affiliate-blog/static/js/main.e7fdee2d.js",
+    "main.js": "/affiliate-blog/static/js/main.35dd7dcc.js",
     "static/js/787.4c8a6313.chunk.js": "/affiliate-blog/static/js/787.4c8a6313.chunk.js",
     "static/media/biketour-3.jpg": "/affiliate-blog/static/media/biketour-3.25398c07b534aa5519d8.jpg",
     "static/media/cover.webp": "/affiliate-blog/static/media/cover.94cb922a7c1f770198c7.webp",
@@ -115,11 +115,11 @@
     "static/media/icons8-instagram.svg": "/affiliate-blog/static/media/icons8-instagram.211c176b8b3e426f580b.svg",
     "static/media/icons8-facebook.svg": "/affiliate-blog/static/media/icons8-facebook.cf871ab202d50cd3e71f.svg",
     "main.93a783fb.css.map": "/affiliate-blog/static/css/main.93a783fb.css.map",
-    "main.e7fdee2d.js.map": "/affiliate-blog/static/js/main.e7fdee2d.js.map",
+    "main.35dd7dcc.js.map": "/affiliate-blog/static/js/main.35dd7dcc.js.map",
     "787.4c8a6313.chunk.js.map": "/affiliate-blog/static/js/787.4c8a6313.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.93a783fb.css",
-    "static/js/main.e7fdee2d.js"
+    "static/js/main.35dd7dcc.js"
   ]
 }
