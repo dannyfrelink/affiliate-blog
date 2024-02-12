@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import About from "../pages/About";
 import Home from "../pages/Home";
 import BlogOverview from "../pages/Blogs/BlogOverview";
@@ -11,7 +11,7 @@ const AppRouter: React.FC = () => {
 	console.log(Router);
 
 	return (
-		<Router>
+		<Router basename="https://dannyfrelink.github.io/affiliate-blog/">
 			<ScrollToTop />
 			<Routes>
 				<Route path="/" element={<Home />} />

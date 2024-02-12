@@ -2,7 +2,7 @@
 	"homepage": "https://dannyfrelink.github.io/affiliate-blog/",
 	"name": "affiliate-blog",
 	"version": "0.1.0",
-	"private": true,
+	"private": false,
 	"dependencies": {
 		"@babel/plugin-proposal-private-property-in-object": "^7.21.11",
 		"@babel/preset-env": "^7.23.8",
