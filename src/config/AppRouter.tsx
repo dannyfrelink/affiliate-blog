@@ -11,7 +11,7 @@ const AppRouter: React.FC = () => {
 	console.log(Router);
 
 	return (
-		<Router basename="https://dannyfrelink.github.io/affiliate-blog/">
+		<Router basename={process.env.PUBLIC_URL}>
 			<ScrollToTop />
 			<Routes>
 				<Route path="/" element={<Home />} />
