@@ -25,7 +25,7 @@ const BlogPost: React.FC = React.memo(() => {
 	return (
 		<ScrollBar>
 			<div>
-				<Helmet>
+				<Helmet prioritizeSeoTags>
 					<title>{blog.metaTitle}</title>
 					<meta name="description" content={blog.metaDesc} />
 
