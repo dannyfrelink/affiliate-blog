@@ -37,11 +37,7 @@ const BlogPost: React.FC = React.memo(() => {
 					/>
 					<meta
 						property="og:image"
-						content={
-							blog.coverImage.src.includes("webp")
-								? `https://raw.githubusercontent.com/dannyfrelink/affiliate-blog/main/src/assets/pages/blogposts/${blog.coverImage.src}`
-								: `https://github.com/dannyfrelink/affiliate-blog/blob/main/src/assets/pages/blogposts/${blog.coverImage.src}`
-						}
+						content={`${process.env.PUBLIC_URL}/assets/pages/blogposts/${blog.coverImage.src}`}
 					/>
 				</Helmet>
 
