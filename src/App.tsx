@@ -6,6 +6,7 @@ import { HelmetProvider } from "react-helmet-async";
 const App = () => {
 	return (
 		<HelmetProvider>
+			<div>Test</div>
 			<AppProvider>
 				<AppRouter />
 			</AppProvider>
