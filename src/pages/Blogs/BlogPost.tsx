@@ -28,6 +28,22 @@ const BlogPost: React.FC = React.memo(() => {
 				<Helmet>
 					<title>{blog.metaTitle}</title>
 					<meta name="description" content={blog.metaDesc} />
+					<meta
+						property="og:URL"
+						content={
+							blog.coverImage.src.includes("webp")
+								? `https://raw.githubusercontent.com/dannyfrelink/affiliate-blog/main/src/assets/pages/blogposts/${blog.coverImage.src}`
+								: `https://github.com/dannyfrelink/affiliate-blog/blob/main/src/assets/pages/blogposts/${blog.coverImage.src}`
+						}
+					/>
+					<meta
+						property="og:image"
+						content={
+							blog.coverImage.src.includes("webp")
+								? `https://raw.githubusercontent.com/dannyfrelink/affiliate-blog/main/src/assets/pages/blogposts/${blog.coverImage.src}`
+								: `https://github.com/dannyfrelink/affiliate-blog/blob/main/src/assets/pages/blogposts/${blog.coverImage.src}`
+						}
+					/>
 				</Helmet>
 
 				<Header
