@@ -106,7 +106,7 @@ const BlogOverview: React.FC = React.memo(() => {
 					/>
 					<meta
 						property="og:URL"
-						content="https://github.com/dannyfrelink/affiliate-blog/blob/main/src/assets/header/blogs.jpg"
+						content="https://www.reisfeeld.nl/indonesie/"
 					/>
 					<meta
 						property="og:image"

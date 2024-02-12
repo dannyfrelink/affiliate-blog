@@ -34,7 +34,7 @@ const About: React.FC = React.memo(() => {
 					/>
 					<meta
 						property="og:URL"
-						content="https://raw.githubusercontent.com/dannyfrelink/affiliate-blog/main/src/assets/header/about.webp"
+						content="https://www.reisfeeld.nl/over-ons/"
 					/>
 					<meta
 						property="og:image"

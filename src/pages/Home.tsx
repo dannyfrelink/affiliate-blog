@@ -50,7 +50,7 @@ const Home: React.FC = React.memo(() => {
 					/>
 					<meta
 						property="og:URL"
-						content="https://raw.githubusercontent.com/dannyfrelink/affiliate-blog/main/src/assets/header/home.webp"
+						content="https://www.reisfeeld.nl/"
 					/>
 					<meta
 						property="og:image"

@@ -57,7 +57,7 @@ const Accommodations = React.memo(() => {
 					/>
 					<meta
 						property="og:URL"
-						content="https://github.com/dannyfrelink/affiliate-blog/blob/main/src/assets/header/accommodations.jpg"
+						content="https://www.reisfeeld.nl/accommodaties/"
 					/>
 					<meta
 						property="og:image"
