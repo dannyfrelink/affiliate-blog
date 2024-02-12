@@ -28,6 +28,9 @@ const BlogPost: React.FC = React.memo(() => {
 				<Helmet>
 					<title>{blog.metaTitle}</title>
 					<meta name="description" content={blog.metaDesc} />
+
+					<meta name="og:title" content={blog.metaTitle} />
+					<meta name="og:description" content={blog.metaDesc} />
 					<meta
 						property="og:URL"
 						content={

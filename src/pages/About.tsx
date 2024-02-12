@@ -26,6 +26,12 @@ const About: React.FC = React.memo(() => {
 						name="description"
 						content="Met onze tips en ervaringen hopen wij jouw voorbereidingen én reis een stukje leuker te maken. En wij zijn nog lang niet klaar met reizen!"
 					/>
+
+					<meta name="og:title" content="Reisfeeld | Over ons" />
+					<meta
+						name="og:description"
+						content="Met onze tips en ervaringen hopen wij jouw voorbereidingen én reis een stukje leuker te maken. En wij zijn nog lang niet klaar met reizen!"
+					/>
 					<meta
 						property="og:URL"
 						content="https://raw.githubusercontent.com/dannyfrelink/affiliate-blog/main/src/assets/header/about.webp"

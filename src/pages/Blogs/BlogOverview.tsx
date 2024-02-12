@@ -98,6 +98,12 @@ const BlogOverview: React.FC = React.memo(() => {
 						name="description"
 						content="Indonesië is een prachtige reisbestemming. Je kunt hier alles vinden, zoals prachtige stranden, groene jungles en een interessante cultuur."
 					/>
+
+					<meta name="og:title" content="Reizen naar Indonesië" />
+					<meta
+						name="og:description"
+						content="Indonesië is een prachtige reisbestemming. Je kunt hier alles vinden, zoals prachtige stranden, groene jungles en een interessante cultuur."
+					/>
 					<meta
 						property="og:URL"
 						content="https://github.com/dannyfrelink/affiliate-blog/blob/main/src/assets/header/blogs.jpg"

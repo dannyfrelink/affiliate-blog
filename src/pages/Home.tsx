@@ -39,6 +39,15 @@ const Home: React.FC = React.memo(() => {
 						name="description"
 						content="Beleef de reis van jouw dromen met al onze tips en tricks. Ontdek de leukste activiteiten, mooiste plekjes en beste restaurants!"
 					/>
+
+					<meta
+						name="og:title"
+						content="ReisFeeld.nl | Jouw avontuur, ons verhaal!"
+					/>
+					<meta
+						name="og:description"
+						content="Beleef de reis van jouw dromen met al onze tips en tricks. Ontdek de leukste activiteiten, mooiste plekjes en beste restaurants!"
+					/>
 					<meta
 						property="og:URL"
 						content="https://raw.githubusercontent.com/dannyfrelink/affiliate-blog/main/src/assets/header/home.webp"

@@ -46,6 +46,15 @@ const Accommodations = React.memo(() => {
 						name="description"
 						content="In Indonesië kan je echt van alles vinden: een guesthouse met lieve eigenaren, een luxe privé villa en alles wat hier tussenin zit."
 					/>
+
+					<meta
+						name="og:title"
+						content="Slaap op de leukste plekken in Indonesië!"
+					/>
+					<meta
+						name="og:description"
+						content="In Indonesië kan je echt van alles vinden: een guesthouse met lieve eigenaren, een luxe privé villa en alles wat hier tussenin zit."
+					/>
 					<meta
 						property="og:URL"
 						content="https://github.com/dannyfrelink/affiliate-blog/blob/main/src/assets/header/accommodations.jpg"
