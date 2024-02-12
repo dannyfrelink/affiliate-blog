@@ -8,8 +8,6 @@ import Accommodations from "../pages/Accommodations";
 import ScrollToTop from "./ScrollToTop";
 
 const AppRouter: React.FC = () => {
-	console.log(Router);
-
 	return (
 		<Router basename={process.env.PUBLIC_URL}>
 			<ScrollToTop />
