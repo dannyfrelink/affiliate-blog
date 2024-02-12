@@ -61,7 +61,7 @@ const Accommodations = React.memo(() => {
 					/>
 					<meta
 						property="og:image"
-						content={`${process.env.PUBLIC_URL}/assets/header/accommodations.jpg`}
+						content={`https://www.reisfeeld.nl${headerImage}`}
 					/>
 				</Helmet>
 

@@ -37,7 +37,7 @@ const BlogPost: React.FC = React.memo(() => {
 					/>
 					<meta
 						property="og:image"
-						content={`${process.env.PUBLIC_URL}/assets/pages/blogposts/${blog.coverImage.src}`}
+						content={`https://www.reisfeeld.nl/assets/pages/blogposts${coverImage}`}
 					/>
 				</Helmet>
 

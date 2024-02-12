@@ -38,7 +38,7 @@ const About: React.FC = React.memo(() => {
 					/>
 					<meta
 						property="og:image"
-						content={`${process.env.PUBLIC_URL}/assets/header/about.webp`}
+						content={`https://www.reisfeeld.nl${headerImage}`}
 					/>
 				</Helmet>
 

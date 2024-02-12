@@ -54,7 +54,7 @@ const Home: React.FC = React.memo(() => {
 					/>
 					<meta
 						property="og:image"
-						content={`${process.env.PUBLIC_URL}/assets/header/home.webp`}
+						content={`https://www.reisfeeld.nl${headerImage}`}
 					/>
 				</Helmet>
 

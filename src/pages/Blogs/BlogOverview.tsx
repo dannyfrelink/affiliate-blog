@@ -110,7 +110,7 @@ const BlogOverview: React.FC = React.memo(() => {
 					/>
 					<meta
 						property="og:image"
-						content={`${process.env.PUBLIC_URL}/assets/header/blogs.jpg`}
+						content={`https://www.reisfeeld.nl${headerImage}`}
 					/>
 				</Helmet>
 
