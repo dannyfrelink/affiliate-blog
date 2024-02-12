@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import About from "../pages/About";
 import Home from "../pages/Home";
 import BlogOverview from "../pages/Blogs/BlogOverview";
@@ -8,6 +8,8 @@ import Accommodations from "../pages/Accommodations";
 import ScrollToTop from "./ScrollToTop";
 
 const AppRouter: React.FC = () => {
+	console.log(Router);
+
 	return (
 		<Router>
 			<ScrollToTop />
