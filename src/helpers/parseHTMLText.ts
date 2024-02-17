@@ -70,6 +70,22 @@ function parseHTMLText(text: string | undefined, images: any) {
 					{ key: index, className },
 					divContent
 				);
+			} else if (tagName === "ul") {
+				// If the element is a <div> tag, parse HTML children as well
+				const className = element.getAttribute("class");
+				const ulContent: any = parseHTMLText(element.innerHTML, images);
+
+				return React.createElement(
+					"ul",
+					{ key: index, className },
+					ulContent
+				);
+			} else if (tagName === "li") {
+				// If the element is a <div> tag, parse HTML children as well
+				return React.createElement("li", {
+					key: index,
+					children: element.innerHTML.replaceAll("&amp;", "&"),
+				});
 			} else if (tagName === "a") {
 				// If the element is an <a> tag, recursively parse its children
 				return React.createElement("a", {

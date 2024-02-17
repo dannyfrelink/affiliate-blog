@@ -26,6 +26,11 @@
 	object-position: center;
 }
 
+.blogList-container {
+	list-style-type: disc;
+	list-style-position: inside;
+}
+
 .blogText-container > *:not(:last-child) {
 	margin-bottom: 0.75rem;
 }
@@ -71,6 +76,10 @@
 
 	.blogText-container > *:not(:last-child) {
 		margin-bottom: 0.88rem;
+	}
+
+	.blogList-container {
+		font-size: 18px;
 	}
 
 	.blogText-anchor a {
