@@ -5,7 +5,7 @@ import replaceImageTag from "../../../helpers/replaceImageTag";
 import parseHTMLText from "../../../helpers/parseHTMLText";
 import H2 from "../../typography/H2";
 import TableOfContents from "./TableOfContents";
-import { Destination } from "../../../pages/Blogs/BlogOverview";
+import { Destination } from "../../../pages/blogs/BlogOverview";
 
 interface Images {
 	src: {

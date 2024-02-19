@@ -9,7 +9,7 @@ import AboutImage from "../assets/pages/about/couple.jpg";
 import BaseText from "../components/typography/BaseText";
 import Footer from "../components/general/Footer";
 import blogData from "../data/blogs.json";
-import { Destination } from "./Blogs/BlogOverview";
+import { Destination } from "./blogs/BlogOverview";
 import { Helmet } from "react-helmet-async";
 import { useEffect, useState } from "react";
 import ButtonLink from "../components/general/ButtonLink";

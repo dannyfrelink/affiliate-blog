@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import About from "../pages/About";
 import Home from "../pages/Home";
-import BlogOverview from "../pages/Blogs/BlogOverview";
-import BlogPost from "../pages/Blogs/BlogPost";
+import BlogOverview from "../pages/blogs/BlogOverview";
+import BlogPost from "../pages/blogs/BlogPost";
 import Accommodations from "../pages/Accommodations";
 import ScrollToTop from "./ScrollToTop";
 

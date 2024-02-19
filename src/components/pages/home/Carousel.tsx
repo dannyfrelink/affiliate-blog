@@ -7,7 +7,7 @@ import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRound
 import H3 from "../../typography/H3";
 import { useAppContext } from "../../../config/AppContext";
 import { Link } from "react-router-dom";
-import { Destination } from "../../../pages/Blogs/BlogOverview";
+import { Destination } from "../../../pages/blogs/BlogOverview";
 
 interface CarouselProps {
 	items: Destination[];

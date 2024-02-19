@@ -3,7 +3,7 @@ import { useAppContext } from "../../../config/AppContext";
 import H2 from "../../typography/H2";
 import BaseText from "../../typography/BaseText";
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
-import { Destination } from "../../../pages/Blogs/BlogOverview";
+import { Destination } from "../../../pages/blogs/BlogOverview";
 import ButtonLink from "../../general/ButtonLink";
 
 interface FeaturedProps {

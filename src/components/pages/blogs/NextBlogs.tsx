@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import NextBlog from "./NextBlog";
-import { Destination } from "../../../pages/Blogs/BlogOverview";
+import { Destination } from "../../../pages/blogs/BlogOverview";
 import { getRandomBlogs } from "../../../helpers/getRandomBlogs";
 
 export interface NextBlogsProps {

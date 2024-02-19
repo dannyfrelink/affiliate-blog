@@ -1,5 +1,5 @@
 import React from "react";
-import { Destination } from "../../../pages/Blogs/BlogOverview";
+import { Destination } from "../../../pages/blogs/BlogOverview";
 import { useAppContext } from "../../../config/AppContext";
 import { Link } from "react-router-dom";
 import BaseText from "../../typography/BaseText";
