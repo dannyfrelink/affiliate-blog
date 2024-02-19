@@ -60,10 +60,7 @@ const Accommodations = React.memo(() => {
 						content="https://www.reisfeeld.nl/accommodaties/"
 					/>
 
-					<meta
-						name="og:image"
-						content={`%PUBLIC_URL%${headerImage}`}
-					/>
+					<meta name="og:image" content={headerImage} />
 					<meta property="og:image:width" content="2500" />
 					<meta property="og:image:height" content="1667" />
 					<meta property="og:image:type" content="image/jpeg" />
