@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.16d58ce9.css",
-    "main.js": "/static/js/main.29aa6c0e.js",
+    "main.js": "/static/js/main.c3272f90.js",
     "static/js/787.4c8a6313.chunk.js": "/static/js/787.4c8a6313.chunk.js",
     "static/media/biketour-3.jpg": "/static/media/biketour-3.25398c07b534aa5519d8.jpg",
     "static/media/cover.webp": "/static/media/cover.94cb922a7c1f770198c7.webp",
@@ -118,18 +118,18 @@
     "static/media/palmtree.svg": "/static/media/palmtree.5de630923143ff562d63f2d02e241a2d.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "static/media/icons8-tiktok.svg": "/static/media/icons8-tiktok.eb91ad80a2a67d6e02cf.svg",
     "static/media/icons8-youtube.svg": "/static/media/icons8-youtube.f74ed2c124f6e7d50f8c.svg",
     "static/media/icons8-instagram.svg": "/static/media/icons8-instagram.211c176b8b3e426f580b.svg",
     "static/media/icons8-facebook.svg": "/static/media/icons8-facebook.cf871ab202d50cd3e71f.svg",
     "main.16d58ce9.css.map": "/static/css/main.16d58ce9.css.map",
-    "main.29aa6c0e.js.map": "/static/js/main.29aa6c0e.js.map",
+    "main.c3272f90.js.map": "/static/js/main.c3272f90.js.map",
     "787.4c8a6313.chunk.js.map": "/static/js/787.4c8a6313.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.16d58ce9.css",
-    "static/js/main.29aa6c0e.js"
+    "static/js/main.c3272f90.js"
   ]
 }
