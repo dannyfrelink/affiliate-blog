@@ -27,7 +27,7 @@ const About: React.FC = React.memo(() => {
 						content="Met onze tips en ervaringen hopen wij jouw voorbereidingen én reis een stukje leuker te maken. En wij zijn nog lang niet klaar met reizen!"
 					/>
 
-					<meta property="og:title" content="Reisfeeld | Over ons" />
+					{/* <meta property="og:title" content="Reisfeeld | Over ons" />
 					<meta
 						property="og:description"
 						content="Met onze tips en ervaringen hopen wij jouw voorbereidingen én reis een stukje leuker te maken. En wij zijn nog lang niet klaar met reizen!"
@@ -40,7 +40,7 @@ const About: React.FC = React.memo(() => {
 					<meta name="og:image" content={headerImage} />
 					<meta property="og:image:width" content="2500" />
 					<meta property="og:image:height" content="1667" />
-					<meta property="og:image:type" content="image/jpeg" />
+					<meta property="og:image:type" content="image/jpeg" /> */}
 				</Helmet>
 
 				<Header

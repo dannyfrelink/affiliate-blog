@@ -40,7 +40,7 @@ const Home: React.FC = React.memo(() => {
 						content="Beleef de reis van jouw dromen met al onze tips en tricks. Ontdek de leukste activiteiten, mooiste plekjes en beste restaurants!"
 					/>
 
-					<meta
+					{/* <meta
 						property="og:title"
 						content="ReisFeeld.nl | Jouw avontuur, ons verhaal!"
 					/>
@@ -56,7 +56,7 @@ const Home: React.FC = React.memo(() => {
 					<meta property="og:image" content={headerImage} />
 					<meta property="og:image:width" content="2500" />
 					<meta property="og:image:height" content="1667" />
-					<meta property="og:image:type" content="image/jpeg" />
+					<meta property="og:image:type" content="image/jpeg" /> */}
 				</Helmet>
 
 				<Header
