@@ -33,13 +33,17 @@ const About: React.FC = React.memo(() => {
 						content="Met onze tips en ervaringen hopen wij jouw voorbereidingen én reis een stukje leuker te maken. En wij zijn nog lang niet klaar met reizen!"
 					/>
 					<meta
-						property="og:URL"
+						property="og:url"
 						content="https://www.reisfeeld.nl/over-ons/"
 					/>
+
 					<meta
 						name="og:image"
 						content={`https://www.reisfeeld.nl${headerImage}`}
 					/>
+					<meta property="og:image:width" content="2500" />
+					<meta property="og:image:height" content="1667" />
+					<meta property="og:image:type" content="image/jpeg" />
 				</Helmet>
 
 				<Header

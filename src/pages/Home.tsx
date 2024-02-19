@@ -49,13 +49,17 @@ const Home: React.FC = React.memo(() => {
 						content="Beleef de reis van jouw dromen met al onze tips en tricks. Ontdek de leukste activiteiten, mooiste plekjes en beste restaurants!"
 					/>
 					<meta
-						property="og:URL"
+						property="og:url"
 						content="https://www.reisfeeld.nl/"
 					/>
+
 					<meta
-						name="og:image"
+						property="og:image"
 						content={`https://www.reisfeeld.nl${headerImage}`}
 					/>
+					<meta property="og:image:width" content="2500" />
+					<meta property="og:image:height" content="1667" />
+					<meta property="og:image:type" content="image/jpeg" />
 				</Helmet>
 
 				<Header

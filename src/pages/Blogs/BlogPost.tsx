@@ -32,13 +32,17 @@ const BlogPost: React.FC = React.memo(() => {
 					<meta property="og:title" content={blog.metaTitle} />
 					<meta property="og:description" content={blog.metaDesc} />
 					<meta
-						property="og:URL"
+						property="og:url"
 						content={`https://www.reisfeeld.nl/indonesie/${blog.href}`}
 					/>
+
 					<meta
 						name="og:image"
 						content={`https://www.reisfeeld.nl/assets/pages/blogposts${coverImage}`}
 					/>
+					<meta property="og:image:width" content="2500" />
+					<meta property="og:image:height" content="1667" />
+					<meta property="og:image:type" content="image/jpeg" />
 				</Helmet>
 
 				<Header

@@ -105,13 +105,17 @@ const BlogOverview: React.FC = React.memo(() => {
 						content="Indonesië is een prachtige reisbestemming. Je kunt hier alles vinden, zoals prachtige stranden, groene jungles en een interessante cultuur."
 					/>
 					<meta
-						property="og:URL"
+						property="og:url"
 						content="https://www.reisfeeld.nl/indonesie/"
 					/>
+
 					<meta
 						name="og:image"
 						content={`https://www.reisfeeld.nl${headerImage}`}
 					/>
+					<meta property="og:image:width" content="2500" />
+					<meta property="og:image:height" content="1667" />
+					<meta property="og:image:type" content="image/jpeg" />
 				</Helmet>
 
 				<Header
