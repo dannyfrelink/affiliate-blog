@@ -29,14 +29,14 @@ const BlogPost: React.FC = React.memo(() => {
 					<title>{blog.metaTitle}</title>
 					<meta name="description" content={blog.metaDesc} />
 
-					<meta name="og:title" content={blog.metaTitle} />
-					<meta name="og:description" content={blog.metaDesc} />
+					<meta property="og:title" content={blog.metaTitle} />
+					<meta property="og:description" content={blog.metaDesc} />
 					<meta
 						property="og:URL"
 						content={`https://www.reisfeeld.nl/indonesie/${blog.href}`}
 					/>
 					<meta
-						property="og:image"
+						name="og:image"
 						content={`https://www.reisfeeld.nl/assets/pages/blogposts${coverImage}`}
 					/>
 				</Helmet>

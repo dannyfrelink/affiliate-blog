@@ -27,9 +27,9 @@ const About: React.FC = React.memo(() => {
 						content="Met onze tips en ervaringen hopen wij jouw voorbereidingen én reis een stukje leuker te maken. En wij zijn nog lang niet klaar met reizen!"
 					/>
 
-					<meta name="og:title" content="Reisfeeld | Over ons" />
+					<meta property="og:title" content="Reisfeeld | Over ons" />
 					<meta
-						name="og:description"
+						property="og:description"
 						content="Met onze tips en ervaringen hopen wij jouw voorbereidingen én reis een stukje leuker te maken. En wij zijn nog lang niet klaar met reizen!"
 					/>
 					<meta
@@ -37,7 +37,7 @@ const About: React.FC = React.memo(() => {
 						content="https://www.reisfeeld.nl/over-ons/"
 					/>
 					<meta
-						property="og:image"
+						name="og:image"
 						content={`https://www.reisfeeld.nl${headerImage}`}
 					/>
 				</Helmet>

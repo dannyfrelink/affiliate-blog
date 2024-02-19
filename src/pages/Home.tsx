@@ -41,11 +41,11 @@ const Home: React.FC = React.memo(() => {
 					/>
 
 					<meta
-						name="og:title"
+						property="og:title"
 						content="ReisFeeld.nl | Jouw avontuur, ons verhaal!"
 					/>
 					<meta
-						name="og:description"
+						property="og:description"
 						content="Beleef de reis van jouw dromen met al onze tips en tricks. Ontdek de leukste activiteiten, mooiste plekjes en beste restaurants!"
 					/>
 					<meta
@@ -53,7 +53,7 @@ const Home: React.FC = React.memo(() => {
 						content="https://www.reisfeeld.nl/"
 					/>
 					<meta
-						property="og:image"
+						name="og:image"
 						content={`https://www.reisfeeld.nl${headerImage}`}
 					/>
 				</Helmet>

@@ -48,11 +48,11 @@ const Accommodations = React.memo(() => {
 					/>
 
 					<meta
-						name="og:title"
+						property="og:title"
 						content="Slaap op de leukste plekken in Indonesië!"
 					/>
 					<meta
-						name="og:description"
+						property="og:description"
 						content="In Indonesië kan je echt van alles vinden: een guesthouse met lieve eigenaren, een luxe privé villa en alles wat hier tussenin zit."
 					/>
 					<meta
@@ -60,7 +60,7 @@ const Accommodations = React.memo(() => {
 						content="https://www.reisfeeld.nl/accommodaties/"
 					/>
 					<meta
-						property="og:image"
+						name="og:image"
 						content={`https://www.reisfeeld.nl${headerImage}`}
 					/>
 				</Helmet>
