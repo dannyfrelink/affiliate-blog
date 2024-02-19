@@ -38,7 +38,7 @@ const BlogPost: React.FC = React.memo(() => {
 
 					<meta
 						name="og:image"
-						content={`https://www.reisfeeld.nl/assets/pages/blogposts${coverImage}`}
+						content={`%PUBLIC_URL%/assets/pages/blogposts${coverImage}`}
 					/>
 					<meta property="og:image:width" content="2500" />
 					<meta property="og:image:height" content="1667" />
